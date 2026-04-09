@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run Capital Partners | Strategic Financial Management</title>
+  <meta name="description" content="Run Capital Partners structures alternative investment funds, securitization vehicles, and wealth management solutions from Luxembourg. Founded 2018.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#" class="nav__logo">
+        <span class="nav__logo-icon">&#9670;</span>
+        <span class="nav__logo-text">Run Capital Partners</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#group">Group</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#insights">Insights</a></li>
+        <li><a href="#contact" class="nav__cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero__bg"></div>
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero__content">
+      <p class="hero__eyebrow">Founded 2018 &middot; London &middot; Luxembourg &middot; Milan</p>
+      <h1 class="hero__title">We structure <span class="gold">alternative investments</span><br>for those who build wealth differently.</h1>
+      <p class="hero__sub">Alternative fund structuring, securitization vehicles, and AI-driven wealth management. Regulated. Independent. Luxembourg-domiciled.</p>
+      <div class="hero__actions">
+        <a href="#services" class="btn btn--primary">Our Services</a>
+        <a href="#contact" class="btn btn--outline">Schedule a Call</a>
+      </div>
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">7+</span>
+          <span class="hero__stat-label">Years Operating</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">20+</span>
+          <span class="hero__stat-label">Professionals</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">4</span>
+          <span class="hero__stat-label">European Offices</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">6</span>
+          <span class="hero__stat-label">Group Entities</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
+    <div class="container">
+      <p class="trust-bar__label">Institutional Partners</p>
+    </div>
+    <div class="trust-bar__track">
+      <div class="trust-bar__logos">
+        <span class="trust-bar__logo">Vontobel</span>
+        <span class="trust-bar__logo">BNP Paribas</span>
+        <span class="trust-bar__logo">Leonteq</span>
+        <span class="trust-bar__logo">Marex</span>
+        <span class="trust-bar__logo">Deutsche Bank</span>
+      </div>
+      <div class="trust-bar__logos" aria-hidden="true">
+        <span class="trust-bar__logo">Vontobel</span>
+        <span class="trust-bar__logo">BNP Paribas</span>
+        <span class="trust-bar__logo">Leonteq</span>
+        <span class="trust-bar__logo">Marex</span>
+        <span class="trust-bar__logo">Deutsche Bank</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section--light" id="about">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">About Us</p>
+          <h2 class="section__title">Independent. Unaffiliated.<br>Built for your interests.</h2>
+        </div>
+        <div class="split__right">
+          <p class="text-lg">Since 2018, Run Capital Partners has supported enterprises in strategic financial management. We accompany clients through governance, legal and financial structuring of alternative investment funds, and the creation of securitization vehicles.</p>
+          <p>We operate independently, without affiliation to any banking, financial, or insurance group. Our only obligation is to our clients. Our team brings over 30 years of combined experience from institutions including JP Morgan, Pictet, and Banca Commerciale Italiana.</p>
+          <div class="about__badges">
+            <div class="badge">
+              <span class="badge__icon">&#9733;</span>
+              <div>
+                <strong>Top 100 WealthTech</strong>
+                <span>Recognized 2022</span>
+              </div>
+            </div>
+            <div class="badge">
+              <span class="badge__icon">&#9830;</span>
+              <div>
+                <strong>Nasdaq Partnership</strong>
+                <span>Signed 2023</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="section section--dark" id="services">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">What We Do</p>
+      <h2 class="section__title section__title--light">Five service lines.<br>One strategic partner.</h2>
+      <p class="section__intro">Each service is delivered by a dedicated team within our group. You always know which entity you're working with and who is responsible.</p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-card__number">01</div>
+          <h3 class="service-card__title">Asset Management</h3>
+          <p class="service-card__entity">Run Asset Management, Luxembourg</p>
+          <p>Creation and management of alternative investment funds, securitization vehicles, notes, and bonds. Domiciled in Luxembourg for EU regulatory alignment, political stability, and favorable tax framework.</p>
+          <ul class="service-card__list">
+            <li>Alternative investment fund structuring</li>
+            <li>Securitization vehicle creation</li>
+            <li>Notes and bond issuance</li>
+            <li>EU-compliant fund domiciliation</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__number">02</div>
+          <h3 class="service-card__title">Wealth Management</h3>
+          <p class="service-card__entity">In partnership with MdotM</p>
+          <p>Investment strategy definition powered by proprietary AI technology. Our system provides objective market analysis across multiple data inputs with 24/7 decision-making capability, removing emotional bias from portfolio management.</p>
+          <ul class="service-card__list">
+            <li>AI-driven portfolio strategy</li>
+            <li>Objective data evaluation</li>
+            <li>Continuous market monitoring</li>
+            <li>Bias-free decision making</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__number">03</div>
+          <h3 class="service-card__title">Algorithmic Trading</h3>
+          <p class="service-card__entity">Proprietary technology</p>
+          <p>Management and implementation of proprietary solutions for automated trading activities. Our algorithms execute strategies across markets with speed and discipline that manual trading cannot match.</p>
+          <ul class="service-card__list">
+            <li>Proprietary trading algorithms</li>
+            <li>Automated execution</li>
+            <li>Multi-market coverage</li>
+            <li>Real-time risk management</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__number">04</div>
+          <h3 class="service-card__title">Certificate Issuance</h3>
+          <p class="service-card__entity">With BNP Paribas, Vontobel, Leonteq</p>
+          <p>Creation of both passively and actively managed certificates in partnership with leading investment banks. Structured products designed for specific risk/return profiles across equities, indices, and thematic baskets.</p>
+          <ul class="service-card__list">
+            <li>Actively managed certificates (AMC)</li>
+            <li>Passive structured products</li>
+            <li>Custom risk/return profiles</li>
+            <li>Multi-issuer partnerships</li>
+          </ul>
+        </div>
+
+        <div class="service-card">
+          <div class="service-card__number">05</div>
+          <h3 class="service-card__title">Nasdaq Listings</h3>
+          <p class="service-card__entity">3DOTS UK</p>
+          <p>Supporting high-potential Southern European companies in their journey to list on the Nasdaq. End-to-end advisory from preparation through listing, connecting European excellence with US capital markets.</p>
+          <ul class="service-card__list">
+            <li>IPO preparation and advisory</li>
+            <li>US capital markets access</li>
+            <li>Regulatory compliance support</li>
+            <li>Investor relations strategy</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GROUP STRUCTURE -->
+  <section class="section section--light" id="group">
+    <div class="container">
+      <p class="section__eyebrow">Group Structure</p>
+      <h2 class="section__title">Six entities. Clear responsibilities.</h2>
+      <p class="section__intro">Each entity within the Run Capital Partners group serves a distinct function. When you work with us, you know exactly who you're contracting with.</p>
+
+      <div class="group-diagram">
+        <div class="group-parent">
+          <div class="group-card group-card--parent">
+            <h3>Run Capital Partners LTD</h3>
+            <p>Group Holding &middot; London (HQ)</p>
+          </div>
+        </div>
+        <div class="group-line"></div>
+        <div class="group-children">
+          <div class="group-card">
+            <h4>Run Asset Management</h4>
+            <p>Alternative funds &amp; vehicles</p>
+            <span class="group-card__loc">Luxembourg</span>
+          </div>
+          <div class="group-card">
+            <h4>RCP SRL</h4>
+            <p>Insurance brokerage, credit mediation, portfolio analysis</p>
+            <span class="group-card__loc">Milan</span>
+          </div>
+          <div class="group-card">
+            <h4>yooro</h4>
+            <p>Digital securitization platform for EU/UK/CH investors</p>
+            <span class="group-card__loc">Digital</span>
+          </div>
+          <div class="group-card">
+            <h4>3DOTS UK</h4>
+            <p>Nasdaq listing advisory</p>
+            <span class="group-card__loc">London</span>
+          </div>
+          <div class="group-card">
+            <h4>Polaris Italia</h4>
+            <p>Credit mediation &amp; training</p>
+            <span class="group-card__loc">Italy</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TEAM -->
+  <section class="section section--cream" id="team">
+    <div class="container">
+      <p class="section__eyebrow">Leadership</p>
+      <h2 class="section__title">Meet the team behind your strategy.</h2>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-card__photo"></div>
+          <h3 class="team-card__name">Luca Padovan</h3>
+          <p class="team-card__role">CEO &amp; Founder</p>
+          <p class="team-card__bio">Combines international finance experience with an entrepreneurial approach to market strategy. Previously held positions at leading European financial institutions. Founded Run Capital Partners in 2018.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__photo"></div>
+          <h3 class="team-card__name">Cesare Trebeschi</h3>
+          <p class="team-card__role">Co-Founder &amp; Partner</p>
+          <p class="team-card__bio">Background in public administration leadership and association governance (Confapi). Founded Polaris Group. Brings operational discipline and institutional relationships to the partnership.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__photo"></div>
+          <h3 class="team-card__name">Enrico Fiore</h3>
+          <p class="team-card__role">Partner</p>
+          <p class="team-card__bio">Senior partner with deep expertise in financial structuring and client relationship management across European markets.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__photo"></div>
+          <h3 class="team-card__name">Matteo Boldini</h3>
+          <p class="team-card__role">Head of Legal Affairs</p>
+          <p class="team-card__bio">Leads legal structuring for fund formation, securitization vehicles, and cross-border regulatory compliance across multiple jurisdictions.</p>
+        </div>
+        <div class="team-card">
+          <div class="team-card__photo"></div>
+          <h3 class="team-card__name">Enrico De Angelis</h3>
+          <p class="team-card__role">Business Development Manager</p>
+          <p class="team-card__bio">Drives client acquisition and partnership development. Focuses on connecting Southern European enterprises with international capital markets and investment opportunities.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY LUXEMBOURG -->
+  <section class="section section--dark" id="luxembourg">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow section__eyebrow--light">Why Luxembourg</p>
+          <h2 class="section__title section__title--light">The #1 EU hub for fund domiciliation.</h2>
+        </div>
+        <div class="split__right">
+          <div class="lux-grid">
+            <div class="lux-item">
+              <h4>Political Stability</h4>
+              <p>AAA-rated sovereign. EU founding member. Consistent regulatory framework.</p>
+            </div>
+            <div class="lux-item">
+              <h4>Tax Efficiency</h4>
+              <p>Competitive tax regime for investment vehicles. Double tax treaties with 80+ countries.</p>
+            </div>
+            <div class="lux-item">
+              <h4>EU Passporting</h4>
+              <p>Funds domiciled in Luxembourg can be marketed across all 27 EU member states.</p>
+            </div>
+            <div class="lux-item">
+              <h4>AML Standards</h4>
+              <p>Rigorous anti-money laundering framework. CSSF oversight ensures institutional-grade compliance.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="section section--light" id="insights">
+    <div class="container">
+      <p class="section__eyebrow">Insights</p>
+      <h2 class="section__title">From our team.</h2>
+      <div class="insights-grid">
+        <article class="insight-card">
+          <div class="insight-card__date">Apr 11, 2025</div>
+          <h3 class="insight-card__title">Beyond Traditional Economic Thinking: The Doughnut Model</h3>
+          <p class="insight-card__author">Davide De Luca</p>
+          <p>Exploring how Kate Raworth's framework challenges conventional growth assumptions and what it means for alternative investment strategy.</p>
+        </article>
+        <article class="insight-card">
+          <div class="insight-card__date">Mar 5, 2025</div>
+          <h3 class="insight-card__title">The American Economy Between Growth and Debt</h3>
+          <p class="insight-card__author">Davide De Luca</p>
+          <p>An increasingly fragile balance. What US fiscal dynamics mean for European investors positioning in alternatives.</p>
+        </article>
+        <article class="insight-card">
+          <div class="insight-card__date">Feb 24, 2025</div>
+          <h3 class="insight-card__title">Investing in the Future: Our Participation in Eterna III Fund</h3>
+          <p class="insight-card__author">Giovanni Campodall'Orto</p>
+          <p>Why we committed to Eterna III and what the fund's thesis tells us about the next cycle of European private markets.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--cream" id="contact">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Contact</p>
+          <h2 class="section__title">Let's discuss your strategy.</h2>
+          <p class="text-lg">Whether you're structuring an alternative fund, exploring Nasdaq listing, or seeking AI-driven wealth management, we'd like to hear from you.</p>
+
+          <div class="contact-offices">
+            <div class="contact-office">
+              <strong>London (HQ)</strong>
+              <p>Exhibition House<br>Addison Bridge Place<br>W14 8XP</p>
+            </div>
+            <div class="contact-office">
+              <strong>Luxembourg</strong>
+              <p>2 Rue Ste Zithe<br>2763</p>
+            </div>
+            <div class="contact-office">
+              <strong>Milan</strong>
+              <p>Via Monte Napoleone 8<br>20121</p>
+            </div>
+            <div class="contact-office">
+              <strong>Conegliano</strong>
+              <p>Viale Italia 203<br>31015</p>
+            </div>
+          </div>
+
+          <p class="contact-info">
+            <strong>Phone:</strong> +44 (0) 7500 169238<br>
+            <strong>Email:</strong> info@runcapital.partners
+          </p>
+        </div>
+        <div class="split__right">
+          <form class="contact-form" onsubmit="event.preventDefault(); alert('Form submitted! (Demo)');">
+            <div class="form-group">
+              <label for="name">Full Name</label>
+              <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="company">Company</label>
+              <input type="text" id="company" name="company">
+            </div>
+            <div class="form-group">
+              <label for="service">Service of Interest</label>
+              <select id="service" name="service">
+                <option value="">Select a service</option>
+                <option value="asset">Asset Management</option>
+                <option value="wealth">Wealth Management</option>
+                <option value="trading">Algorithmic Trading</option>
+                <option value="certificates">Certificate Issuance</option>
+                <option value="nasdaq">Nasdaq Listing</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4"></textarea>
+            </div>
+            <div class="form-group form-group--check">
+              <input type="checkbox" id="consent" name="consent" required>
+              <label for="consent">I consent to the processing of my personal data in accordance with applicable privacy regulations.</label>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <span class="nav__logo-icon">&#9670;</span>
+          <span class="nav__logo-text">Run Capital Partners</span>
+          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="#services">Asset Management</a></li>
+            <li><a href="#services">Wealth Management</a></li>
+            <li><a href="#services">Algorithmic Trading</a></li>
+            <li><a href="#services">Certificate Issuance</a></li>
+            <li><a href="#services">Nasdaq Listings</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#group">Group Structure</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#insights">Insights</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="#contact">Privacy Policy</a></li>
+            <li><a href="#contact">Cookie Policy</a></li>
+            <li><a href="#contact">Terms of Service</a></li>
+            <li><a href="#contact">Regulatory Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ---- Particle system ----
+    (function() {
+      const canvas = document.getElementById('heroCanvas');
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      let w, h, particles = [];
+      const GOLD = 'rgba(201, 168, 76,';
+
+      function resize() {
+        w = canvas.width = canvas.offsetWidth;
+        h = canvas.height = canvas.offsetHeight;
+      }
+      resize();
+      window.addEventListener('resize', resize);
+
+      for (let i = 0; i < 60; i++) {
+        particles.push({
+          x: Math.random() * w,
+          y: Math.random() * h,
+          vx: (Math.random() - 0.5) * 0.3,
+          vy: (Math.random() - 0.5) * 0.3,
+          r: Math.random() * 1.5 + 0.5,
+          a: Math.random() * 0.4 + 0.1
+        });
+      }
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        particles.forEach(p => {
+          p.x += p.vx;
+          p.y += p.vy;
+          if (p.x < 0) p.x = w;
+          if (p.x > w) p.x = 0;
+          if (p.y < 0) p.y = h;
+          if (p.y > h) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = GOLD + p.a + ')';
+          ctx.fill();
+        });
+
+        // Draw connecting lines
+        for (let i = 0; i < particles.length; i++) {
+          for (let j = i + 1; j < particles.length; j++) {
+            const dx = particles[i].x - particles[j].x;
+            const dy = particles[i].y - particles[j].y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            if (dist < 150) {
+              ctx.beginPath();
+              ctx.moveTo(particles[i].x, particles[i].y);
+              ctx.lineTo(particles[j].x, particles[j].y);
+              ctx.strokeStyle = GOLD + (0.06 * (1 - dist / 150)) + ')';
+              ctx.lineWidth = 0.5;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      draw();
+    })();
+
+    // ---- Animated counters ----
+    function animateCounters() {
+      document.querySelectorAll('.hero__stat-num').forEach(el => {
+        const text = el.textContent.trim();
+        const match = text.match(/(\d+)/);
+        if (!match) return;
+        const target = parseInt(match[1]);
+        const suffix = text.replace(match[1], '');
+        let current = 0;
+        const step = Math.max(1, Math.floor(target / 40));
+        const interval = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            current = target;
+            clearInterval(interval);
+          }
+          el.textContent = current + suffix;
+        }, 30);
+      });
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounters();
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.3 });
+    const statsEl = document.querySelector('.hero__stats');
+    if (statsEl) counterObserver.observe(statsEl);
+
+    // ---- Sticky nav ----
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('nav--scrolled', window.scrollY > 50);
+    });
+
+    // ---- Mobile toggle ----
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    // ---- Smooth scroll ----
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+      });
+    });
+
+    // ---- Fade-in on scroll (staggered) ----
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.service-card, .team-card, .insight-card, .group-card, .lux-item, .badge, .contact-office').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+
+    // ---- Parallax on hero bg ----
+    const heroBg = document.querySelector('.hero__bg');
+    window.addEventListener('scroll', function() {
+      const scrolled = window.scrollY;
+      if (scrolled < window.innerHeight && heroBg) {
+        heroBg.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
+      }
+    }, { passive: true });
+  </script>
+</body>
+</html>
