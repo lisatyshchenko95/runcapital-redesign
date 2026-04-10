@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Luca Padovan | CEO &amp; Founder | Run Capital Partners</title>
+  <meta name="description" content="Luca Padovan, CEO & Founder of Run Capital Partners. 15+ years transforming private investment across Europe. Based in Luxembourg.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* CEO Bio Page Styles */
+    .bio-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--dark);
+      overflow: hidden;
+    }
+
+    .bio-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 75% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%);
+    }
+
+    .bio-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .bio-photo {
+      position: relative;
+    }
+
+    .bio-photo__frame {
+      width: 340px;
+      height: 420px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--dark-3), var(--dark-4));
+      border: 1px solid rgba(201,168,76,0.15);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bio-photo__placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 120px;
+      color: rgba(201,168,76,0.12);
+      font-weight: 700;
+    }
+
+    .bio-photo__frame::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 100px;
+      background: linear-gradient(transparent, rgba(8,8,8,0.6));
+    }
+
+    .bio-photo__accent {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      opacity: 0.3;
+    }
+
+    .bio-photo__accent-2 {
+      position: absolute;
+      bottom: -8px;
+      left: -8px;
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      opacity: 0.2;
+    }
+
+    .bio-intro__eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .bio-intro__eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .bio-intro__name {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 5vw, 56px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .bio-intro__title {
+      font-size: 20px;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .bio-intro__summary {
+      font-size: 18px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+
+    .bio-intro__meta {
+      display: flex;
+      gap: 32px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+
+    .bio-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .bio-meta-item__label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .bio-meta-item__value {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: 2px solid var(--gold);
+      z-index: 1;
+    }
+
+    .timeline-item--current::before {
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+
+    .timeline-item__date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item__role {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+    }
+
+    .timeline-item__company {
+      font-size: 14px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    /* Ventures Grid */
+    .ventures-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .venture-card {
+      background: linear-gradient(135deg, var(--dark-2), var(--dark-3));
+      border: 1px solid rgba(201,168,76,0.06);
+      border-radius: 16px;
+      padding: 32px;
+      transition: all 0.4s var(--ease-out-expo);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .venture-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0;
+      transition: opacity 0.4s;
+    }
+
+    .venture-card:hover {
+      border-color: rgba(201,168,76,0.2);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+
+    .venture-card:hover::before {
+      opacity: 1;
+    }
+
+    .venture-card__name {
+      font-family: var(--font-serif);
+      font-size: 22px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 6px;
+    }
+
+    .venture-card__role {
+      font-size: 13px;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 16px;
+    }
+
+    .venture-card__desc {
+      font-size: 14px;
+      color: rgba(255,255,255,0.45);
+      line-height: 1.7;
+    }
+
+    /* Education/Credentials */
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+
+    .cred-card {
+      padding: 28px;
+      background: var(--cream);
+      border-radius: 14px;
+      border: 1px solid rgba(201,168,76,0.08);
+      transition: all 0.3s;
+    }
+
+    .cred-card:hover {
+      border-color: var(--gold);
+    }
+
+    .cred-card__year {
+      font-size: 12px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .cred-card__title {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .cred-card__detail {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* Quote */
+    .bio-quote {
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    .bio-quote__text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(22px, 3vw, 32px);
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+
+    .bio-quote__attr {
+      font-size: 14px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    /* Speaking/Media */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .media-card {
+      display: flex;
+      gap: 20px;
+      padding: 24px;
+      background: var(--white);
+      border-radius: 14px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+    }
+
+    .media-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 8px 32px rgba(201,168,76,0.06);
+    }
+
+    .media-card__icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      flex-shrink: 0;
+    }
+
+    .media-card__title {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+
+    .media-card__detail {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    /* CTA */
+    .bio-cta {
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .bio-cta__title {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .bio-cta__sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .bio-cta__links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .bio-hero__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 100px 20px 60px;
+      }
+
+      .bio-photo__frame {
+        width: 240px;
+        height: 300px;
+        margin: 0 auto;
+      }
+
+      .bio-photo {
+        text-align: center;
+      }
+
+      .bio-photo__accent,
+      .bio-photo__accent-2 {
+        display: none;
+      }
+
+      .bio-intro__name {
+        font-size: 36px;
+      }
+
+      .bio-intro__summary {
+        font-size: 16px;
+      }
+
+      .bio-intro__meta {
+        flex-wrap: wrap;
+        gap: 20px;
+      }
+
+      .bio-meta-item {
+        flex: 0 0 calc(50% - 10px);
+      }
+
+      .ventures-grid,
+      .cred-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .media-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .media-card {
+        flex-direction: column;
+        gap: 12px;
+      }
+
+      .bio-cta__title {
+        font-size: 28px;
+      }
+
+      .bio-cta__links {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .timeline {
+        padding-left: 36px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <span class="nav__logo-icon">&#9670;</span>
+        <span class="nav__logo-text">Run Capital Partners</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#group">Group</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#insights">Insights</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BIO HERO -->
+  <section class="bio-hero">
+    <div class="bio-hero__bg"></div>
+    <div class="bio-hero__content">
+      <div class="bio-photo">
+        <div class="bio-photo__frame">
+          <div class="bio-photo__placeholder">LP</div>
+        </div>
+        <div class="bio-photo__accent"></div>
+        <div class="bio-photo__accent-2"></div>
+      </div>
+      <div class="bio-intro">
+        <p class="bio-intro__eyebrow">CEO &amp; Founder</p>
+        <h1 class="bio-intro__name">Luca Padovan</h1>
+        <p class="bio-intro__title">Run Capital Partners</p>
+        <p class="bio-intro__summary">A financial leader with over 15 years of experience transforming the private investment sector. Luca founded Run Capital Partners in 2018 with a single conviction: independent financial engineering, free from banking and insurance group affiliations, produces better outcomes for clients.</p>
+        <div class="bio-intro__meta">
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Based in</span>
+            <span class="bio-meta-item__value">Luxembourg</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Experience</span>
+            <span class="bio-meta-item__value">15+ Years</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Group Entities</span>
+            <span class="bio-meta-item__value">6 Companies</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Offices</span>
+            <span class="bio-meta-item__value">4 Countries</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="section section--dark">
+    <div class="container bio-quote">
+      <p class="bio-quote__text">"International markets are constantly changing, evolving. The path is daily, aiming at the deepest 360-degree expertise of the entrepreneurial world."</p>
+      <p class="bio-quote__attr">Luca Padovan</p>
+    </div>
+  </section>
+
+  <!-- VENTURES -->
+  <section class="section section--dark-alt" id="ventures">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">The Group</p>
+      <h2 class="section__title section__title--light">Built from scratch. Six companies.</h2>
+      <p class="section__intro">Since 2018, Luca has built an international group spanning asset management, fintech, Nasdaq advisory, and insurance brokerage. Each entity serves a distinct market need.</p>
+
+      <div class="ventures-grid">
+        <div class="venture-card">
+          <h3 class="venture-card__name">Run Capital Partners</h3>
+          <p class="venture-card__role">CEO &amp; Founder</p>
+          <p class="venture-card__desc">The group holding company. Strategic financial management, alternative fund structuring, and securitization vehicles. Headquartered in London, operating from Luxembourg.</p>
+        </div>
+        <div class="venture-card">
+          <h3 class="venture-card__name">Run Asset Management</h3>
+          <p class="venture-card__role">Founder</p>
+          <p class="venture-card__desc">Luxembourg-domiciled alternative investment fund management. Creates and manages funds, notes, and bonds with EU regulatory alignment.</p>
+        </div>
+        <div class="venture-card">
+          <h3 class="venture-card__name">yooro</h3>
+          <p class="venture-card__role">Head of Business Development</p>
+          <p class="venture-card__desc">Securitisation-as-a-Service platform. Streamlines private market access through blockchain and smart contracts for EU, UK, and Swiss professional investors.</p>
+        </div>
+        <div class="venture-card">
+          <h3 class="venture-card__name">3DOTS Capital Advisory</h3>
+          <p class="venture-card__role">Co-Founder</p>
+          <p class="venture-card__desc">Guides high-potential Southern European companies through the Nasdaq listing journey. Connecting European excellence with US capital markets.</p>
+        </div>
+        <div class="venture-card">
+          <h3 class="venture-card__name">RCP SRL</h3>
+          <p class="venture-card__role">Group Entity</p>
+          <p class="venture-card__desc">Independent insurance brokerage, credit mediation, and portfolio analysis. Milan-based, operating across Italy.</p>
+        </div>
+        <div class="venture-card">
+          <h3 class="venture-card__name">Capital Strategy</h3>
+          <p class="venture-card__role">Acquired 2025</p>
+          <p class="venture-card__desc">Recent strategic acquisition expanding the group's capabilities in financial advisory and capital markets.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER TIMELINE -->
+  <section class="section section--light" id="career">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Career</p>
+          <h2 class="section__title">From trading floors to building institutions.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">Luca's career spans professional trading, financial advisory, and institutional building. He combines hands-on market experience with entrepreneurial vision to create financial infrastructure that serves clients, not intermediaries.</p>
+        </div>
+        <div class="split__right">
+          <div class="timeline">
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">2018 - Present</p>
+              <h3 class="timeline-item__role">CEO &amp; Founder</h3>
+              <p class="timeline-item__company">Run Capital Partners</p>
+              <p class="timeline-item__desc">Founded the group from scratch. Grew to 20+ professionals across 4 offices in London, Luxembourg, Milan, and Conegliano. Recognized in Top 100 WealthTech &amp; FinTech AI companies (2022). Signed partnership with Nasdaq (2023).</p>
+            </div>
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">2025 - Present</p>
+              <h3 class="timeline-item__role">Head of Business Development</h3>
+              <p class="timeline-item__company">yooro</p>
+              <p class="timeline-item__desc">Launched the Securitisation-as-a-Service platform. Featured in FundsTech and Tech.eu. Transforming private market access through blockchain infrastructure.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">2020+</p>
+              <h3 class="timeline-item__role">Co-Founder</h3>
+              <p class="timeline-item__company">3DOTS Capital Advisory</p>
+              <p class="timeline-item__desc">Built the advisory practice guiding Southern European companies to Nasdaq listings. Bridge between European enterprises and US capital markets.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">Prior</p>
+              <h3 class="timeline-item__role">Professional Trader &amp; Analyst</h3>
+              <p class="timeline-item__company">Independent &amp; FreeFinance</p>
+              <p class="timeline-item__desc">Active across currencies, indices, crypto, and commodities. Published market analysis and trading strategies. Built expertise in macro-economic analysis and risk management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="section section--cream" id="credentials">
+    <div class="container">
+      <p class="section__eyebrow">Credentials &amp; Affiliations</p>
+      <h2 class="section__title">Education, memberships, and recognition.</h2>
+
+      <div class="cred-grid">
+        <div class="cred-card">
+          <p class="cred-card__year">2020</p>
+          <h3 class="cred-card__title">Master in Family Office</h3>
+          <p class="cred-card__detail">Advanced certification in family wealth management, governance, and multi-generational planning.</p>
+        </div>
+        <div class="cred-card">
+          <p class="cred-card__year">2019</p>
+          <h3 class="cred-card__title">Master in Trading Strategies</h3>
+          <p class="cred-card__detail">Specialized program covering algorithmic trading, macro strategies, and quantitative portfolio management.</p>
+        </div>
+        <div class="cred-card">
+          <p class="cred-card__year">2018</p>
+          <h3 class="cred-card__title">Master in Independent Financial Advisory</h3>
+          <p class="cred-card__detail">Professional qualification for independent financial advisory and wealth management.</p>
+        </div>
+        <div class="cred-card">
+          <p class="cred-card__year">Member</p>
+          <h3 class="cred-card__title">YPO</h3>
+          <p class="cred-card__detail">Young Presidents' Organization. Global leadership community of chief executives.</p>
+        </div>
+        <div class="cred-card">
+          <p class="cred-card__year">Associated</p>
+          <h3 class="cred-card__title">Queen Elizabeth II Commonwealth Trust</h3>
+          <p class="cred-card__detail">Connected with the QECT, supporting young social entrepreneurs across the Commonwealth.</p>
+        </div>
+        <div class="cred-card">
+          <p class="cred-card__year">2022</p>
+          <h3 class="cred-card__title">Top 100 WealthTech</h3>
+          <p class="cred-card__detail">Run Capital Partners recognized among the most innovative 100 WealthTech and FinTech AI companies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SPEAKING / MEDIA -->
+  <section class="section section--light" id="media">
+    <div class="container">
+      <p class="section__eyebrow">Speaking &amp; Media</p>
+      <h2 class="section__title">Sharing ideas that move markets.</h2>
+
+      <div class="media-grid">
+        <div class="media-card">
+          <div class="media-card__icon">&#127897;</div>
+          <div>
+            <h3 class="media-card__title">Investopia Milan</h3>
+            <p class="media-card__detail">Speaker at the Milan edition of Investopia, covering fintech innovation and alternative investment structuring.</p>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="media-card__icon">&#128240;</div>
+          <div>
+            <h3 class="media-card__title">FundsTech Feature</h3>
+            <p class="media-card__detail">Featured in FundsTech for the launch of yooro's Securitisation-as-a-Service platform, transforming private market access.</p>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="media-card__icon">&#128200;</div>
+          <div>
+            <h3 class="media-card__title">Tech.eu Coverage</h3>
+            <p class="media-card__detail">yooro featured in Tech.eu for removing barriers to private investment markets through blockchain securitization.</p>
+          </div>
+        </div>
+        <div class="media-card">
+          <div class="media-card__icon">&#9997;</div>
+          <div>
+            <h3 class="media-card__title">FreeFinance &amp; Investire.biz</h3>
+            <p class="media-card__detail">Regular contributor writing market analysis, trading strategies, and macro-economic commentary for Italian financial media.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section section--dark">
+    <div class="container bio-cta">
+      <h2 class="bio-cta__title">Let's talk.</h2>
+      <p class="bio-cta__sub">Whether you're exploring fund structuring, Nasdaq listings, or want to understand how yooro can transform your investment operations.</p>
+      <div class="bio-cta__links">
+        <a href="index.html#contact" class="btn btn--primary">Get in Touch</a>
+        <a href="https://www.linkedin.com/in/padovanluca/" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn Profile</a>
+        <a href="index.html" class="btn btn--outline">Back to Run Capital</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__bottom" style="border-top: none; padding-top: 0;">
+        <p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    // Fade-in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.venture-card, .cred-card, .media-card, .timeline-item').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
