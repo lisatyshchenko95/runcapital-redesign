@@ -95,6 +95,12 @@ body {
   color: var(--white);
 }
 
+.nav__logo-img {
+  height: 36px;
+  width: auto;
+  display: block;
+}
+
 .nav__logo-icon {
   color: var(--gold);
   font-size: 20px;
