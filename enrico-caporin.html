@@ -45,6 +45,13 @@
     .cred-card__year { font-size: 12px; color: var(--gold-dark); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 8px; }
     .cred-card__title { font-family: var(--font-serif); font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--dark); }
     .cred-card__detail { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
+    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .expertise-card { background: linear-gradient(135deg, var(--dark-2), var(--dark-3)); border: 1px solid rgba(201,168,76,0.06); border-radius: 16px; padding: 32px; transition: all 0.4s var(--ease-out-expo); position: relative; overflow: hidden; }
+    .expertise-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s var(--ease-out-expo); }
+    .expertise-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
+    .expertise-card:hover::before { height: 100%; }
+    .expertise-card__title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+    .expertise-card__desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
     .bio-cta { text-align: center; padding: 80px 0; }
     .bio-cta__title { font-family: var(--font-serif); font-size: 36px; font-weight: 600; color: var(--white); margin-bottom: 16px; }
     .bio-cta__sub { font-size: 17px; color: rgba(255,255,255,0.45); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
@@ -59,6 +66,7 @@
       .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
       .bio-meta-item { flex: 0 0 calc(50% - 10px); }
       .cred-grid { grid-template-columns: 1fr; }
+      .expertise-grid { grid-template-columns: 1fr; }
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
@@ -116,6 +124,38 @@
             <span class="bio-meta-item__label">Focus</span>
             <span class="bio-meta-item__value">Capital Markets &amp; IPOs</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="section section--dark-alt">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">Expertise</p>
+      <h2 class="section__title section__title--light">Capital markets, IPOs, and three decades of financial advisory.</h2>
+      <p class="section__intro">Enrico brings a rare combination of entrepreneurial founding experience and institutional capital-markets expertise spanning over 20 years.</p>
+
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Capital Markets &amp; IPOs</h3>
+          <p class="expertise-card__desc">Advisory for listed and pre-IPO companies on capital-markets strategies, secondary offerings, and Nasdaq listings.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Corporate Finance &amp; M&amp;A</h3>
+          <p class="expertise-card__desc">Senior-level consulting in corporate finance, mergers and acquisitions, and capital allocation for mid-sized companies.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Independent Financial Advisory</h3>
+          <p class="expertise-card__desc">Co-founded one of Italy's first independent financial-advisory firms, providing corporate-finance advisory to SMEs.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Fund Management</h3>
+          <p class="expertise-card__desc">Experience founding and running regulated fund structures in Luxembourg, including cross-border investment vehicles.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Structured Solutions</h3>
+          <p class="expertise-card__desc">Deep background in corporate-finance advisory and structured solutions from management roles at Generali group.</p>
         </div>
       </div>
     </div>
@@ -203,7 +243,7 @@
     toggle.addEventListener('click', () => { links.classList.toggle('nav__links--open'); toggle.classList.toggle('nav__toggle--active'); });
     links.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { links.classList.remove('nav__links--open'); toggle.classList.remove('nav__toggle--active'); }); });
     const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.08 });
-    document.querySelectorAll('.timeline-item').forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
+    document.querySelectorAll('.timeline-item, .expertise-card').forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
   </script>
 </body>
 </html>

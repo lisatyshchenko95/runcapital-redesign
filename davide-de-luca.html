@@ -232,6 +232,14 @@
       max-width: 480px;
     }
 
+    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .expertise-card { background: linear-gradient(135deg, var(--dark-2), var(--dark-3)); border: 1px solid rgba(201,168,76,0.06); border-radius: 16px; padding: 32px; transition: all 0.4s var(--ease-out-expo); position: relative; overflow: hidden; }
+    .expertise-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s var(--ease-out-expo); }
+    .expertise-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
+    .expertise-card:hover::before { height: 100%; }
+    .expertise-card__title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+    .expertise-card__desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
     .bio-cta {
       text-align: center;
       padding: 80px 0;
@@ -278,6 +286,7 @@
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
+      .expertise-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -328,6 +337,29 @@
             <span class="bio-meta-item__label">Focus</span>
             <span class="bio-meta-item__value">Research &amp; Analysis</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="section section--dark-alt">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">Expertise</p>
+      <h2 class="section__title section__title--light">Research and analytics powering investment decisions.</h2>
+      <p class="section__intro">Davide supports the analytical foundation of Run Capital Partners, contributing research and data analysis across alternative-investment products.</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Market Research</h3>
+          <p class="expertise-card__desc">Conducting market research and analysis to support investment decisions across alternative-investment and securitization products.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Investment Analysis</h3>
+          <p class="expertise-card__desc">Contributing to portfolio analytics, performance reporting, and investment-thesis development for the group's fund platforms.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Data & Reporting</h3>
+          <p class="expertise-card__desc">Supporting client reporting, data analysis, and analytical workflows across the group's service lines.</p>
         </div>
       </div>
     </div>
@@ -399,7 +431,7 @@
       });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll('.timeline-item').forEach(el => {
+    document.querySelectorAll('.timeline-item, .expertise-card').forEach(el => {
       el.classList.add('fade-in');
       observer.observe(el);
     });

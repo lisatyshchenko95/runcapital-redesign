@@ -270,6 +270,14 @@
       line-height: 1.5;
     }
 
+    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .expertise-card { background: linear-gradient(135deg, var(--dark-2), var(--dark-3)); border: 1px solid rgba(201,168,76,0.06); border-radius: 16px; padding: 32px; transition: all 0.4s var(--ease-out-expo); position: relative; overflow: hidden; }
+    .expertise-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s var(--ease-out-expo); }
+    .expertise-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
+    .expertise-card:hover::before { height: 100%; }
+    .expertise-card__title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+    .expertise-card__desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
     .bio-cta {
       text-align: center;
       padding: 80px 0;
@@ -314,6 +322,7 @@
       .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
       .bio-meta-item { flex: 0 0 calc(50% - 10px); }
       .cred-grid { grid-template-columns: 1fr; }
+      .expertise-grid { grid-template-columns: 1fr; }
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
@@ -371,6 +380,29 @@
             <span class="bio-meta-item__label">Focus</span>
             <span class="bio-meta-item__value">Relationship Management</span>
           </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="section section--dark-alt">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">Expertise</p>
+      <h2 class="section__title section__title--light">Aligning client portfolios with alternative investment platforms.</h2>
+      <p class="section__intro">Marco builds and maintains client relationships, ensuring portfolios are aligned with suitable fund and securitization structures.</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Client Relationship Management</h3>
+          <p class="expertise-card__desc">Building and maintaining relationships with institutional and private investors across Run Capital's platforms.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Suitability Analysis</h3>
+          <p class="expertise-card__desc">Conducting suitability analyses and aligning client portfolios with appropriate fund and securitization structures.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Fund Onboarding &amp; Reporting</h3>
+          <p class="expertise-card__desc">Coordinating with internal teams on fund onboarding, client reporting, and ongoing portfolio management.</p>
         </div>
       </div>
     </div>
@@ -448,7 +480,7 @@
       });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll('.cred-card, .timeline-item').forEach(el => {
+    document.querySelectorAll('.expertise-card, .cred-card, .timeline-item').forEach(el => {
       el.classList.add('fade-in');
       observer.observe(el);
     });
