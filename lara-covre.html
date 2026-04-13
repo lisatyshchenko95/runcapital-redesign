@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lara Covre | Insurance and Finance Specialist | Run Capital Partners</title>
   <meta name="description" content="Lara Covre, Insurance and Finance Specialist at Run Capital Partners, combining insurance-solutions expertise with financial-advisory services.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x25C6;</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
   <style>
     .bio-hero {
       position: relative;
-      min-height: 80vh;
+      min-height: 100vh;
       display: flex;
       align-items: center;
       background: var(--dark);
@@ -24,17 +24,72 @@
       position: absolute;
       inset: 0;
       background:
-        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 75% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
         linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%);
     }
 
     .bio-hero__content {
       position: relative;
       z-index: 1;
-      max-width: 800px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 140px 24px 80px;
-      text-align: center;
+      padding: 120px 24px 80px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .bio-photo { position: relative; }
+
+    .bio-photo__frame {
+      width: 320px;
+      height: 380px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--dark-3), var(--dark-4));
+      border: 1px solid rgba(201,168,76,0.15);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bio-photo__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .bio-photo__frame::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(transparent, rgba(8,8,8,0.5));
+    }
+
+    .bio-photo__accent {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      opacity: 0.3;
+    }
+
+    .bio-photo__accent-2 {
+      position: absolute;
+      bottom: -8px;
+      left: -8px;
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      opacity: 0.2;
     }
 
     .bio-intro__eyebrow {
@@ -44,12 +99,12 @@
       letter-spacing: 0.15em;
       text-transform: uppercase;
       margin-bottom: 20px;
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 12px;
     }
 
-    .bio-intro__eyebrow::before, .bio-intro__eyebrow::after {
+    .bio-intro__eyebrow::before {
       content: '';
       width: 32px;
       height: 1px;
@@ -58,7 +113,7 @@
 
     .bio-intro__name {
       font-family: var(--font-serif);
-      font-size: clamp(36px, 5vw, 52px);
+      font-size: clamp(40px, 5vw, 56px);
       font-weight: 600;
       color: var(--white);
       line-height: 1.1;
@@ -66,23 +121,22 @@
     }
 
     .bio-intro__title {
-      font-size: 18px;
+      font-size: 20px;
       color: var(--gold);
       font-weight: 500;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
 
     .bio-intro__summary {
-      font-size: 17px;
+      font-size: 18px;
       color: rgba(255,255,255,0.55);
       line-height: 1.8;
-      max-width: 600px;
-      margin: 0 auto 36px;
+      margin-bottom: 36px;
+      max-width: 540px;
     }
 
     .bio-intro__meta {
       display: flex;
-      justify-content: center;
       gap: 32px;
       padding-top: 28px;
       border-top: 1px solid rgba(201,168,76,0.12);
@@ -107,7 +161,6 @@
       font-weight: 500;
     }
 
-    /* Timeline */
     .timeline {
       position: relative;
       padding-left: 48px;
@@ -128,9 +181,7 @@
       margin-bottom: 48px;
     }
 
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
+    .timeline-item:last-child { margin-bottom: 0; }
 
     .timeline-item::before {
       content: '';
@@ -181,7 +232,6 @@
       max-width: 480px;
     }
 
-    /* CTA */
     .bio-cta {
       text-align: center;
       padding: 80px 0;
@@ -212,9 +262,17 @@
     }
 
     @media (max-width: 768px) {
-      .bio-hero__content { padding: 100px 20px 60px; }
-      .bio-intro__name { font-size: 32px; }
-      .bio-intro__summary { font-size: 15px; }
+      .bio-hero__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 100px 20px 60px;
+      }
+
+      .bio-photo__frame { width: 240px; height: 300px; margin: 0 auto; }
+      .bio-photo { text-align: center; }
+      .bio-photo__accent, .bio-photo__accent-2 { display: none; }
+      .bio-intro__name { font-size: 36px; }
+      .bio-intro__summary { font-size: 16px; }
       .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
       .bio-meta-item { flex: 0 0 calc(50% - 10px); }
       .bio-cta__title { font-size: 28px; }
@@ -249,8 +307,14 @@
   <section class="bio-hero">
     <div class="bio-hero__bg"></div>
     <div class="bio-hero__content">
+      <div class="bio-photo">
+        <div class="bio-photo__frame">
+          <img src="lara-covre.jpg" alt="Lara Covre, Insurance and Finance Specialist at Run Capital Partners" class="bio-photo__img">
+        </div>
+        <div class="bio-photo__accent"></div>
+        <div class="bio-photo__accent-2"></div>
+      </div>
       <div class="bio-intro">
-        <div style="width:200px;height:200px;border-radius:50%;overflow:hidden;margin:0 auto 32px;border:2px solid rgba(201,168,76,0.2);"><img src="lara-covre.jpg" alt="Lara Covre" style="width:100%;height:100%;object-fit:cover;"></div>
         <p class="bio-intro__eyebrow">Insurance and Finance Specialist</p>
         <h1 class="bio-intro__name">Lara Covre</h1>
         <p class="bio-intro__title">Run Capital Partners</p>

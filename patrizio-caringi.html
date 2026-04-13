@@ -5,62 +5,332 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Patrizio Caringi | Relationship Manager | Run Capital Partners</title>
   <meta name="description" content="Patrizio Caringi, Relationship Manager at Run Capital Partners. Based in Rome, supporting institutional and private clients in accessing alternative-investment products and structured-finance solutions.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x25C6;</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    .bio-hero { position: relative; min-height: 70vh; display: flex; align-items: center; background: var(--dark); overflow: hidden; }
-    .bio-hero__bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 60%), linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%); }
-    .bio-hero__content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 140px 24px 80px; text-align: center; }
-    .bio-intro__eyebrow { color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 12px; }
-    .bio-intro__eyebrow::before, .bio-intro__eyebrow::after { content: ''; width: 32px; height: 1px; background: var(--gold); }
-    .bio-intro__name { font-family: var(--font-serif); font-size: clamp(36px, 5vw, 52px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 12px; }
-    .bio-intro__title { font-size: 18px; color: var(--gold); font-weight: 500; margin-bottom: 32px; }
-    .bio-intro__summary { font-size: 17px; color: rgba(255,255,255,0.55); line-height: 1.8; max-width: 600px; margin: 0 auto 36px; }
-    .bio-intro__meta { display: flex; justify-content: center; gap: 48px; padding-top: 28px; border-top: 1px solid rgba(201,168,76,0.12); }
-    .bio-meta-item { display: flex; flex-direction: column; gap: 4px; }
-    .bio-meta-item__label { font-size: 11px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; }
-    .bio-meta-item__value { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500; }
-    .timeline { position: relative; padding-left: 48px; }
-    .timeline::before { content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1)); }
-    .timeline-item { position: relative; margin-bottom: 48px; }
+    .bio-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--dark);
+      overflow: hidden;
+    }
+
+    .bio-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 75% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%);
+    }
+
+    .bio-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .bio-photo { position: relative; }
+
+    .bio-photo__frame {
+      width: 320px;
+      height: 380px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--dark-3), var(--dark-4));
+      border: 1px solid rgba(201,168,76,0.15);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bio-photo__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .bio-photo__frame::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(transparent, rgba(8,8,8,0.5));
+    }
+
+    .bio-photo__accent {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      opacity: 0.3;
+    }
+
+    .bio-photo__accent-2 {
+      position: absolute;
+      bottom: -8px;
+      left: -8px;
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      opacity: 0.2;
+    }
+
+    .bio-intro__eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .bio-intro__eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .bio-intro__name {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 5vw, 56px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .bio-intro__title {
+      font-size: 20px;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .bio-intro__summary {
+      font-size: 18px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+
+    .bio-intro__meta {
+      display: flex;
+      gap: 32px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+
+    .bio-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .bio-meta-item__label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .bio-meta-item__value {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+
     .timeline-item:last-child { margin-bottom: 0; }
-    .timeline-item::before { content: ''; position: absolute; left: -36px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--dark); border: 2px solid var(--gold); z-index: 1; }
-    .timeline-item--current::before { background: var(--gold); box-shadow: 0 0 12px var(--gold-glow); }
-    .timeline-item__date { font-size: 12px; color: var(--gold); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 6px; }
-    .timeline-item__role { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
-    .timeline-item__company { font-size: 14px; color: var(--gold-dark); font-weight: 600; margin-bottom: 10px; }
-    .timeline-item__desc { font-size: 14px; color: var(--gray-600); line-height: 1.7; max-width: 480px; }
-    .cred-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .cred-card { padding: 28px; background: var(--cream); border-radius: 14px; border: 1px solid rgba(201,168,76,0.08); transition: all 0.3s; }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: 2px solid var(--gold);
+      z-index: 1;
+    }
+
+    .timeline-item--current::before {
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+
+    .timeline-item__date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item__role {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+    }
+
+    .timeline-item__company {
+      font-size: 14px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .cred-card {
+      padding: 28px;
+      background: var(--cream);
+      border-radius: 14px;
+      border: 1px solid rgba(201,168,76,0.08);
+      transition: all 0.3s;
+    }
+
     .cred-card:hover { border-color: var(--gold); }
-    .cred-card__year { font-size: 12px; color: var(--gold-dark); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 8px; }
-    .cred-card__title { font-family: var(--font-serif); font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--dark); }
-    .cred-card__detail { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
-    .bio-cta { text-align: center; padding: 80px 0; }
-    .bio-cta__title { font-family: var(--font-serif); font-size: 32px; font-weight: 600; color: var(--white); margin-bottom: 16px; }
-    .bio-cta__sub { font-size: 16px; color: rgba(255,255,255,0.45); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-    .bio-cta__links { display: flex; justify-content: center; gap: 16px; }
+
+    .cred-card__year {
+      font-size: 12px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .cred-card__title {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .cred-card__detail {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    .bio-cta {
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .bio-cta__title {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .bio-cta__sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .bio-cta__links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
     @media (max-width: 768px) {
-      .bio-hero__content { padding: 100px 20px 60px; }
-      .bio-intro__name { font-size: 32px; }
-      .bio-intro__summary { font-size: 15px; }
-      .bio-intro__meta { flex-wrap: wrap; gap: 24px; }
-      .bio-meta-item { flex: 0 0 calc(50% - 12px); }
+      .bio-hero__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 100px 20px 60px;
+      }
+
+      .bio-photo__frame { width: 240px; height: 300px; margin: 0 auto; }
+      .bio-photo { text-align: center; }
+      .bio-photo__accent, .bio-photo__accent-2 { display: none; }
+      .bio-intro__name { font-size: 36px; }
+      .bio-intro__summary { font-size: 16px; }
+      .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
+      .bio-meta-item { flex: 0 0 calc(50% - 10px); }
       .cred-grid { grid-template-columns: 1fr; }
-      .timeline { padding-left: 36px; }
-      .bio-cta__title { font-size: 26px; }
+      .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
+      .timeline { padding-left: 36px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"></a>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <a href="index.html" class="nav__logo">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img">
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav__links" id="navLinks">
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#services">Services</a></li>
@@ -72,13 +342,18 @@
     </div>
   </nav>
 
+  <!-- BIO HERO -->
   <section class="bio-hero">
     <div class="bio-hero__bg"></div>
     <div class="bio-hero__content">
-      <div class="bio-intro">
-        <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto 32px; border: 2px solid rgba(201,168,76,0.2);">
-          <img src="patrizio-caringi.jpg" alt="Patrizio Caringi" style="width: 100%; height: 100%; object-fit: cover;">
+      <div class="bio-photo">
+        <div class="bio-photo__frame">
+          <img src="patrizio-caringi.jpg" alt="Patrizio Caringi, Relationship Manager at Run Capital Partners" class="bio-photo__img">
         </div>
+        <div class="bio-photo__accent"></div>
+        <div class="bio-photo__accent-2"></div>
+      </div>
+      <div class="bio-intro">
         <p class="bio-intro__eyebrow">Relationship Manager</p>
         <h1 class="bio-intro__name">Patrizio Caringi</h1>
         <p class="bio-intro__title">Run Capital Partners</p>
@@ -101,6 +376,7 @@
     </div>
   </section>
 
+  <!-- CAREER TIMELINE -->
   <section class="section section--light" id="career">
     <div class="container">
       <div class="split">
@@ -129,11 +405,12 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section class="section section--dark">
     <div class="container bio-cta">
       <h2 class="bio-cta__title">Get in touch.</h2>
       <p class="bio-cta__sub">For inquiries related to client onboarding, portfolio monitoring, and alternative-investment advisory in Italy.</p>
-      <p style="margin-bottom: 28px;"><a href="mailto:patrizio.caringi@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">patrizio.caringi@runcapital.partners</a></p>
+      <p style="margin-bottom: 32px;"><a href="mailto:patrizio.caringi@runcapital.partners" style="color: var(--gold); font-size: 18px; text-decoration: none; font-weight: 500;">patrizio.caringi@runcapital.partners</a></p>
       <div class="bio-cta__links">
         <a href="mailto:patrizio.caringi@runcapital.partners" class="btn btn--primary">Send Email</a>
         <a href="https://www.linkedin.com/in/patrizio-caringi-69232762" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn Profile</a>
@@ -142,6 +419,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top: none; padding-top: 0;">
@@ -153,10 +431,27 @@
   <script>
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => { links.classList.toggle('nav__links--open'); toggle.classList.toggle('nav__toggle--active'); });
-    links.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { links.classList.remove('nav__links--open'); toggle.classList.remove('nav__toggle--active'); }); });
-    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.08 });
-    document.querySelectorAll('.timeline-item').forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.timeline-item').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>
