@@ -293,7 +293,7 @@
       <!-- Expand Button -->
       <div class="team-expand">
         <button class="team-expand__btn" id="teamExpandBtn" aria-expanded="false" aria-controls="teamFull">
-          Meet the Full Team (16 more)
+          Meet the Full Team
         </button>
       </div>
 
@@ -743,7 +743,7 @@
         const isExpanded = teamFull.classList.toggle('team-grid--visible');
         teamBtn.classList.toggle('team-expand__btn--active', isExpanded);
         teamBtn.setAttribute('aria-expanded', isExpanded);
-        teamBtn.textContent = isExpanded ? 'Show Less' : 'Meet the Full Team (16 more)';
+        teamBtn.textContent = isExpanded ? 'Show Less' : 'Meet the Full Team';
         if (isExpanded) {
           teamFull.querySelectorAll('.team-card').forEach(el => {
             el.classList.add('fade-in');
