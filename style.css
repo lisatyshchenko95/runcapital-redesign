@@ -474,6 +474,18 @@ body {
   100% { transform: translateX(-50%); }
 }
 
+.trust-bar__logo img {
+  height: 32px;
+  width: auto;
+  filter: brightness(0) invert(1);
+  opacity: 0.7;
+  transition: opacity 0.3s;
+}
+
+.trust-bar__logo img:hover {
+  opacity: 1;
+}
+
 .trust-bar__logo {
   font-family: var(--font-serif);
   font-size: 18px;
@@ -628,8 +640,8 @@ body {
 }
 
 .service-card {
-  background: linear-gradient(135deg, var(--dark-2), var(--dark-3));
-  border: 1px solid rgba(201,168,76,0.06);
+  background: linear-gradient(160deg, rgba(201,168,76,0.08) 0%, rgba(201,168,76,0.03) 30%, var(--dark-3) 100%);
+  border: 1px solid rgba(201,168,76,0.15);
   border-radius: 16px;
   padding: 36px;
   transition: all 0.4s var(--ease-out-expo);
@@ -645,14 +657,25 @@ body {
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
-  opacity: 0;
+  opacity: 0.4;
   transition: opacity 0.4s;
 }
 
+.service-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at top left, rgba(201,168,76,0.06) 0%, transparent 50%);
+  pointer-events: none;
+}
+
 .service-card:hover {
-  border-color: rgba(201,168,76,0.2);
+  border-color: rgba(201,168,76,0.3);
   transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(201,168,76,0.05);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 40px rgba(201,168,76,0.08);
 }
 
 .service-card:hover::before {
