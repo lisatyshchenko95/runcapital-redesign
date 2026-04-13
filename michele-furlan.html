@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michele Furlan | Senior Advisor | Run Capital Partners</title>
-  <meta name="description" content="Michele Furlan, Senior Advisor at Run Capital Partners.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <meta name="description" content="Michele Furlan, Senior Advisor at Run Capital Partners. Chartered accountant and legal auditor with over 30 years in corporate finance, M&amp;A, and business advisory.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x25C6;</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -73,6 +73,135 @@
       max-width: 600px;
       margin: 0 auto;
     }
+    .bio-intro__meta {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding-top: 28px;
+      margin-top: 32px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+    .bio-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .bio-meta-item__label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .bio-meta-item__value {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1));
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: 2px solid var(--gold);
+      z-index: 1;
+    }
+    .timeline-item--current::before {
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+    .timeline-item__date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .timeline-item__role {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+    }
+    .timeline-item__company {
+      font-size: 14px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .timeline-item__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    /* Credentials */
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      gap: 20px;
+      max-width: 560px;
+      margin: 0 auto;
+    }
+    .cred-card {
+      padding: 32px;
+      background: var(--cream);
+      border-radius: 14px;
+      border: 1px solid rgba(201,168,76,0.08);
+      transition: all 0.3s;
+    }
+    .cred-card:hover {
+      border-color: var(--gold);
+    }
+    .cred-card__year {
+      font-size: 12px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+    .cred-card__title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+    .cred-card__detail {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* CTA */
     .bio-cta {
       text-align: center;
       padding: 80px 0;
@@ -98,16 +227,23 @@
       justify-content: center;
       gap: 16px;
     }
+
+    /* Responsive */
     @media (max-width: 768px) {
       .bio-hero__content { padding: 100px 20px 60px; }
       .bio-intro__name { font-size: 32px; }
       .bio-intro__summary { font-size: 15px; }
+      .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
+      .bio-meta-item { flex: 0 0 calc(50% - 10px); }
       .bio-cta__title { font-size: 26px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
+      .timeline { padding-left: 36px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
@@ -127,6 +263,7 @@
     </div>
   </nav>
 
+  <!-- BIO HERO -->
   <section class="bio-hero">
     <div class="bio-hero__bg"></div>
     <div class="bio-hero__content">
@@ -134,15 +271,69 @@
         <p class="bio-intro__eyebrow">Senior Advisor</p>
         <h1 class="bio-intro__name">Michele Furlan</h1>
         <p class="bio-intro__title">Run Capital Partners</p>
-        <p class="bio-intro__summary">Senior advisor bringing strategic insight and institutional expertise to Run Capital Partners' client relationships.</p>
+        <p class="bio-intro__summary">Michele Furlan is a Senior Advisor at Run Capital Partners and a long-standing chartered accountant and legal auditor with over 30 years in corporate finance, M&amp;A, and business-advisory work for Italian mid-sized industrial companies. He brings deep experience in taxation, corporate restructuring, and cross-border advisory, supporting the group's governance and financial-structuring services.</p>
+        <div class="bio-intro__meta">
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Based in</span>
+            <span class="bio-meta-item__value">Treviso, Italy</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Experience</span>
+            <span class="bio-meta-item__value">30+ Years</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Focus</span>
+            <span class="bio-meta-item__value">Corporate Finance &amp; M&amp;A</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- CAREER TIMELINE -->
+  <section class="section section--light" id="career">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Career</p>
+          <h2 class="section__title">Three decades of corporate finance and business advisory.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">Michele has spent his entire career serving Italian and international businesses with tax, corporate, and legal-advisory services, building a practice that is trusted by mid-sized industrial companies across the region.</p>
+        </div>
+        <div class="split__right">
+          <div class="timeline">
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">March 1993 - Present</p>
+              <h3 class="timeline-item__role">Senior Partner</h3>
+              <p class="timeline-item__company">Zaccariotto e Furlan Business Advisory Group</p>
+              <p class="timeline-item__desc">Leads a Treviso-based business-advisory firm that supports Italian and international companies with tax, corporate, and legal-advisory services, including M&amp;A and corporate-finance mandates.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="section section--cream" id="credentials">
+    <div class="container">
+      <p class="section__eyebrow">Credentials</p>
+      <h2 class="section__title">Professional certifications and standing.</h2>
+
+      <div class="cred-grid">
+        <div class="cred-card">
+          <p class="cred-card__year">Professional Designation</p>
+          <h3 class="cred-card__title">Chartered Accountant &amp; Legal Auditor</h3>
+          <p class="cred-card__detail">Registered member of the Italian professional accounting body (Ordine dei Dottori Commercialisti e degli Esperti Contabili). Qualified to provide statutory audit, corporate-finance advisory, tax planning, and legal-audit services across Italy.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section class="section section--dark">
     <div class="container bio-cta">
-      <h2 class="bio-cta__title">Get in touch.</h2>
-      <p class="bio-cta__sub">For inquiries related to strategic advisory services, feel free to reach out directly.</p>
+      <h2 class="bio-cta__title">Get in touch directly.</h2>
+      <p class="bio-cta__sub">For inquiries related to corporate finance, taxation, M&amp;A advisory, or business restructuring services.</p>
       <p style="margin-bottom: 28px;"><a href="mailto:michele.furlan@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">michele.furlan@runcapital.partners</a></p>
       <div class="bio-cta__links">
         <a href="mailto:michele.furlan@runcapital.partners" class="btn btn--primary">Send Email</a>
@@ -152,6 +343,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top: none; padding-top: 0;">
@@ -161,6 +353,7 @@
   </footer>
 
   <script>
+    // Mobile toggle
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
     toggle.addEventListener('click', () => {
@@ -172,6 +365,18 @@
         links.classList.remove('nav__links--open');
         toggle.classList.remove('nav__toggle--active');
       });
+    });
+
+    // Fade-in observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.timeline-item, .cred-card').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
     });
   </script>
 </body>

@@ -4,39 +4,214 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enrico De Angelis | Business Development Manager | Run Capital Partners</title>
-  <meta name="description" content="Enrico De Angelis, Business Development Manager at Run Capital Partners.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <meta name="description" content="Enrico De Angelis, Business Development Manager at Run Capital Partners. Luxembourg-based fund distribution and asset-management specialist.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    .bio-hero { position: relative; min-height: 70vh; display: flex; align-items: center; background: var(--dark); overflow: hidden; }
-    .bio-hero__bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 60%), linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%); }
-    .bio-hero__content { position: relative; z-index: 1; max-width: 800px; margin: 0 auto; padding: 140px 24px 80px; text-align: center; }
-    .bio-intro__eyebrow { color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; display: inline-flex; align-items: center; gap: 12px; }
-    .bio-intro__eyebrow::before, .bio-intro__eyebrow::after { content: ''; width: 32px; height: 1px; background: var(--gold); }
-    .bio-intro__name { font-family: var(--font-serif); font-size: clamp(36px, 5vw, 52px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 12px; }
-    .bio-intro__title { font-size: 18px; color: var(--gold); font-weight: 500; margin-bottom: 32px; }
-    .bio-intro__summary { font-size: 17px; color: rgba(255,255,255,0.55); line-height: 1.8; max-width: 600px; margin: 0 auto; }
-    .bio-cta { text-align: center; padding: 80px 0; }
-    .bio-cta__title { font-family: var(--font-serif); font-size: 32px; font-weight: 600; color: var(--white); margin-bottom: 16px; }
-    .bio-cta__sub { font-size: 16px; color: rgba(255,255,255,0.45); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
-    .bio-cta__links { display: flex; justify-content: center; gap: 16px; }
+    .bio-hero {
+      position: relative;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      background: var(--dark);
+      overflow: hidden;
+    }
+    .bio-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 50% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%);
+    }
+    .bio-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 140px 24px 80px;
+      text-align: center;
+    }
+    .bio-intro__eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .bio-intro__eyebrow::before,
+    .bio-intro__eyebrow::after {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .bio-intro__name {
+      font-family: var(--font-serif);
+      font-size: clamp(36px, 5vw, 52px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+    .bio-intro__title {
+      font-size: 18px;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 32px;
+    }
+    .bio-intro__summary {
+      font-size: 17px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+      max-width: 620px;
+      margin: 0 auto 40px;
+    }
+    .bio-intro__meta {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+    .bio-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .bio-meta-item__label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .bio-meta-item__value {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1));
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: 2px solid var(--gold);
+      z-index: 1;
+    }
+    .timeline-item--current::before {
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+    .timeline-item__date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .timeline-item__role {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+    }
+    .timeline-item__company {
+      font-size: 14px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .timeline-item__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    /* CTA */
+    .bio-cta {
+      text-align: center;
+      padding: 80px 0;
+    }
+    .bio-cta__title {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+    .bio-cta__sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+    .bio-cta__links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
     @media (max-width: 768px) {
       .bio-hero__content { padding: 100px 20px 60px; }
       .bio-intro__name { font-size: 32px; }
       .bio-intro__summary { font-size: 15px; }
-      .bio-cta__title { font-size: 26px; }
+      .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
+      .bio-meta-item { flex: 0 0 calc(50% - 10px); }
+      .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
+      .timeline { padding-left: 36px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"></a>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <a href="index.html" class="nav__logo">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img">
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
       <ul class="nav__links" id="navLinks">
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#services">Services</a></li>
@@ -47,6 +222,8 @@
       </ul>
     </div>
   </nav>
+
+  <!-- BIO HERO -->
   <section class="bio-hero">
     <div class="bio-hero__bg"></div>
     <div class="bio-hero__content">
@@ -54,15 +231,96 @@
         <p class="bio-intro__eyebrow">Business Development Manager</p>
         <h1 class="bio-intro__name">Enrico De Angelis</h1>
         <p class="bio-intro__title">Run Capital Partners</p>
-        <p class="bio-intro__summary">Based in Luxembourg, Enrico drives client acquisition and partnership development across the group. He focuses on connecting Southern European enterprises with international capital markets and investment opportunities, bridging the gap between local business excellence and global financial infrastructure.</p>
+        <p class="bio-intro__summary">Enrico De Angelis is a Business Development Manager at Run Capital Partners, focused on expanding the firm's institutional and private-client relationships in financial engineering and alternative-investment solutions. He brings over a decade of experience in fund distribution, asset-management sales, and client-coverage roles, primarily within Luxembourg's fund and asset-management ecosystem.</p>
+        <div class="bio-intro__meta">
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Location</span>
+            <span class="bio-meta-item__value">Luxembourg</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Experience</span>
+            <span class="bio-meta-item__value">9+ Years</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Specialisation</span>
+            <span class="bio-meta-item__value">Fund Distribution &amp; BD</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- CAREER TIMELINE -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Career</p>
+          <h2 class="section__title">Building institutional relationships across Luxembourg's fund industry.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">From portfolio management to senior business development, Enrico has cultivated deep expertise in fund distribution and client coverage for some of Luxembourg's most prominent asset-management platforms.</p>
+        </div>
+        <div class="split__right">
+          <div class="timeline">
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">April 2025 &mdash; Present</p>
+              <h3 class="timeline-item__role">Director</h3>
+              <p class="timeline-item__company">Run AM Sarl (Run Capital Partners)</p>
+              <p class="timeline-item__desc">Serves as a director for Run AM Sarl, supporting the group's alternative-investment fund and asset-management activities from Luxembourg.</p>
+            </div>
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">September 2025 &mdash; Present</p>
+              <h3 class="timeline-item__role">Director</h3>
+              <p class="timeline-item__company">Finexia Capital Sarl</p>
+              <p class="timeline-item__desc">Holds a director role at this Luxembourg-based entity, with ongoing client-development and structuring work in the fund space.</p>
+            </div>
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">January 2026 &mdash; Present</p>
+              <h3 class="timeline-item__role">Director</h3>
+              <p class="timeline-item__company">I.A.R. Art Resources Ltd &mdash; "The Dali Universe"</p>
+              <p class="timeline-item__desc">Board member of a Luxembourg-registered art and cultural-asset company.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">October 2024 &mdash; April 2025</p>
+              <h3 class="timeline-item__role">Senior Business Development Manager</h3>
+              <p class="timeline-item__company">Funds365</p>
+              <p class="timeline-item__desc">Led business-development efforts for a fund-distribution and asset-management infrastructure platform.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">September 2022 &mdash; October 2024</p>
+              <h3 class="timeline-item__role">Senior Business Developer</h3>
+              <p class="timeline-item__company">Funds Avenue S.A.</p>
+              <p class="timeline-item__desc">Focused on expanding distribution and client relationships for a Luxembourg-based fund and asset-management platform.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">July 2021 &mdash; September 2022</p>
+              <h3 class="timeline-item__role">Vice President, Business Development</h3>
+              <p class="timeline-item__company">Apex Group Ltd</p>
+              <p class="timeline-item__desc">Represented Apex's fund-services arm in London, selling administration, custody, and compliance-related services to fund managers.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">August 2019 &mdash; August 2021</p>
+              <h3 class="timeline-item__role">Relationship Manager / Business Development</h3>
+              <p class="timeline-item__company">Lemanik Asset Management S.A.</p>
+              <p class="timeline-item__desc">Covered institutional and private-client relationships for a Luxembourg-based asset manager, driving AUM and mandate growth.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">August 2017 &mdash; July 2019</p>
+              <h3 class="timeline-item__role">Portfolio Management</h3>
+              <p class="timeline-item__company">ZEUS Asset Management SA</p>
+              <p class="timeline-item__desc">Worked in portfolio-management roles, supporting investment-strategy execution and client reporting.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section class="section section--dark">
     <div class="container bio-cta">
-      <h2 class="bio-cta__title">Get in touch.</h2>
-      <p class="bio-cta__sub">For inquiries related to business development and partnership inquiries, feel free to reach out directly.</p>
-      <p style="margin-bottom: 28px;"><a href="mailto:enrico.deangelis@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">enrico.deangelis@runcapital.partners</a></p>
+      <h2 class="bio-cta__title">Get in touch directly.</h2>
+      <p class="bio-cta__sub">For fund distribution, institutional relationships, and alternative-investment business development in Luxembourg and beyond.</p>
+      <p style="margin-bottom: 32px;"><a href="mailto:enrico.deangelis@runcapital.partners" style="color: var(--gold); font-size: 18px; text-decoration: none; font-weight: 500;">enrico.deangelis@runcapital.partners</a></p>
       <div class="bio-cta__links">
         <a href="mailto:enrico.deangelis@runcapital.partners" class="btn btn--primary">Send Email</a>
         <a href="https://www.linkedin.com/in/enrico-de-angelis-173042126" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn Profile</a>
@@ -70,6 +328,8 @@
       </div>
     </div>
   </section>
+
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top: none; padding-top: 0;">
@@ -77,11 +337,31 @@
       </div>
     </div>
   </footer>
+
   <script>
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => { links.classList.toggle('nav__links--open'); toggle.classList.toggle('nav__toggle--active'); });
-    links.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { links.classList.remove('nav__links--open'); toggle.classList.remove('nav__toggle--active'); }); });
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.timeline-item').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
   </script>
 </body>
 </html>

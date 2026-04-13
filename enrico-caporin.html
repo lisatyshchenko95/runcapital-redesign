@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Enrico Caporin | Senior Advisor | Run Capital Partners</title>
-  <meta name="description" content="Enrico Caporin, Senior Advisor at Run Capital Partners.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <meta name="description" content="Enrico Caporin, Senior Advisor at Run Capital Partners and Co-Founder of 3DOTS Capital Advisory. Over 20 years in capital markets, IPOs, and financial consulting.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x25C6;</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -73,6 +73,97 @@
       max-width: 600px;
       margin: 0 auto;
     }
+    .bio-intro__meta {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding-top: 28px;
+      margin-top: 32px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+    .bio-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .bio-meta-item__label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .bio-meta-item__value {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1));
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: 2px solid var(--gold);
+      z-index: 1;
+    }
+    .timeline-item--current::before {
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+    .timeline-item__date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .timeline-item__role {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+    }
+    .timeline-item__company {
+      font-size: 14px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .timeline-item__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    /* CTA */
     .bio-cta {
       text-align: center;
       padding: 80px 0;
@@ -98,16 +189,23 @@
       justify-content: center;
       gap: 16px;
     }
+
+    /* Responsive */
     @media (max-width: 768px) {
       .bio-hero__content { padding: 100px 20px 60px; }
       .bio-intro__name { font-size: 32px; }
       .bio-intro__summary { font-size: 15px; }
+      .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
+      .bio-meta-item { flex: 0 0 calc(50% - 10px); }
       .bio-cta__title { font-size: 26px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
+      .timeline { padding-left: 36px; }
     }
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
@@ -127,6 +225,7 @@
     </div>
   </nav>
 
+  <!-- BIO HERO -->
   <section class="bio-hero">
     <div class="bio-hero__bg"></div>
     <div class="bio-hero__content">
@@ -134,15 +233,83 @@
         <p class="bio-intro__eyebrow">Senior Advisor</p>
         <h1 class="bio-intro__name">Enrico Caporin</h1>
         <p class="bio-intro__title">Run Capital Partners</p>
-        <p class="bio-intro__summary">Over 20 years of experience in the financial sector and a strong aptitude for international relations. Throughout his career, Enrico has expressed profound entrepreneurial resourcefulness and a consistent understanding of customer needs, making him a trusted advisor within the Run Capital Partners network.</p>
+        <p class="bio-intro__summary">Enrico Caporin is a Senior Advisor at Run Capital Partners and a co-founder of 3DOTS Capital Advisory, where he focuses on capital markets, IPOs, and financial-consulting services. With over 20 years in the financial sector, he contributes expertise in advisory for listed and pre-IPO companies, M&amp;A, and cross-border capital allocation.</p>
+        <div class="bio-intro__meta">
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Based in</span>
+            <span class="bio-meta-item__value">Italy</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Experience</span>
+            <span class="bio-meta-item__value">20+ Years</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Focus</span>
+            <span class="bio-meta-item__value">Capital Markets &amp; IPOs</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- CAREER TIMELINE -->
+  <section class="section section--light" id="career">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Career</p>
+          <h2 class="section__title">Two decades bridging capital markets and corporate advisory.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">From institutional management roles at Generali to co-founding independent advisory firms and fund vehicles, Enrico has built a career defined by entrepreneurial initiative within the regulated financial sector.</p>
+        </div>
+        <div class="split__right">
+          <div class="timeline">
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">2023 - Present</p>
+              <h3 class="timeline-item__role">Shareholder &amp; Senior Advisor</h3>
+              <p class="timeline-item__company">Run Capital Partners Group</p>
+              <p class="timeline-item__desc">Joined the Run Capital Partners group as a shareholder and senior advisor, linking capital-markets expertise with alternative-investment and securitization structures.</p>
+            </div>
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">2020s - Present</p>
+              <h3 class="timeline-item__role">Co-Founder &amp; Managing Director</h3>
+              <p class="timeline-item__company">3DOTS Capital Advisory (EU)</p>
+              <p class="timeline-item__desc">Co-founded and leads 3DOTS' European operations, advising on IPOs, secondary offerings, and capital-markets strategies for growth-oriented companies.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">Prior to 2023</p>
+              <h3 class="timeline-item__role">Partner &amp; Senior Consultant</h3>
+              <p class="timeline-item__company">Performando</p>
+              <p class="timeline-item__desc">Provides senior-level consulting services in corporate finance and capital-markets advisory for mid-sized companies.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">Earlier Career</p>
+              <h3 class="timeline-item__role">Co-Founder</h3>
+              <p class="timeline-item__company">Archeide SCF srl</p>
+              <p class="timeline-item__desc">Co-founded one of the first Italian independent financial-advisory firms, providing corporate-finance and M&amp;A advisory to SMEs.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">Active until 2020</p>
+              <h3 class="timeline-item__role">Co-Founder</h3>
+              <p class="timeline-item__company">Archeide Lux</p>
+              <p class="timeline-item__desc">Helped found and run a Luxembourg-based fund-management company, adding experience in regulated-fund structures and cross-border investment vehicles.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">1990s - 2006</p>
+              <h3 class="timeline-item__role">Various Management Roles</h3>
+              <p class="timeline-item__company">Generali Bank / Altinia SIM (Generali Group)</p>
+              <p class="timeline-item__desc">Progressed through management roles in a financial-consulting division that later became Generali Bank, gaining experience in corporate-finance advisory and structured solutions.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section class="section section--dark">
     <div class="container bio-cta">
-      <h2 class="bio-cta__title">Get in touch.</h2>
-      <p class="bio-cta__sub">For inquiries related to advisory services and international relations, feel free to reach out directly.</p>
+      <h2 class="bio-cta__title">Get in touch directly.</h2>
+      <p class="bio-cta__sub">For inquiries related to capital markets advisory, IPO strategies, or cross-border investment structuring.</p>
       <p style="margin-bottom: 28px;"><a href="mailto:enrico.caporin@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">enrico.caporin@runcapital.partners</a></p>
       <div class="bio-cta__links">
         <a href="mailto:enrico.caporin@runcapital.partners" class="btn btn--primary">Send Email</a>
@@ -152,6 +319,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top: none; padding-top: 0;">
@@ -161,6 +329,7 @@
   </footer>
 
   <script>
+    // Mobile toggle
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
     toggle.addEventListener('click', () => {
@@ -172,6 +341,18 @@
         links.classList.remove('nav__links--open');
         toggle.classList.remove('nav__toggle--active');
       });
+    });
+
+    // Fade-in observer
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.timeline-item').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
     });
   </script>
 </body>

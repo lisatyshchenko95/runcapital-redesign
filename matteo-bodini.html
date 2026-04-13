@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matteo Bodini | Head of Legal Affairs | Run Capital Partners</title>
-  <meta name="description" content="Matteo Bodini, Head of Legal Affairs at Run Capital Partners.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <meta name="description" content="Matteo Bodini, Head of Legal Affairs at Run Capital Partners. London-based legal and compliance specialist across fintech, capital markets, and asset management.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9670;</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -13,7 +13,7 @@
   <style>
     .bio-hero {
       position: relative;
-      min-height: 70vh;
+      min-height: 80vh;
       display: flex;
       align-items: center;
       background: var(--dark);
@@ -70,24 +70,151 @@
       font-size: 17px;
       color: rgba(255,255,255,0.55);
       line-height: 1.8;
-      max-width: 600px;
-      margin: 0 auto;
+      max-width: 620px;
+      margin: 0 auto 40px;
     }
+    .bio-intro__meta {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+    .bio-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .bio-meta-item__label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+    .bio-meta-item__value {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    /* Timeline */
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1));
+    }
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: 2px solid var(--gold);
+      z-index: 1;
+    }
+    .timeline-item--current::before {
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+    .timeline-item__date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    .timeline-item__role {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+    }
+    .timeline-item__company {
+      font-size: 14px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .timeline-item__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    /* Credentials grid */
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+    .cred-card {
+      padding: 32px;
+      background: var(--cream);
+      border-radius: 14px;
+      border: 1px solid rgba(201,168,76,0.08);
+      transition: all 0.3s;
+    }
+    .cred-card:hover {
+      border-color: var(--gold);
+    }
+    .cred-card__label {
+      font-size: 12px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .cred-card__title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+    .cred-card__detail {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.6;
+    }
+
+    /* CTA */
     .bio-cta {
       text-align: center;
       padding: 80px 0;
     }
     .bio-cta__title {
       font-family: var(--font-serif);
-      font-size: 32px;
+      font-size: 36px;
       font-weight: 600;
       color: var(--white);
       margin-bottom: 16px;
     }
     .bio-cta__sub {
-      font-size: 16px;
+      font-size: 17px;
       color: rgba(255,255,255,0.45);
-      margin-bottom: 32px;
+      margin-bottom: 36px;
       max-width: 480px;
       margin-left: auto;
       margin-right: auto;
@@ -98,16 +225,23 @@
       justify-content: center;
       gap: 16px;
     }
+
     @media (max-width: 768px) {
       .bio-hero__content { padding: 100px 20px 60px; }
       .bio-intro__name { font-size: 32px; }
       .bio-intro__summary { font-size: 15px; }
-      .bio-cta__title { font-size: 26px; }
+      .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
+      .bio-meta-item { flex: 0 0 calc(50% - 10px); }
+      .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
+      .timeline { padding-left: 36px; }
+      .cred-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
 <body>
+
+  <!-- NAV -->
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
@@ -127,6 +261,7 @@
     </div>
   </nav>
 
+  <!-- BIO HERO -->
   <section class="bio-hero">
     <div class="bio-hero__bg"></div>
     <div class="bio-hero__content">
@@ -134,16 +269,99 @@
         <p class="bio-intro__eyebrow">Head of Legal Affairs</p>
         <h1 class="bio-intro__name">Matteo Bodini</h1>
         <p class="bio-intro__title">Run Capital Partners</p>
-        <p class="bio-intro__summary">An experienced manager and professional advisor with both legal and financial expertise. Based in London, Matteo leads legal structuring for fund formation, securitization vehicles, and cross-border regulatory compliance across multiple jurisdictions within the Run Capital Partners group.</p>
+        <p class="bio-intro__summary">Matteo Bodini is Head of Legal Affairs at Run Capital Partners, where he oversees legal and compliance frameworks for the group's alternative-investment and securitization structures. Based in London, he combines board-level and legal-compliance roles across fintech, capital markets, and asset-management platforms.</p>
+        <div class="bio-intro__meta">
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Location</span>
+            <span class="bio-meta-item__value">London</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Experience</span>
+            <span class="bio-meta-item__value">12+ Years</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Specialisation</span>
+            <span class="bio-meta-item__value">Legal &amp; Compliance</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
+  <!-- CAREER TIMELINE -->
+  <section class="section section--light">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Career</p>
+          <h2 class="section__title">A decade of legal leadership across fintech and capital markets.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">From wealth advisory to in-house legal counsel for technology-driven financial platforms, Matteo has built a practice defined by governance rigour and regulatory depth.</p>
+        </div>
+        <div class="split__right">
+          <div class="timeline">
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">April 2025 &mdash; Present</p>
+              <h3 class="timeline-item__role">Head of Legal Affairs</h3>
+              <p class="timeline-item__company">Run Capital Partners</p>
+              <p class="timeline-item__desc">Responsible for legal and regulatory aspects of alternative-investment funds and securitization vehicles, working alongside the group's senior leadership.</p>
+            </div>
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">September 2017 &mdash; Present</p>
+              <h3 class="timeline-item__role">CEO &amp; Founder</h3>
+              <p class="timeline-item__company">B2Business Group</p>
+              <p class="timeline-item__desc">Leads a London-based B2B and technology-focused group, handling strategy, governance, and commercial expansion across multiple sectors.</p>
+            </div>
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">July 2019 &mdash; Present</p>
+              <h3 class="timeline-item__role">Head of Legal and Compliance</h3>
+              <p class="timeline-item__company">ArtSquare.io</p>
+              <p class="timeline-item__desc">In-house legal and compliance lead for an art-focused financial-technology platform, covering governance, KYC/AML, and product structuring.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">September 2017 &mdash; January 2024</p>
+              <h3 class="timeline-item__role">Head of Legal and Compliance</h3>
+              <p class="timeline-item__company">Buzzoole Holdings Ltd</p>
+              <p class="timeline-item__desc">Led legal and compliance at a social-media and influencer-marketing company, managing regulatory, IP, and contractual matters.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">August 2014 &mdash; December 2017</p>
+              <h3 class="timeline-item__role">Financial Advisor</h3>
+              <p class="timeline-item__company">The Family Officer Group</p>
+              <p class="timeline-item__desc">Advised private clients and families on investment and wealth-structuring topics.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDENTIALS -->
+  <section class="section section--cream">
+    <div class="container">
+      <p class="section__eyebrow">Credentials</p>
+      <h2 class="section__title">Education and professional standing.</h2>
+
+      <div class="cred-grid">
+        <div class="cred-card">
+          <p class="cred-card__label">Education</p>
+          <h3 class="cred-card__title">University of Essex Online</h3>
+          <p class="cred-card__detail">Academic foundation in law and business, supporting a career built on legal-compliance expertise across regulated industries.</p>
+        </div>
+        <div class="cred-card">
+          <p class="cred-card__label">Corporate Directorship</p>
+          <h3 class="cred-card__title">Run Capital Partners Ltd</h3>
+          <p class="cred-card__detail">Director of Run Capital Partners Ltd, as registered with Companies House, United Kingdom.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section class="section section--dark">
     <div class="container bio-cta">
-      <h2 class="bio-cta__title">Get in touch.</h2>
-      <p class="bio-cta__sub">For inquiries related to legal affairs and regulatory compliance, feel free to reach out directly.</p>
-      <p style="margin-bottom: 28px;"><a href="mailto:matteo.bodini@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">matteo.bodini@runcapital.partners</a></p>
+      <h2 class="bio-cta__title">Get in touch directly.</h2>
+      <p class="bio-cta__sub">For legal, compliance, or governance matters related to alternative investments and securitization structures.</p>
+      <p style="margin-bottom: 32px;"><a href="mailto:matteo.bodini@runcapital.partners" style="color: var(--gold); font-size: 18px; text-decoration: none; font-weight: 500;">matteo.bodini@runcapital.partners</a></p>
       <div class="bio-cta__links">
         <a href="mailto:matteo.bodini@runcapital.partners" class="btn btn--primary">Send Email</a>
         <a href="https://www.linkedin.com/in/matteo-bodini-a6bb18a7" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn Profile</a>
@@ -152,6 +370,7 @@
     </div>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top: none; padding-top: 0;">
@@ -172,6 +391,17 @@
         links.classList.remove('nav__links--open');
         toggle.classList.remove('nav__toggle--active');
       });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.timeline-item, .cred-card').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
     });
   </script>
 </body>
