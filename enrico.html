@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giordano Tomasini | General Counsel | Run Capital Partners</title>
-  <meta name="description" content="Giordano Tomasini, General Counsel & Head of Deal Coordination at Run AM. Cambridge LL.M. graduate. Luxembourg-based alternative investment fund specialist.">
+  <title>Enrico Fiore | Partner | Run Capital Partners</title>
+  <meta name="description" content="Enrico Fiore, Partner at Run Capital Partners. Serial entrepreneur, angel investor, and venture strategist with 30+ years of experience across Europe, USA, and Israel.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -40,9 +40,7 @@
       align-items: center;
     }
 
-    .bio-photo {
-      position: relative;
-    }
+    .bio-photo { position: relative; }
 
     .bio-photo__frame {
       width: 320px;
@@ -119,13 +117,6 @@
       font-weight: 600;
       color: var(--white);
       line-height: 1.1;
-      margin-bottom: 4px;
-    }
-
-    .bio-intro__degree {
-      font-size: 15px;
-      color: rgba(255,255,255,0.4);
-      font-style: italic;
       margin-bottom: 12px;
     }
 
@@ -170,7 +161,6 @@
       font-weight: 500;
     }
 
-    /* Timeline */
     .timeline {
       position: relative;
       padding-left: 48px;
@@ -191,9 +181,7 @@
       margin-bottom: 48px;
     }
 
-    .timeline-item:last-child {
-      margin-bottom: 0;
-    }
+    .timeline-item:last-child { margin-bottom: 0; }
 
     .timeline-item::before {
       content: '';
@@ -244,7 +232,6 @@
       max-width: 480px;
     }
 
-    /* Expertise grid */
     .expertise-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -277,9 +264,7 @@
       transform: translateY(-4px);
     }
 
-    .expertise-card:hover::before {
-      height: 100%;
-    }
+    .expertise-card:hover::before { height: 100%; }
 
     .expertise-card__title {
       font-family: var(--font-serif);
@@ -295,70 +280,6 @@
       line-height: 1.7;
     }
 
-    /* Education cards */
-    .edu-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 20px;
-    }
-
-    .edu-card {
-      padding: 32px;
-      background: var(--cream);
-      border-radius: 14px;
-      border: 1px solid rgba(201,168,76,0.08);
-      transition: all 0.3s;
-    }
-
-    .edu-card:hover {
-      border-color: var(--gold);
-    }
-
-    .edu-card__year {
-      font-size: 12px;
-      color: var(--gold-dark);
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      margin-bottom: 8px;
-    }
-
-    .edu-card__title {
-      font-family: var(--font-serif);
-      font-size: 20px;
-      font-weight: 600;
-      margin-bottom: 6px;
-      color: var(--dark);
-    }
-
-    .edu-card__detail {
-      font-size: 14px;
-      color: var(--gray-600);
-      line-height: 1.6;
-    }
-
-    /* Quote */
-    .bio-quote {
-      padding: 64px 0;
-      text-align: center;
-    }
-
-    .bio-quote__text {
-      font-family: var(--font-serif);
-      font-style: italic;
-      font-size: clamp(22px, 3vw, 32px);
-      color: rgba(255,255,255,0.7);
-      line-height: 1.5;
-      max-width: 720px;
-      margin: 0 auto 24px;
-    }
-
-    .bio-quote__attr {
-      font-size: 14px;
-      color: var(--gold);
-      font-weight: 600;
-    }
-
-    /* Community */
     .community-grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
@@ -405,7 +326,27 @@
       line-height: 1.6;
     }
 
-    /* CTA */
+    .bio-quote {
+      padding: 64px 0;
+      text-align: center;
+    }
+
+    .bio-quote__text {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(22px, 3vw, 32px);
+      color: rgba(255,255,255,0.7);
+      line-height: 1.5;
+      max-width: 720px;
+      margin: 0 auto 24px;
+    }
+
+    .bio-quote__attr {
+      font-size: 14px;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
     .bio-cta {
       text-align: center;
       padding: 80px 0;
@@ -442,30 +383,14 @@
         padding: 100px 20px 60px;
       }
 
-      .bio-photo__frame {
-        width: 240px;
-        height: 300px;
-        margin: 0 auto;
-      }
-
+      .bio-photo__frame { width: 240px; height: 300px; margin: 0 auto; }
       .bio-photo { text-align: center; }
       .bio-photo__accent, .bio-photo__accent-2 { display: none; }
       .bio-intro__name { font-size: 36px; }
       .bio-intro__summary { font-size: 16px; }
-
-      .bio-intro__meta {
-        flex-wrap: wrap;
-        gap: 20px;
-      }
-
+      .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
       .bio-meta-item { flex: 0 0 calc(50% - 10px); }
-
-      .expertise-grid,
-      .edu-grid,
-      .community-grid {
-        grid-template-columns: 1fr;
-      }
-
+      .expertise-grid, .community-grid { grid-template-columns: 1fr; }
       .community-card { flex-direction: column; gap: 12px; }
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
@@ -501,36 +426,43 @@
     <div class="bio-hero__content">
       <div class="bio-photo">
         <div class="bio-photo__frame">
-          <img src="giordano-tomasini.png" alt="Giordano Tomasini, General Counsel at Run Capital Partners" class="bio-photo__img">
+          <img src="enrico-fiore.jpg" alt="Enrico Fiore, Partner at Run Capital Partners" class="bio-photo__img">
         </div>
         <div class="bio-photo__accent"></div>
         <div class="bio-photo__accent-2"></div>
       </div>
       <div class="bio-intro">
-        <p class="bio-intro__eyebrow">General Counsel &amp; Head of Deal Coordination</p>
-        <h1 class="bio-intro__name">Giordano Tomasini</h1>
-        <p class="bio-intro__degree">LL.M. (Cantab)</p>
-        <p class="bio-intro__title">Run AM S.à r.l.</p>
-        <p class="bio-intro__summary">A senior legal and strategic professional combining Cambridge-trained legal expertise with deep knowledge of alternative investment fund structuring. Giordano guides fund governance, ensures regulatory compliance, and coordinates complex cross-border transactions with global investors and service providers.</p>
+        <p class="bio-intro__eyebrow">Partner</p>
+        <h1 class="bio-intro__name">Enrico Fiore</h1>
+        <p class="bio-intro__title">Run Capital Partners</p>
+        <p class="bio-intro__summary">A serial entrepreneur and trusted advisor with over 30 years of experience across the corporate and startup arena. Enrico brings profound entrepreneurial resourcefulness, deep international relationships, and a relentless focus on understanding what clients actually need.</p>
         <div class="bio-intro__meta">
           <div class="bio-meta-item">
-            <span class="bio-meta-item__label">Based in</span>
-            <span class="bio-meta-item__value">Luxembourg</span>
+            <span class="bio-meta-item__label">Experience</span>
+            <span class="bio-meta-item__value">30+ Years</span>
           </div>
           <div class="bio-meta-item">
-            <span class="bio-meta-item__label">Education</span>
-            <span class="bio-meta-item__value">Cambridge LL.M.</span>
+            <span class="bio-meta-item__label">Reach</span>
+            <span class="bio-meta-item__value">EU, UK, USA, Israel</span>
           </div>
           <div class="bio-meta-item">
             <span class="bio-meta-item__label">Focus</span>
-            <span class="bio-meta-item__value">AIFM &amp; M&amp;A</span>
+            <span class="bio-meta-item__value">Strategy &amp; Ventures</span>
           </div>
           <div class="bio-meta-item">
-            <span class="bio-meta-item__label">Languages</span>
-            <span class="bio-meta-item__value">IT, EN, FR</span>
+            <span class="bio-meta-item__label">Role</span>
+            <span class="bio-meta-item__value">Founding Member</span>
           </div>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section class="section section--dark">
+    <div class="container bio-quote">
+      <p class="bio-quote__text">"Throughout my career, I have always sought to blend strategy and finance with a fervent pursuit of economic, environmental, and social sustainability."</p>
+      <p class="bio-quote__attr">Enrico Fiore</p>
     </div>
   </section>
 
@@ -538,33 +470,33 @@
   <section class="section section--dark-alt">
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light">Expertise</p>
-      <h2 class="section__title section__title--light">Where legal precision meets deal execution.</h2>
-      <p class="section__intro">Giordano operates at the intersection of law and finance, combining rigorous legal analysis with commercial pragmatism to structure deals that work for all parties.</p>
+      <h2 class="section__title section__title--light">Where entrepreneurship meets strategic investing.</h2>
+      <p class="section__intro">Enrico operates across the full spectrum of business building, from early-stage venture investment to international corporate strategy, always with a focus on sustainable value creation.</p>
 
       <div class="expertise-grid">
         <div class="expertise-card">
-          <h3 class="expertise-card__title">Alternative Investment Funds</h3>
-          <p class="expertise-card__desc">Fund structuring and governance for AIFM-regulated vehicles. Launching and managing alternative investment funds across multiple asset classes and jurisdictions from Luxembourg.</p>
+          <h3 class="expertise-card__title">Venture Capital &amp; Angel Investing</h3>
+          <p class="expertise-card__desc">Early-stage investor since Italy's first VC funds launched in 1998. That initial fund delivered 4 IPOs and a 7x return over 10 years. Continues to invest in high-potential startups across FinTech, eHealth, and clean technology.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title">M&amp;A &amp; Corporate Development</h3>
-          <p class="expertise-card__desc">End-to-end transaction coordination for cross-border mergers, acquisitions, and corporate restructurings. Working with institutional investors, family offices, and PE funds.</p>
+          <h3 class="expertise-card__title">Business Strategy &amp; Development</h3>
+          <p class="expertise-card__desc">Expert strategy analyst for business development, international expansion, and market entry. Helps portfolio companies and clients navigate growth across European and international markets.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title">Regulatory Compliance</h3>
-          <p class="expertise-card__desc">Navigating the Luxembourg regulatory framework for fund vehicles. CSSF compliance, AIFMD requirements, and cross-border distribution rules across the EU.</p>
+          <h3 class="expertise-card__title">FinTech &amp; Innovation</h3>
+          <p class="expertise-card__desc">Deep involvement in financial technology ventures. Active in cultivating innovation across multiple companies worldwide and fast-growing startups in the FinTech space.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title">Deal Coordination</h3>
-          <p class="expertise-card__desc">Managing complex multi-party transactions with global investors and service providers. Coordinating legal, financial, and operational workstreams to close.</p>
+          <h3 class="expertise-card__title">Renewable Energy &amp; Sustainability</h3>
+          <p class="expertise-card__desc">Focused on green technology and planet conservation. Investment and development across tidal renewable energy, green fashion, and industrial waste management sectors.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title">Investment Management</h3>
-          <p class="expertise-card__desc">Investment vehicle management and structuring for private equity, real estate, and alternative asset classes. Previously led vehicle management for major PE firms at CSC.</p>
+          <h3 class="expertise-card__title">eHealth &amp; MedTech</h3>
+          <p class="expertise-card__desc">Investor and strategist in healthcare technology ventures across Europe and Israel. Brings operational insight to companies transforming healthcare delivery through technology.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title">Real Estate Advisory</h3>
-          <p class="expertise-card__desc">Investment deal origination and structuring in real estate. Co-founded Fondamenta Capital, a real estate advisory firm focused on the Italian market.</p>
+          <h3 class="expertise-card__title">International Relations</h3>
+          <p class="expertise-card__desc">Strong aptitude for cross-border business relationships spanning Italy, the UK, Belgium, Israel, the USA, and Australia. Connects ecosystems that don't naturally talk to each other.</p>
         </div>
       </div>
     </div>
@@ -576,34 +508,34 @@
       <div class="split">
         <div class="split__left">
           <p class="section__eyebrow">Career</p>
-          <h2 class="section__title">From Cambridge to Luxembourg's fund industry.</h2>
-          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">Giordano's career traces a deliberate path from academic legal excellence to the practical world of alternative investment fund structuring, building expertise at each step.</p>
+          <h2 class="section__title">Three decades of building, investing, and connecting.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">From early venture capital in Italy's first funds through to founding his own strategy firm and joining Run Capital Partners as a founding member, Enrico has consistently operated at the intersection of entrepreneurship and institutional finance.</p>
         </div>
         <div class="split__right">
           <div class="timeline">
             <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">2018 - Present</p>
+              <h3 class="timeline-item__role">Partner &amp; Founding Member</h3>
+              <p class="timeline-item__company">Run Capital Partners</p>
+              <p class="timeline-item__desc">Joined as one of the founding members, bringing decades of entrepreneurial experience and international relationships to the group's strategic financial management practice.</p>
+            </div>
+            <div class="timeline-item timeline-item--current">
               <p class="timeline-item__date">Present</p>
-              <h3 class="timeline-item__role">General Counsel &amp; Head of Deal Coordination</h3>
-              <p class="timeline-item__company">Run AM S.à r.l. (Run Capital Partners Group)</p>
-              <p class="timeline-item__desc">Leads legal and strategic functions at the group's Luxembourg AIFM. Guides fund structuring and governance, ensures regulatory compliance, and coordinates complex cross-border transactions with global investors.</p>
+              <h3 class="timeline-item__role">CEO</h3>
+              <p class="timeline-item__company">TRUYOINS Ltd, Strategy &amp; Ventures</p>
+              <p class="timeline-item__desc">Leads a strategy and ventures firm operating across Italy, UK, Belgium, and Israel. Focus on investment strategy, business development, and innovation across multiple sectors.</p>
             </div>
             <div class="timeline-item">
-              <p class="timeline-item__date">Previous</p>
-              <h3 class="timeline-item__role">Senior Relationship Manager</h3>
-              <p class="timeline-item__company">CSC Luxembourg</p>
-              <p class="timeline-item__desc">Led investment vehicle management for major private equity firms. Managed complex fund structures and relationships with institutional investors across multiple jurisdictions.</p>
+              <p class="timeline-item__date">1998+</p>
+              <h3 class="timeline-item__role">Early-Stage Investor</h3>
+              <p class="timeline-item__company">Italy's First VC Funds</p>
+              <p class="timeline-item__desc">Minority investor and external advisor in Italy's pioneering venture capital funds. The first fund achieved 4 IPOs and delivered a 7x return over 10 years.</p>
             </div>
             <div class="timeline-item">
-              <p class="timeline-item__date">Co-Founder</p>
-              <h3 class="timeline-item__role">Co-Founder</h3>
-              <p class="timeline-item__company">Fondamenta Capital</p>
-              <p class="timeline-item__desc">Co-founded a real estate advisory firm focused on investment deal origination and structuring in the Italian market. Bridged legal expertise with commercial real estate.</p>
-            </div>
-            <div class="timeline-item">
-              <p class="timeline-item__date">2017</p>
-              <h3 class="timeline-item__role">LL.M. Graduate</h3>
-              <p class="timeline-item__company">University of Cambridge, Clare Hall</p>
-              <p class="timeline-item__desc">Master of Laws from Cambridge. Thesis on first demand guarantees and their development in the Italian legal framework. Foundation for cross-border legal practice.</p>
+              <p class="timeline-item__date">30+ Years</p>
+              <h3 class="timeline-item__role">Serial Entrepreneur</h3>
+              <p class="timeline-item__company">Multiple Ventures</p>
+              <p class="timeline-item__desc">Led the development of numerous successful investment ventures and projects across renewable energy, eHealth, MedTech, FinTech, green fashion, and industrial technology.</p>
             </div>
           </div>
         </div>
@@ -611,44 +543,39 @@
     </div>
   </section>
 
-  <!-- EDUCATION -->
+  <!-- COMMUNITY & RECOGNITION -->
   <section class="section section--cream">
     <div class="container">
-      <p class="section__eyebrow">Education &amp; Recognition</p>
-      <h2 class="section__title">Built on a Cambridge foundation.</h2>
-
-      <div class="edu-grid" style="grid-template-columns: 1fr;">
-        <div class="edu-card" style="display: grid; grid-template-columns: 280px 1fr; gap: 32px; align-items: center; padding: 0; overflow: hidden;">
-          <img src="cambridge.jpg" alt="University of Cambridge" style="width: 100%; height: 100%; object-fit: cover; display: block; min-height: 180px;">
-          <div style="padding: 32px 32px 32px 0;">
-            <p class="edu-card__year">2017</p>
-            <h3 class="edu-card__title">LL.M., University of Cambridge</h3>
-            <p class="edu-card__detail">Clare Hall. Master of Laws with a thesis on first demand guarantees in the Italian legal framework. One of the world's most respected postgraduate law programmes.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- COMMUNITY -->
-  <section class="section section--light">
-    <div class="container">
-      <p class="section__eyebrow">Community &amp; Leadership</p>
-      <h2 class="section__title">Active in Luxembourg's professional community.</h2>
+      <p class="section__eyebrow">Recognition &amp; Community</p>
+      <h2 class="section__title">Active across European innovation ecosystems.</h2>
 
       <div class="community-grid">
         <div class="community-card">
-          <div class="community-card__icon">C</div>
+          <div class="community-card__icon">S</div>
           <div>
-            <h3 class="community-card__title">Cambridge Society of Luxembourg</h3>
-            <p class="community-card__detail">Serves as Treasurer, maintaining ties between Cambridge alumni and the Luxembourg professional community.</p>
+            <h3 class="community-card__title">Startup Europe Awards</h3>
+            <p class="community-card__detail">Advisor to the EU for the Startup Europe Awards, organized by Finnova Brussels. Supporting the recognition of Europe's most promising startups.</p>
           </div>
         </div>
         <div class="community-card">
-          <div class="community-card__icon">I</div>
+          <div class="community-card__icon">V</div>
           <div>
-            <h3 class="community-card__title">IPN Luxembourg Chapter</h3>
-            <p class="community-card__detail">Leads the Italian Professionals Network Luxembourg chapter, fostering connections among Italian professionals and strengthening their presence in the local business environment.</p>
+            <h3 class="community-card__title">Veneto BAN</h3>
+            <p class="community-card__detail">Member of the Veneto Charter of Business Angel Network (BAN), Italy's regional angel investing community connecting capital with early-stage innovation.</p>
+          </div>
+        </div>
+        <div class="community-card">
+          <div class="community-card__icon">W</div>
+          <div>
+            <h3 class="community-card__title">World Business Angel Forum</h3>
+            <p class="community-card__detail">Connected with the WBAF global angel investing community, bridging European startups with international investor networks.</p>
+          </div>
+        </div>
+        <div class="community-card">
+          <div class="community-card__icon">Y</div>
+          <div>
+            <h3 class="community-card__title">YESS Incubation</h3>
+            <p class="community-card__detail">Business angel at the Young Entrepreneurs Startup School, mentoring the next generation of European founders and early-stage companies.</p>
           </div>
         </div>
       </div>
@@ -659,11 +586,11 @@
   <section class="section section--dark">
     <div class="container bio-cta">
       <h2 class="bio-cta__title">Get in touch directly.</h2>
-      <p class="bio-cta__sub">For fund structuring, cross-border transactions, or regulatory guidance across Luxembourg and the EU.</p>
-      <p style="margin-bottom: 32px;"><a href="mailto:giordano.tomasini@runcapital.partners" style="color: var(--gold); font-size: 18px; text-decoration: none; font-weight: 500;">giordano.tomasini@runcapital.partners</a></p>
+      <p class="bio-cta__sub">For strategic partnerships, venture opportunities, or to explore how I can support your growth.</p>
+      <p style="margin-bottom: 32px;"><a href="mailto:enrico.fiore@runcapital.partners" style="color: var(--gold); font-size: 18px; text-decoration: none; font-weight: 500;">enrico.fiore@runcapital.partners</a></p>
       <div class="bio-cta__links">
-        <a href="mailto:giordano.tomasini@runcapital.partners" class="btn btn--primary">Email Giordano</a>
-        <a href="https://www.linkedin.com/in/giordano-tomasini/" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn Profile</a>
+        <a href="mailto:enrico.fiore@runcapital.partners" class="btn btn--primary">Email Enrico</a>
+        <a href="https://www.linkedin.com/in/enricofiore/" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn Profile</a>
         <a href="index.html" class="btn btn--outline">Run Capital Partners</a>
       </div>
     </div>
@@ -698,7 +625,7 @@
       });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll('.expertise-card, .edu-card, .community-card, .timeline-item').forEach(el => {
+    document.querySelectorAll('.expertise-card, .community-card, .timeline-item').forEach(el => {
       el.classList.add('fade-in');
       observer.observe(el);
     });
