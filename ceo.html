@@ -361,6 +361,54 @@
       font-weight: 600;
     }
 
+    /* Video Section */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .video-card {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      background: var(--dark-3);
+      border: 1px solid rgba(201,168,76,0.1);
+      transition: all 0.4s var(--ease-out-expo);
+    }
+
+    .video-card:hover {
+      border-color: rgba(201,168,76,0.25);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.4);
+    }
+
+    .video-card video {
+      width: 100%;
+      display: block;
+      aspect-ratio: 9/16;
+      object-fit: cover;
+      background: var(--dark-2);
+    }
+
+    .video-card__label {
+      padding: 16px 20px;
+      background: linear-gradient(135deg, rgba(201,168,76,0.06), var(--dark-3));
+    }
+
+    .video-card__title {
+      font-family: var(--font-serif);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 4px;
+    }
+
+    .video-card__sub {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+    }
+
     /* Speaking/Media */
     .media-grid {
       display: grid;
@@ -483,6 +531,12 @@
         grid-template-columns: 1fr;
       }
 
+      .video-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 0 auto;
+      }
+
       .media-grid {
         grid-template-columns: 1fr;
       }
@@ -572,6 +626,45 @@
     <div class="container bio-quote">
       <p class="bio-quote__text">"International markets are constantly changing, evolving. The path is daily, aiming at the deepest 360-degree expertise of the entrepreneurial world."</p>
       <p class="bio-quote__attr">Luca Padovan</p>
+    </div>
+  </section>
+
+  <!-- IN HIS WORDS -->
+  <section class="section section--cream" id="videos">
+    <div class="container">
+      <p class="section__eyebrow">In His Words</p>
+      <h2 class="section__title">The vision behind Run Capital Partners.</h2>
+      <p class="section__intro" style="margin-bottom: 40px;">Luca shares the principles, ambitions, and convictions that drive the group forward.</p>
+
+      <div class="video-grid">
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="videos/luca-vision-1.mp4" type="video/mp4">
+          </video>
+          <div class="video-card__label">
+            <p class="video-card__title">Why Run Capital Partners</p>
+            <p class="video-card__sub">The founding story</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="videos/luca-vision-2.mp4" type="video/mp4">
+          </video>
+          <div class="video-card__label">
+            <p class="video-card__title">Our Approach</p>
+            <p class="video-card__sub">Independence and client alignment</p>
+          </div>
+        </div>
+        <div class="video-card">
+          <video controls preload="metadata" playsinline>
+            <source src="videos/luca-vision-3.mp4" type="video/mp4">
+          </video>
+          <div class="video-card__label">
+            <p class="video-card__title">Looking Forward</p>
+            <p class="video-card__sub">The future of alternative investment</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -776,7 +869,7 @@
       });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll('.venture-card, .cred-card, .timeline-item').forEach(el => {
+    document.querySelectorAll('.venture-card, .cred-card, .timeline-item, .video-card').forEach(el => {
       el.classList.add('fade-in');
       observer.observe(el);
     });
