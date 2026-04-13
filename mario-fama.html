@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mario Fama | Relationship Manager | Run Capital Partners</title>
-  <meta name="description" content="Mario Fama, Relationship Manager at Run Capital Partners.">
+  <meta name="description" content="Mario Fama, Relationship Manager at Run Capital Partners. Focused on translating complex financial structures into actionable opportunities for companies, institutions, and high-net-worth individuals.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,27 @@
     .bio-intro__eyebrow::before, .bio-intro__eyebrow::after { content: ''; width: 32px; height: 1px; background: var(--gold); }
     .bio-intro__name { font-family: var(--font-serif); font-size: clamp(36px, 5vw, 52px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 12px; }
     .bio-intro__title { font-size: 18px; color: var(--gold); font-weight: 500; margin-bottom: 32px; }
-    .bio-intro__summary { font-size: 17px; color: rgba(255,255,255,0.55); line-height: 1.8; max-width: 600px; margin: 0 auto; }
+    .bio-intro__summary { font-size: 17px; color: rgba(255,255,255,0.55); line-height: 1.8; max-width: 600px; margin: 0 auto 36px; }
+    .bio-intro__meta { display: flex; justify-content: center; gap: 48px; padding-top: 28px; border-top: 1px solid rgba(201,168,76,0.12); }
+    .bio-meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .bio-meta-item__label { font-size: 11px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; }
+    .bio-meta-item__value { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500; }
+    .timeline { position: relative; padding-left: 48px; }
+    .timeline::before { content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1)); }
+    .timeline-item { position: relative; margin-bottom: 48px; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item::before { content: ''; position: absolute; left: -36px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--dark); border: 2px solid var(--gold); z-index: 1; }
+    .timeline-item--current::before { background: var(--gold); box-shadow: 0 0 12px var(--gold-glow); }
+    .timeline-item__date { font-size: 12px; color: var(--gold); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 6px; }
+    .timeline-item__role { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
+    .timeline-item__company { font-size: 14px; color: var(--gold-dark); font-weight: 600; margin-bottom: 10px; }
+    .timeline-item__desc { font-size: 14px; color: var(--gray-600); line-height: 1.7; max-width: 480px; }
+    .cred-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .cred-card { padding: 28px; background: var(--cream); border-radius: 14px; border: 1px solid rgba(201,168,76,0.08); transition: all 0.3s; }
+    .cred-card:hover { border-color: var(--gold); }
+    .cred-card__year { font-size: 12px; color: var(--gold-dark); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 8px; }
+    .cred-card__title { font-family: var(--font-serif); font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--dark); }
+    .cred-card__detail { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
     .bio-cta { text-align: center; padding: 80px 0; }
     .bio-cta__title { font-family: var(--font-serif); font-size: 32px; font-weight: 600; color: var(--white); margin-bottom: 16px; }
     .bio-cta__sub { font-size: 16px; color: rgba(255,255,255,0.45); margin-bottom: 32px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
@@ -27,6 +47,10 @@
       .bio-hero__content { padding: 100px 20px 60px; }
       .bio-intro__name { font-size: 32px; }
       .bio-intro__summary { font-size: 15px; }
+      .bio-intro__meta { flex-wrap: wrap; gap: 24px; }
+      .bio-meta-item { flex: 0 0 calc(50% - 12px); }
+      .cred-grid { grid-template-columns: 1fr; }
+      .timeline { padding-left: 36px; }
       .bio-cta__title { font-size: 26px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
     }
@@ -47,21 +71,80 @@
       </ul>
     </div>
   </nav>
+
   <section class="bio-hero">
     <div class="bio-hero__bg"></div>
     <div class="bio-hero__content">
       <div class="bio-intro">
+        <div style="width: 200px; height: 200px; border-radius: 50%; overflow: hidden; margin: 0 auto 32px; border: 2px solid rgba(201,168,76,0.2);">
+          <img src="mario-fama.jpg" alt="Mario Fama" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
         <p class="bio-intro__eyebrow">Relationship Manager</p>
         <h1 class="bio-intro__name">Mario Fama</h1>
         <p class="bio-intro__title">Run Capital Partners</p>
-        <p class="bio-intro__summary">Relationship manager providing tailored financial solutions and ongoing client support across investment products.</p>
+        <p class="bio-intro__summary">Mario Fama is a Relationship Manager at Run Capital Partners, focused on translating complex financial structures into actionable opportunities for companies, institutions, and high-net-worth individuals in Italy. With a background in corporate-finance consulting and sales roles, he positions Run Capital's alternative-investment and financial-engineering solutions to private and institutional clients.</p>
+        <div class="bio-intro__meta">
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Based in</span>
+            <span class="bio-meta-item__value">Milan, Italy</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Experience</span>
+            <span class="bio-meta-item__value">20+ Years</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Focus</span>
+            <span class="bio-meta-item__value">Client Relationships</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <section class="section section--light" id="career">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Career</p>
+          <h2 class="section__title">From corporate-finance consulting to client advisory.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">Mario's career bridges corporate-finance consulting with direct client engagement. Two decades of experience across financial advisory, business development, and sales inform his work connecting Italian clients with Run Capital's alternative-investment and structured-finance platforms.</p>
+        </div>
+        <div class="split__right">
+          <div class="timeline">
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">January 2025 - Present</p>
+              <h3 class="timeline-item__role">Relationship Manager</h3>
+              <p class="timeline-item__company">Run Capital Partners</p>
+              <p class="timeline-item__desc">Serves as Relationship Manager in Milan, supporting clients with access to alternative-investment funds and securitisation vehicles.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">February 2024 - Present</p>
+              <h3 class="timeline-item__role">Consultant</h3>
+              <p class="timeline-item__company">Profiqua (Legal Protection &amp; Business Development)</p>
+              <p class="timeline-item__desc">Business consultant providing legal-protection and business-development support to Italian companies.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">2002 - 2005</p>
+              <h3 class="timeline-item__role">Consultant for the Financial Area</h3>
+              <p class="timeline-item__company">TradeWork System</p>
+              <p class="timeline-item__desc">Advised client companies on financial-policy decisions, short- and medium-term financial planning.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">January 2001 - January 2002</p>
+              <h3 class="timeline-item__role">Sales Agent</h3>
+              <p class="timeline-item__company">Ascom Italia</p>
+              <p class="timeline-item__desc">Early-career sales-agent role in telecommunications and industrial equipment.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section section--dark">
     <div class="container bio-cta">
       <h2 class="bio-cta__title">Get in touch.</h2>
-      <p class="bio-cta__sub">For inquiries related to client relationship management, feel free to reach out directly.</p>
+      <p class="bio-cta__sub">For inquiries related to alternative-investment opportunities, client onboarding, and structured-finance solutions in Italy.</p>
       <p style="margin-bottom: 28px;"><a href="mailto:mario.fama@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">mario.fama@runcapital.partners</a></p>
       <div class="bio-cta__links">
         <a href="mailto:mario.fama@runcapital.partners" class="btn btn--primary">Send Email</a>
@@ -70,6 +153,7 @@
       </div>
     </div>
   </section>
+
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top: none; padding-top: 0;">
@@ -77,11 +161,14 @@
       </div>
     </div>
   </footer>
+
   <script>
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
     toggle.addEventListener('click', () => { links.classList.toggle('nav__links--open'); toggle.classList.toggle('nav__toggle--active'); });
     links.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { links.classList.remove('nav__links--open'); toggle.classList.remove('nav__toggle--active'); }); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.08 });
+    document.querySelectorAll('.timeline-item').forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
   </script>
 </body>
 </html>

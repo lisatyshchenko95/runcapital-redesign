@@ -291,7 +291,7 @@
       <!-- Expand Button -->
       <div class="team-expand">
         <button class="team-expand__btn" id="teamExpandBtn" aria-expanded="false" aria-controls="teamFull">
-          View Full Team (17 more)
+          View Full Team (16 more)
         </button>
       </div>
 
@@ -313,14 +313,14 @@
         </div>
         <div class="team-card">
           <a href="danilo-carolini.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="danilo-carolini.jpg" alt="Danilo Carolini" loading="lazy"></div>
             <h3 class="team-card__name">Danilo Carolini</h3>
             <p class="team-card__role">Head of Alternative Investments</p>
           </a>
         </div>
         <div class="team-card">
           <a href="giovanni-campodallorto.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="giovanni-campodallorto.jpg" alt="Giovanni Campodall'Orto" loading="lazy"></div>
             <h3 class="team-card__name">Giovanni Campodall'Orto</h3>
             <p class="team-card__role">Head of Operations | RunAM</p>
           </a>
@@ -334,84 +334,77 @@
         </div>
         <div class="team-card">
           <a href="giovanni-randazzo.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="giovanni-randazzo.jpg" alt="Giovanni Randazzo" loading="lazy"></div>
             <h3 class="team-card__name">Giovanni Randazzo</h3>
             <p class="team-card__role">VP Institutional Clients</p>
           </a>
         </div>
         <div class="team-card">
           <a href="maurizio-caroglio.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="maurizio-caroglio.jpg" alt="Maurizio Caroglio" loading="lazy"></div>
             <h3 class="team-card__name">Maurizio Caroglio</h3>
             <p class="team-card__role">Relationship Manager</p>
           </a>
         </div>
         <div class="team-card">
           <a href="patrizio-caringi.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="patrizio-caringi.jpg" alt="Patrizio Caringi" loading="lazy"></div>
             <h3 class="team-card__name">Patrizio Caringi</h3>
             <p class="team-card__role">Relationship Manager</p>
           </a>
         </div>
         <div class="team-card">
           <a href="mario-fama.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="mario-fama.jpg" alt="Mario Fama" loading="lazy"></div>
             <h3 class="team-card__name">Mario Fama</h3>
             <p class="team-card__role">Relationship Manager</p>
           </a>
         </div>
         <div class="team-card">
           <a href="massimo-bocci.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="massimo-bocci.jpg" alt="Massimo Bocci" loading="lazy"></div>
             <h3 class="team-card__name">Massimo Bocci</h3>
             <p class="team-card__role">Institutional | Sport &amp; Wealth</p>
           </a>
         </div>
         <div class="team-card">
-          <a href="salvatore-bochicchio.html">
-            <div class="team-card__photo"></div>
-            <h3 class="team-card__name">Salvatore Bochicchio</h3>
-            <p class="team-card__role">Relationship Manager</p>
-          </a>
-        </div>
-        <div class="team-card">
           <a href="marco-falsarella.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="marco-falsarella.jpg" alt="Marco Falsarella" loading="lazy"></div>
             <h3 class="team-card__name">Marco Falsarella</h3>
             <p class="team-card__role">Relationship Manager</p>
           </a>
         </div>
         <div class="team-card">
           <a href="alice-pozzobon.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="alice-pozzobon.jpg" alt="Alice Pozzobon" loading="lazy"></div>
             <h3 class="team-card__name">Alice Pozzobon</h3>
             <p class="team-card__role">Operations Manager</p>
           </a>
         </div>
         <div class="team-card">
           <a href="lara-covre.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="lara-covre.jpg" alt="Lara Covre" loading="lazy"></div>
             <h3 class="team-card__name">Lara Covre</h3>
             <p class="team-card__role">Insurance and Finance Specialist</p>
           </a>
         </div>
         <div class="team-card">
           <a href="sara-longo.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="sara-longo.jpg" alt="Sara Longo" loading="lazy"></div>
             <h3 class="team-card__name">Sara Longo</h3>
             <p class="team-card__role">Operations Associate</p>
           </a>
         </div>
         <div class="team-card">
           <a href="elena-bernardi.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="elena-bernardi.jpg" alt="Elena Bernardi" loading="lazy"></div>
             <h3 class="team-card__name">Elena Bernardi</h3>
             <p class="team-card__role">Marketing Specialist</p>
           </a>
         </div>
         <div class="team-card">
           <a href="davide-de-luca.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="davide-de-luca.jpg" alt="Davide De Luca" loading="lazy"></div>
             <h3 class="team-card__name">Davide De Luca</h3>
             <p class="team-card__role">Analyst</p>
           </a>
@@ -748,7 +741,7 @@
         const isExpanded = teamFull.classList.toggle('team-grid--visible');
         teamBtn.classList.toggle('team-expand__btn--active', isExpanded);
         teamBtn.setAttribute('aria-expanded', isExpanded);
-        teamBtn.textContent = isExpanded ? 'Show Less' : 'View Full Team (17 more)';
+        teamBtn.textContent = isExpanded ? 'Show Less' : 'View Full Team (16 more)';
         if (isExpanded) {
           teamFull.querySelectorAll('.team-card').forEach(el => {
             el.classList.add('fade-in');
