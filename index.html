@@ -37,13 +37,73 @@
   <header class="hero">
     <div class="hero__bg"></div>
     <canvas id="heroCanvas"></canvas>
-    <div class="hero__content">
-      <p class="hero__eyebrow">Founded 2018 &middot; London &middot; Luxembourg &middot; Milan</p>
-      <h1 class="hero__title">We structure <span class="gold">alternative investments</span><br>for those who build wealth differently.</h1>
-      <p class="hero__sub">Alternative fund structuring, securitization vehicles, and AI-driven wealth management. Regulated. Independent. Luxembourg-domiciled.</p>
-      <div class="hero__actions">
-        <a href="#services" class="btn btn--primary">Our Services</a>
-        <a href="#contact" class="btn btn--outline">Schedule a Call</a>
+    <div class="hero__content hero__content--split">
+      <div class="hero__text">
+        <p class="hero__eyebrow">Founded 2018 &middot; London &middot; Luxembourg &middot; Milan</p>
+        <h1 class="hero__title">Your wealth.<br><span class="gold">Structured</span> for what&rsquo;s next.</h1>
+        <p class="hero__sub">We build and manage alternative investment funds, structured products, and AI-driven portfolios from Luxembourg. Independent. Regulated. Aligned with your interests.</p>
+        <div class="hero__actions">
+          <a href="#services" class="btn btn--primary">Explore Our Services</a>
+          <a href="#contact" class="btn btn--outline">Schedule a Consultation</a>
+        </div>
+      </div>
+      <div class="hero__visual" aria-hidden="true">
+        <svg class="hero__network" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
+              <stop offset="0%" stop-color="#e0c874" stop-opacity="1"/>
+              <stop offset="60%" stop-color="#c9a84c" stop-opacity="0.5"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.1"/>
+              <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.6"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.1"/>
+            </linearGradient>
+          </defs>
+          <!-- Connection lines -->
+          <g class="hero__network-lines" stroke="url(#lineGradient)" stroke-width="1" fill="none">
+            <line x1="200" y1="60" x2="80" y2="180"/>
+            <line x1="200" y1="60" x2="320" y2="180"/>
+            <line x1="200" y1="60" x2="200" y2="240"/>
+            <line x1="80" y1="180" x2="200" y2="240"/>
+            <line x1="320" y1="180" x2="200" y2="240"/>
+            <line x1="80" y1="180" x2="60" y2="360"/>
+            <line x1="320" y1="180" x2="340" y2="360"/>
+            <line x1="200" y1="240" x2="60" y2="360"/>
+            <line x1="200" y1="240" x2="340" y2="360"/>
+            <line x1="200" y1="240" x2="200" y2="420"/>
+            <line x1="60" y1="360" x2="200" y2="420"/>
+            <line x1="340" y1="360" x2="200" y2="420"/>
+          </g>
+          <!-- Nodes (glow + ring) -->
+          <g class="hero__network-nodes">
+            <!-- top hub -->
+            <circle cx="200" cy="60" r="28" fill="url(#nodeGlow)"/>
+            <circle cx="200" cy="60" r="8" fill="#e0c874"/>
+            <circle cx="200" cy="60" r="14" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
+            <!-- mid-left -->
+            <circle cx="80" cy="180" r="20" fill="url(#nodeGlow)"/>
+            <circle cx="80" cy="180" r="5" fill="#c9a84c"/>
+            <!-- mid-right -->
+            <circle cx="320" cy="180" r="20" fill="url(#nodeGlow)"/>
+            <circle cx="320" cy="180" r="5" fill="#c9a84c"/>
+            <!-- center -->
+            <circle cx="200" cy="240" r="32" fill="url(#nodeGlow)"/>
+            <circle cx="200" cy="240" r="10" fill="#e0c874"/>
+            <circle cx="200" cy="240" r="18" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
+            <!-- bottom-left -->
+            <circle cx="60" cy="360" r="18" fill="url(#nodeGlow)"/>
+            <circle cx="60" cy="360" r="4" fill="#c9a84c"/>
+            <!-- bottom-right -->
+            <circle cx="340" cy="360" r="18" fill="url(#nodeGlow)"/>
+            <circle cx="340" cy="360" r="4" fill="#c9a84c"/>
+            <!-- bottom hub -->
+            <circle cx="200" cy="420" r="24" fill="url(#nodeGlow)"/>
+            <circle cx="200" cy="420" r="7" fill="#e0c874"/>
+            <circle cx="200" cy="420" r="13" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.4"/>
+          </g>
+        </svg>
       </div>
       <div class="hero__stats">
         <div class="hero__stat">
