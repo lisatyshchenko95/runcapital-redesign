@@ -313,36 +313,52 @@ body {
   filter: drop-shadow(0 0 40px rgba(201, 168, 76, 0.15));
 }
 
-.hero__network-lines line {
-  stroke-dasharray: 4 6;
-  animation: networkPulse 6s linear infinite;
+.hero__city-back {
+  animation: citySway 16s ease-in-out infinite;
 }
 
-.hero__network-nodes circle {
-  transform-origin: center;
+.hero__city-mid {
+  animation: citySway 20s ease-in-out infinite 1s;
+}
+
+.hero__city-spire {
+  transform-origin: 206px 460px;
   transform-box: fill-box;
+  animation: spireGlow 6s ease-in-out infinite;
 }
 
-.hero__network-nodes > circle:nth-child(3n+1) {
-  animation: nodeBreath 4s ease-in-out infinite;
+.hero__city-pulses circle:first-child {
+  transform-origin: 206px 14px;
+  transform-box: fill-box;
+  animation: signalRing 3s ease-out infinite;
 }
 
-.hero__network-nodes > circle:nth-child(3n+2) {
-  animation: nodeBreath 5s ease-in-out infinite 0.8s;
+.hero__city-pulses circle:nth-child(2) {
+  animation: twinkle 3.5s ease-in-out infinite 0.5s;
 }
 
-.hero__network-nodes > circle:nth-child(3n) {
-  animation: nodeBreath 4.5s ease-in-out infinite 1.6s;
+.hero__city-pulses circle:nth-child(3) {
+  animation: twinkle 4s ease-in-out infinite 1.8s;
 }
 
-@keyframes networkPulse {
-  from { stroke-dashoffset: 0; }
-  to { stroke-dashoffset: -100; }
+@keyframes citySway {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-2px); }
 }
 
-@keyframes nodeBreath {
-  0%, 100% { opacity: 0.85; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.08); }
+@keyframes spireGlow {
+  0%, 100% { filter: drop-shadow(0 0 8px rgba(224, 200, 116, 0.35)); }
+  50% { filter: drop-shadow(0 0 18px rgba(224, 200, 116, 0.6)); }
+}
+
+@keyframes signalRing {
+  0% { r: 6; opacity: 0.9; }
+  100% { r: 26; opacity: 0; }
+}
+
+@keyframes twinkle {
+  0%, 100% { opacity: 0.4; }
+  50% { opacity: 1; }
 }
 
 .hero__eyebrow {

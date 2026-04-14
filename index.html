@@ -40,7 +40,7 @@
     <div class="hero__content hero__content--split">
       <div class="hero__text">
         <p class="hero__eyebrow">Founded 2018 &middot; London &middot; Luxembourg &middot; Milan</p>
-        <h1 class="hero__title">Your wealth.<br><span class="gold">Structured</span> for what&rsquo;s next.</h1>
+        <h1 class="hero__title"><span class="gold">Alternative investments,</span><br>structured for those who think<br>beyond the ordinary.</h1>
         <p class="hero__sub">We build and manage alternative investment funds, structured products, and AI-driven portfolios from Luxembourg. Independent. Regulated. Aligned with your interests.</p>
         <div class="hero__actions">
           <a href="#services" class="btn btn--primary">Explore Our Services</a>
@@ -50,58 +50,90 @@
       <div class="hero__visual" aria-hidden="true">
         <svg class="hero__network" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg">
           <defs>
-            <radialGradient id="nodeGlow" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#e0c874" stop-opacity="1"/>
-              <stop offset="60%" stop-color="#c9a84c" stop-opacity="0.5"/>
+            <radialGradient id="cityGlow" cx="50%" cy="100%" r="80%">
+              <stop offset="0%" stop-color="#e0c874" stop-opacity="0.6"/>
+              <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.25"/>
               <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
             </radialGradient>
-            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.1"/>
-              <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.6"/>
-              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.1"/>
+            <linearGradient id="towerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e0c874" stop-opacity="0.9"/>
+              <stop offset="100%" stop-color="#8a6f2e" stop-opacity="0.3"/>
             </linearGradient>
+            <linearGradient id="towerGradient2" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0.7"/>
+              <stop offset="100%" stop-color="#8a6f2e" stop-opacity="0.2"/>
+            </linearGradient>
+            <linearGradient id="spireGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e0c874" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.5"/>
+            </linearGradient>
+            <pattern id="windowGrid" width="10" height="14" patternUnits="userSpaceOnUse">
+              <rect x="2" y="2" width="3" height="4" fill="#e0c874" opacity="0.55"/>
+              <rect x="7" y="2" width="3" height="4" fill="#c9a84c" opacity="0.35"/>
+              <rect x="2" y="8" width="3" height="4" fill="#c9a84c" opacity="0.45"/>
+              <rect x="7" y="8" width="3" height="4" fill="#e0c874" opacity="0.25"/>
+            </pattern>
+            <pattern id="windowGridDense" width="8" height="10" patternUnits="userSpaceOnUse">
+              <rect x="1.5" y="1.5" width="2.5" height="3" fill="#e0c874" opacity="0.5"/>
+              <rect x="5" y="1.5" width="2.5" height="3" fill="#c9a84c" opacity="0.3"/>
+              <rect x="1.5" y="6" width="2.5" height="3" fill="#c9a84c" opacity="0.4"/>
+              <rect x="5" y="6" width="2.5" height="3" fill="#e0c874" opacity="0.2"/>
+            </pattern>
           </defs>
-          <!-- Connection lines -->
-          <g class="hero__network-lines" stroke="url(#lineGradient)" stroke-width="1" fill="none">
-            <line x1="200" y1="60" x2="80" y2="180"/>
-            <line x1="200" y1="60" x2="320" y2="180"/>
-            <line x1="200" y1="60" x2="200" y2="240"/>
-            <line x1="80" y1="180" x2="200" y2="240"/>
-            <line x1="320" y1="180" x2="200" y2="240"/>
-            <line x1="80" y1="180" x2="60" y2="360"/>
-            <line x1="320" y1="180" x2="340" y2="360"/>
-            <line x1="200" y1="240" x2="60" y2="360"/>
-            <line x1="200" y1="240" x2="340" y2="360"/>
-            <line x1="200" y1="240" x2="200" y2="420"/>
-            <line x1="60" y1="360" x2="200" y2="420"/>
-            <line x1="340" y1="360" x2="200" y2="420"/>
+
+          <!-- Ambient glow base -->
+          <ellipse cx="200" cy="440" rx="200" ry="80" fill="url(#cityGlow)"/>
+
+          <!-- Back-layer towers (muted) -->
+          <g class="hero__city-back" opacity="0.55">
+            <rect x="30" y="240" width="42" height="220" fill="url(#towerGradient2)"/>
+            <rect x="34" y="250" width="34" height="200" fill="url(#windowGrid)" opacity="0.6"/>
+
+            <rect x="330" y="220" width="48" height="240" fill="url(#towerGradient2)"/>
+            <rect x="334" y="232" width="40" height="220" fill="url(#windowGrid)" opacity="0.6"/>
+
+            <rect x="86" y="200" width="36" height="260" fill="url(#towerGradient2)"/>
+            <rect x="90" y="212" width="28" height="240" fill="url(#windowGrid)" opacity="0.55"/>
           </g>
-          <!-- Nodes (glow + ring) -->
-          <g class="hero__network-nodes">
-            <!-- top hub -->
-            <circle cx="200" cy="60" r="28" fill="url(#nodeGlow)"/>
-            <circle cx="200" cy="60" r="8" fill="#e0c874"/>
-            <circle cx="200" cy="60" r="14" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
-            <!-- mid-left -->
-            <circle cx="80" cy="180" r="20" fill="url(#nodeGlow)"/>
-            <circle cx="80" cy="180" r="5" fill="#c9a84c"/>
-            <!-- mid-right -->
-            <circle cx="320" cy="180" r="20" fill="url(#nodeGlow)"/>
-            <circle cx="320" cy="180" r="5" fill="#c9a84c"/>
-            <!-- center -->
-            <circle cx="200" cy="240" r="32" fill="url(#nodeGlow)"/>
-            <circle cx="200" cy="240" r="10" fill="#e0c874"/>
-            <circle cx="200" cy="240" r="18" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
-            <!-- bottom-left -->
-            <circle cx="60" cy="360" r="18" fill="url(#nodeGlow)"/>
-            <circle cx="60" cy="360" r="4" fill="#c9a84c"/>
-            <!-- bottom-right -->
-            <circle cx="340" cy="360" r="18" fill="url(#nodeGlow)"/>
-            <circle cx="340" cy="360" r="4" fill="#c9a84c"/>
-            <!-- bottom hub -->
-            <circle cx="200" cy="420" r="24" fill="url(#nodeGlow)"/>
-            <circle cx="200" cy="420" r="7" fill="#e0c874"/>
-            <circle cx="200" cy="420" r="13" fill="none" stroke="#c9a84c" stroke-width="1" opacity="0.4"/>
+
+          <!-- Mid-layer towers -->
+          <g class="hero__city-mid">
+            <!-- Left stepped tower -->
+            <rect x="130" y="160" width="58" height="300" fill="url(#towerGradient)"/>
+            <rect x="134" y="172" width="50" height="280" fill="url(#windowGridDense)" opacity="0.9"/>
+            <rect x="138" y="140" width="42" height="24" fill="url(#towerGradient)"/>
+
+            <!-- Right stepped tower -->
+            <rect x="250" y="180" width="62" height="280" fill="url(#towerGradient)"/>
+            <rect x="254" y="192" width="54" height="260" fill="url(#windowGridDense)" opacity="0.85"/>
+            <rect x="256" y="160" width="50" height="22" fill="url(#towerGradient)"/>
+            <rect x="264" y="140" width="34" height="22" fill="url(#towerGradient)"/>
+          </g>
+
+          <!-- Central landmark spire -->
+          <g class="hero__city-spire">
+            <!-- Tower shaft -->
+            <rect x="192" y="120" width="28" height="340" fill="url(#spireGradient)"/>
+            <rect x="195" y="132" width="22" height="320" fill="url(#windowGridDense)" opacity="0.95"/>
+            <!-- Crown / setback -->
+            <rect x="186" y="100" width="40" height="22" fill="url(#spireGradient)"/>
+            <rect x="196" y="80" width="20" height="22" fill="url(#spireGradient)"/>
+            <!-- Antenna / spire -->
+            <line x1="206" y1="20" x2="206" y2="80" stroke="#e0c874" stroke-width="2"/>
+            <circle cx="206" cy="14" r="4" fill="#e0c874"/>
+          </g>
+
+          <!-- Accent lines (architectural blueprint feel) -->
+          <g class="hero__city-accents" stroke="#c9a84c" stroke-width="0.75" fill="none" opacity="0.35">
+            <line x1="0" y1="460" x2="400" y2="460"/>
+            <line x1="0" y1="140" x2="400" y2="140" stroke-dasharray="3 6"/>
+          </g>
+
+          <!-- Floating signal pulses -->
+          <g class="hero__city-pulses">
+            <circle cx="206" cy="14" r="6" fill="none" stroke="#e0c874" stroke-width="1"/>
+            <circle cx="160" cy="140" r="3" fill="#e0c874" opacity="0.85"/>
+            <circle cx="280" cy="162" r="3" fill="#e0c874" opacity="0.7"/>
           </g>
         </svg>
       </div>
