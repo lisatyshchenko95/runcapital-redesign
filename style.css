@@ -1831,6 +1831,14 @@ span.gold {
   object-fit: contain;
 }
 
+.custodian-logo--img img[src*="citi"] {
+  transform: scale(0.6);
+}
+
+.custodian-logo--img img[src*="safra-sarasin"] {
+  transform: scale(1.2);
+}
+
 @media (max-width: 900px) {
   .custodians__grid {
     grid-template-columns: repeat(2, 1fr);
