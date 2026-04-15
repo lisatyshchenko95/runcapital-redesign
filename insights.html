@@ -24,6 +24,7 @@
         <li><a href="index.html#team">Team</a></li>
         <li><a href="insights.html">Insights</a></li>
         <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+        <li class="nav__lang"><button type="button" class="lang-switch" id="langSwitch" aria-label="Change language"><span class="lang-switch__opt lang-switch__opt--active" data-lang="en">EN</span><span class="lang-switch__sep">/</span><span class="lang-switch__opt" data-lang="it">IT</span></button></li>
       </ul>
     </div>
   </nav>
@@ -46,14 +47,8 @@
     <div class="container">
       <div class="insights-grid">
         <a href="insight-doughnut-model.html" class="insight-card">
-          <div class="insight-card__cover" aria-hidden="true">
-            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="60" cy="60" r="54" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4" opacity="0.45"/>
-              <circle cx="60" cy="60" r="44" fill="none" stroke="currentColor" stroke-width="14" opacity="0.75"/>
-              <circle cx="60" cy="60" r="28" fill="none" stroke="currentColor" stroke-width="1" opacity="0.6"/>
-              <circle cx="60" cy="60" r="22" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="2 4" opacity="0.45"/>
-              <circle cx="60" cy="60" r="2" fill="currentColor"/>
-            </svg>
+          <div class="insight-card__cover">
+            <img src="images/insights/doughnut-model.jpg" alt="Economy vs ecology" loading="lazy">
           </div>
           <div class="insight-card__tag-row">
             <span class="insight-card__tag">Macro &amp; Strategy</span>
@@ -74,19 +69,8 @@
           <span class="insight-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
         </a>
         <a href="insight-american-economy.html" class="insight-card">
-          <div class="insight-card__cover" aria-hidden="true">
-            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <rect x="18" y="30" width="84" height="60" rx="3" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.55"/>
-              <rect x="24" y="36" width="72" height="48" rx="2" fill="none" stroke="currentColor" stroke-width="0.7" opacity="0.35"/>
-              <circle cx="60" cy="60" r="18" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.65"/>
-              <text x="60" y="68" text-anchor="middle" font-family="Playfair Display, serif" font-size="24" font-weight="600" fill="currentColor">$</text>
-              <g stroke="currentColor" stroke-width="1.4" fill="none" opacity="0.85">
-                <line x1="34" y1="58" x2="34" y2="42"/>
-                <polyline points="30,48 34,42 38,48"/>
-                <line x1="86" y1="62" x2="86" y2="78"/>
-                <polyline points="82,72 86,78 90,72"/>
-              </g>
-            </svg>
+          <div class="insight-card__cover">
+            <img src="images/insights/american-economy.jpg" alt="Market candlestick chart" loading="lazy">
           </div>
           <div class="insight-card__tag-row">
             <span class="insight-card__tag">Macro &amp; Strategy</span>
@@ -108,24 +92,8 @@
           <span class="insight-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
         </a>
         <a href="insight-eterna-iii.html" class="insight-card">
-          <div class="insight-card__cover" aria-hidden="true">
-            <svg viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg">
-              <polygon points="28,34 92,34 60,14" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.85"/>
-              <rect x="24" y="36" width="72" height="6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.75"/>
-              <g stroke="currentColor" stroke-width="1.1" fill="none" opacity="0.85">
-                <rect x="32" y="44" width="12" height="48"/>
-                <rect x="54" y="44" width="12" height="48"/>
-                <rect x="76" y="44" width="12" height="48"/>
-                <line x1="36" y1="44" x2="36" y2="92"/>
-                <line x1="40" y1="44" x2="40" y2="92"/>
-                <line x1="58" y1="44" x2="58" y2="92"/>
-                <line x1="62" y1="44" x2="62" y2="92"/>
-                <line x1="80" y1="44" x2="80" y2="92"/>
-                <line x1="84" y1="44" x2="84" y2="92"/>
-              </g>
-              <rect x="24" y="92" width="72" height="6" fill="none" stroke="currentColor" stroke-width="1" opacity="0.75"/>
-              <path d="M 38 108 C 38 102, 48 102, 54 108 C 60 114, 66 114, 72 108 C 78 102, 82 102, 82 108 C 82 114, 78 114, 72 108 C 66 102, 60 102, 54 108 C 48 114, 38 114, 38 108 Z" fill="none" stroke="currentColor" stroke-width="1.3" opacity="0.9"/>
-            </svg>
+          <div class="insight-card__cover">
+            <img src="images/insights/eterna-iii.jpg" alt="European urban aerial" loading="lazy">
           </div>
           <div class="insight-card__tag-row">
             <span class="insight-card__tag">Private Markets</span>
@@ -220,5 +188,6 @@
 
   </script>
 
+<script>(function(){var K='rcp_lang';function ap(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(e){var t=e.getAttribute('data-'+l);if(t!=null)e.textContent=t;});document.querySelectorAll('[data-en-html]').forEach(function(e){var h=e.getAttribute('data-'+l+'-html');if(h!=null)e.innerHTML=h;});document.querySelectorAll('.lang-switch__opt').forEach(function(o){o.classList.toggle('lang-switch__opt--active',o.getAttribute('data-lang')===l);});try{localStorage.setItem(K,l);}catch(e){}}var sv;try{sv=localStorage.getItem(K);}catch(e){}if(sv==='it')ap('it');var sw=document.getElementById('langSwitch');if(sw)sw.addEventListener('click',function(e){e.preventDefault();var c=e.target.closest('.lang-switch__opt');var cur=document.documentElement.lang==='it'?'it':'en';if(c&&c.getAttribute('data-lang'))ap(c.getAttribute('data-lang'));else ap(cur==='en'?'it':'en');});})();</script>
 </body>
 </html>

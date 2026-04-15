@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Stefano Giuffra | Board Member &amp; Compliance Officer | Run Capital Partners</title>
-  <meta name="description" content="Stefano Giuffra, Board Member and Compliance Officer at Run AM, the Luxembourg AIFM arm of Run Capital Partners.">
+  <meta name="description" content="Stefano Giuffra, Board Member and Compliance Officer at Run Asset Management, the Luxembourg AIFM arm of Run Capital Partners.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -79,6 +79,7 @@
         <li><a href="index.html#team">Team</a></li>
         <li><a href="index.html#insights">Insights</a></li>
         <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+        <li class="nav__lang"><button type="button" class="lang-switch" id="langSwitch" aria-label="Change language"><span class="lang-switch__opt lang-switch__opt--active" data-lang="en">EN</span><span class="lang-switch__sep">/</span><span class="lang-switch__opt" data-lang="it">IT</span></button></li>
       </ul>
     </div>
   </nav>
@@ -88,7 +89,7 @@
     <div class="bio-hero__content">
       <div class="bio-photo">
         <div class="bio-photo__frame">
-          <span class="bio-photo__placeholder">SG</span>
+          <img src="stefano-giuffra.jpg" alt="Stefano Giuffra" class="bio-photo__img">
         </div>
         <div class="bio-photo__accent"></div>
         <div class="bio-photo__accent-2"></div>
@@ -97,8 +98,8 @@
         <a href="index.html#team" class="bio-back-link"><span aria-hidden="true">&larr;</span> Back to Team</a>
         <p class="bio-intro__eyebrow">Board Member &amp; Compliance Officer</p>
         <h1 class="bio-intro__name">Stefano Giuffra</h1>
-        <p class="bio-intro__title">Run AM S.&agrave;.r.l &middot; Run Capital Partners</p>
-        <p class="bio-intro__summary">Stefano serves as Board Member and Compliance Officer at Run AM S.&agrave;.r.l, the Luxembourg-based alternative investment fund management arm of Run Capital Partners. He ensures regulatory alignment and governance integrity across the group's AIFM-regulated platform.</p>
+        <p class="bio-intro__title">Run Asset Management S.&agrave;.r.l &middot; Run Capital Partners</p>
+        <p class="bio-intro__summary">Stefano serves as Board Member and Compliance Officer at Run Asset Management S.&agrave;.r.l, the Luxembourg-based alternative investment fund management arm of Run Capital Partners. He ensures regulatory alignment and governance integrity across the group's AIFM-regulated platform.</p>
         <div class="bio-intro__meta">
           <div class="bio-meta-item">
             <span class="bio-meta-item__label">Based in</span>
@@ -106,7 +107,7 @@
           </div>
           <div class="bio-meta-item">
             <span class="bio-meta-item__label">Entity</span>
-            <span class="bio-meta-item__value">Run AM S.&agrave;.r.l</span>
+            <span class="bio-meta-item__value">Run Asset Management S.&agrave;.r.l</span>
           </div>
           <div class="bio-meta-item">
             <span class="bio-meta-item__label">Focus</span>
@@ -121,7 +122,7 @@
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light">Expertise</p>
       <h2 class="section__title section__title--light">Regulatory integrity at the heart of fund management.</h2>
-      <p class="section__intro">Stefano brings a rigorous compliance lens to every aspect of Run AM's Luxembourg-regulated platform.</p>
+      <p class="section__intro">Stefano brings a rigorous compliance lens to every aspect of Run Asset Management's Luxembourg-regulated platform.</p>
 
       <div class="expertise-grid">
         <div class="expertise-card">
@@ -130,7 +131,7 @@
         </div>
         <div class="expertise-card">
           <h3 class="expertise-card__title">Board Governance</h3>
-          <p class="expertise-card__desc">Serving as a board member for Run AM, contributing to strategic direction, risk oversight, and regulatory alignment.</p>
+          <p class="expertise-card__desc">Serving as a board member for Run Asset Management, contributing to strategic direction, risk oversight, and regulatory alignment.</p>
         </div>
         <div class="expertise-card">
           <h3 class="expertise-card__title">Regulatory Reporting</h3>
@@ -153,8 +154,8 @@
             <div class="timeline-item timeline-item--current">
               <p class="timeline-item__date">Present</p>
               <h3 class="timeline-item__role">Board Member &amp; Compliance Officer</h3>
-              <p class="timeline-item__company">Run AM S.&agrave;.r.l</p>
-              <p class="timeline-item__desc">Serves on the board and leads compliance for Run AM, the AIFM-registered Luxembourg entity of Run Capital Partners. Ensures adherence to CSSF regulations and AIFMD requirements.</p>
+              <p class="timeline-item__company">Run Asset Management S.&agrave;.r.l</p>
+              <p class="timeline-item__desc">Serves on the board and leads compliance for Run Asset Management, the AIFM-registered Luxembourg entity of Run Capital Partners. Ensures adherence to CSSF regulations and AIFMD requirements.</p>
             </div>
           </div>
         </div>
@@ -165,7 +166,7 @@
   <section class="section section--dark">
     <div class="container bio-cta">
       <h2 class="bio-cta__title">Get in touch.</h2>
-      <p class="bio-cta__sub">For inquiries related to compliance, governance, or regulated fund matters at Run AM.</p>
+      <p class="bio-cta__sub">For inquiries related to compliance, governance, or regulated fund matters at Run Asset Management.</p>
       <p style="margin-bottom: 28px;"><a href="mailto:stefano.giuffra@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">stefano.giuffra@runcapital.partners</a></p>
       <div class="bio-cta__links">
         <a href="mailto:stefano.giuffra@runcapital.partners" class="btn btn--primary">Send Email</a>
@@ -191,5 +192,6 @@
     const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.08 });
     document.querySelectorAll('.expertise-card, .timeline-item').forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
   </script>
+<script>(function(){var K='rcp_lang';function ap(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(e){var t=e.getAttribute('data-'+l);if(t!=null)e.textContent=t;});document.querySelectorAll('[data-en-html]').forEach(function(e){var h=e.getAttribute('data-'+l+'-html');if(h!=null)e.innerHTML=h;});document.querySelectorAll('.lang-switch__opt').forEach(function(o){o.classList.toggle('lang-switch__opt--active',o.getAttribute('data-lang')===l);});try{localStorage.setItem(K,l);}catch(e){}}var sv;try{sv=localStorage.getItem(K);}catch(e){}if(sv==='it')ap('it');var sw=document.getElementById('langSwitch');if(sw)sw.addEventListener('click',function(e){e.preventDefault();var c=e.target.closest('.lang-switch__opt');var cur=document.documentElement.lang==='it'?'it':'en';if(c&&c.getAttribute('data-lang'))ap(c.getAttribute('data-lang'));else ap(cur==='en'?'it':'en');});})();</script>
 </body>
 </html>

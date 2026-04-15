@@ -26,12 +26,19 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="navLinks">
-        <li><a href="#about">About</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#group">Group</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#insights">Insights</a></li>
-        <li><a href="#contact" class="nav__cta">Get in Touch</a></li>
+        <li><a href="#about" data-en="About" data-it="Chi Siamo">About</a></li>
+        <li><a href="#services" data-en="Services" data-it="Servizi">Services</a></li>
+        <li><a href="#group" data-en="Group" data-it="Gruppo">Group</a></li>
+        <li><a href="#team" data-en="Team" data-it="Team">Team</a></li>
+        <li><a href="#insights" data-en="Insights" data-it="News">Insights</a></li>
+        <li><a href="#contact" class="nav__cta" data-en="Get in Touch" data-it="Contattaci">Get in Touch</a></li>
+        <li class="nav__lang">
+          <button type="button" class="lang-switch" id="langSwitch" aria-label="Change language">
+            <span class="lang-switch__opt lang-switch__opt--active" data-lang="en">EN</span>
+            <span class="lang-switch__sep">/</span>
+            <span class="lang-switch__opt" data-lang="it">IT</span>
+          </button>
+        </li>
       </ul>
     </div>
   </nav>
@@ -42,12 +49,12 @@
     <canvas id="heroCanvas"></canvas>
     <div class="hero__content hero__content--split">
       <div class="hero__text">
-        <p class="hero__eyebrow">Founded 2018 &middot; London &middot; Luxembourg &middot; Milan</p>
-        <h1 class="hero__title"><span class="gold">Alternative investments,</span><br>structured for those who <span class="gold">think beyond</span> the ordinary.</h1>
-        <p class="hero__sub">We build and manage alternative investment funds, structured products, and systematic portfolios from Luxembourg. Independent. Regulated. Aligned with your interests.</p>
+        <p class="hero__eyebrow" data-en="Founded 2018 &middot; London &middot; Luxembourg &middot; Milan" data-it="Fondata nel 2018 &middot; Londra &middot; Lussemburgo &middot; Milano">Founded 2018 &middot; London &middot; Luxembourg &middot; Milan</p>
+        <h1 class="hero__title" data-en-html='<span class="gold">Alternative investments,</span><br>structured for those who <span class="gold">think beyond</span> the ordinary.' data-it-html='<span class="gold">Investimenti alternativi,</span><br>strutturati per chi <span class="gold">guarda oltre</span> l&rsquo;ordinario.'><span class="gold">Alternative investments,</span><br>structured for those who <span class="gold">think beyond</span> the ordinary.</h1>
+        <p class="hero__sub" data-en="We build and manage alternative investment funds, structured products, and systematic portfolios from Luxembourg. Independent. Regulated. Aligned with your interests." data-it="Costruiamo e gestiamo fondi di investimento alternativi, prodotti strutturati e portafogli sistematici dal Lussemburgo. Indipendenti. Regolamentati. Allineati ai vostri interessi.">We build and manage alternative investment funds, structured products, and systematic portfolios from Luxembourg. Independent. Regulated. Aligned with your interests.</p>
         <div class="hero__actions">
-          <a href="#services" class="btn btn--primary">Explore Our Services</a>
-          <a href="#contact" class="btn btn--outline">Schedule a Consultation</a>
+          <a href="#services" class="btn btn--primary" data-en="Explore Our Services" data-it="I Nostri Servizi">Explore Our Services</a>
+          <a href="#contact" class="btn btn--outline" data-en="Schedule a Consultation" data-it="Prenota una Consulenza">Schedule a Consultation</a>
         </div>
       </div>
       <div class="hero__visual" aria-hidden="true">
@@ -331,8 +338,8 @@
     <div class="container">
       <div class="split">
         <div class="split__left">
-          <p class="section__eyebrow">About Us</p>
-          <h2 class="section__title">Independent. Unaffiliated.<br>Built for your interests.</h2>
+          <p class="section__eyebrow" data-en="About Us" data-it="Chi Siamo">About Us</p>
+          <h2 class="section__title" data-en-html="Independent. Unaffiliated.<br>Built for your interests." data-it-html="Indipendenti. Non affiliati.<br>Costruiti per i vostri interessi.">Independent. Unaffiliated.<br>Built for your interests.</h2>
         </div>
         <div class="split__right">
           <p class="text-lg">Since 2018, Run Capital Partners has supported enterprises in strategic financial management. We accompany clients through governance, legal and financial structuring of alternative investment funds, and the creation of securitization vehicles.</p>
@@ -394,9 +401,9 @@
   <!-- SERVICES -->
   <section class="section section--dark" id="services">
     <div class="container">
-      <p class="section__eyebrow section__eyebrow--light">What We Do</p>
-      <h2 class="section__title section__title--light">One partner.<br>Five specialized service lines.</h2>
-      <p class="section__intro">Each service is delivered by a dedicated team within our group. You always know which entity you&rsquo;re working with, and who is responsible.</p>
+      <p class="section__eyebrow section__eyebrow--light" data-en="What We Do" data-it="Cosa Facciamo">What We Do</p>
+      <h2 class="section__title section__title--light" data-en-html='<span class="gold">One partner.</span><br>Five specialized service lines.' data-it-html='<span class="gold">Un solo partner.</span><br>Cinque linee di servizio specializzate.'><span class="gold">One partner.</span><br>Five specialized service lines.</h2>
+      <p class="section__intro" data-en="Each service is delivered by a dedicated team within our group. You always know which entity you&rsquo;re working with, and who is responsible." data-it="Ogni servizio è erogato da un team dedicato all&rsquo;interno del nostro gruppo. Sapete sempre con quale entità state lavorando e chi ne è responsabile.">Each service is delivered by a dedicated team within our group. You always know which entity you&rsquo;re working with, and who is responsible.</p>
 
       <!-- Featured service: Asset Management -->
       <a href="asset-management.html" class="service-featured">
@@ -415,15 +422,15 @@
           <span class="service-featured__number">01</span>
           <span class="service-featured__entity">Run Asset Management &middot; Luxembourg</span>
         </div>
-        <h3 class="service-featured__title">Asset Management</h3>
-        <p class="service-featured__body">Creation and management of alternative investment funds, securitization vehicles, notes, and bonds. Domiciled in Luxembourg for EU regulatory alignment, political stability, and a favorable tax framework.</p>
+        <h3 class="service-featured__title" data-en="Asset Management" data-it="Gestione Patrimoniale">Asset Management</h3>
+        <p class="service-featured__body" data-en="Creation and management of alternative investment funds, securitization vehicles, notes, and bonds. Domiciled in Luxembourg for EU regulatory alignment, political stability, and a favorable tax framework." data-it="Creazione e gestione di fondi di investimento alternativi, veicoli di cartolarizzazione, note e obbligazioni. Domiciliati in Lussemburgo per l&rsquo;allineamento normativo UE, la stabilit&agrave; politica e un quadro fiscale favorevole.">Creation and management of alternative investment funds, securitization vehicles, notes, and bonds. Domiciled in Luxembourg for EU regulatory alignment, political stability, and a favorable tax framework.</p>
         <ul class="service-featured__list">
           <li>Alternative investment fund structuring</li>
           <li>Securitization vehicle creation</li>
           <li>Notes and bond issuance</li>
           <li>EU-compliant fund domiciliation</li>
         </ul>
-        <span class="service-featured__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+        <span class="service-featured__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
       </a>
 
       <!-- Secondary services: 2x2 compact grid -->
@@ -438,10 +445,10 @@
             </svg>
           </span>
           <span class="service-compact__number">02</span>
-          <h3 class="service-compact__title">Wealth Management</h3>
+          <h3 class="service-compact__title" data-en="Wealth Management" data-it="Gestione del Patrimonio">Wealth Management</h3>
           <p class="service-compact__entity">Systematic &middot; Independent &middot; Institutional-grade</p>
           <p class="service-compact__body">Quantitative portfolio strategy with objective market analysis, continuous monitoring, and disciplined risk management. Data-led, bias-free wealth management.</p>
-          <span class="service-compact__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+          <span class="service-compact__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
 
         <a href="sport-wealth.html" class="service-compact">
@@ -457,10 +464,10 @@
             </svg>
           </span>
           <span class="service-compact__number">03</span>
-          <h3 class="service-compact__title">Sport &amp; Wealth</h3>
-          <p class="service-compact__entity">Led by Massimo Bocci</p>
+          <h3 class="service-compact__title" data-en="Sport &amp; Wealth" data-it="Sport &amp; Wealth">Sport &amp; Wealth</h3>
+          <p class="service-compact__entity">Institutional &middot; Athletes &middot; Private</p>
           <p class="service-compact__body">Bespoke wealth management and alternative-investment structures for professional athletes, sports-related clients, and institutional mandates with a sports footprint.</p>
-          <span class="service-compact__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+          <span class="service-compact__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
 
         <a href="certificate-issuance.html" class="service-compact">
@@ -473,10 +480,10 @@
             </svg>
           </span>
           <span class="service-compact__number">04</span>
-          <h3 class="service-compact__title">Certificate Issuance</h3>
+          <h3 class="service-compact__title" data-en="Certificate Issuance" data-it="Emissione di Certificati">Certificate Issuance</h3>
           <p class="service-compact__entity">With BNP Paribas, Leonteq, Marex</p>
           <p class="service-compact__body">Actively and passively managed certificates structured with leading investment banks across equities, indices, and thematic baskets.</p>
-          <span class="service-compact__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+          <span class="service-compact__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
 
         <a href="nasdaq-listings.html" class="service-compact">
@@ -492,44 +499,11 @@
             </svg>
           </span>
           <span class="service-compact__number">05</span>
-          <h3 class="service-compact__title">Nasdaq Listings</h3>
+          <h3 class="service-compact__title" data-en="Nasdaq Listings" data-it="Quotazioni Nasdaq">Nasdaq Listings</h3>
           <p class="service-compact__entity">3DOTS UK</p>
           <p class="service-compact__body">Supporting high-potential Southern European companies from preparation through listing, connecting European excellence with US capital markets.</p>
-          <span class="service-compact__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+          <span class="service-compact__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- WHY LUXEMBOURG -->
-  <section class="section section--dark-alt" id="luxembourg">
-    <div class="container">
-      <div class="split">
-        <div class="split__left">
-          <p class="section__eyebrow section__eyebrow--light">Why Luxembourg</p>
-          <h2 class="section__title section__title--light">The #1 EU hub for fund domiciliation.</h2>
-          <p class="section__intro">The natural home for our Asset Management service &mdash; and why clients trust us to structure their vehicles here.</p>
-        </div>
-        <div class="split__right">
-          <div class="lux-grid">
-            <div class="lux-item">
-              <h4>Political Stability</h4>
-              <p>AAA-rated sovereign. EU founding member. Consistent regulatory framework.</p>
-            </div>
-            <div class="lux-item">
-              <h4>Tax Efficiency</h4>
-              <p>Competitive tax regime for investment vehicles. Double tax treaties with 80+ countries.</p>
-            </div>
-            <div class="lux-item">
-              <h4>EU Passporting</h4>
-              <p>Funds domiciled in Luxembourg can be marketed across all 27 EU member states.</p>
-            </div>
-            <div class="lux-item">
-              <h4>AML Standards</h4>
-              <p>Rigorous anti-money laundering framework. CSSF oversight ensures institutional-grade compliance.</p>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -537,9 +511,9 @@
   <!-- GROUP STRUCTURE -->
   <section class="section section--light" id="group">
     <div class="container">
-      <p class="section__eyebrow">Group Structure</p>
-      <h2 class="section__title">Three regulated entities.<br>Clear responsibilities.</h2>
-      <p class="section__intro">Each entity within the Run Capital Partners group serves a distinct, regulated function. When you work with us, you know exactly who you're contracting with.</p>
+      <p class="section__eyebrow" data-en="Group Structure" data-it="Struttura del Gruppo">Group Structure</p>
+      <h2 class="section__title" data-en-html="Three regulated entities.<br>Clear responsibilities." data-it-html="Tre entit&agrave; regolamentate.<br>Responsabilit&agrave; chiare.">Three regulated entities.<br>Clear responsibilities.</h2>
+      <p class="section__intro" data-en="Each entity within the Run Capital Partners group serves a distinct, regulated function. When you work with us, you know exactly who you're contracting with." data-it="Ogni entit&agrave; del gruppo Run Capital Partners svolge una funzione distinta e regolamentata. Quando lavorate con noi, sapete esattamente con chi state contrattando.">Each entity within the Run Capital Partners group serves a distinct, regulated function. When you work with us, you know exactly who you're contracting with.</p>
 
       <div class="group-diagram">
         <div class="group-parent">
@@ -567,7 +541,7 @@
           </a>
           <a class="group-card" href="run-am.html">
             <span class="group-card__num">02</span>
-            <h4>Run AM S.&agrave;.r.l</h4>
+            <h4>Run Asset Management S.&agrave;.r.l</h4>
             <p>Alternative investment funds, securitization vehicles, SPVs, holding structures.</p>
             <div class="group-card__meta">
               <span class="group-card__loc">Luxembourg</span>
@@ -583,13 +557,13 @@
               <span class="group-card__reg">IVASS E000657518</span>
             </div>
           </a>
-          <a class="group-card group-card--external" href="3dots.html">
+          <a class="group-card group-card--external" href="nasdaq-listings.html">
             <span class="group-card__num">04</span>
             <span class="group-card__badge">Spinoff</span>
             <h4>3DOTS Capital Advisory</h4>
             <p>Nasdaq listing advisory for Southern European companies.</p>
             <div class="group-card__meta">
-              <span class="group-card__loc">London</span>
+              <span class="group-card__loc">New York</span>
               <span class="group-card__reg">Learn more &rarr;</span>
             </div>
           </a>
@@ -601,8 +575,8 @@
   <!-- TEAM -->
   <section class="section section--cream" id="team">
     <div class="container">
-      <p class="section__eyebrow">Leadership</p>
-      <h2 class="section__title">Meet the team behind your strategy.</h2>
+      <p class="section__eyebrow" data-en="Leadership" data-it="Leadership">Leadership</p>
+      <h2 class="section__title" data-en="Meet the team behind your strategy." data-it="Il team dietro la vostra strategia.">Meet the team behind your strategy.</h2>
 
       <!-- Leadership Tier -->
       <div class="team-grid">
@@ -656,7 +630,7 @@
           <a href="giordano.html">
             <div class="team-card__photo"><img src="giordano-tomasini.jpg" alt="Giordano Tomasini" loading="lazy"></div>
             <h3 class="team-card__name">Giordano Tomasini</h3>
-            <p class="team-card__role">General Counsel | RunAM</p>
+            <p class="team-card__role">General Counsel | Run Asset Management</p>
           </a>
         </div>
         <div class="team-card">
@@ -668,9 +642,9 @@
         </div>
         <div class="team-card">
           <a href="stefano-giuffra.html">
-            <div class="team-card__photo"></div>
+            <div class="team-card__photo"><img src="stefano-giuffra.jpg" alt="Stefano Giuffra" loading="lazy"></div>
             <h3 class="team-card__name">Stefano Giuffra</h3>
-            <p class="team-card__role">Board Member &amp; Compliance Officer | RunAM</p>
+            <p class="team-card__role">Board Member &amp; Compliance Officer | Run Asset Management</p>
           </a>
         </div>
         <div class="team-card">
@@ -684,7 +658,7 @@
           <a href="giovanni-campodallorto.html">
             <div class="team-card__photo"><img src="giovanni-campodallorto.jpg" alt="Giovanni Campodall'Orto" loading="lazy"></div>
             <h3 class="team-card__name">Giovanni Campodall'Orto</h3>
-            <p class="team-card__role">Head of Operations | RunAM</p>
+            <p class="team-card__role">Head of Operations | Run Asset Management</p>
           </a>
         </div>
         <div class="team-card">
@@ -780,33 +754,100 @@
     <div class="container">
       <div class="insights-header">
         <div>
-          <p class="section__eyebrow">Insights</p>
-          <h2 class="section__title">From our team.</h2>
+          <p class="section__eyebrow" data-en="Insights" data-it="News">Insights</p>
+          <h2 class="section__title" data-en="From our team." data-it="Dal nostro team.">From our team.</h2>
         </div>
-        <a href="insights.html" class="insights-header__link">View all insights <span aria-hidden="true">&rarr;</span></a>
+        <a href="insights.html" class="insights-header__link" data-en-html='View all insights <span aria-hidden="true">&rarr;</span>' data-it-html='Tutti gli articoli <span aria-hidden="true">&rarr;</span>'>View all insights <span aria-hidden="true">&rarr;</span></a>
       </div>
       <div class="insights-grid">
-        <a href="insight-doughnut-model.html" class="insight-card">
-          <div class="insight-card__date">Apr 11, 2025</div>
-          <h3 class="insight-card__title">Beyond Traditional Economic Thinking: The Doughnut Model</h3>
-          <p class="insight-card__author">Davide De Luca</p>
-          <p>Exploring how Kate Raworth&rsquo;s framework challenges conventional growth assumptions and what it means for alternative investment strategy.</p>
-          <span class="insight-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
+
+        <a href="insight-doughnut-model.html" class="insight-card insight-card--magazine">
+          <div class="insight-card__cover">
+            <img src="images/insights/doughnut-model.jpg" alt="Economy vs ecology" loading="lazy">
+            <span class="insight-card__tag">Macro &amp; Strategy</span>
+          </div>
+          <div class="insight-card__body">
+            <div class="insight-card__meta">
+              <span class="insight-card__date">Apr 11, 2025</span>
+              <span class="insight-card__dot">&bull;</span>
+              <span class="insight-card__read-time">
+                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 1"/></svg>
+                7 min read
+              </span>
+            </div>
+            <h3 class="insight-card__title">Beyond Traditional Economic Thinking: The Doughnut Model</h3>
+            <p class="insight-card__excerpt">Exploring how Kate Raworth&rsquo;s framework challenges conventional growth assumptions and what it means for alternative investment strategy.</p>
+            <div class="insight-card__footer">
+              <span class="insight-author">
+                <span class="author-avatar" aria-hidden="true">DD</span>
+                <span class="author-name">
+                  <strong>Davide De Luca</strong>
+                  <span>Analyst</span>
+                </span>
+              </span>
+              <span class="insight-card__cta">Read <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </div>
         </a>
-        <a href="insight-american-economy.html" class="insight-card">
-          <div class="insight-card__date">Mar 5, 2025</div>
-          <h3 class="insight-card__title">The American Economy Between Growth and Debt</h3>
-          <p class="insight-card__author">Davide De Luca</p>
-          <p>An increasingly fragile balance. What US fiscal dynamics mean for European investors positioning in alternatives.</p>
-          <span class="insight-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
+
+        <a href="insight-american-economy.html" class="insight-card insight-card--magazine">
+          <div class="insight-card__cover">
+            <img src="images/insights/american-economy.jpg" alt="Market candlestick chart" loading="lazy">
+            <span class="insight-card__tag">US Markets</span>
+          </div>
+          <div class="insight-card__body">
+            <div class="insight-card__meta">
+              <span class="insight-card__date">Mar 5, 2025</span>
+              <span class="insight-card__dot">&bull;</span>
+              <span class="insight-card__read-time">
+                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 1"/></svg>
+                6 min read
+              </span>
+            </div>
+            <h3 class="insight-card__title">The American Economy Between Growth and Debt</h3>
+            <p class="insight-card__excerpt">An increasingly fragile balance. What US fiscal dynamics mean for European investors positioning in alternatives.</p>
+            <div class="insight-card__footer">
+              <span class="insight-author">
+                <span class="author-avatar" aria-hidden="true">DD</span>
+                <span class="author-name">
+                  <strong>Davide De Luca</strong>
+                  <span>Analyst</span>
+                </span>
+              </span>
+              <span class="insight-card__cta">Read <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </div>
         </a>
-        <a href="insight-eterna-iii.html" class="insight-card">
-          <div class="insight-card__date">Feb 24, 2025</div>
-          <h3 class="insight-card__title">Investing in the Future: Our Participation in Eterna III Fund</h3>
-          <p class="insight-card__author">Giovanni Campodall&rsquo;Orto</p>
-          <p>Why we committed to Eterna III and what the fund&rsquo;s thesis tells us about the next cycle of European private markets.</p>
-          <span class="insight-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
+
+        <a href="insight-eterna-iii.html" class="insight-card insight-card--magazine">
+          <div class="insight-card__cover">
+            <img src="images/insights/eterna-iii.jpg" alt="European urban aerial" loading="lazy">
+            <span class="insight-card__tag">Private Markets</span>
+          </div>
+          <div class="insight-card__body">
+            <div class="insight-card__meta">
+              <span class="insight-card__date">Feb 24, 2025</span>
+              <span class="insight-card__dot">&bull;</span>
+              <span class="insight-card__read-time">
+                <svg viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="8" cy="8" r="6"/><path d="M8 5v3l2 1"/></svg>
+                5 min read
+              </span>
+            </div>
+            <h3 class="insight-card__title">Investing in the Future: Our Participation in Eterna III Fund</h3>
+            <p class="insight-card__excerpt">Why we committed to Eterna III and what the fund&rsquo;s thesis tells us about the next cycle of European private markets.</p>
+            <div class="insight-card__footer">
+              <span class="insight-author">
+                <span class="author-avatar" aria-hidden="true">GC</span>
+                <span class="author-name">
+                  <strong>Giovanni Campodall&rsquo;Orto</strong>
+                  <span>Head of Operations</span>
+                </span>
+              </span>
+              <span class="insight-card__cta">Read <span aria-hidden="true">&rarr;</span></span>
+            </div>
+          </div>
         </a>
+
       </div>
     </div>
   </section>
@@ -816,9 +857,9 @@
     <div class="container">
       <div class="split">
         <div class="split__left">
-          <p class="section__eyebrow">Contact</p>
-          <h2 class="section__title">Let's discuss your strategy.</h2>
-          <p class="text-lg">Whether you're structuring an alternative fund, exploring Nasdaq listing, or seeking systematic wealth management, we'd like to hear from you.</p>
+          <p class="section__eyebrow" data-en="Contact" data-it="Contatti">Contact</p>
+          <h2 class="section__title" data-en="Let's discuss your strategy." data-it="Parliamo della vostra strategia.">Let's discuss your strategy.</h2>
+          <p class="text-lg" data-en="Whether you're structuring an alternative fund, exploring Nasdaq listing, or seeking systematic wealth management, we'd like to hear from you." data-it="Che stiate strutturando un fondo alternativo, esplorando una quotazione al Nasdaq o cercando una gestione patrimoniale sistematica, saremo lieti di sentirvi.">Whether you're structuring an alternative fund, exploring Nasdaq listing, or seeking systematic wealth management, we'd like to hear from you.</p>
 
           <div class="contact-offices">
             <div class="contact-office">
@@ -1059,6 +1100,41 @@
         }
       });
     });
+
+    // ---- Language switcher (EN / IT) ----
+    (function() {
+      const STORE_KEY = 'rcp_lang';
+      function applyLang(lang) {
+        document.documentElement.lang = lang;
+        document.querySelectorAll('[data-en]').forEach(el => {
+          const text = el.getAttribute('data-' + lang);
+          if (text != null) el.textContent = text;
+        });
+        document.querySelectorAll('[data-en-html]').forEach(el => {
+          const html = el.getAttribute('data-' + lang + '-html');
+          if (html != null) el.innerHTML = html;
+        });
+        document.querySelectorAll('.lang-switch__opt').forEach(opt => {
+          opt.classList.toggle('lang-switch__opt--active', opt.getAttribute('data-lang') === lang);
+        });
+        try { localStorage.setItem(STORE_KEY, lang); } catch (e) {}
+      }
+      const saved = (function() { try { return localStorage.getItem(STORE_KEY); } catch (e) { return null; } })();
+      if (saved === 'it') applyLang('it');
+      const switcher = document.getElementById('langSwitch');
+      if (switcher) {
+        switcher.addEventListener('click', function(e) {
+          e.preventDefault();
+          const clicked = e.target.closest('.lang-switch__opt');
+          const current = document.documentElement.lang === 'it' ? 'it' : 'en';
+          if (clicked && clicked.getAttribute('data-lang')) {
+            applyLang(clicked.getAttribute('data-lang'));
+          } else {
+            applyLang(current === 'en' ? 'it' : 'en');
+          }
+        });
+      }
+    })();
 
     // ---- Fade-in on scroll (staggered) ----
     const observer = new IntersectionObserver((entries) => {
