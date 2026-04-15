@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCP Global Markets UK | London Advisory & Distribution | Run Capital Partners</title>
+  <meta name="description" content="RCP Global Markets UK: the London-based advisory and distribution arm of Run Capital Partners. FCA Appointed Representative, Reference number 1043763.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .entity-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 24px;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .entity-mark__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: inline-block;
+    }
+    .regulatory-panel {
+      margin-top: 48px;
+      padding: 40px 44px;
+      background: linear-gradient(160deg, rgba(201,168,76,0.06), rgba(201,168,76,0.01), var(--dark-3));
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 14px;
+    }
+    .regulatory-panel__label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .regulatory-panel__title {
+      font-family: var(--font-serif);
+      font-size: 28px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+    .regulatory-panel__text {
+      color: rgba(255,255,255,0.65);
+      font-size: 15px;
+      line-height: 1.8;
+      max-width: 780px;
+    }
+    .regulatory-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 36px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(201,168,76,0.14);
+    }
+    .regulatory-grid__item-label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      color: rgba(201,168,76,0.75);
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .regulatory-grid__item-value {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      color: var(--white);
+      font-weight: 500;
+    }
+    @media (max-width: 768px) {
+      .regulatory-grid { grid-template-columns: 1fr; }
+      .regulatory-panel { padding: 28px 24px; }
+    }
+    /* Hero two-column layout */
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-illustration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--gold);
+      opacity: 0.85;
+    }
+    .hero-illustration svg {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      filter: drop-shadow(0 0 40px rgba(201,168,76,0.15));
+    }
+    @media (max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr; gap: 32px; }
+      .hero-illustration { order: -1; }
+      .hero-illustration svg { max-width: 220px; }
+    }
+    /* Capability card icon */
+    .cap-icon { width: 44px; height: 44px; color: var(--gold); margin-bottom: 16px; }
+    .cap-icon svg { width: 100%; height: 100%; }
+    /* Section divider */
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+      color: var(--gold);
+      max-width: 400px;
+      padding: 0 24px;
+    }
+    .section-divider span {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#group">Group</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#insights">Insights</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="service-hero">
+    <div class="service-hero__bg"></div>
+    <div class="service-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <a href="index.html#group">Group</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <span class="breadcrumb__current">RCP Global Markets UK</span>
+      </nav>
+      <div class="hero-layout">
+        <div class="hero-layout__text">
+          <span class="entity-mark">
+            <span class="entity-mark__dot"></span>
+            Group Entity 01 &middot; London
+          </span>
+          <h1 class="service-hero__title">RCP Global Markets UK</h1>
+          <p class="service-hero__sub">The UK advisory and distribution arm of Run Capital Partners. London-based, FCA Appointed Representative, serving institutional and private clients across advisory, sport &amp; wealth, and structured product distribution.</p>
+          <div class="service-hero__actions">
+            <a href="#contact-us" class="btn btn--primary">Speak with London</a>
+            <a href="#services" class="btn btn--outline">Our Capabilities</a>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <svg viewBox="0 0 240 320" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Ground line -->
+            <line x1="10" y1="300" x2="230" y2="300" stroke-width="0.8" opacity="0.5"/>
+            <!-- Left skyline buildings -->
+            <rect x="20" y="240" width="28" height="60" opacity="0.35"/>
+            <rect x="52" y="220" width="20" height="80" opacity="0.45"/>
+            <!-- Big Ben tower -->
+            <rect x="100" y="90" width="40" height="210"/>
+            <rect x="96" y="85" width="48" height="8"/>
+            <!-- Clock face -->
+            <circle cx="120" cy="140" r="14"/>
+            <line x1="120" y1="140" x2="120" y2="130"/>
+            <line x1="120" y1="140" x2="128" y2="144"/>
+            <line x1="106" y1="140" x2="134" y2="140" opacity="0.3"/>
+            <line x1="120" y1="126" x2="120" y2="154" opacity="0.3"/>
+            <!-- Tower details -->
+            <line x1="100" y1="170" x2="140" y2="170" opacity="0.5"/>
+            <line x1="100" y1="110" x2="140" y2="110" opacity="0.5"/>
+            <!-- Spire top -->
+            <polygon points="100,85 140,85 138,70 102,70"/>
+            <polygon points="102,70 138,70 130,55 110,55"/>
+            <polygon points="110,55 130,55 120,30"/>
+            <line x1="120" y1="30" x2="120" y2="18"/>
+            <circle cx="120" cy="16" r="2" fill="currentColor"/>
+            <!-- Windows -->
+            <rect x="108" y="190" width="6" height="14" opacity="0.5"/>
+            <rect x="118" y="190" width="6" height="14" opacity="0.5"/>
+            <rect x="128" y="190" width="4" height="14" opacity="0.5"/>
+            <rect x="108" y="215" width="6" height="14" opacity="0.5"/>
+            <rect x="118" y="215" width="6" height="14" opacity="0.5"/>
+            <rect x="128" y="215" width="4" height="14" opacity="0.5"/>
+            <rect x="108" y="240" width="6" height="14" opacity="0.5"/>
+            <rect x="118" y="240" width="6" height="14" opacity="0.5"/>
+            <rect x="128" y="240" width="4" height="14" opacity="0.5"/>
+            <!-- Right skyline -->
+            <rect x="155" y="230" width="22" height="70" opacity="0.45"/>
+            <polygon points="182,230 200,210 200,300 182,300" opacity="0.4"/>
+            <rect x="205" y="250" width="20" height="50" opacity="0.35"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="section-divider" aria-hidden="true">
+    <span></span>
+    <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+      <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
+    </svg>
+    <span></span>
+  </div>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Overview</p>
+          <h2 class="section__title">London-based advisory and distribution.</h2>
+        </div>
+        <div class="split__right">
+          <p class="text-lg">Run Capital Partners Global Markets Ltd operates from London as the group's UK advisory and distribution arm, connecting Southern European capital with institutional-grade opportunities across the City and beyond.</p>
+          <p>As an FCA Appointed Representative, the London team provides regulated advisory services, distributes the group's structured products and alternative investment solutions, and leads client coverage in the sport &amp; wealth vertical. The entity works in close coordination with the group's Luxembourg and Italian platforms to deliver end-to-end execution.</p>
+          <div class="service-stats">
+            <div class="service-stats__item">
+              <span class="service-stats__num">FCA</span>
+              <span class="service-stats__label">Appointed Rep</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">Ref. 1043763</span>
+              <span class="service-stats__label">FSR No.</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">London</span>
+              <span class="service-stats__label">Based</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="services">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">Capabilities</p>
+      <h2 class="section__title section__title--light">What the London entity delivers.</h2>
+      <p class="section__intro">Four focused capabilities at the intersection of UK regulation, European origination, and global distribution.</p>
+
+      <div class="capability-grid">
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 24 L14 20 L18 24 L22 22 L26 24 L30 22 L38 24"/>
+              <path d="M6 24 L6 30 L14 28 L14 22"/>
+              <path d="M38 24 L38 30 L30 28 L30 22"/>
+              <path d="M14 28 L22 30 L30 28"/>
+              <circle cx="22" cy="14" r="2.5"/>
+              <path d="M19 18 L22 16 L25 18"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">Advisory</h3>
+          <p>Regulated investment advisory to institutional clients, family offices, and sophisticated private investors. Portfolio construction, manager selection, and bespoke mandates delivered through FCA-authorised channels.</p>
+        </div>
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="22" cy="22" r="3.5" fill="currentColor"/>
+              <circle cx="8" cy="10" r="2.5" fill="currentColor"/>
+              <circle cx="36" cy="10" r="2.5" fill="currentColor"/>
+              <circle cx="8" cy="34" r="2.5" fill="currentColor"/>
+              <circle cx="36" cy="34" r="2.5" fill="currentColor"/>
+              <line x1="22" y1="22" x2="8" y2="10"/>
+              <line x1="22" y1="22" x2="36" y2="10"/>
+              <line x1="22" y1="22" x2="8" y2="34"/>
+              <line x1="22" y1="22" x2="36" y2="34"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">Distribution</h3>
+          <p>Distribution of the group's structured products, certificates, and alternative investment solutions across the UK and broader European investor base. Institutional placement and intermediary coverage.</p>
+        </div>
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 8 L30 8 L30 18 C30 24 26 28 22 28 C18 28 14 24 14 18 Z"/>
+              <path d="M14 10 L8 10 L8 14 C8 18 11 20 14 20"/>
+              <path d="M30 10 L36 10 L36 14 C36 18 33 20 30 20"/>
+              <line x1="18" y1="28" x2="18" y2="34"/>
+              <line x1="26" y1="28" x2="26" y2="34"/>
+              <rect x="14" y="34" width="16" height="3"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">Sport &amp; Wealth</h3>
+          <p>Dedicated wealth advisory for professional athletes, agents, and sporting institutions. Career-aware portfolio construction, currency management, and long-term financial planning tailored to the realities of a sporting career.</p>
+        </div>
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="6" y1="38" x2="38" y2="38"/>
+              <rect x="9" y="26" width="6" height="12"/>
+              <rect x="19" y="18" width="6" height="20"/>
+              <rect x="29" y="10" width="6" height="28"/>
+              <polyline points="9,22 19,14 29,8 35,6"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">Structured Products &amp; Alternatives Partner</h3>
+          <p>The group's UK counterparty for structured product origination and alternative strategies. Bridges UK distribution with Luxembourg issuance and Italian advisory to deliver cohesive cross-border execution.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="team">
+    <div class="container">
+      <p class="section__eyebrow">London Team</p>
+      <h2 class="section__title">The London team.</h2>
+      <p class="section__intro">Senior partners leading the UK entity from offices in London.</p>
+
+      <div class="team-grid" style="grid-template-columns: repeat(3, minmax(0, 280px)); justify-content: center;">
+        <div class="team-card">
+          <a href="ceo.html">
+            <div class="team-card__photo"><img src="luca-padovan.jpg" alt="Luca Padovan" loading="lazy"></div>
+            <h3 class="team-card__name">Luca Padovan</h3>
+            <p class="team-card__role">CEO &amp; Founder</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="danilo-carolini.html">
+            <div class="team-card__photo"><img src="danilo-carolini.jpg" alt="Danilo Carolini" loading="lazy"></div>
+            <h3 class="team-card__name">Danilo Carolini</h3>
+            <p class="team-card__role">Head of Alternative Investments</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="matteo-bodini.html">
+            <div class="team-card__photo"><img src="matteo-bodini.jpg" alt="Matteo Bodini" loading="lazy"></div>
+            <h3 class="team-card__name">Matteo Bodini</h3>
+            <p class="team-card__role">Head of Legal Affairs</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true">
+    <span></span>
+    <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+      <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
+    </svg>
+    <span></span>
+  </div>
+
+  <section class="section section--dark-alt">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">Regulatory</p>
+      <h2 class="section__title section__title--light">FCA registration &amp; legal status.</h2>
+
+      <div class="regulatory-panel">
+        <p class="regulatory-panel__label">Legal Notice</p>
+        <h3 class="regulatory-panel__title">Appointed Representative of the Financial Conduct Authority</h3>
+        <p class="regulatory-panel__text">Run Capital Partners Global Markets Ltd is part of Run Capital Partners Group. Run Capital Partners Global Markets Ltd is an Appointed Representative (FCA Reference number: 1043763) registered on the Financial Services Register.</p>
+
+        <div class="regulatory-grid">
+          <div>
+            <p class="regulatory-grid__item-label">Legal Entity</p>
+            <p class="regulatory-grid__item-value">Run Capital Partners Global Markets Ltd</p>
+          </div>
+          <div>
+            <p class="regulatory-grid__item-label">FCA Reference</p>
+            <p class="regulatory-grid__item-value">1043763</p>
+          </div>
+          <div>
+            <p class="regulatory-grid__item-label">Status</p>
+            <p class="regulatory-grid__item-value">Appointed Representative</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="contact-us">
+    <div class="container service-cta">
+      <h2 class="service-cta__title">Speak with the London team</h2>
+      <p class="service-cta__sub">For advisory mandates, distribution partnerships, and sport &amp; wealth engagements, contact the RCP Global Markets UK team directly. Confidential introductions welcomed.</p>
+      <div class="service-cta__actions">
+        <a href="mailto:london@runcapital.partners" class="btn btn--primary">london@runcapital.partners</a>
+        <a href="index.html#contact" class="btn btn--outline">Contact Run Capital Partners</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+            <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+          </div>
+          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with. 3DOTS Capital Advisory operates as an independent spinoff.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="asset-management.html">Asset Management</a></li>
+            <li><a href="wealth-management.html">Wealth Management</a></li>
+            <li><a href="sport-wealth.html">Sport &amp; Wealth</a></li>
+            <li><a href="certificate-issuance.html">Certificate Issuance</a></li>
+            <li><a href="3dots.html">Nasdaq Listings (3DOTS)</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#group">Group Structure</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#insights">Insights</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="regulatory-disclosures.html">Regulatory Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.capability-card, .team-card, .service-stats__item, .regulatory-panel').forEach(el => {
+        el.classList.add('fade-in');
+        revealObserver.observe(el);
+      });
+    }
+  </script>
+
+</body>
+</html>

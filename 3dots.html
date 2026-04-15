@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3DOTS Capital Advisory | Independent Spinoff | Run Capital Partners</title>
+  <meta name="description" content="3DOTS Capital Advisory: independent spinoff guiding Southern European companies through Nasdaq listings. End-to-end advisory for the journey to US public markets.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .threedots-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 18px;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 24px;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .threedots-mark__dots {
+      display: inline-flex;
+      gap: 4px;
+    }
+    .threedots-mark__dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .pillar-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+    .pillar-card {
+      padding: 32px 28px;
+      background: linear-gradient(160deg, rgba(201,168,76,0.06), rgba(201,168,76,0.01), var(--dark-3));
+      border: 1px solid rgba(201,168,76,0.12);
+      border-radius: 14px;
+      transition: all 0.3s var(--ease-out-expo);
+    }
+    .pillar-card:hover {
+      border-color: rgba(201,168,76,0.3);
+      transform: translateY(-4px);
+    }
+    .pillar-card__num {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      color: var(--gold);
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 16px;
+      opacity: 0.6;
+    }
+    .pillar-card__title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+    .pillar-card__desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.5);
+      line-height: 1.7;
+    }
+    .external-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 16px 28px;
+      background: var(--gold);
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 14px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: all 0.3s var(--ease-out-expo);
+    }
+    .external-cta:hover {
+      background: var(--gold-light);
+      transform: translateY(-2px);
+      box-shadow: 0 12px 32px rgba(201,168,76,0.2);
+    }
+    @media (max-width: 768px) {
+      .pillar-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#group">Group</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#insights">Insights</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="service-hero">
+    <div class="service-hero__bg"></div>
+    <div class="service-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <a href="index.html#group">Group</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <span class="breadcrumb__current">3DOTS Capital Advisory</span>
+      </nav>
+      <span class="threedots-mark">
+        <span class="threedots-mark__dots"><span></span><span></span><span></span></span>
+        Independent Spinoff
+      </span>
+      <h1 class="service-hero__title">3DOTS Capital Advisory</h1>
+      <p class="service-hero__sub">An independent capital markets advisory firm guiding Southern European companies through Nasdaq listings. Born inside Run Capital Partners, now operating as a dedicated spinoff bridging European excellence with US public markets.</p>
+      <div class="service-hero__actions">
+        <a href="https://3dots.com" target="_blank" rel="noopener" class="btn btn--primary">Visit 3dots.com &rarr;</a>
+        <a href="#how-we-help" class="btn btn--outline">How We Help</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">About 3DOTS</p>
+          <h2 class="section__title">European companies, US public markets.</h2>
+        </div>
+        <div class="split__right">
+          <p class="text-lg">Southern European companies often have the strength, the customer base, and the growth profile to thrive on the public markets &mdash; but the path to a US listing is unfamiliar territory.</p>
+          <p>3DOTS was founded inside Run Capital Partners as a dedicated practice for this transition. Today it operates as an independent spinoff with the same conviction: Europe builds great companies, and the US capital markets are the right venue for many of them. We make the journey navigable.</p>
+          <div class="service-stats">
+            <div class="service-stats__item">
+              <span class="service-stats__num">Nasdaq</span>
+              <span class="service-stats__label">Target Market</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">End-to-End</span>
+              <span class="service-stats__label">Advisory</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">Independent</span>
+              <span class="service-stats__label">Spinoff</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">Why 3DOTS</p>
+      <h2 class="section__title section__title--light">Four pillars of our advisory practice.</h2>
+      <p class="section__intro">A specialised approach built for European founders considering the move to US public markets.</p>
+
+      <div class="pillar-grid">
+        <div class="pillar-card">
+          <div class="pillar-card__num">01</div>
+          <h3 class="pillar-card__title">Governance</h3>
+          <p class="pillar-card__desc">From private-company structure to public-company readiness. Board composition, audit committee, internal controls aligned with US listing standards and Sarbanes-Oxley.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-card__num">02</div>
+          <h3 class="pillar-card__title">Administrative</h3>
+          <p class="pillar-card__desc">Reporting infrastructure, PCAOB-ready audits, financial systems, and the ongoing administrative discipline that public-company life requires.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-card__num">03</div>
+          <h3 class="pillar-card__title">International Network</h3>
+          <p class="pillar-card__desc">Direct relationships with US underwriters, securities counsel, PCAOB auditors, IR firms, and the institutional investor base that allocates to Southern European growth stories.</p>
+        </div>
+        <div class="pillar-card">
+          <div class="pillar-card__num">04</div>
+          <h3 class="pillar-card__title">Tailored</h3>
+          <p class="pillar-card__desc">Every engagement is built around the company's specific stage, sector, and ambitions. No template paths. The right route to listing depends on who you are.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="how-we-help">
+    <div class="container">
+      <p class="section__eyebrow">How It Works</p>
+      <h2 class="section__title">From private company<br>to public market.</h2>
+      <p class="section__intro">A staged roadmap that prepares the company, executes the listing, and supports life as a public issuer.</p>
+
+      <div class="capability-grid">
+        <div class="capability-card">
+          <h3 class="capability-card__title">01 &middot; Readiness Assessment</h3>
+          <p>We evaluate the company against Nasdaq listing standards: financials, governance, reporting capability, market positioning. We identify gaps and set a realistic timeline.</p>
+        </div>
+        <div class="capability-card">
+          <h3 class="capability-card__title">02 &middot; Preparation</h3>
+          <p>Audit readiness, corporate reorganization, governance upgrades, equity story refinement, and investor targeting. We introduce underwriters, US counsel, auditors, and IR partners.</p>
+        </div>
+        <div class="capability-card">
+          <h3 class="capability-card__title">03 &middot; Listing Execution</h3>
+          <p>Prospectus, SEC filings, roadshow, pricing, and listing day. We stay alongside the management team through the entire sequence, coordinating the full advisor stack.</p>
+        </div>
+        <div class="capability-card">
+          <h3 class="capability-card__title">04 &middot; Post-Listing Advisory</h3>
+          <p>Quarterly reporting cadence, investor relations, secondary offerings, and the ongoing regulatory rhythm of a US-listed company.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark-alt">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow section__eyebrow--light">Relationship to Run Capital Partners</p>
+          <h2 class="section__title section__title--light">Independent. Aligned.</h2>
+        </div>
+        <div class="split__right">
+          <p class="text-lg" style="color: rgba(255,255,255,0.7);">3DOTS Capital Advisory was founded inside Run Capital Partners and now operates as an independent spinoff. The two entities work as long-term partners: Run Capital Partners brings clients with growth ambitions to consider US listings; 3DOTS executes the advisory mandate.</p>
+          <p style="color: rgba(255,255,255,0.5); margin-top: 16px;">For founders evaluating a Nasdaq listing, this means the strategic conversation can start at Run Capital Partners and continue seamlessly with the dedicated 3DOTS team.</p>
+          <p style="margin-top: 36px;">
+            <a href="https://3dots.com" target="_blank" rel="noopener" class="external-cta">
+              Visit 3dots.com
+              <span aria-hidden="true">&#8599;</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="contact-us">
+    <div class="container service-cta">
+      <h2 class="service-cta__title">Considering a Nasdaq listing?</h2>
+      <p class="service-cta__sub">Start the conversation with Run Capital Partners. We'll connect you with the 3DOTS team for a confidential review of your company, your timeline, and whether a US listing is the right next step. No fee, no commitment.</p>
+      <div class="service-cta__actions">
+        <a href="index.html#contact?service=nasdaq" class="btn btn--primary">Contact Run Capital Partners</a>
+        <a href="https://3dots.com" target="_blank" rel="noopener" class="btn btn--outline">Visit 3DOTS &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+            <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+          </div>
+          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with. 3DOTS Capital Advisory operates as an independent spinoff.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="asset-management.html">Asset Management</a></li>
+            <li><a href="wealth-management.html">Wealth Management</a></li>
+            <li><a href="sport-wealth.html">Sport &amp; Wealth</a></li>
+            <li><a href="certificate-issuance.html">Certificate Issuance</a></li>
+            <li><a href="3dots.html">Nasdaq Listings (3DOTS)</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#group">Group Structure</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#insights">Insights</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="regulatory-disclosures.html">Regulatory Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.pillar-card, .capability-card, .service-stats__item').forEach(el => {
+        el.classList.add('fade-in');
+        revealObserver.observe(el);
+      });
+    }
+  </script>
+
+</body>
+</html>

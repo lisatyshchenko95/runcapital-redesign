@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nasdaq Listings | Run Capital Partners</title>
+  <meta name="description" content="End-to-end advisory for high-potential Southern European companies listing on the Nasdaq. Delivered by 3DOTS UK, connecting European excellence with US capital markets.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    :root {
+      --nasdaq-blue: #0096D6;
+      --nasdaq-blue-dark: #005983;
+      --nasdaq-blue-glow: rgba(0, 150, 214, 0.35);
+    }
+
+    /* Nasdaq-blue hero accents layered over dark base */
+    .nasdaq-hero .service-hero__bg {
+      background:
+        radial-gradient(ellipse 50% 40% at 75% 30%, var(--nasdaq-blue-glow) 0%, transparent 60%),
+        radial-gradient(ellipse 60% 50% at 20% 80%, rgba(201,168,76,0.12) 0%, transparent 55%),
+        linear-gradient(180deg, #030710 0%, #050a14 100%);
+    }
+
+    .nasdaq-hero__illustration {
+      position: relative;
+      aspect-ratio: 1 / 1.05;
+      max-width: 360px;
+      margin: 0 auto;
+    }
+
+    .nasdaq-hero__illustration svg {
+      width: 100%;
+      height: 100%;
+      filter: drop-shadow(0 0 30px rgba(0,150,214,0.25));
+    }
+
+    /* Ticker strip */
+    .ticker-strip {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(180deg, #030710 0%, #050a14 100%);
+      border-top: 1px solid rgba(0,150,214,0.25);
+      border-bottom: 1px solid rgba(0,150,214,0.25);
+      padding: 18px 0;
+    }
+
+    .ticker-strip::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(90deg, #050a14 0%, transparent 8%, transparent 92%, #050a14 100%);
+      pointer-events: none;
+      z-index: 2;
+    }
+
+    .ticker-track {
+      display: flex;
+      gap: 56px;
+      width: max-content;
+      animation: tickerScroll 45s linear infinite;
+      white-space: nowrap;
+    }
+
+    @keyframes tickerScroll {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+
+    .ticker-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-family: 'Inter', monospace;
+      font-size: 14px;
+      letter-spacing: 0.06em;
+      color: rgba(255,255,255,0.85);
+    }
+
+    .ticker-item__symbol {
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.12em;
+    }
+
+    .ticker-item__change { font-weight: 600; display: inline-flex; align-items: center; gap: 4px; }
+    .ticker-item__change--up { color: #22c55e; }
+    .ticker-item__change--down { color: #ef4444; }
+    .ticker-item__dot {
+      width: 6px; height: 6px; border-radius: 50%; background: var(--nasdaq-blue);
+      animation: tickerPulse 2.5s ease-in-out infinite;
+    }
+
+    @keyframes tickerPulse {
+      0%, 100% { opacity: 0.5; box-shadow: 0 0 0 0 rgba(0,150,214,0.6); }
+      50% { opacity: 1; box-shadow: 0 0 0 6px rgba(0,150,214,0); }
+    }
+
+    /* Nasdaq pill badge in eyebrow */
+    .nasdaq-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: linear-gradient(135deg, var(--nasdaq-blue) 0%, var(--nasdaq-blue-dark) 100%);
+      color: var(--white);
+      font-family: 'Cinzel', serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.22em;
+      padding: 6px 14px;
+      border-radius: 100px;
+      margin-right: 12px;
+      text-transform: uppercase;
+      box-shadow: 0 0 20px var(--nasdaq-blue-glow);
+    }
+
+    .nasdaq-pill__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #fff;
+      animation: tickerPulse 2s ease-in-out infinite;
+    }
+
+    /* Image gallery */
+    .nasdaq-gallery {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      grid-template-rows: 240px 240px;
+      gap: 16px;
+      margin-top: 40px;
+    }
+
+    .nasdaq-gallery__item {
+      position: relative;
+      overflow: hidden;
+      border-radius: 12px;
+      border: 1px solid rgba(0,150,214,0.2);
+      transition: all 0.4s var(--ease-out-expo);
+    }
+
+    .nasdaq-gallery__item:hover {
+      border-color: rgba(0,150,214,0.6);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 40px rgba(0,0,0,0.15), 0 0 32px rgba(0,150,214,0.15);
+    }
+
+    .nasdaq-gallery__item:first-child {
+      grid-row: 1 / span 2;
+    }
+
+    .nasdaq-gallery__item:nth-child(4) {
+      grid-column: 2 / span 2;
+    }
+
+    .nasdaq-gallery__item:nth-child(5) {
+      display: none; /* keep for optional use */
+    }
+
+    .nasdaq-gallery__item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.6s var(--ease-out-expo);
+    }
+
+    .nasdaq-gallery__item:hover img {
+      transform: scale(1.04);
+    }
+
+    .nasdaq-gallery__item::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 50%, rgba(3,7,16,0.85) 100%);
+      pointer-events: none;
+    }
+
+    .nasdaq-gallery__caption {
+      position: absolute;
+      bottom: 16px;
+      left: 18px;
+      right: 18px;
+      z-index: 2;
+      color: #fff;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    /* Nasdaq blue accent on stats */
+    .nasdaq-hero .service-hero__eyebrow,
+    .nasdaq-accent-text { color: var(--nasdaq-blue); }
+
+    .stat-highlight {
+      border-left: 3px solid var(--nasdaq-blue);
+      padding-left: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .nasdaq-gallery { grid-template-columns: 1fr; grid-template-rows: auto; }
+      .nasdaq-gallery__item:first-child { grid-row: auto; }
+      .nasdaq-gallery__item { height: 200px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#group">Group</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#insights">Insights</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="service-hero nasdaq-hero">
+    <div class="service-hero__bg"></div>
+    <div class="service-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <a href="index.html#services">Services</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <span class="breadcrumb__current">Nasdaq Listings</span>
+      </nav>
+      <div class="service-hero__layout">
+        <div class="service-hero__text">
+          <p class="service-hero__eyebrow">
+            <span class="nasdaq-pill"><span class="nasdaq-pill__dot"></span>Nasdaq</span>
+            Service 05 &middot; 3DOTS UK
+          </p>
+          <h1 class="service-hero__title">Take your company to <span class="nasdaq-accent-text">Times Square.</span></h1>
+          <p class="service-hero__sub">Supporting high-potential Southern European companies on the journey to list on the Nasdaq. End-to-end advisory from preparation through listing, connecting European excellence with US capital markets.</p>
+          <div class="service-hero__actions">
+            <a href="#contact-us" class="btn btn--primary">Contact Us About This Service</a>
+            <a href="#process" class="btn btn--outline">How It Works</a>
+          </div>
+        </div>
+        <div class="service-hero__illustration nasdaq-hero__illustration" aria-hidden="true">
+          <!-- Nasdaq MarketSite-inspired illuminated tower in Times Square -->
+          <svg viewBox="0 0 360 380" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="ndScreen" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#0096D6" stop-opacity="0.95"/>
+                <stop offset="60%" stop-color="#0096D6" stop-opacity="0.7"/>
+                <stop offset="100%" stop-color="#005983" stop-opacity="0.5"/>
+              </linearGradient>
+              <linearGradient id="ndTower" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" stop-color="#0a1826"/>
+                <stop offset="100%" stop-color="#030710"/>
+              </linearGradient>
+              <radialGradient id="ndGlow" cx="50%" cy="50%" r="50%">
+                <stop offset="0%" stop-color="#0096D6" stop-opacity="0.5"/>
+                <stop offset="100%" stop-color="#0096D6" stop-opacity="0"/>
+              </radialGradient>
+            </defs>
+
+            <!-- Ambient glow behind tower -->
+            <ellipse cx="180" cy="200" rx="180" ry="170" fill="url(#ndGlow)"/>
+
+            <!-- Surrounding buildings silhouette (left) -->
+            <g stroke="rgba(201,168,76,0.3)" stroke-width="1" fill="rgba(10,24,38,0.6)">
+              <rect x="10" y="220" width="56" height="160"/>
+              <line x1="10" y1="250" x2="66" y2="250"/>
+              <line x1="10" y1="280" x2="66" y2="280"/>
+              <line x1="10" y1="310" x2="66" y2="310"/>
+              <line x1="10" y1="340" x2="66" y2="340"/>
+              <line x1="38" y1="220" x2="38" y2="380"/>
+            </g>
+
+            <!-- Surrounding buildings silhouette (right) -->
+            <g stroke="rgba(201,168,76,0.3)" stroke-width="1" fill="rgba(10,24,38,0.6)">
+              <rect x="300" y="240" width="50" height="140"/>
+              <line x1="300" y1="270" x2="350" y2="270"/>
+              <line x1="300" y1="300" x2="350" y2="300"/>
+              <line x1="300" y1="330" x2="350" y2="330"/>
+              <line x1="325" y1="240" x2="325" y2="380"/>
+            </g>
+
+            <!-- Central Nasdaq tower base -->
+            <rect x="90" y="80" width="180" height="300" fill="url(#ndTower)" stroke="rgba(0,150,214,0.4)" stroke-width="1.2"/>
+
+            <!-- Curved tower frame top -->
+            <path d="M 90 80 Q 90 50 120 50 L 240 50 Q 270 50 270 80" fill="url(#ndTower)" stroke="rgba(0,150,214,0.4)" stroke-width="1.2"/>
+
+            <!-- LED wrap-around screen (the Nasdaq big screen) -->
+            <rect x="100" y="100" width="160" height="210" fill="url(#ndScreen)" opacity="0.85">
+              <animate attributeName="opacity" values="0.75;0.95;0.75" dur="4s" repeatCount="indefinite"/>
+            </rect>
+
+            <!-- Inner screen text lines (simulating ticker) -->
+            <g fill="#fff" opacity="0.85" font-family="Inter, sans-serif">
+              <text x="180" y="150" text-anchor="middle" font-size="28" font-weight="800" letter-spacing="3">IPO</text>
+              <rect x="110" y="170" width="140" height="1.5" opacity="0.4"/>
+              <text x="180" y="195" text-anchor="middle" font-size="12" font-weight="600" letter-spacing="2">LISTED TODAY</text>
+              <rect x="110" y="210" width="140" height="1" opacity="0.25"/>
+              <text x="118" y="235" font-size="11" font-weight="600" letter-spacing="1" opacity="0.9">YOUR</text>
+              <text x="242" y="235" text-anchor="end" font-size="11" font-weight="600" letter-spacing="1" fill="#22c55e" opacity="0.95">▲ +4.2%</text>
+              <text x="118" y="258" font-size="11" font-weight="600" letter-spacing="1" opacity="0.9">COMPANY</text>
+              <text x="242" y="258" text-anchor="end" font-size="11" font-weight="600" letter-spacing="1" fill="#22c55e" opacity="0.95">▲ +2.8%</text>
+              <text x="180" y="290" text-anchor="middle" font-size="10" font-weight="400" letter-spacing="2" opacity="0.6">NASDAQ · NEW YORK</text>
+            </g>
+
+            <!-- Screen top/bottom edges -->
+            <line x1="100" y1="100" x2="260" y2="100" stroke="#fff" stroke-width="1" opacity="0.2"/>
+            <line x1="100" y1="310" x2="260" y2="310" stroke="#fff" stroke-width="1" opacity="0.2"/>
+
+            <!-- Tower spire with pulsing tip -->
+            <line x1="180" y1="50" x2="180" y2="20" stroke="rgba(0,150,214,0.6)" stroke-width="1.2"/>
+            <circle cx="180" cy="16" r="4" fill="#0096D6">
+              <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;1;0.6" dur="2s" repeatCount="indefinite"/>
+            </circle>
+            <circle cx="180" cy="16" r="8" fill="none" stroke="#0096D6" stroke-width="0.6" opacity="0.5">
+              <animate attributeName="r" values="5;16;5" dur="3s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.6;0;0.6" dur="3s" repeatCount="indefinite"/>
+            </circle>
+
+            <!-- Ground line -->
+            <line x1="0" y1="380" x2="360" y2="380" stroke="rgba(201,168,76,0.35)" stroke-width="0.75"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Live market ticker strip -->
+  <div class="ticker-strip" aria-hidden="true">
+    <div class="ticker-track">
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">NDX</span><span>18,245.32</span><span class="ticker-item__change ticker-item__change--up">&#9650; +1.24%</span></span>
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">IXIC</span><span>16,082.11</span><span class="ticker-item__change ticker-item__change--up">&#9650; +0.86%</span></span>
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">IPO</span><span>Listings 2025</span><span class="ticker-item__change ticker-item__change--up">&#9650; +18</span></span>
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">EU &rarr; US</span><span>Cross-border</span><span class="ticker-item__change ticker-item__change--up">&#9650; Growing</span></span>
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">3DOTS</span><span>UK Advisory</span><span class="ticker-item__change ticker-item__change--up">&#9650; Active</span></span>
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">NDX</span><span>18,245.32</span><span class="ticker-item__change ticker-item__change--up">&#9650; +1.24%</span></span>
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">IXIC</span><span>16,082.11</span><span class="ticker-item__change ticker-item__change--up">&#9650; +0.86%</span></span>
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">IPO</span><span>Listings 2025</span><span class="ticker-item__change ticker-item__change--up">&#9650; +18</span></span>
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">EU &rarr; US</span><span>Cross-border</span><span class="ticker-item__change ticker-item__change--up">&#9650; Growing</span></span>
+      <span class="ticker-item"><span class="ticker-item__dot"></span><span class="ticker-item__symbol">3DOTS</span><span>UK Advisory</span><span class="ticker-item__change ticker-item__change--up">&#9650; Active</span></span>
+    </div>
+  </div>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Overview</p>
+          <h2 class="section__title">European excellence,<br>US public markets.</h2>
+        </div>
+        <div class="split__right">
+          <p class="text-lg">Southern European companies often have the strength, the market, and the growth profile to thrive as publicly listed companies &mdash; but the path to a US listing is unfamiliar. Our Nasdaq Listings practice, delivered by 3DOTS UK, is designed specifically for this transition.</p>
+          <p>We work with founders and management teams from the preparation phase through listing day and beyond. Our role is to demystify the process, align the company with US market expectations, and introduce the right banks, counsel, and investor relations partners to make the listing successful.</p>
+          <div class="service-stats">
+            <div class="service-stats__item">
+              <span class="service-stats__num">Nasdaq</span>
+              <span class="service-stats__label">Target Market</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">End-to-End</span>
+              <span class="service-stats__label">Advisory</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">3DOTS UK</span>
+              <span class="service-stats__label">Delivery Entity</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-highlight feature-highlight--light">
+        <div class="feature-highlight__icon">
+          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M6 40 H42"/>
+            <rect x="10" y="30" width="6" height="10"/>
+            <rect x="20" y="22" width="6" height="18"/>
+            <rect x="30" y="12" width="6" height="28"/>
+            <path d="M8 36 L16 30 L26 22 L38 10"/>
+            <path d="M34 10 L38 10 L38 14"/>
+          </svg>
+        </div>
+        <div class="feature-highlight__num">Nasdaq</div>
+        <div class="feature-highlight__label">US Capital Markets Access</div>
+      </div>
+
+      <div class="section-divider" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+          <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
+        </svg>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="process">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">How It Works</p>
+      <h2 class="section__title section__title--light">From private company to public market.</h2>
+      <p class="section__intro">A staged roadmap that prepares the company, executes the listing, and supports the life as a public company.</p>
+
+      <div class="process-grid">
+        <div class="process-step">
+          <span class="process-step__num">01</span>
+          <span class="process-step__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11 L11 13 L15 9"/><rect x="4" y="4" width="16" height="16" rx="2"/></svg></span>
+          <h3 class="process-step__title">Readiness Assessment</h3>
+          <p>We assess the company against Nasdaq listing standards: financials, governance, reporting capability, market positioning. We identify gaps and set a realistic timeline.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-step__num">02</span>
+          <span class="process-step__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 L3 9 L12 15 L21 9 Z"/><path d="M6 11 V17 C8 18 10 19 12 19 C14 19 16 18 18 17 V11"/></svg></span>
+          <h3 class="process-step__title">Preparation</h3>
+          <p>Audit readiness, corporate reorganization, governance upgrades, equity story refinement, and investor targeting. We introduce underwriters, US counsel, auditors, and IR partners.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-step__num">03</span>
+          <span class="process-step__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 L10 14 L14 18 L20 8"/><path d="M14 8 H20 V14"/></svg></span>
+          <h3 class="process-step__title">Listing Execution</h3>
+          <p>Prospectus, SEC filings, roadshow, pricing, and listing day. We stay alongside the management team through the entire sequence, coordinating the full advisor stack.</p>
+        </div>
+        <div class="process-step">
+          <span class="process-step__num">04</span>
+          <span class="process-step__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7 V12 L15 14"/></svg></span>
+          <h3 class="process-step__title">Post-Listing Advisory</h3>
+          <p>Life as a public company is a different discipline. We advise on quarterly reporting cadence, investor relations, secondary offerings, and the ongoing regulatory rhythm.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <p class="section__eyebrow"><span class="nasdaq-accent-text">&#9679;</span>&nbsp; Nasdaq MarketSite</p>
+      <h2 class="section__title">Times Square.<br>Your listing moment.</h2>
+      <p class="section__intro">From opening bell to the illuminated tower in Times Square, a Nasdaq listing is more than a capital event. It's a signal to US institutional investors, global media, and your clients.</p>
+
+      <div class="nasdaq-gallery">
+        <div class="nasdaq-gallery__item">
+          <img src="images/nasdaq/nasdaq-building.jpg" alt="Nasdaq MarketSite, Times Square" loading="lazy">
+          <span class="nasdaq-gallery__caption">Nasdaq MarketSite &middot; Times Square</span>
+        </div>
+        <div class="nasdaq-gallery__item">
+          <img src="images/nasdaq/marketsite.jpg" alt="Nasdaq MarketSite entrance" loading="lazy">
+          <span class="nasdaq-gallery__caption">MarketSite Entrance</span>
+        </div>
+        <div class="nasdaq-gallery__item">
+          <img src="images/nasdaq/market-data.jpg" alt="Nasdaq market data ticker" loading="lazy">
+          <span class="nasdaq-gallery__caption">Live Market Data</span>
+        </div>
+        <div class="nasdaq-gallery__item">
+          <img src="images/nasdaq/times-square.jpg" alt="Nasdaq Times Square tower" loading="lazy">
+          <span class="nasdaq-gallery__caption">Your Listing Moment</span>
+        </div>
+        <div class="nasdaq-gallery__item">
+          <img src="images/nasdaq/nasdaq-tower.jpg" alt="Nasdaq tower illuminated" loading="lazy">
+          <span class="nasdaq-gallery__caption">Illuminated Tower</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream">
+    <div class="container">
+      <p class="section__eyebrow">What We Deliver</p>
+      <h2 class="section__title">The full advisory stack for a US listing.</h2>
+      <div class="capability-grid">
+        <div class="capability-card">
+          <h3 class="capability-card__title">IPO Preparation &amp; Advisory</h3>
+          <p>Pre-IPO readiness, governance upgrades, reporting infrastructure, and the equity story that resonates with US investors.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> Governance upgrades</li>
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> Reporting infrastructure</li>
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> Equity story refinement</li>
+          </ul>
+        </div>
+        <div class="capability-card">
+          <h3 class="capability-card__title">US Capital Markets Access</h3>
+          <p>Introductions to underwriters, US counsel, PCAOB auditors, and institutional investors who allocate to Southern European growth companies.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> Underwriter introductions</li>
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> PCAOB auditors</li>
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> US institutional investors</li>
+          </ul>
+        </div>
+        <div class="capability-card">
+          <h3 class="capability-card__title">Regulatory Compliance Support</h3>
+          <p>SEC filings, Nasdaq listing standards, Sarbanes-Oxley readiness, and the ongoing compliance rhythm of a US-listed company.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> SEC filings</li>
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> Sarbanes-Oxley readiness</li>
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> Nasdaq listing standards</li>
+          </ul>
+        </div>
+        <div class="capability-card">
+          <h3 class="capability-card__title">Investor Relations Strategy</h3>
+          <p>From roadshow to post-listing communications. We help management teams speak the language US investors expect from a Nasdaq-listed issuer.</p>
+          <ul class="feature-list">
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> Roadshow preparation</li>
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> Earnings cadence</li>
+            <li><svg viewBox="0 0 16 16" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2"><circle cx="8" cy="8" r="3" fill="currentColor"/><circle cx="8" cy="8" r="7"/></svg> Analyst relationships</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="section-divider" aria-hidden="true">
+        <span></span>
+        <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
+          <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
+        </svg>
+        <span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="contact-us">
+    <div class="container service-cta">
+      <h2 class="service-cta__title">Considering a Nasdaq listing?</h2>
+      <p class="service-cta__sub">A confidential conversation about your company, your timeline, and whether a US listing is the right next step. No fee, no commitment.</p>
+      <div class="service-cta__actions">
+        <a href="index.html#contact?service=nasdaq" class="btn btn--primary">Contact Us About Nasdaq Listings</a>
+        <a href="index.html#services" class="btn btn--outline">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img" style="filter: brightness(0) invert(1); opacity: 0.7;">
+          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="asset-management.html">Asset Management</a></li>
+            <li><a href="wealth-management.html">Wealth Management</a></li>
+            <li><a href="sport-wealth.html">Sport &amp; Wealth</a></li>
+            <li><a href="certificate-issuance.html">Certificate Issuance</a></li>
+            <li><a href="nasdaq-listings.html">Nasdaq Listings</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#group">Group Structure</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#insights">Insights</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="regulatory-disclosures.html">Regulatory Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    // Scroll reveal
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.service-featured, .service-compact, .process-step, .capability-card, .insight-card, .service-stats__item, .lux-item').forEach(el => {
+        el.classList.add('fade-in');
+        revealObserver.observe(el);
+      });
+    }
+
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Run AM S.à.r.l | Luxembourg AIFM | Run Capital Partners</title>
+  <meta name="description" content="Run AM S.à.r.l is the Luxembourg-based Alternative Investment Fund Manager of the Run Capital Partners Group, registered with the CSSF under reference A00003107.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .entity-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 24px;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .entity-mark__dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--gold);
+    }
+    .regulatory-card {
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 14px;
+      padding: 44px;
+      background: linear-gradient(160deg, rgba(201,168,76,0.04), rgba(201,168,76,0.01));
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .regulatory-card__ref {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      color: var(--gold);
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+      line-height: 1;
+    }
+    .regulatory-card__label {
+      font-family: 'Cinzel', serif;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(0,0,0,0.55);
+      margin-bottom: 28px;
+    }
+    .regulatory-card__body {
+      font-size: 15px;
+      line-height: 1.8;
+      color: rgba(0,0,0,0.72);
+    }
+    @media (max-width: 768px) {
+      .regulatory-card { padding: 28px; }
+      .regulatory-card__ref { font-size: 30px; }
+    }
+    /* Hero two-column layout */
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-illustration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--gold);
+      opacity: 0.85;
+    }
+    .hero-illustration svg {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      filter: drop-shadow(0 0 40px rgba(201,168,76,0.15));
+    }
+    @media (max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr; gap: 32px; }
+      .hero-illustration { order: -1; }
+      .hero-illustration svg { max-width: 220px; }
+    }
+    .cap-icon { width: 44px; height: 44px; color: var(--gold); margin-bottom: 16px; }
+    .cap-icon svg { width: 100%; height: 100%; }
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+      color: var(--gold);
+      max-width: 400px;
+      padding: 0 24px;
+    }
+    .section-divider span {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#group">Group</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#insights">Insights</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="service-hero">
+    <div class="service-hero__bg"></div>
+    <div class="service-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <a href="index.html#group">Group</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <span class="breadcrumb__current">Run AM S.&agrave;.r.l</span>
+      </nav>
+      <div class="hero-layout">
+        <div class="hero-layout__text">
+          <span class="entity-mark">
+            <span class="entity-mark__dot"></span>
+            Group Entity 02 &middot; Luxembourg
+          </span>
+          <h1 class="service-hero__title">Run AM S.&agrave;.r.l</h1>
+          <p class="service-hero__sub">The Luxembourg-based Alternative Investment Fund Manager of the Run Capital Partners Group. Regulated by the CSSF, Run AM is the institutional backbone of our fund infrastructure, managing vehicles that serve private clients, family offices, and institutions across Europe.</p>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <svg viewBox="0 0 260 320" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Ground line -->
+            <line x1="10" y1="300" x2="250" y2="300" stroke-width="0.8" opacity="0.5"/>
+            <!-- Cliff / rock base -->
+            <path d="M20 300 L40 290 L60 295 L80 285 L110 285 L140 285 L170 285 L200 290 L220 285 L240 300" opacity="0.5"/>
+            <!-- Main castle body -->
+            <rect x="70" y="180" width="120" height="110"/>
+            <!-- Left tower -->
+            <rect x="50" y="130" width="30" height="160"/>
+            <polygon points="50,130 80,130 80,120 50,120"/>
+            <!-- Left tower crenellations -->
+            <path d="M50 120 L50 110 L56 110 L56 116 L62 116 L62 110 L68 110 L68 116 L74 116 L74 110 L80 110 L80 120"/>
+            <line x1="65" y1="150" x2="65" y2="170"/>
+            <rect x="60" y="200" width="10" height="16"/>
+            <rect x="60" y="230" width="10" height="16"/>
+            <!-- Right tower (taller) -->
+            <rect x="180" y="100" width="30" height="190"/>
+            <polygon points="180,100 210,100 210,90 180,90"/>
+            <path d="M180 90 L180 80 L186 80 L186 86 L192 86 L192 80 L198 80 L198 86 L204 86 L204 80 L210 80 L210 90"/>
+            <rect x="190" y="120" width="10" height="16"/>
+            <rect x="190" y="150" width="10" height="16"/>
+            <rect x="190" y="200" width="10" height="16"/>
+            <rect x="190" y="230" width="10" height="16"/>
+            <!-- Central spire tower -->
+            <rect x="110" y="140" width="40" height="50"/>
+            <polygon points="110,140 150,140 150,130 110,130"/>
+            <polygon points="108,130 152,130 130,90"/>
+            <line x1="130" y1="90" x2="130" y2="70"/>
+            <polygon points="127,70 133,70 130,60"/>
+            <!-- Flag -->
+            <line x1="130" y1="60" x2="130" y2="45"/>
+            <path d="M130 45 L148 48 L143 52 L148 56 L130 58" fill="currentColor" opacity="0.6"/>
+            <!-- Main crenellations -->
+            <path d="M70 180 L70 172 L76 172 L76 178 L82 178 L82 172 L88 172 L88 178 L94 178 L94 172 L100 172 L100 180"/>
+            <path d="M160 180 L160 172 L166 172 L166 178 L172 178 L172 172 L178 172 L178 178 L184 178 L184 172 L190 172 L190 180"/>
+            <!-- Main gate arch -->
+            <path d="M116 290 L116 250 Q116 240 130 240 Q144 240 144 250 L144 290"/>
+            <line x1="130" y1="250" x2="130" y2="290" opacity="0.4"/>
+            <!-- Windows -->
+            <path d="M82 210 L82 224 Q82 220 86 220 Q90 220 90 224 L90 210 Z" opacity="0.6"/>
+            <path d="M168 210 L168 224 Q168 220 172 220 Q176 220 176 224 L176 210 Z" opacity="0.6"/>
+            <path d="M120 200 L120 214 Q120 210 124 210 Q128 210 128 214 L128 200 Z" opacity="0.6"/>
+            <path d="M136 200 L136 214 Q136 210 140 210 Q144 210 144 214 L144 200 Z" opacity="0.6"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="section-divider" aria-hidden="true">
+    <span></span>
+    <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+      <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
+    </svg>
+    <span></span>
+  </div>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Overview</p>
+          <h2 class="section__title">Luxembourg AIFM,<br>at the heart of European fund infrastructure.</h2>
+          <p class="section__intro">Run AM S.&agrave;.r.l operates from Luxembourg &mdash; Europe's foremost fund jurisdiction &mdash; providing the regulated management layer for the group's alternative investment strategies.</p>
+        </div>
+        <div class="split__right">
+          <p class="text-lg">Authorised and supervised by the Commission de Surveillance du Secteur Financier (CSSF), Run AM structures and manages alternative investment funds, securitisation vehicles, and holding arrangements for the Run Capital Partners Group.</p>
+          <p>The entity combines the regulatory rigour of Luxembourg with the investment philosophy of the wider group: patient capital, privileged access, and long-term alignment with clients. Every vehicle is built to institutional standards and administered with the discipline that a CSSF-regulated manager requires.</p>
+          <div class="service-stats">
+            <div class="service-stats__item">
+              <span class="service-stats__num">AIFM</span>
+              <span class="service-stats__label">Regulated</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">CSSF A00003107</span>
+              <span class="service-stats__label">Reg. No.</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">Luxembourg</span>
+              <span class="service-stats__label">Domiciled</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">Capabilities</p>
+      <h2 class="section__title section__title--light">What Run AM does.</h2>
+      <p class="section__intro">Four core capabilities delivered within a CSSF-regulated Luxembourg framework.</p>
+
+      <div class="capability-grid">
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22,6 38,14 22,22 6,14"/>
+              <polygon points="22,16 38,24 22,32 6,24"/>
+              <polygon points="22,26 38,34 22,42 6,34"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">Securitization</h3>
+          <p>Structuring and administration of securitisation transactions under the Luxembourg Securitisation Law. Bespoke instruments that transform illiquid exposures into tradable, investable form for institutional and professional investors.</p>
+        </div>
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22,6 38,36 6,36"/>
+              <line x1="22" y1="6" x2="22" y2="36" opacity="0.5"/>
+              <line x1="14" y1="26" x2="30" y2="26" opacity="0.5"/>
+              <line x1="18" y1="16" x2="26" y2="16" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">Alternative Investment Funds (AIF)</h3>
+          <p>Authorised management of alternative investment funds across private equity, private credit, and multi-strategy mandates. Full AIFM services including risk management, portfolio management, valuation, and regulatory reporting.</p>
+        </div>
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="22,4 38,18 22,40 6,18"/>
+              <line x1="6" y1="18" x2="38" y2="18" opacity="0.6"/>
+              <line x1="22" y1="4" x2="22" y2="18" opacity="0.5"/>
+              <line x1="14" y1="11" x2="14" y2="18" opacity="0.5"/>
+              <line x1="30" y1="11" x2="30" y2="18" opacity="0.5"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">Securitization Vehicles (SPV)</h3>
+          <p>Establishment and ongoing administration of Luxembourg SPVs for single-asset, single-strategy, or compartmentalised exposures. Efficient, ring-fenced structures for club deals, co-investments, and dedicated mandates.</p>
+        </div>
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 24 L6 16 L12 20 L16 12 L22 18 L28 12 L32 20 L38 16 L38 24 Z"/>
+              <line x1="6" y1="24" x2="38" y2="24"/>
+              <rect x="6" y="24" width="32" height="10"/>
+              <circle cx="12" cy="14" r="1.5" fill="currentColor"/>
+              <circle cx="22" cy="10" r="1.5" fill="currentColor"/>
+              <circle cx="32" cy="14" r="1.5" fill="currentColor"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">Holding Arrangements</h3>
+          <p>Design and management of holding structures for family offices, entrepreneurs, and institutional groups. Tax-aware, treaty-efficient arrangements for long-term ownership of operating businesses, financial assets, and real estate.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="team">
+    <div class="container">
+      <p class="section__eyebrow">Luxembourg Team</p>
+      <h2 class="section__title">The Run AM team</h2>
+      <p class="section__intro">The professionals responsible for the management, compliance, and operations of Run AM S.&agrave;.r.l.</p>
+
+      <div class="team-grid">
+        <div class="team-card">
+          <a href="ceo.html">
+            <div class="team-card__photo"><img src="luca-padovan.jpg" alt="Luca Padovan" loading="lazy"></div>
+            <h3 class="team-card__name">Luca Padovan</h3>
+            <p class="team-card__role">CEO &amp; Founder</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="giordano.html">
+            <div class="team-card__photo"><img src="giordano-tomasini.jpg" alt="Giordano Tomasini" loading="lazy"></div>
+            <h3 class="team-card__name">Giordano Tomasini</h3>
+            <p class="team-card__role">General Counsel | RunAM</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="stefano-giuffra.html">
+            <div class="team-card__photo"></div>
+            <h3 class="team-card__name">Stefano Giuffra</h3>
+            <p class="team-card__role">Board Member &amp; Compliance Officer</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="enrico-de-angelis.html">
+            <div class="team-card__photo"><img src="enrico-de-angelis.jpg" alt="Enrico De Angelis" loading="lazy"></div>
+            <h3 class="team-card__name">Enrico De Angelis</h3>
+            <p class="team-card__role">Business Development Manager</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="giovanni-campodallorto.html">
+            <div class="team-card__photo"><img src="giovanni-campodallorto.jpg" alt="Giovanni Campodall'Orto" loading="lazy"></div>
+            <h3 class="team-card__name">Giovanni Campodall'Orto</h3>
+            <p class="team-card__role">Head of Operations | RunAM</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true">
+    <span></span>
+    <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+      <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
+    </svg>
+    <span></span>
+  </div>
+
+  <section class="section section--light">
+    <div class="container">
+      <p class="section__eyebrow" style="text-align: center;">Regulatory Status</p>
+      <h2 class="section__title" style="text-align: center;">CSSF registered.<br>Luxembourg supervised.</h2>
+      <p class="section__intro" style="text-align: center;">Run AM S.&agrave;.r.l operates under the oversight of the Commission de Surveillance du Secteur Financier.</p>
+
+      <div class="regulatory-card">
+        <div class="regulatory-card__ref">A00003107</div>
+        <div class="regulatory-card__label">CSSF Registration Number</div>
+        <p class="regulatory-card__body">Run AM S.&agrave;.r.l is part of Run Capital Partners Group. Run AM S.&agrave;.r.l is an Alternative investment fund manager registered to CSSF &mdash; Luxembourg commission for the supervision of the financial sector &mdash; with registration number A00003107 according to the Law of 12 July 2013 of Luxembourg.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="contact-us">
+    <div class="container service-cta">
+      <h2 class="service-cta__title">Speak with the Run AM team</h2>
+      <p class="service-cta__sub">For enquiries regarding alternative investment funds, securitisation vehicles, or holding arrangements managed by Run AM S.&agrave;.r.l, contact our Luxembourg office directly.</p>
+      <div class="service-cta__actions">
+        <a href="mailto:info@runcapital.partners" class="btn btn--primary">info@runcapital.partners</a>
+        <a href="index.html#contact" class="btn btn--outline">Contact the Group</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+            <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+          </div>
+          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with. 3DOTS Capital Advisory operates as an independent spinoff.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="asset-management.html">Asset Management</a></li>
+            <li><a href="wealth-management.html">Wealth Management</a></li>
+            <li><a href="sport-wealth.html">Sport &amp; Wealth</a></li>
+            <li><a href="certificate-issuance.html">Certificate Issuance</a></li>
+            <li><a href="3dots.html">Nasdaq Listings (3DOTS)</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#group">Group Structure</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#insights">Insights</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="regulatory-disclosures.html">Regulatory Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.capability-card, .service-stats__item, .team-card, .regulatory-card').forEach(el => {
+        el.classList.add('fade-in');
+        revealObserver.observe(el);
+      });
+    }
+  </script>
+
+</body>
+</html>

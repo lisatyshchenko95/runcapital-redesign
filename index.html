@@ -8,16 +8,19 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
 
   <!-- NAV -->
   <nav class="nav" id="nav">
     <div class="nav__inner">
       <a href="#" class="nav__logo">
         <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img">
+        <span class="nav__logo-text">Run Capital Partners LTD</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -34,14 +37,14 @@
   </nav>
 
   <!-- HERO -->
-  <header class="hero">
+  <header class="hero" id="main-content">
     <div class="hero__bg"></div>
     <canvas id="heroCanvas"></canvas>
     <div class="hero__content hero__content--split">
       <div class="hero__text">
         <p class="hero__eyebrow">Founded 2018 &middot; London &middot; Luxembourg &middot; Milan</p>
         <h1 class="hero__title"><span class="gold">Alternative investments,</span><br>structured for those who <span class="gold">think beyond</span> the ordinary.</h1>
-        <p class="hero__sub">We build and manage alternative investment funds, structured products, and AI-driven portfolios from Luxembourg. Independent. Regulated. Aligned with your interests.</p>
+        <p class="hero__sub">We build and manage alternative investment funds, structured products, and systematic portfolios from Luxembourg. Independent. Regulated. Aligned with your interests.</p>
         <div class="hero__actions">
           <a href="#services" class="btn btn--primary">Explore Our Services</a>
           <a href="#contact" class="btn btn--outline">Schedule a Consultation</a>
@@ -61,26 +64,20 @@
             </linearGradient>
           </defs>
 
-          <!-- Ambient gold glow at base -->
-          <ellipse cx="200" cy="440" rx="220" ry="80" fill="url(#cityGlow)"/>
-
           <!-- Back-layer towers (very thin, muted lines) -->
           <g class="hero__city-back" stroke="#c9a84c" stroke-width="0.75" opacity="0.4">
-            <!-- Far-left tower -->
             <path d="M 30 460 L 30 240 L 72 240 L 72 460"/>
             <line x1="30" y1="280" x2="72" y2="280"/>
             <line x1="30" y1="340" x2="72" y2="340"/>
             <line x1="30" y1="400" x2="72" y2="400"/>
             <line x1="51" y1="240" x2="51" y2="460"/>
 
-            <!-- Far-right tower -->
             <path d="M 330 460 L 330 220 L 378 220 L 378 460"/>
             <line x1="330" y1="260" x2="378" y2="260"/>
             <line x1="330" y1="320" x2="378" y2="320"/>
             <line x1="330" y1="380" x2="378" y2="380"/>
             <line x1="354" y1="220" x2="354" y2="460"/>
 
-            <!-- Left-back tower -->
             <path d="M 86 460 L 86 200 L 122 200 L 122 460"/>
             <line x1="86" y1="250" x2="122" y2="250"/>
             <line x1="86" y1="310" x2="122" y2="310"/>
@@ -88,11 +85,9 @@
             <line x1="104" y1="200" x2="104" y2="460"/>
           </g>
 
-          <!-- Mid-layer towers (sleek line drawings) -->
+          <!-- Mid-layer towers -->
           <g class="hero__city-mid" stroke="url(#lineFade)" stroke-width="1" opacity="0.85">
-            <!-- Left stepped tower -->
             <path d="M 138 460 L 138 140 L 180 140 L 180 164 L 188 164 L 188 460"/>
-            <!-- horizontal floor bands -->
             <line x1="138" y1="180" x2="188" y2="180"/>
             <line x1="138" y1="220" x2="188" y2="220"/>
             <line x1="138" y1="260" x2="188" y2="260"/>
@@ -100,29 +95,23 @@
             <line x1="138" y1="340" x2="188" y2="340"/>
             <line x1="138" y1="380" x2="188" y2="380"/>
             <line x1="138" y1="420" x2="188" y2="420"/>
-            <!-- vertical mullions -->
             <line x1="155" y1="140" x2="155" y2="460"/>
             <line x1="171" y1="164" x2="171" y2="460"/>
 
-            <!-- Right stepped tower -->
             <path d="M 250 460 L 250 180 L 256 180 L 256 160 L 306 160 L 306 180 L 312 180 L 312 460"/>
-            <!-- floor bands -->
             <line x1="250" y1="210" x2="312" y2="210"/>
             <line x1="250" y1="250" x2="312" y2="250"/>
             <line x1="250" y1="290" x2="312" y2="290"/>
             <line x1="250" y1="330" x2="312" y2="330"/>
             <line x1="250" y1="370" x2="312" y2="370"/>
             <line x1="250" y1="410" x2="312" y2="410"/>
-            <!-- vertical mullions -->
             <line x1="271" y1="180" x2="271" y2="460"/>
             <line x1="291" y1="180" x2="291" y2="460"/>
           </g>
 
-          <!-- Central landmark spire (hero element, brightest) -->
+          <!-- Central landmark spire (brightest) -->
           <g class="hero__city-spire" stroke="#e0c874" stroke-width="1.2">
-            <!-- tower shaft -->
             <path d="M 192 460 L 192 120 L 186 120 L 186 100 L 196 100 L 196 80 L 216 80 L 216 100 L 226 100 L 226 120 L 220 120 L 220 460"/>
-            <!-- floor bands -->
             <line x1="192" y1="150" x2="220" y2="150"/>
             <line x1="192" y1="190" x2="220" y2="190"/>
             <line x1="192" y1="230" x2="220" y2="230"/>
@@ -131,20 +120,18 @@
             <line x1="192" y1="350" x2="220" y2="350"/>
             <line x1="192" y1="390" x2="220" y2="390"/>
             <line x1="192" y1="430" x2="220" y2="430"/>
-            <!-- central mullion -->
             <line x1="206" y1="80" x2="206" y2="460"/>
-            <!-- antenna -->
             <line x1="206" y1="20" x2="206" y2="80" stroke-width="1"/>
             <circle cx="206" cy="14" r="3" fill="#e0c874" stroke="none"/>
           </g>
 
-          <!-- Horizon line accent -->
+          <!-- Horizon accents -->
           <g class="hero__city-accents" stroke="#c9a84c" opacity="0.35">
             <line x1="0" y1="460" x2="400" y2="460" stroke-width="0.75"/>
             <line x1="0" y1="140" x2="400" y2="140" stroke-width="0.5" stroke-dasharray="3 6"/>
           </g>
 
-          <!-- Signal pulse at spire tip -->
+          <!-- Signal pulses -->
           <g class="hero__city-pulses">
             <circle cx="206" cy="14" r="6" stroke="#e0c874" stroke-width="1" fill="none"/>
             <circle cx="155" cy="140" r="2" fill="#e0c874" stroke="none" opacity="0.85"/>
@@ -166,8 +153,8 @@
           <span class="hero__stat-label">European Offices</span>
         </div>
         <div class="hero__stat">
-          <span class="hero__stat-num">6</span>
-          <span class="hero__stat-label">Group Entities</span>
+          <span class="hero__stat-num">3</span>
+          <span class="hero__stat-label">Regulated Entities</span>
         </div>
       </div>
     </div>
@@ -180,20 +167,161 @@
     </div>
     <div class="trust-bar__track">
       <div class="trust-bar__logos">
-        <span class="trust-bar__logo" style="font-weight: 700; letter-spacing: 0.02em;">Actarus Renewables</span>
-        <span class="trust-bar__logo" style="font-weight: 400; letter-spacing: 0.08em;">Deutsche Bank</span>
-        <span class="trust-bar__logo" style="font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">BNP Paribas</span>
-        <span class="trust-bar__logo" style="font-weight: 500; letter-spacing: 0.04em;">Leonteq</span>
-        <span class="trust-bar__logo" style="font-weight: 500; letter-spacing: 0.02em;">Marex Financial Products</span>
-        <span class="trust-bar__logo" style="font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">Rebel Fund</span>
+        <!-- Actarus Renewables: serif with diamond symbol -->
+        <span class="trust-bar__logo partner-logo partner-logo--actarus">
+          <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Actarus Renewables">
+            <text x="0" y="26" font-family="Georgia, 'Playfair Display', serif" font-size="26" font-weight="700" letter-spacing="1">AR</text>
+            <circle cx="55" cy="17" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M 51 17 L 59 17 M 55 13 L 55 21" stroke="currentColor" stroke-width="1.2"/>
+            <text x="0" y="44" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="0.5">Actarus Renewables</text>
+          </svg>
+        </span>
+
+        <!-- Deutsche Bank: thick square border with parallelogram slash -->
+        <span class="trust-bar__logo partner-logo partner-logo--db">
+          <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Deutsche Bank">
+            <defs>
+              <mask id="dbMask">
+                <rect x="2" y="6" width="36" height="36" fill="#fff"/>
+                <rect x="8" y="12" width="24" height="24" fill="#000"/>
+                <path d="M 12 33 L 17 33 L 28 15 L 23 15 Z" fill="#fff"/>
+              </mask>
+            </defs>
+            <rect x="2" y="6" width="36" height="36" mask="url(#dbMask)"/>
+            <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="400" letter-spacing="0.5">Deutsche Bank</text>
+          </svg>
+        </span>
+
+        <!-- BNP Paribas: rounded square with 4 stylized wing marks (via mask) -->
+        <span class="trust-bar__logo partner-logo partner-logo--bnp">
+          <svg viewBox="0 0 230 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="BNP Paribas">
+            <defs>
+              <mask id="bnpMask">
+                <rect x="2" y="6" width="36" height="36" rx="4" ry="4" fill="#fff"/>
+                <g fill="#000" transform="translate(6,10)">
+                  <path d="M 8 4 Q 12 2 14 6 Q 12 8 10 8 Q 8 7 8 4 Z"/>
+                  <path d="M 18 4 Q 22 2 24 6 Q 22 8 20 8 Q 18 7 18 4 Z"/>
+                  <path d="M 3 14 Q 7 13 9 16 Q 8 19 5 19 Q 2 18 3 14 Z"/>
+                  <path d="M 14 14 Q 18 13 20 16 Q 19 19 16 19 Q 13 18 14 14 Z"/>
+                  <path d="M 23 14 Q 27 13 29 16 Q 28 19 25 19 Q 22 18 23 14 Z"/>
+                  <path d="M 8 24 Q 12 23 14 26 Q 13 29 10 29 Q 7 28 8 24 Z"/>
+                  <path d="M 18 24 Q 22 23 24 26 Q 23 29 20 29 Q 17 28 18 24 Z"/>
+                </g>
+              </mask>
+            </defs>
+            <rect x="2" y="6" width="36" height="36" rx="4" ry="4" mask="url(#bnpMask)"/>
+            <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">BNP PARIBAS</text>
+          </svg>
+        </span>
+
+        <!-- Leonteq: molecular dot cluster + clean sans -->
+        <span class="trust-bar__logo partner-logo partner-logo--leonteq">
+          <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Leonteq">
+            <g transform="translate(4,12)">
+              <line x1="6" y1="6" x2="14" y2="2" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="6" x2="14" y2="12" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="2" x2="24" y2="6" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="12" x2="24" y2="16" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="6" cy="6" r="3.5"/>
+              <circle cx="14" cy="2" r="2.8"/>
+              <circle cx="14" cy="12" r="2.8"/>
+              <circle cx="24" cy="6" r="2.8"/>
+              <circle cx="24" cy="16" r="2.8"/>
+              <circle cx="6" cy="18" r="2.8"/>
+            </g>
+            <text x="40" y="34" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1">LEONTEQ</text>
+          </svg>
+        </span>
+
+        <!-- Marex: thin sans with upward arrow off the E -->
+        <span class="trust-bar__logo partner-logo partner-logo--marex">
+          <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Marex">
+            <text x="0" y="36" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="300" letter-spacing="2">MAREX</text>
+            <path d="M 160 16 L 176 4 L 176 18 L 172 18 L 172 11 L 162 19 Z"/>
+          </svg>
+        </span>
+
+        <!-- Rebel Fund: bold italic REBEL with FUND subtitle -->
+        <span class="trust-bar__logo partner-logo partner-logo--rebel">
+          <svg viewBox="0 0 170 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Rebel Fund">
+            <text x="0" y="28" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" font-style="italic" letter-spacing="-1">REBEL</text>
+            <text x="70" y="42" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="300" letter-spacing="2">FUND</text>
+          </svg>
+        </span>
       </div>
       <div class="trust-bar__logos" aria-hidden="true">
-        <span class="trust-bar__logo" style="font-weight: 700; letter-spacing: 0.02em;">Actarus Renewables</span>
-        <span class="trust-bar__logo" style="font-weight: 400; letter-spacing: 0.08em;">Deutsche Bank</span>
-        <span class="trust-bar__logo" style="font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;">BNP Paribas</span>
-        <span class="trust-bar__logo" style="font-weight: 500; letter-spacing: 0.04em;">Leonteq</span>
-        <span class="trust-bar__logo" style="font-weight: 500; letter-spacing: 0.02em;">Marex Financial Products</span>
-        <span class="trust-bar__logo" style="font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;">Rebel Fund</span>
+        <span class="trust-bar__logo partner-logo partner-logo--actarus">
+          <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <text x="0" y="26" font-family="Georgia, 'Playfair Display', serif" font-size="26" font-weight="700" letter-spacing="1">AR</text>
+            <circle cx="55" cy="17" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M 51 17 L 59 17 M 55 13 L 55 21" stroke="currentColor" stroke-width="1.2"/>
+            <text x="0" y="44" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="0.5">Actarus Renewables</text>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--db">
+          <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <defs>
+              <mask id="dbMask2">
+                <rect x="2" y="6" width="36" height="36" fill="#fff"/>
+                <rect x="8" y="12" width="24" height="24" fill="#000"/>
+                <path d="M 12 33 L 17 33 L 28 15 L 23 15 Z" fill="#fff"/>
+              </mask>
+            </defs>
+            <rect x="2" y="6" width="36" height="36" mask="url(#dbMask2)"/>
+            <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="400" letter-spacing="0.5">Deutsche Bank</text>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--bnp">
+          <svg viewBox="0 0 230 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <defs>
+              <mask id="bnpMask2">
+                <rect x="2" y="6" width="36" height="36" rx="4" ry="4" fill="#fff"/>
+                <g fill="#000" transform="translate(6,10)">
+                  <path d="M 8 4 Q 12 2 14 6 Q 12 8 10 8 Q 8 7 8 4 Z"/>
+                  <path d="M 18 4 Q 22 2 24 6 Q 22 8 20 8 Q 18 7 18 4 Z"/>
+                  <path d="M 3 14 Q 7 13 9 16 Q 8 19 5 19 Q 2 18 3 14 Z"/>
+                  <path d="M 14 14 Q 18 13 20 16 Q 19 19 16 19 Q 13 18 14 14 Z"/>
+                  <path d="M 23 14 Q 27 13 29 16 Q 28 19 25 19 Q 22 18 23 14 Z"/>
+                  <path d="M 8 24 Q 12 23 14 26 Q 13 29 10 29 Q 7 28 8 24 Z"/>
+                  <path d="M 18 24 Q 22 23 24 26 Q 23 29 20 29 Q 17 28 18 24 Z"/>
+                </g>
+              </mask>
+            </defs>
+            <rect x="2" y="6" width="36" height="36" rx="4" ry="4" mask="url(#bnpMask2)"/>
+            <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">BNP PARIBAS</text>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--leonteq">
+          <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <g transform="translate(4,12)">
+              <line x1="6" y1="6" x2="14" y2="2" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="6" x2="14" y2="12" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="2" x2="24" y2="6" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="12" x2="24" y2="16" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="6" cy="6" r="3.5"/>
+              <circle cx="14" cy="2" r="2.8"/>
+              <circle cx="14" cy="12" r="2.8"/>
+              <circle cx="24" cy="6" r="2.8"/>
+              <circle cx="24" cy="16" r="2.8"/>
+              <circle cx="6" cy="18" r="2.8"/>
+            </g>
+            <text x="40" y="34" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1">LEONTEQ</text>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--marex">
+          <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <text x="0" y="36" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="300" letter-spacing="2">MAREX</text>
+            <path d="M 160 16 L 176 4 L 176 18 L 172 18 L 172 11 L 162 19 Z"/>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--rebel">
+          <svg viewBox="0 0 170 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <text x="0" y="28" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" font-style="italic" letter-spacing="-1">REBEL</text>
+            <text x="70" y="42" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="300" letter-spacing="2">FUND</text>
+          </svg>
+        </span>
       </div>
     </div>
   </section>
@@ -213,8 +341,8 @@
             <div class="badge">
               <span class="badge__icon">&#9733;</span>
               <div>
-                <strong>Top 100 WealthTech</strong>
-                <span>Recognized 2022</span>
+                <strong>30+ Years Combined</strong>
+                <span>Institutional Experience</span>
               </div>
             </div>
             <div class="badge">
@@ -227,6 +355,39 @@
           </div>
         </div>
       </div>
+
+      <!-- Custodian Institutions -->
+      <div class="custodians">
+        <div class="custodians__header">
+          <p class="section__eyebrow">Custodian Institutions</p>
+          <h3 class="custodians__title">Client assets held with globally renowned banking partners.</h3>
+        </div>
+        <div class="custodians__grid">
+          <span class="custodian-logo" aria-label="J.P. Morgan">
+            <svg viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <text x="0" y="42" font-family="Georgia, 'Playfair Display', serif" font-size="40" font-weight="500" letter-spacing="-1">J.P.Morgan</text>
+            </svg>
+          </span>
+          <span class="custodian-logo custodian-logo--img" aria-label="UBS">
+            <img src="logos/ubs.png" alt="UBS">
+          </span>
+          <span class="custodian-logo custodian-logo--img" aria-label="Citi">
+            <img src="logos/citi.png" alt="Citi">
+          </span>
+          <span class="custodian-logo custodian-logo--img" aria-label="Deutsche Bank">
+            <img src="logos/deutsche-bank.png" alt="Deutsche Bank">
+          </span>
+          <span class="custodian-logo custodian-logo--img" aria-label="Coutts">
+            <img src="logos/coutts.png" alt="Coutts">
+          </span>
+          <span class="custodian-logo custodian-logo--img" aria-label="J. Safra Sarasin">
+            <img src="logos/safra-sarasin.png" alt="J. Safra Sarasin">
+          </span>
+          <span class="custodian-logo custodian-logo--img" aria-label="Pictet">
+            <img src="logos/pictet.png" alt="Pictet">
+          </span>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -234,73 +395,140 @@
   <section class="section section--dark" id="services">
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light">What We Do</p>
-      <h2 class="section__title section__title--light">Five service lines.<br>One strategic partner.</h2>
-      <p class="section__intro">Each service is delivered by a dedicated team within our group. You always know which entity you're working with and who is responsible.</p>
+      <h2 class="section__title section__title--light">One partner.<br>Five specialized service lines.</h2>
+      <p class="section__intro">Each service is delivered by a dedicated team within our group. You always know which entity you&rsquo;re working with, and who is responsible.</p>
 
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-card__number">01</div>
-          <h3 class="service-card__title">Asset Management</h3>
-          <p class="service-card__entity">Run Asset Management, Luxembourg</p>
-          <p>Creation and management of alternative investment funds, securitization vehicles, notes, and bonds. Domiciled in Luxembourg for EU regulatory alignment, political stability, and favorable tax framework.</p>
-          <ul class="service-card__list">
-            <li>Alternative investment fund structuring</li>
-            <li>Securitization vehicle creation</li>
-            <li>Notes and bond issuance</li>
-            <li>EU-compliant fund domiciliation</li>
-          </ul>
+      <!-- Featured service: Asset Management -->
+      <a href="asset-management.html" class="service-featured">
+        <span class="service-card__icon" aria-hidden="true">
+          <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="10" y="34" width="32" height="8" rx="1"/>
+            <rect x="13" y="24" width="26" height="8" rx="1"/>
+            <rect x="16" y="14" width="20" height="8" rx="1"/>
+            <path d="M20 10 L26 6 L32 10"/>
+            <line x1="14" y1="38" x2="38" y2="38" opacity="0.5"/>
+            <line x1="17" y1="28" x2="35" y2="28" opacity="0.5"/>
+            <line x1="20" y1="18" x2="32" y2="18" opacity="0.5"/>
+          </svg>
+        </span>
+        <div class="service-featured__meta">
+          <span class="service-featured__number">01</span>
+          <span class="service-featured__entity">Run Asset Management &middot; Luxembourg</span>
         </div>
+        <h3 class="service-featured__title">Asset Management</h3>
+        <p class="service-featured__body">Creation and management of alternative investment funds, securitization vehicles, notes, and bonds. Domiciled in Luxembourg for EU regulatory alignment, political stability, and a favorable tax framework.</p>
+        <ul class="service-featured__list">
+          <li>Alternative investment fund structuring</li>
+          <li>Securitization vehicle creation</li>
+          <li>Notes and bond issuance</li>
+          <li>EU-compliant fund domiciliation</li>
+        </ul>
+        <span class="service-featured__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+      </a>
 
-        <div class="service-card">
-          <div class="service-card__number">02</div>
-          <h3 class="service-card__title">Wealth Management</h3>
-          <p class="service-card__entity">In partnership with MdotM</p>
-          <p>Investment strategy definition powered by proprietary AI technology. Our system provides objective market analysis across multiple data inputs with 24/7 decision-making capability, removing emotional bias from portfolio management.</p>
-          <ul class="service-card__list">
-            <li>AI-driven portfolio strategy</li>
-            <li>Objective data evaluation</li>
-            <li>Continuous market monitoring</li>
-            <li>Bias-free decision making</li>
-          </ul>
+      <!-- Secondary services: 2x2 compact grid -->
+      <div class="services-grid services-grid--compact">
+        <a href="wealth-management.html" class="service-compact">
+          <span class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M26 8 L42 42 L10 42 Z"/>
+              <path d="M26 20 L34 36 L18 36 Z" opacity="0.6"/>
+              <path d="M26 8 L26 42" opacity="0.35"/>
+              <circle cx="26" cy="8" r="1.6" fill="currentColor"/>
+            </svg>
+          </span>
+          <span class="service-compact__number">02</span>
+          <h3 class="service-compact__title">Wealth Management</h3>
+          <p class="service-compact__entity">Systematic &middot; Independent &middot; Institutional-grade</p>
+          <p class="service-compact__body">Quantitative portfolio strategy with objective market analysis, continuous monitoring, and disciplined risk management. Data-led, bias-free wealth management.</p>
+          <span class="service-compact__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+
+        <a href="sport-wealth.html" class="service-compact">
+          <span class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M18 10 h16 v10 a8 8 0 0 1 -16 0 z"/>
+              <path d="M18 14 h-5 a4 4 0 0 0 4 6"/>
+              <path d="M34 14 h5 a4 4 0 0 1 -4 6"/>
+              <path d="M22 28 q4 4 8 0"/>
+              <line x1="26" y1="28" x2="26" y2="36"/>
+              <path d="M20 42 h12 v-4 h-12 z"/>
+              <path d="M22 38 l-1 -2 h10 l-1 2"/>
+            </svg>
+          </span>
+          <span class="service-compact__number">03</span>
+          <h3 class="service-compact__title">Sport &amp; Wealth</h3>
+          <p class="service-compact__entity">Led by Massimo Bocci</p>
+          <p class="service-compact__body">Bespoke wealth management and alternative-investment structures for professional athletes, sports-related clients, and institutional mandates with a sports footprint.</p>
+          <span class="service-compact__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+
+        <a href="certificate-issuance.html" class="service-compact">
+          <span class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="26" cy="22" r="12"/>
+              <circle cx="26" cy="22" r="8" opacity="0.5"/>
+              <path d="M26 14 l2 4 l4 0.5 l-3 3 l1 4 l-4 -2 l-4 2 l1 -4 l-3 -3 l4 -0.5 z" fill="currentColor" opacity="0.85" stroke="none"/>
+              <path d="M18 32 L14 46 L22 42 L26 46 L30 42 L38 46 L34 32"/>
+            </svg>
+          </span>
+          <span class="service-compact__number">04</span>
+          <h3 class="service-compact__title">Certificate Issuance</h3>
+          <p class="service-compact__entity">With BNP Paribas, Leonteq, Marex</p>
+          <p class="service-compact__body">Actively and passively managed certificates structured with leading investment banks across equities, indices, and thematic baskets.</p>
+          <span class="service-compact__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+
+        <a href="nasdaq-listings.html" class="service-compact">
+          <span class="service-card__icon" aria-hidden="true">
+            <svg viewBox="0 0 52 52" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="8" y1="44" x2="44" y2="44"/>
+              <line x1="8" y1="44" x2="8" y2="10"/>
+              <rect x="13" y="32" width="5" height="10" opacity="0.55"/>
+              <rect x="21" y="26" width="5" height="16" opacity="0.7"/>
+              <rect x="29" y="20" width="5" height="22" opacity="0.85"/>
+              <path d="M12 30 L20 22 L28 26 L40 12"/>
+              <path d="M34 12 L40 12 L40 18"/>
+            </svg>
+          </span>
+          <span class="service-compact__number">05</span>
+          <h3 class="service-compact__title">Nasdaq Listings</h3>
+          <p class="service-compact__entity">3DOTS UK</p>
+          <p class="service-compact__body">Supporting high-potential Southern European companies from preparation through listing, connecting European excellence with US capital markets.</p>
+          <span class="service-compact__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY LUXEMBOURG -->
+  <section class="section section--dark-alt" id="luxembourg">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow section__eyebrow--light">Why Luxembourg</p>
+          <h2 class="section__title section__title--light">The #1 EU hub for fund domiciliation.</h2>
+          <p class="section__intro">The natural home for our Asset Management service &mdash; and why clients trust us to structure their vehicles here.</p>
         </div>
-
-        <div class="service-card">
-          <div class="service-card__number">03</div>
-          <h3 class="service-card__title">Algorithmic Trading</h3>
-          <p class="service-card__entity">Proprietary technology</p>
-          <p>Management and implementation of proprietary solutions for automated trading activities. Our algorithms execute strategies across markets with speed and discipline that manual trading cannot match.</p>
-          <ul class="service-card__list">
-            <li>Proprietary trading algorithms</li>
-            <li>Automated execution</li>
-            <li>Multi-market coverage</li>
-            <li>Real-time risk management</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__number">04</div>
-          <h3 class="service-card__title">Certificate Issuance</h3>
-          <p class="service-card__entity">With BNP Paribas, Leonteq, Marex</p>
-          <p>Creation of both passively and actively managed certificates in partnership with leading investment banks. Structured products designed for specific risk/return profiles across equities, indices, and thematic baskets.</p>
-          <ul class="service-card__list">
-            <li>Actively managed certificates (AMC)</li>
-            <li>Passive structured products</li>
-            <li>Custom risk/return profiles</li>
-            <li>Multi-issuer partnerships</li>
-          </ul>
-        </div>
-
-        <div class="service-card">
-          <div class="service-card__number">05</div>
-          <h3 class="service-card__title">Nasdaq Listings</h3>
-          <p class="service-card__entity">3DOTS UK</p>
-          <p>Supporting high-potential Southern European companies in their journey to list on the Nasdaq. End-to-end advisory from preparation through listing, connecting European excellence with US capital markets.</p>
-          <ul class="service-card__list">
-            <li>IPO preparation and advisory</li>
-            <li>US capital markets access</li>
-            <li>Regulatory compliance support</li>
-            <li>Investor relations strategy</li>
-          </ul>
+        <div class="split__right">
+          <div class="lux-grid">
+            <div class="lux-item">
+              <h4>Political Stability</h4>
+              <p>AAA-rated sovereign. EU founding member. Consistent regulatory framework.</p>
+            </div>
+            <div class="lux-item">
+              <h4>Tax Efficiency</h4>
+              <p>Competitive tax regime for investment vehicles. Double tax treaties with 80+ countries.</p>
+            </div>
+            <div class="lux-item">
+              <h4>EU Passporting</h4>
+              <p>Funds domiciled in Luxembourg can be marketed across all 27 EU member states.</p>
+            </div>
+            <div class="lux-item">
+              <h4>AML Standards</h4>
+              <p>Rigorous anti-money laundering framework. CSSF oversight ensures institutional-grade compliance.</p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -310,43 +538,61 @@
   <section class="section section--light" id="group">
     <div class="container">
       <p class="section__eyebrow">Group Structure</p>
-      <h2 class="section__title">Six entities. Clear responsibilities.</h2>
-      <p class="section__intro">Each entity within the Run Capital Partners group serves a distinct function. When you work with us, you know exactly who you're contracting with.</p>
+      <h2 class="section__title">Three regulated entities.<br>Clear responsibilities.</h2>
+      <p class="section__intro">Each entity within the Run Capital Partners group serves a distinct, regulated function. When you work with us, you know exactly who you're contracting with.</p>
 
       <div class="group-diagram">
         <div class="group-parent">
           <div class="group-card group-card--parent">
-            <h3>Run Capital Partners LTD</h3>
-            <p>Group Holding &middot; London (HQ)</p>
+            <div class="group-card__lockup">
+              <img src="rcp-logo.png" alt="" class="group-card__crest-img">
+              <div class="group-card__lockup-text">
+                <h3>Run Capital Partners</h3>
+                <p class="group-card__tag">Group Holding</p>
+              </div>
+            </div>
+            <span class="group-card__loc group-card__loc--parent">London &middot; United Kingdom</span>
           </div>
         </div>
         <div class="group-line"></div>
         <div class="group-children">
-          <div class="group-card">
-            <h4>Run Asset Management</h4>
-            <p>Alternative funds &amp; vehicles</p>
-            <span class="group-card__loc">Luxembourg</span>
-          </div>
-          <div class="group-card">
-            <h4>RCP SRL</h4>
-            <p>Insurance brokerage, credit mediation, portfolio analysis</p>
-            <span class="group-card__loc">Milan</span>
-          </div>
-          <div class="group-card">
-            <h4>yooro</h4>
-            <p>Digital securitization platform for EU/UK/CH investors</p>
-            <span class="group-card__loc">Digital</span>
-          </div>
-          <div class="group-card">
-            <h4>3DOTS UK</h4>
-            <p>Nasdaq listing advisory</p>
-            <span class="group-card__loc">London</span>
-          </div>
-          <div class="group-card">
-            <h4>Polaris Italia</h4>
-            <p>Credit mediation &amp; training</p>
-            <span class="group-card__loc">Italy</span>
-          </div>
+          <a class="group-card" href="rcp-global-markets.html">
+            <span class="group-card__num">01</span>
+            <h4>RCP Global Markets UK</h4>
+            <p>Advisory, distribution, sport &amp; wealth, and structured products partnerships.</p>
+            <div class="group-card__meta">
+              <span class="group-card__loc">London</span>
+              <span class="group-card__reg">FCA Ref. 1043763</span>
+            </div>
+          </a>
+          <a class="group-card" href="run-am.html">
+            <span class="group-card__num">02</span>
+            <h4>Run AM S.&agrave;.r.l</h4>
+            <p>Alternative investment funds, securitization vehicles, SPVs, holding structures.</p>
+            <div class="group-card__meta">
+              <span class="group-card__loc">Luxembourg</span>
+              <span class="group-card__reg">CSSF A00003107</span>
+            </div>
+          </a>
+          <a class="group-card" href="rcp-srl.html">
+            <span class="group-card__num">03</span>
+            <h4>RCP S.r.l</h4>
+            <p>Corporate consultancy and regulated insurance services.</p>
+            <div class="group-card__meta">
+              <span class="group-card__loc">Italy</span>
+              <span class="group-card__reg">IVASS E000657518</span>
+            </div>
+          </a>
+          <a class="group-card group-card--external" href="3dots.html">
+            <span class="group-card__num">04</span>
+            <span class="group-card__badge">Spinoff</span>
+            <h4>3DOTS Capital Advisory</h4>
+            <p>Nasdaq listing advisory for Southern European companies.</p>
+            <div class="group-card__meta">
+              <span class="group-card__loc">London</span>
+              <span class="group-card__reg">Learn more &rarr;</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
@@ -382,17 +628,17 @@
           </a>
         </div>
         <div class="team-card">
-          <a href="giordano.html">
-            <div class="team-card__photo"><img src="giordano-tomasini.jpg" alt="Giordano Tomasini" loading="eager"></div>
-            <h3 class="team-card__name">Giordano Tomasini</h3>
-            <p class="team-card__role">General Counsel | RunAM</p>
+          <a href="michele-furlan.html">
+            <div class="team-card__photo"><img src="michele-furlan.jpg" alt="Michele Furlan" loading="eager"></div>
+            <h3 class="team-card__name">Michele Furlan</h3>
+            <p class="team-card__role">Senior Advisor</p>
           </a>
         </div>
         <div class="team-card">
-          <a href="matteo-bodini.html">
-            <div class="team-card__photo"><img src="matteo-bodini.jpg" alt="Matteo Bodini" loading="eager"></div>
-            <h3 class="team-card__name">Matteo Bodini</h3>
-            <p class="team-card__role">Head of Legal Affairs</p>
+          <a href="enrico-caporin.html">
+            <div class="team-card__photo"><img src="enrico-caporin.jpg" alt="Enrico Caporin" loading="eager"></div>
+            <h3 class="team-card__name">Enrico Caporin</h3>
+            <p class="team-card__role">Senior Advisor</p>
           </a>
         </div>
       </div>
@@ -407,17 +653,24 @@
       <!-- Full Team (hidden by default) -->
       <div class="team-grid team-grid--full" id="teamFull">
         <div class="team-card">
-          <a href="enrico-caporin.html">
-            <div class="team-card__photo"><img src="enrico-caporin.jpg" alt="Enrico Caporin" loading="lazy"></div>
-            <h3 class="team-card__name">Enrico Caporin</h3>
-            <p class="team-card__role">Senior Advisor</p>
+          <a href="giordano.html">
+            <div class="team-card__photo"><img src="giordano-tomasini.jpg" alt="Giordano Tomasini" loading="lazy"></div>
+            <h3 class="team-card__name">Giordano Tomasini</h3>
+            <p class="team-card__role">General Counsel | RunAM</p>
           </a>
         </div>
         <div class="team-card">
-          <a href="michele-furlan.html">
-            <div class="team-card__photo"><img src="michele-furlan.jpg" alt="Michele Furlan" loading="lazy"></div>
-            <h3 class="team-card__name">Michele Furlan</h3>
-            <p class="team-card__role">Senior Advisor</p>
+          <a href="matteo-bodini.html">
+            <div class="team-card__photo"><img src="matteo-bodini.jpg" alt="Matteo Bodini" loading="lazy"></div>
+            <h3 class="team-card__name">Matteo Bodini</h3>
+            <p class="team-card__role">Head of Legal Affairs</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="stefano-giuffra.html">
+            <div class="team-card__photo"></div>
+            <h3 class="team-card__name">Stefano Giuffra</h3>
+            <p class="team-card__role">Board Member &amp; Compliance Officer | RunAM</p>
           </a>
         </div>
         <div class="team-card">
@@ -522,62 +775,38 @@
     </div>
   </section>
 
-  <!-- WHY LUXEMBOURG -->
-  <section class="section section--dark" id="luxembourg">
-    <div class="container">
-      <div class="split">
-        <div class="split__left">
-          <p class="section__eyebrow section__eyebrow--light">Why Luxembourg</p>
-          <h2 class="section__title section__title--light">The #1 EU hub for fund domiciliation.</h2>
-        </div>
-        <div class="split__right">
-          <div class="lux-grid">
-            <div class="lux-item">
-              <h4>Political Stability</h4>
-              <p>AAA-rated sovereign. EU founding member. Consistent regulatory framework.</p>
-            </div>
-            <div class="lux-item">
-              <h4>Tax Efficiency</h4>
-              <p>Competitive tax regime for investment vehicles. Double tax treaties with 80+ countries.</p>
-            </div>
-            <div class="lux-item">
-              <h4>EU Passporting</h4>
-              <p>Funds domiciled in Luxembourg can be marketed across all 27 EU member states.</p>
-            </div>
-            <div class="lux-item">
-              <h4>AML Standards</h4>
-              <p>Rigorous anti-money laundering framework. CSSF oversight ensures institutional-grade compliance.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <!-- INSIGHTS -->
   <section class="section section--light" id="insights">
     <div class="container">
-      <p class="section__eyebrow">Insights</p>
-      <h2 class="section__title">From our team.</h2>
+      <div class="insights-header">
+        <div>
+          <p class="section__eyebrow">Insights</p>
+          <h2 class="section__title">From our team.</h2>
+        </div>
+        <a href="insights.html" class="insights-header__link">View all insights <span aria-hidden="true">&rarr;</span></a>
+      </div>
       <div class="insights-grid">
-        <article class="insight-card">
+        <a href="insight-doughnut-model.html" class="insight-card">
           <div class="insight-card__date">Apr 11, 2025</div>
           <h3 class="insight-card__title">Beyond Traditional Economic Thinking: The Doughnut Model</h3>
           <p class="insight-card__author">Davide De Luca</p>
-          <p>Exploring how Kate Raworth's framework challenges conventional growth assumptions and what it means for alternative investment strategy.</p>
-        </article>
-        <article class="insight-card">
+          <p>Exploring how Kate Raworth&rsquo;s framework challenges conventional growth assumptions and what it means for alternative investment strategy.</p>
+          <span class="insight-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="insight-american-economy.html" class="insight-card">
           <div class="insight-card__date">Mar 5, 2025</div>
           <h3 class="insight-card__title">The American Economy Between Growth and Debt</h3>
           <p class="insight-card__author">Davide De Luca</p>
           <p>An increasingly fragile balance. What US fiscal dynamics mean for European investors positioning in alternatives.</p>
-        </article>
-        <article class="insight-card">
+          <span class="insight-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
+        </a>
+        <a href="insight-eterna-iii.html" class="insight-card">
           <div class="insight-card__date">Feb 24, 2025</div>
           <h3 class="insight-card__title">Investing in the Future: Our Participation in Eterna III Fund</h3>
-          <p class="insight-card__author">Giovanni Campodall'Orto</p>
-          <p>Why we committed to Eterna III and what the fund's thesis tells us about the next cycle of European private markets.</p>
-        </article>
+          <p class="insight-card__author">Giovanni Campodall&rsquo;Orto</p>
+          <p>Why we committed to Eterna III and what the fund&rsquo;s thesis tells us about the next cycle of European private markets.</p>
+          <span class="insight-card__cta">Read article <span aria-hidden="true">&rarr;</span></span>
+        </a>
       </div>
     </div>
   </section>
@@ -589,7 +818,7 @@
         <div class="split__left">
           <p class="section__eyebrow">Contact</p>
           <h2 class="section__title">Let's discuss your strategy.</h2>
-          <p class="text-lg">Whether you're structuring an alternative fund, exploring Nasdaq listing, or seeking AI-driven wealth management, we'd like to hear from you.</p>
+          <p class="text-lg">Whether you're structuring an alternative fund, exploring Nasdaq listing, or seeking systematic wealth management, we'd like to hear from you.</p>
 
           <div class="contact-offices">
             <div class="contact-office">
@@ -635,7 +864,7 @@
                 <option value="">Select a service</option>
                 <option value="asset">Asset Management</option>
                 <option value="wealth">Wealth Management</option>
-                <option value="trading">Algorithmic Trading</option>
+                <option value="sport-wealth">Sport &amp; Wealth</option>
                 <option value="certificates">Certificate Issuance</option>
                 <option value="nasdaq">Nasdaq Listing</option>
                 <option value="other">Other</option>
@@ -661,7 +890,10 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img" style="filter: brightness(0) invert(1); opacity: 0.7;">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+            <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+          </div>
           <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
         </div>
         <div class="footer__col">
@@ -669,7 +901,7 @@
           <ul>
             <li><a href="#services">Asset Management</a></li>
             <li><a href="#services">Wealth Management</a></li>
-            <li><a href="#services">Algorithmic Trading</a></li>
+            <li><a href="#services">Sport &amp; Wealth</a></li>
             <li><a href="#services">Certificate Issuance</a></li>
             <li><a href="#services">Nasdaq Listings</a></li>
           </ul>
@@ -687,10 +919,10 @@
         <div class="footer__col">
           <h4>Legal</h4>
           <ul>
-            <li><a href="#contact">Privacy Policy</a></li>
-            <li><a href="#contact">Cookie Policy</a></li>
-            <li><a href="#contact">Terms of Service</a></li>
-            <li><a href="#contact">Regulatory Disclosures</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="regulatory-disclosures.html">Regulatory Disclosures</a></li>
           </ul>
         </div>
       </div>
@@ -837,7 +1069,7 @@
       });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll('.service-card, .team-card, .insight-card, .group-card, .lux-item, .badge, .contact-office').forEach(el => {
+    document.querySelectorAll('.service-featured, .service-compact, .team-card, .insight-card, .group-card, .lux-item, .badge, .contact-office').forEach(el => {
       el.classList.add('fade-in');
       observer.observe(el);
     });

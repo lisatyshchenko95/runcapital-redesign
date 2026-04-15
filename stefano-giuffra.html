@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Michele Furlan | Senior Advisor | Run Capital Partners</title>
-  <meta name="description" content="Michele Furlan, Senior Advisor at Run Capital Partners. Chartered accountant and legal auditor with over 30 years in corporate finance, M&A, and business advisory.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x25C6;</text></svg>">
+  <title>Stefano Giuffra | Board Member &amp; Compliance Officer | Run Capital Partners</title>
+  <meta name="description" content="Stefano Giuffra, Board Member and Compliance Officer at Run AM, the Luxembourg AIFM arm of Run Capital Partners.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
@@ -15,9 +15,10 @@
     .bio-hero__bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 75% 50%, rgba(201,168,76,0.06) 0%, transparent 60%), linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%); }
     .bio-hero__content { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 120px 24px 80px; display: grid; grid-template-columns: 320px 1fr; gap: 72px; align-items: center; }
     .bio-photo { position: relative; }
-    .bio-photo__frame { width: 320px; height: 380px; border-radius: 20px; background: linear-gradient(135deg, var(--dark-3), var(--dark-4)); border: 1px solid rgba(201,168,76,0.15); overflow: hidden; position: relative; }
-    .bio-photo__img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
-    .bio-photo__frame::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(transparent, rgba(8,8,8,0.5)); }
+    .bio-photo__frame { width: 320px; height: 380px; border-radius: 20px; background: linear-gradient(135deg, var(--dark-3), var(--dark-4)); border: 1px solid rgba(201,168,76,0.15); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+    .bio-photo__placeholder { font-family: var(--font-serif); font-size: 64px; color: rgba(201,168,76,0.3); }
+    .bio-photo__img { width: 100%; height: 100%; object-fit: contain; object-position: center; display: block; background: var(--dark); }
+    .bio-photo__frame::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(transparent, rgba(8,8,8,0.5)); pointer-events: none; }
     .bio-photo__accent { position: absolute; top: -12px; right: -12px; width: 80px; height: 80px; border: 2px solid var(--gold); border-radius: 16px; opacity: 0.3; }
     .bio-photo__accent-2 { position: absolute; bottom: -8px; left: -8px; width: 60px; height: 60px; border: 1px solid var(--gold); border-radius: 12px; opacity: 0.2; }
     .bio-intro__eyebrow { color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
@@ -29,6 +30,13 @@
     .bio-meta-item { display: flex; flex-direction: column; gap: 4px; }
     .bio-meta-item__label { font-size: 11px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; }
     .bio-meta-item__value { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500; }
+    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .expertise-card { background: linear-gradient(135deg, var(--dark-2), var(--dark-3)); border: 1px solid rgba(201,168,76,0.06); border-radius: 16px; padding: 32px; transition: all 0.4s var(--ease-out-expo); position: relative; overflow: hidden; }
+    .expertise-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s var(--ease-out-expo); }
+    .expertise-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
+    .expertise-card:hover::before { height: 100%; }
+    .expertise-card__title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+    .expertise-card__desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
     .timeline { position: relative; padding-left: 48px; }
     .timeline::before { content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1)); }
     .timeline-item { position: relative; margin-bottom: 48px; }
@@ -39,19 +47,6 @@
     .timeline-item__role { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
     .timeline-item__company { font-size: 14px; color: var(--gold-dark); font-weight: 600; margin-bottom: 10px; }
     .timeline-item__desc { font-size: 14px; color: var(--gray-600); line-height: 1.7; max-width: 480px; }
-    .cred-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-    .cred-card { padding: 28px; background: var(--cream); border-radius: 14px; border: 1px solid rgba(201,168,76,0.08); transition: all 0.3s; }
-    .cred-card:hover { border-color: var(--gold); }
-    .cred-card__year { font-size: 12px; color: var(--gold-dark); font-weight: 600; letter-spacing: 0.05em; margin-bottom: 8px; }
-    .cred-card__title { font-family: var(--font-serif); font-size: 17px; font-weight: 600; margin-bottom: 6px; color: var(--dark); }
-    .cred-card__detail { font-size: 13px; color: var(--gray-600); line-height: 1.5; }
-    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-    .expertise-card { background: linear-gradient(135deg, var(--dark-2), var(--dark-3)); border: 1px solid rgba(201,168,76,0.06); border-radius: 16px; padding: 32px; transition: all 0.4s var(--ease-out-expo); position: relative; overflow: hidden; }
-    .expertise-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s var(--ease-out-expo); }
-    .expertise-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
-    .expertise-card:hover::before { height: 100%; }
-    .expertise-card__title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
-    .expertise-card__desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
     .bio-cta { text-align: center; padding: 80px 0; }
     .bio-cta__title { font-family: var(--font-serif); font-size: 36px; font-weight: 600; color: var(--white); margin-bottom: 16px; }
     .bio-cta__sub { font-size: 17px; color: rgba(255,255,255,0.45); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
@@ -65,7 +60,6 @@
       .bio-intro__summary { font-size: 16px; }
       .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
       .bio-meta-item { flex: 0 0 calc(50% - 10px); }
-      .cred-grid { grid-template-columns: 1fr; }
       .expertise-grid { grid-template-columns: 1fr; }
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
@@ -74,16 +68,10 @@
   </style>
 </head>
 <body>
-
-  <!-- NAV -->
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
-      <a href="index.html" class="nav__logo">
-        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span>
-      </a>
-      <button class="nav__toggle" id="navToggle" aria-label="Menu">
-        <span></span><span></span><span></span>
-      </button>
+      <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
       <ul class="nav__links" id="navLinks">
         <li><a href="index.html#about">About</a></li>
         <li><a href="index.html#services">Services</a></li>
@@ -95,85 +83,78 @@
     </div>
   </nav>
 
-  <!-- BIO HERO -->
   <section class="bio-hero">
     <div class="bio-hero__bg"></div>
     <div class="bio-hero__content">
       <div class="bio-photo">
         <div class="bio-photo__frame">
-          <img src="michele-furlan.jpg" alt="Michele Furlan" class="bio-photo__img">
+          <span class="bio-photo__placeholder">SG</span>
         </div>
         <div class="bio-photo__accent"></div>
         <div class="bio-photo__accent-2"></div>
       </div>
       <div class="bio-intro">
         <a href="index.html#team" class="bio-back-link"><span aria-hidden="true">&larr;</span> Back to Team</a>
-        <p class="bio-intro__eyebrow">Senior Advisor</p>
-        <h1 class="bio-intro__name">Michele Furlan</h1>
-        <p class="bio-intro__title">Run Capital Partners</p>
-        <p class="bio-intro__summary">Michele Furlan is a Senior Advisor at Run Capital Partners and a long-standing chartered accountant and legal auditor with over 30 years in corporate finance, M&amp;A, and business-advisory work for Italian mid-sized industrial companies. He brings deep experience in taxation, corporate restructuring, and cross-border advisory.</p>
+        <p class="bio-intro__eyebrow">Board Member &amp; Compliance Officer</p>
+        <h1 class="bio-intro__name">Stefano Giuffra</h1>
+        <p class="bio-intro__title">Run AM S.&agrave;.r.l &middot; Run Capital Partners</p>
+        <p class="bio-intro__summary">Stefano serves as Board Member and Compliance Officer at Run AM S.&agrave;.r.l, the Luxembourg-based alternative investment fund management arm of Run Capital Partners. He ensures regulatory alignment and governance integrity across the group's AIFM-regulated platform.</p>
         <div class="bio-intro__meta">
           <div class="bio-meta-item">
             <span class="bio-meta-item__label">Based in</span>
-            <span class="bio-meta-item__value">Treviso, Italy</span>
+            <span class="bio-meta-item__value">Luxembourg</span>
           </div>
           <div class="bio-meta-item">
-            <span class="bio-meta-item__label">Experience</span>
-            <span class="bio-meta-item__value">30+ Years</span>
+            <span class="bio-meta-item__label">Entity</span>
+            <span class="bio-meta-item__value">Run AM S.&agrave;.r.l</span>
           </div>
           <div class="bio-meta-item">
             <span class="bio-meta-item__label">Focus</span>
-            <span class="bio-meta-item__value">Corporate Finance &amp; M&amp;A</span>
+            <span class="bio-meta-item__value">Compliance &amp; Governance</span>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- EXPERTISE -->
   <section class="section section--dark-alt">
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light">Expertise</p>
-      <h2 class="section__title section__title--light">Chartered expertise in taxation, M&amp;A, and corporate restructuring.</h2>
-      <p class="section__intro">Michele brings over 30 years of hands-on experience advising Italian and international companies on tax, corporate, and financial-structuring matters.</p>
+      <h2 class="section__title section__title--light">Regulatory integrity at the heart of fund management.</h2>
+      <p class="section__intro">Stefano brings a rigorous compliance lens to every aspect of Run AM's Luxembourg-regulated platform.</p>
 
       <div class="expertise-grid">
         <div class="expertise-card">
-          <h3 class="expertise-card__title">Corporate Finance &amp; M&amp;A</h3>
-          <p class="expertise-card__desc">Tax, corporate, and legal advisory services for Italian and international companies, including M&amp;A mandates.</p>
+          <h3 class="expertise-card__title">AIFM Compliance</h3>
+          <p class="expertise-card__desc">Oversight of compliance frameworks for Luxembourg AIFM-regulated alternative-investment vehicles under CSSF supervision.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title">Taxation Advisory</h3>
-          <p class="expertise-card__desc">Deep expertise in Italian and cross-border tax structuring, compliance, and planning for mid-sized industrial companies.</p>
+          <h3 class="expertise-card__title">Board Governance</h3>
+          <p class="expertise-card__desc">Serving as a board member for Run AM, contributing to strategic direction, risk oversight, and regulatory alignment.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title">Corporate Restructuring</h3>
-          <p class="expertise-card__desc">Advisory on corporate restructuring, governance reform, and organisational transformation.</p>
-        </div>
-        <div class="expertise-card">
-          <h3 class="expertise-card__title">Auditing &amp; Compliance</h3>
-          <p class="expertise-card__desc">Chartered accountant and legal auditor credentials, ensuring financial reporting integrity and regulatory compliance.</p>
+          <h3 class="expertise-card__title">Regulatory Reporting</h3>
+          <p class="expertise-card__desc">Ensuring timely and accurate regulatory reporting to CSSF and alignment with Luxembourg's 2013 AIFM Law framework.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CAREER TIMELINE -->
-  <section class="section section--light" id="career">
+  <section class="section section--light">
     <div class="container">
       <div class="split">
         <div class="split__left">
           <p class="section__eyebrow">Career</p>
-          <h2 class="section__title">Three decades of corporate finance and business advisory.</h2>
-          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">Michele has spent his entire career serving Italian and international businesses with tax, corporate, and legal-advisory services, building a practice that is trusted by mid-sized industrial companies across the region.</p>
+          <h2 class="section__title">Compliance leadership in the Luxembourg fund ecosystem.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">Stefano brings deep experience in AIFM compliance and board governance to Run Capital Partners' regulated fund management platform.</p>
         </div>
         <div class="split__right">
           <div class="timeline">
             <div class="timeline-item timeline-item--current">
-              <p class="timeline-item__date">March 1993 - Present</p>
-              <h3 class="timeline-item__role">Senior Partner</h3>
-              <p class="timeline-item__company">Zaccariotto e Furlan Business Advisory Group</p>
-              <p class="timeline-item__desc">Leads a Treviso-based business-advisory firm that supports Italian and international companies with tax, corporate, and legal-advisory services, including M&amp;A and corporate-finance mandates.</p>
+              <p class="timeline-item__date">Present</p>
+              <h3 class="timeline-item__role">Board Member &amp; Compliance Officer</h3>
+              <p class="timeline-item__company">Run AM S.&agrave;.r.l</p>
+              <p class="timeline-item__desc">Serves on the board and leads compliance for Run AM, the AIFM-registered Luxembourg entity of Run Capital Partners. Ensures adherence to CSSF regulations and AIFMD requirements.</p>
             </div>
           </div>
         </div>
@@ -181,36 +162,19 @@
     </div>
   </section>
 
-  <!-- CREDENTIALS -->
-  <section class="section section--cream" id="credentials">
-    <div class="container">
-      <p class="section__eyebrow">Credentials</p>
-      <h2 class="section__title">Professional certifications and standing.</h2>
-      <div class="cred-grid">
-        <div class="cred-card">
-          <p class="cred-card__year">Professional Designation</p>
-          <h3 class="cred-card__title">Chartered Accountant &amp; Legal Auditor</h3>
-          <p class="cred-card__detail">Registered member of the Italian professional accounting body (Ordine dei Dottori Commercialisti e degli Esperti Contabili). Qualified to provide statutory audit, corporate-finance advisory, tax planning, and legal-audit services across Italy.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
   <section class="section section--dark">
     <div class="container bio-cta">
-      <h2 class="bio-cta__title">Get in touch directly.</h2>
-      <p class="bio-cta__sub">For inquiries related to corporate finance, taxation, M&amp;A advisory, or business restructuring services.</p>
-      <p style="margin-bottom: 28px;"><a href="mailto:michele.furlan@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">michele.furlan@runcapital.partners</a></p>
+      <h2 class="bio-cta__title">Get in touch.</h2>
+      <p class="bio-cta__sub">For inquiries related to compliance, governance, or regulated fund matters at Run AM.</p>
+      <p style="margin-bottom: 28px;"><a href="mailto:stefano.giuffra@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">stefano.giuffra@runcapital.partners</a></p>
       <div class="bio-cta__links">
-        <a href="mailto:michele.furlan@runcapital.partners" class="btn btn--primary">Send Email</a>
-        <a href="https://www.linkedin.com/in/furlan-michele-32341617" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn Profile</a>
+        <a href="mailto:stefano.giuffra@runcapital.partners" class="btn btn--primary">Send Email</a>
+        <a href="https://www.linkedin.com/in/stefano-giuffra-6747673b" class="btn btn--outline" target="_blank" rel="noopener">LinkedIn Profile</a>
         <a href="index.html#team" class="btn btn--outline">Back to Team</a>
       </div>
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
       <div class="footer__bottom" style="border-top: none; padding-top: 0;">
@@ -225,7 +189,7 @@
     toggle.addEventListener('click', () => { links.classList.toggle('nav__links--open'); toggle.classList.toggle('nav__toggle--active'); });
     links.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { links.classList.remove('nav__links--open'); toggle.classList.remove('nav__toggle--active'); }); });
     const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.08 });
-    document.querySelectorAll('.timeline-item, .cred-card, .expertise-card').forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
+    document.querySelectorAll('.expertise-card, .timeline-item').forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
   </script>
 </body>
 </html>

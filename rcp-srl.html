@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RCP S.r.l | Italian Corporate Consultancy &amp; Insurance | Run Capital Partners</title>
+  <meta name="description" content="Run Capital Partners S.r.l: the Italian corporate consultancy and insurance brokerage arm of the Run Capital Partners Group. Registered with IVASS, Section E, No. E000657518.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .entity-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 8px 18px;
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 24px;
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.15em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .entity-mark__flag {
+      width: 18px;
+      height: 12px;
+      display: inline-flex;
+      border: 1px solid rgba(201,168,76,0.4);
+      border-radius: 2px;
+      overflow: hidden;
+    }
+    .entity-mark__flag span {
+      flex: 1;
+      display: block;
+    }
+    .entity-mark__flag span:nth-child(1) { background: #008C45; }
+    .entity-mark__flag span:nth-child(2) { background: #F4F9FF; }
+    .entity-mark__flag span:nth-child(3) { background: #CD212A; }
+    .regulatory-panel {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 44px 48px;
+      background: linear-gradient(160deg, rgba(201,168,76,0.05), rgba(201,168,76,0.01));
+      border: 1px solid rgba(201,168,76,0.18);
+      border-radius: 14px;
+      text-align: center;
+    }
+    .regulatory-panel__eyebrow {
+      font-family: 'Cinzel', serif;
+      font-size: 12px;
+      letter-spacing: 0.2em;
+      color: var(--gold);
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+    .regulatory-panel__text {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--dark-2);
+      font-style: italic;
+    }
+    .regulatory-panel__reg {
+      margin-top: 24px;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold-dark, var(--gold));
+      font-weight: 600;
+    }
+    @media (max-width: 768px) {
+      .regulatory-panel { padding: 32px 24px; }
+      .regulatory-panel__text { font-size: 16px; }
+    }
+    /* Hero two-column layout */
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 48px;
+      align-items: center;
+    }
+    .hero-illustration {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: var(--gold);
+      opacity: 0.85;
+    }
+    .hero-illustration svg {
+      width: 100%;
+      max-width: 340px;
+      height: auto;
+      filter: drop-shadow(0 0 40px rgba(201,168,76,0.15));
+    }
+    @media (max-width: 900px) {
+      .hero-layout { grid-template-columns: 1fr; gap: 32px; }
+      .hero-illustration { order: -1; }
+      .hero-illustration svg { max-width: 220px; }
+    }
+    .cap-icon { width: 44px; height: 44px; color: var(--gold); margin-bottom: 16px; }
+    .cap-icon svg { width: 100%; height: 100%; }
+    .section-divider {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 40px auto;
+      color: var(--gold);
+      max-width: 400px;
+      padding: 0 24px;
+    }
+    .section-divider span {
+      flex: 1;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--gold), transparent);
+      opacity: 0.4;
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#group">Group</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#insights">Insights</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="service-hero">
+    <div class="service-hero__bg"></div>
+    <div class="service-hero__content">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <a href="index.html#group">Group</a>
+        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+        <span class="breadcrumb__current">RCP S.r.l</span>
+      </nav>
+      <div class="hero-layout">
+        <div class="hero-layout__text">
+          <span class="entity-mark">
+            <span class="entity-mark__flag"><span></span><span></span><span></span></span>
+            Group Entity 03 &middot; Italy
+          </span>
+          <h1 class="service-hero__title">RCP S.r.l</h1>
+          <p class="service-hero__sub">The Italian corporate consultancy and insurance arm of the Run Capital Partners Group. Regulated by IVASS, operating from Italy, serving institutional and corporate clients with insurance brokerage and cross-border coordination with the wider Group.</p>
+          <div class="service-hero__actions">
+            <a href="#team" class="btn btn--primary">Meet the Italy Team</a>
+            <a href="#contact-us" class="btn btn--outline">Speak with the Team</a>
+          </div>
+        </div>
+        <div class="hero-illustration" aria-hidden="true">
+          <svg viewBox="0 0 280 320" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+            <!-- Ground -->
+            <line x1="10" y1="300" x2="270" y2="300" stroke-width="0.8" opacity="0.5"/>
+            <!-- Steps / base platform -->
+            <rect x="30" y="290" width="220" height="10" opacity="0.6"/>
+            <rect x="40" y="282" width="200" height="8" opacity="0.5"/>
+            <!-- Main cathedral body -->
+            <rect x="60" y="200" width="160" height="82"/>
+            <!-- Side left aisle -->
+            <rect x="40" y="230" width="20" height="52" opacity="0.7"/>
+            <!-- Side right aisle -->
+            <rect x="220" y="230" width="20" height="52" opacity="0.7"/>
+            <!-- Left small dome -->
+            <path d="M45 230 Q50 215 55 230"/>
+            <line x1="50" y1="215" x2="50" y2="208"/>
+            <circle cx="50" cy="207" r="1.5" fill="currentColor"/>
+            <!-- Right small dome -->
+            <path d="M225 230 Q230 215 235 230"/>
+            <line x1="230" y1="215" x2="230" y2="208"/>
+            <circle cx="230" cy="207" r="1.5" fill="currentColor"/>
+            <!-- Central dome drum -->
+            <rect x="115" y="150" width="50" height="50"/>
+            <!-- Main dome -->
+            <path d="M108 150 Q140 80 172 150 Z"/>
+            <line x1="140" y1="90" x2="140" y2="85" opacity="0.5"/>
+            <!-- Lantern on dome -->
+            <rect x="132" y="68" width="16" height="20"/>
+            <path d="M130 68 Q140 58 150 68"/>
+            <line x1="140" y1="58" x2="140" y2="44"/>
+            <polygon points="136,44 144,44 140,34" fill="currentColor" opacity="0.7"/>
+            <line x1="140" y1="34" x2="140" y2="22"/>
+            <polygon points="137,22 143,22 140,14" fill="currentColor"/>
+            <!-- Dome ribs -->
+            <path d="M124 150 Q140 100 140 90" opacity="0.3"/>
+            <path d="M156 150 Q140 100 140 90" opacity="0.3"/>
+            <!-- Dome windows -->
+            <path d="M122 148 L122 140 Q122 136 126 136 Q130 136 130 140 L130 148 Z" opacity="0.6"/>
+            <path d="M136 148 L136 140 Q136 136 140 136 Q144 136 144 140 L144 148 Z" opacity="0.6"/>
+            <path d="M150 148 L150 140 Q150 136 154 136 Q158 136 158 140 L158 148 Z" opacity="0.6"/>
+            <!-- Main facade arches -->
+            <path d="M74 282 L74 240 Q74 230 86 230 Q98 230 98 240 L98 282"/>
+            <path d="M128 282 L128 240 Q128 226 140 226 Q152 226 152 240 L152 282"/>
+            <path d="M182 282 L182 240 Q182 230 194 230 Q206 230 206 240 L206 282"/>
+            <!-- Pediment line -->
+            <line x1="60" y1="215" x2="220" y2="215" opacity="0.5"/>
+            <!-- Columns indicated -->
+            <line x1="110" y1="215" x2="110" y2="200" opacity="0.5"/>
+            <line x1="170" y1="215" x2="170" y2="200" opacity="0.5"/>
+            <!-- Rose window -->
+            <circle cx="140" cy="200" r="8" opacity="0.7"/>
+            <line x1="132" y1="200" x2="148" y2="200" opacity="0.5"/>
+            <line x1="140" y1="192" x2="140" y2="208" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="section-divider" aria-hidden="true">
+    <span></span>
+    <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+      <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
+    </svg>
+    <span></span>
+  </div>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Overview</p>
+          <h2 class="section__title">Italian roots.<br>Regulated insurance services.</h2>
+        </div>
+        <div class="split__right">
+          <p class="text-lg">Run Capital Partners S.r.l is the Italian entity of the Group, providing corporate consultancy to institutional and corporate clients and operating as a regulated insurance broker in the Italian market.</p>
+          <p>The firm is registered with IVASS &mdash; the Italian Register of Insurance and Reinsurance Intermediaries &mdash; within Section E under registration number E000657518. This authorisation underpins the insurance brokerage activity the team delivers alongside its corporate advisory mandates, with coordination across the UK and Luxembourg entities of the Group where cross-border structuring is required.</p>
+          <div class="service-stats">
+            <div class="service-stats__item">
+              <span class="service-stats__num">IVASS</span>
+              <span class="service-stats__label">Section E</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">E000657518</span>
+              <span class="service-stats__label">Reg. No.</span>
+            </div>
+            <div class="service-stats__item">
+              <span class="service-stats__num">Italy</span>
+              <span class="service-stats__label">Operating</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">What We Do</p>
+      <h2 class="section__title section__title--light">Capabilities of the Italian entity.</h2>
+      <p class="section__intro">A focused mandate: corporate advisory for businesses, regulated insurance brokerage, and the cross-border coordination that ties the Italian practice to the rest of the Group.</p>
+
+      <div class="capability-grid">
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 24 L14 20 L18 24 L22 22 L26 24 L30 22 L38 24"/>
+              <path d="M6 24 L6 30 L14 28 L14 22"/>
+              <path d="M38 24 L38 30 L30 28 L30 22"/>
+              <path d="M14 28 L22 30 L30 28"/>
+              <circle cx="22" cy="14" r="2.5"/>
+              <path d="M19 18 L22 16 L25 18"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">01 &middot; Corporate Consultancy</h3>
+          <p>Advisory services for corporate and institutional clients &mdash; strategic, financial, and operational. The Italian entity does not provide private client or individual wealth services; those mandates are handled by the other Group entities under their respective authorisations.</p>
+        </div>
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 5 L36 10 L36 22 C36 30 30 36 22 39 C14 36 8 30 8 22 L8 10 Z"/>
+              <polyline points="16,22 20,26 28,18"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">02 &middot; Insurance Brokerage</h3>
+          <p>A regulated activity conducted under IVASS Section E authorisation (Reg. No. E000657518). The team structures and places insurance solutions for corporate clients, institutions, and high-complexity mandates, with access to the Italian and international carrier markets.</p>
+        </div>
+        <div class="capability-card">
+          <div class="cap-icon" aria-hidden="true">
+            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="22" cy="22" r="16"/>
+              <ellipse cx="22" cy="22" rx="7" ry="16"/>
+              <line x1="6" y1="22" x2="38" y2="22"/>
+              <path d="M8 14 Q22 18 36 14"/>
+              <path d="M8 30 Q22 26 36 30"/>
+            </svg>
+          </div>
+          <h3 class="capability-card__title">03 &middot; Cross-border Coordination</h3>
+          <p>The Italian team coordinates with Run Capital Partners LTD in the UK and the Luxembourg entity to deliver joined-up advisory across jurisdictions &mdash; so clients with exposures in multiple markets are served by a single Group relationship rather than fragmented providers.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--cream" id="team">
+    <div class="container">
+      <p class="section__eyebrow">Italy Team &middot; 16 Members</p>
+      <h2 class="section__title">The Italy team</h2>
+      <p class="section__intro">Partners, senior advisors, relationship managers, and operations &mdash; the people behind RCP S.r.l in Italy.</p>
+
+      <div class="team-grid" style="margin-top: 48px;">
+        <div class="team-card">
+          <a href="ceo.html">
+            <div class="team-card__photo"><img src="luca-padovan.jpg" alt="Luca Padovan" loading="lazy"></div>
+            <h3 class="team-card__name">Luca Padovan</h3>
+            <p class="team-card__role">CEO &amp; Founder</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="cesare-trebeschi.html">
+            <div class="team-card__photo"><img src="cesare-trebeschi.jpg" alt="Cesare Trebeschi" loading="lazy"></div>
+            <h3 class="team-card__name">Cesare Trebeschi</h3>
+            <p class="team-card__role">Co-Founder &amp; Partner</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="enrico.html">
+            <div class="team-card__photo"><img src="enrico-fiore.jpg" alt="Enrico Fiore" loading="lazy"></div>
+            <h3 class="team-card__name">Enrico Fiore</h3>
+            <p class="team-card__role">Partner</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="enrico-caporin.html">
+            <div class="team-card__photo"><img src="enrico-caporin.jpg" alt="Enrico Caporin" loading="lazy"></div>
+            <h3 class="team-card__name">Enrico Caporin</h3>
+            <p class="team-card__role">Senior Advisor</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="michele-furlan.html">
+            <div class="team-card__photo"><img src="michele-furlan.jpg" alt="Michele Furlan" loading="lazy"></div>
+            <h3 class="team-card__name">Michele Furlan</h3>
+            <p class="team-card__role">Senior Advisor</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="giovanni-randazzo.html">
+            <div class="team-card__photo"><img src="giovanni-randazzo.jpg" alt="Giovanni Randazzo" loading="lazy"></div>
+            <h3 class="team-card__name">Giovanni Randazzo</h3>
+            <p class="team-card__role">VP Institutional Clients</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="maurizio-caroglio.html">
+            <div class="team-card__photo"><img src="maurizio-caroglio.jpg" alt="Maurizio Caroglio" loading="lazy"></div>
+            <h3 class="team-card__name">Maurizio Caroglio</h3>
+            <p class="team-card__role">Relationship Manager</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="patrizio-caringi.html">
+            <div class="team-card__photo"><img src="patrizio-caringi.jpg" alt="Patrizio Caringi" loading="lazy"></div>
+            <h3 class="team-card__name">Patrizio Caringi</h3>
+            <p class="team-card__role">Relationship Manager</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="mario-fama.html">
+            <div class="team-card__photo"><img src="mario-fama.jpg" alt="Mario Fama" loading="lazy"></div>
+            <h3 class="team-card__name">Mario Fama</h3>
+            <p class="team-card__role">Relationship Manager</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="massimo-bocci.html">
+            <div class="team-card__photo"><img src="massimo-bocci.jpg" alt="Massimo Bocci" loading="lazy"></div>
+            <h3 class="team-card__name">Massimo Bocci</h3>
+            <p class="team-card__role">Institutional | Sport &amp; Wealth</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="marco-falsarella.html">
+            <div class="team-card__photo"><img src="marco-falsarella.jpg" alt="Marco Falsarella" loading="lazy"></div>
+            <h3 class="team-card__name">Marco Falsarella</h3>
+            <p class="team-card__role">Relationship Manager</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="alice-pozzobon.html">
+            <div class="team-card__photo"><img src="alice-pozzobon.jpg" alt="Alice Pozzobon" loading="lazy"></div>
+            <h3 class="team-card__name">Alice Pozzobon</h3>
+            <p class="team-card__role">Operations Manager</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="lara-covre.html">
+            <div class="team-card__photo"><img src="lara-covre.jpg" alt="Lara Covre" loading="lazy"></div>
+            <h3 class="team-card__name">Lara Covre</h3>
+            <p class="team-card__role">Insurance and Finance Specialist</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="sara-longo.html">
+            <div class="team-card__photo"><img src="sara-longo.jpg" alt="Sara Longo" loading="lazy"></div>
+            <h3 class="team-card__name">Sara Longo</h3>
+            <p class="team-card__role">Operations Associate</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="elena-bernardi.html">
+            <div class="team-card__photo"><img src="elena-bernardi.jpg" alt="Elena Bernardi" loading="lazy"></div>
+            <h3 class="team-card__name">Elena Bernardi</h3>
+            <p class="team-card__role">Marketing Specialist</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="davide-de-luca.html">
+            <div class="team-card__photo"><img src="davide-de-luca.jpg" alt="Davide De Luca" loading="lazy"></div>
+            <h3 class="team-card__name">Davide De Luca</h3>
+            <p class="team-card__role">Analyst</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider" aria-hidden="true">
+    <span></span>
+    <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
+      <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
+    </svg>
+    <span></span>
+  </div>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="regulatory-panel">
+        <p class="regulatory-panel__eyebrow">Regulatory Status</p>
+        <p class="regulatory-panel__text">&ldquo;Run Capital Partners S.r.l is part of Run Capital Partners Group. Run Capital Partners Srl is registered to RUI IVASS &mdash; Italian Register of Insurance and Reinsurance Intermediaries &mdash; within the Section E with registration number E000657518.&rdquo;</p>
+        <p class="regulatory-panel__reg">IVASS &middot; Section E &middot; E000657518</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark" id="contact-us">
+    <div class="container service-cta">
+      <h2 class="service-cta__title">Speak with the Italy team</h2>
+      <p class="service-cta__sub">Whether your mandate is corporate advisory, insurance brokerage, or a cross-border structure coordinated across the Group, the Italian team is ready for a confidential conversation.</p>
+      <div class="service-cta__actions">
+        <a href="index.html#contact?entity=rcp-srl" class="btn btn--primary">Get in Touch</a>
+        <a href="index.html#group" class="btn btn--outline">Back to Group</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+            <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+          </div>
+          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with. Run Capital Partners S.r.l is registered with IVASS, Section E, No. E000657518.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="asset-management.html">Asset Management</a></li>
+            <li><a href="wealth-management.html">Wealth Management</a></li>
+            <li><a href="sport-wealth.html">Sport &amp; Wealth</a></li>
+            <li><a href="certificate-issuance.html">Certificate Issuance</a></li>
+            <li><a href="3dots.html">Nasdaq Listings (3DOTS)</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#group">Group Structure</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="index.html#insights">Insights</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="regulatory-disclosures.html">Regulatory Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom"><p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p></div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add('visible');
+        });
+      }, { threshold: 0.08 });
+      document.querySelectorAll('.capability-card, .service-stats__item, .team-card, .regulatory-panel').forEach(el => {
+        el.classList.add('fade-in');
+        revealObserver.observe(el);
+      });
+    }
+  </script>
+
+</body>
+</html>
