@@ -1800,8 +1800,8 @@ span.gold {
   margin: 0 auto;
 }
 
-.custodians__grid > .custodian-logo:nth-child(5) { grid-column: 1 / 2; }
-.custodians__grid > .custodian-logo:nth-child(6) { grid-column: 2 / 4; }
+.custodians__grid > .custodian-logo:nth-child(5) { grid-column: 2 / 3; }
+.custodians__grid > .custodian-logo:nth-child(6) { grid-column: 3 / 4; }
 .custodians__grid > .custodian-logo:nth-child(7) { grid-column: 4 / 5; }
 
 .custodian-logo {
@@ -1871,7 +1871,7 @@ span.gold {
 }
 
 /* Parent: RCP Group crest card */
-.group-card--parent {
+.group-card.group-card--parent {
   background: linear-gradient(135deg, #050505 0%, var(--dark-3) 100%);
   border: 1px solid rgba(201,168,76,0.4);
   border-radius: 16px;
@@ -1879,8 +1879,9 @@ span.gold {
   min-width: 480px;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 24px 64px rgba(0,0,0,0.4), 0 0 60px rgba(201,168,76,0.05), inset 0 1px 0 rgba(201,168,76,0.15);
   text-align: center;
+  align-items: center;
+  box-shadow: 0 24px 64px rgba(0,0,0,0.4), 0 0 60px rgba(201,168,76,0.05), inset 0 1px 0 rgba(201,168,76,0.15);
 }
 
 .group-card--parent::before {
@@ -1920,6 +1921,13 @@ span.gold {
   display: flex;
   flex-direction: column;
   gap: 6px;
+}
+
+.group-card--parent .group-card__loc--parent {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 100px;
+  font-weight: 500;
 }
 
 .group-card--parent h3 {
