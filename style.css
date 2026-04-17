@@ -3094,8 +3094,8 @@ select:focus-visible,
 
 .skip-link {
   position: absolute;
-  top: 12px;
-  left: 12px;
+  top: -9999px;
+  left: -9999px;
   background: var(--gold);
   color: var(--dark);
   padding: 10px 20px;
@@ -3104,12 +3104,14 @@ select:focus-visible,
   font-weight: 600;
   border-radius: 6px;
   z-index: 2000;
-  transform: translateY(-120%);
-  transition: transform 0.25s var(--ease-out-expo);
+  opacity: 0;
 }
 
 .skip-link:focus {
-  transform: translateY(0);
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  opacity: 1;
   outline: 2px solid var(--white);
   outline-offset: 3px;
 }
