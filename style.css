@@ -2931,13 +2931,14 @@ a.group-card {
   align-items: center;
   justify-content: center;
   gap: 18px;
-  margin: 56px 0 40px;
+  margin: 56px auto 40px;
+  max-width: 480px;
   color: var(--gold);
 }
 .section-divider span {
   display: block;
+  flex: 1;
   height: 1px;
-  width: 80px;
   background: linear-gradient(90deg, transparent, var(--gold), transparent);
 }
 .section-divider svg {
