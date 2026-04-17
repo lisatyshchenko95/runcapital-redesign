@@ -834,6 +834,11 @@ span.gold {
   color: var(--gray-600);
 }
 
+.badge__nasdaq-logo {
+  width: 80px;
+  height: auto;
+}
+
 /* ---- Services ---- */
 
 .services-grid {
@@ -3680,6 +3685,19 @@ select:focus-visible,
 
   .nav__toggle {
     display: flex;
+  }
+
+  .nav__logo-text {
+    font-size: 14px;
+    letter-spacing: 0.04em;
+  }
+
+  .nav__logo-img {
+    height: 40px;
+  }
+
+  .nav__logo {
+    gap: 10px;
   }
 
   /* Hero mobile */
