@@ -1791,28 +1791,25 @@ span.gold {
 }
 
 .custodians__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 32px 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   align-items: center;
-  justify-items: center;
+  gap: 32px 56px;
   max-width: 1100px;
   margin: 0 auto;
 }
-
-.custodians__grid > .custodian-logo:nth-child(5) { grid-column: 2 / 3; }
-.custodians__grid > .custodian-logo:nth-child(6) { grid-column: 3 / 4; }
-.custodians__grid > .custodian-logo:nth-child(7) { grid-column: 4 / 5; }
 
 .custodian-logo {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 180px;
+  flex: 0 0 180px;
   height: 80px;
   color: var(--gold);
   opacity: 0.9;
   transition: all 0.3s var(--ease-out-expo);
+  overflow: hidden;
 }
 
 .custodian-logo:hover {
@@ -1841,19 +1838,7 @@ span.gold {
 
 @media (max-width: 900px) {
   .custodians__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 32px;
-  }
-  .custodians__grid > .custodian-logo:nth-child(5),
-  .custodians__grid > .custodian-logo:nth-child(6),
-  .custodians__grid > .custodian-logo:nth-child(7) {
-    grid-column: auto;
-  }
-}
-
-@media (max-width: 480px) {
-  .custodians__grid {
-    grid-template-columns: 1fr;
+    gap: 24px 40px;
   }
 }
 
@@ -1928,6 +1913,7 @@ span.gold {
   padding: 8px 20px;
   border-radius: 100px;
   font-weight: 500;
+  color: #ffffff;
 }
 
 .group-card--parent h3 {
@@ -2098,6 +2084,21 @@ a.group-card {
   padding-top: 16px;
   border-top: 1px solid rgba(201,168,76,0.15);
   margin-top: auto;
+}
+
+.group-card__cta {
+  display: block;
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: color 0.3s;
+}
+
+.group-card:hover .group-card__cta {
+  color: var(--gold-light);
 }
 
 .group-card__loc {
