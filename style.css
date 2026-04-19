@@ -2256,29 +2256,31 @@ a.group-card {
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  background: conic-gradient(var(--gold), transparent 30%, transparent 70%, var(--gold));
-  opacity: 0;
-  transition: opacity 0.4s;
-  z-index: -1;
+  border: 2px solid var(--gold);
+  opacity: 0.3;
+  transition: opacity 0.4s, border-width 0.3s;
+  z-index: 1;
 }
 
 .team-card:hover .team-card__photo::before {
   opacity: 1;
-  animation: spinBorder 3s linear infinite;
-}
-
-@keyframes spinBorder {
-  to { transform: rotate(360deg); }
+  border-width: 3px;
 }
 
 .team-card__photo::after {
-  content: '';
+  content: '\2192';
   position: absolute;
   inset: 0;
   border-radius: 50%;
-  border: 2px solid var(--gold);
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  color: #fff;
   opacity: 0;
   transition: opacity 0.3s;
+  z-index: 2;
 }
 
 .team-card:hover .team-card__photo::after {
@@ -2298,7 +2300,22 @@ a.group-card {
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  margin-bottom: 14px;
+  margin-bottom: 8px;
+}
+
+.team-card__cta {
+  display: block;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.6;
+  transition: opacity 0.3s;
+}
+
+.team-card:hover .team-card__cta {
+  opacity: 1;
 }
 
 .team-card__bio {
