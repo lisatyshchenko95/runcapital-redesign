@@ -303,7 +303,7 @@
   font-weight: 600;
 }
 .v2-services {
-  margin-top: 72px;
+  margin-top: 48px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1px;
@@ -312,7 +312,7 @@
 }
 .v2-service {
   background: var(--v2-cream);
-  padding: 48px 40px;
+  padding: 28px 28px;
   position: relative;
   transition: background 0.4s var(--v2-ease), color 0.4s var(--v2-ease);
   cursor: pointer;
@@ -326,26 +326,32 @@
 }
 .v2-service__num {
   font-family: var(--v2-serif);
-  font-size: 14px;
-  letter-spacing: 0.2em;
-  color: var(--v2-gold);
+  font-size: 48px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  background: linear-gradient(180deg, #e0c874, #c9a84c);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   display: block;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
+  line-height: 1;
 }
 .v2-service h3 {
   font-family: "Playfair Display", Georgia, serif;
   font-weight: 600;
-  font-size: 26px;
+  font-size: 22px;
   line-height: 1.15;
-  margin: 0 0 16px;
+  margin: 0 0 8px;
   letter-spacing: -0.005em;
+  white-space: nowrap;
 }
 .v2-service p {
   font-family: var(--v2-sans);
-  font-size: 14px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.55;
   color: rgba(10,10,10,0.65);
-  margin: 0 0 24px;
+  margin: 0 0 14px;
   font-weight: 300;
 }
 .v2-service:hover p { color: rgba(247,243,234,0.7); }
