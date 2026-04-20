@@ -1841,6 +1841,10 @@ span.gold {
   transform: scale(1.2);
 }
 
+.custodian-logo--img img[src*="pictet"] {
+  transform: scale(0.8);
+}
+
 @media (max-width: 900px) {
   .custodians__grid {
     gap: 24px 40px;
