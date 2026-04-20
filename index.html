@@ -84,84 +84,114 @@
           <a href="#services" class="btn btn--primary">Explore Our Services</a>
           <a href="#contact" class="btn btn--outline">Schedule a Consultation</a>
         </div>
-        <div class="hero__stats">
-          <div class="hero__stat">
-            <span class="hero__stat-num">7+</span>
-            <span class="hero__stat-label">Years Operating</span>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-num">20+</span>
-            <span class="hero__stat-label">Professionals</span>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-num">4</span>
-            <span class="hero__stat-label">European Offices</span>
-          </div>
-          <div class="hero__stat">
-            <span class="hero__stat-num">3</span>
-            <span class="hero__stat-label">Regulated Entities</span>
-          </div>
-        </div>
       </div>
       <div class="hero__visual" aria-hidden="true">
-        <svg class="hero__orb" viewBox="0 0 480 480" xmlns="http://www.w3.org/2000/svg" fill="none">
+        <svg class="hero__network" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" fill="none">
           <defs>
-            <radialGradient id="orbCore" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#e0c874" stop-opacity="0.45"/>
-              <stop offset="55%" stop-color="#c9a84c" stop-opacity="0.12"/>
+            <radialGradient id="cityGlow" cx="50%" cy="100%" r="80%">
+              <stop offset="0%" stop-color="#e0c874" stop-opacity="0.35"/>
+              <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.15"/>
               <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
             </radialGradient>
-            <linearGradient id="waveGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
-              <stop offset="50%" stop-color="#e0c874" stop-opacity="1"/>
-              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
-            </linearGradient>
-            <linearGradient id="waveGradSoft" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
-              <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.55"/>
-              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+            <linearGradient id="lineFade" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e0c874" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.35"/>
             </linearGradient>
           </defs>
 
-          <!-- Soft central glow -->
-          <circle cx="240" cy="240" r="150" fill="url(#orbCore)"/>
+          <!-- Back-layer towers (very thin, muted lines) -->
+          <g class="hero__city-back" stroke="#c9a84c" stroke-width="0.75" opacity="0.4">
+            <path d="M 30 460 L 30 240 L 72 240 L 72 460"/>
+            <line x1="30" y1="280" x2="72" y2="280"/>
+            <line x1="30" y1="340" x2="72" y2="340"/>
+            <line x1="30" y1="400" x2="72" y2="400"/>
+            <line x1="51" y1="240" x2="51" y2="460"/>
 
-          <!-- Outer dashed ring -->
-          <circle class="hero__orb-ring hero__orb-ring--outer" cx="240" cy="240" r="200" stroke="#c9a84c" stroke-opacity="0.22" stroke-width="0.6" stroke-dasharray="2 8"/>
+            <path d="M 330 460 L 330 220 L 378 220 L 378 460"/>
+            <line x1="330" y1="260" x2="378" y2="260"/>
+            <line x1="330" y1="320" x2="378" y2="320"/>
+            <line x1="330" y1="380" x2="378" y2="380"/>
+            <line x1="354" y1="220" x2="354" y2="460"/>
 
-          <!-- Orbital ellipses (each group rotates at a different rate) -->
-          <g class="hero__orb-rot hero__orb-rot--a">
-            <ellipse cx="240" cy="240" rx="170" ry="60" stroke="#c9a84c" stroke-opacity="0.4" stroke-width="0.7"/>
-            <circle class="hero__orb-dot" cx="410" cy="240" r="3.5" fill="#e0c874"/>
-          </g>
-          <g class="hero__orb-rot hero__orb-rot--b">
-            <ellipse cx="240" cy="240" rx="190" ry="75" stroke="#c9a84c" stroke-opacity="0.3" stroke-width="0.6" transform="rotate(32 240 240)"/>
-            <circle class="hero__orb-dot" cx="400" cy="280" r="2.5" fill="#c9a84c"/>
-          </g>
-          <g class="hero__orb-rot hero__orb-rot--c">
-            <ellipse cx="240" cy="240" rx="150" ry="50" stroke="#c9a84c" stroke-opacity="0.35" stroke-width="0.6" transform="rotate(-28 240 240)"/>
-            <circle class="hero__orb-dot" cx="88" cy="225" r="2.8" fill="#e0c874"/>
-          </g>
-
-          <!-- Market-flow sine waves through center -->
-          <g class="hero__orb-waves">
-            <path class="hero__orb-wave hero__orb-wave--1" d="M 30 240 Q 140 170 240 240 T 450 240" stroke="url(#waveGrad)" stroke-width="1.4"/>
-            <path class="hero__orb-wave hero__orb-wave--2" d="M 30 240 Q 140 310 240 240 T 450 240" stroke="url(#waveGradSoft)" stroke-width="1.1"/>
-            <path class="hero__orb-wave hero__orb-wave--3" d="M 30 240 Q 180 190 240 240 T 450 240" stroke="url(#waveGradSoft)" stroke-width="0.8"/>
+            <path d="M 86 460 L 86 200 L 122 200 L 122 460"/>
+            <line x1="86" y1="250" x2="122" y2="250"/>
+            <line x1="86" y1="310" x2="122" y2="310"/>
+            <line x1="86" y1="370" x2="122" y2="370"/>
+            <line x1="104" y1="200" x2="104" y2="460"/>
           </g>
 
-          <!-- Cardinal reticle -->
-          <g stroke="#c9a84c" stroke-opacity="0.22" stroke-width="0.5" stroke-dasharray="2 6">
-            <line x1="240" y1="30" x2="240" y2="450"/>
-            <line x1="30" y1="240" x2="450" y2="240"/>
+          <!-- Mid-layer towers -->
+          <g class="hero__city-mid" stroke="url(#lineFade)" stroke-width="1" opacity="0.85">
+            <path d="M 138 460 L 138 140 L 180 140 L 180 164 L 188 164 L 188 460"/>
+            <line x1="138" y1="180" x2="188" y2="180"/>
+            <line x1="138" y1="220" x2="188" y2="220"/>
+            <line x1="138" y1="260" x2="188" y2="260"/>
+            <line x1="138" y1="300" x2="188" y2="300"/>
+            <line x1="138" y1="340" x2="188" y2="340"/>
+            <line x1="138" y1="380" x2="188" y2="380"/>
+            <line x1="138" y1="420" x2="188" y2="420"/>
+            <line x1="155" y1="140" x2="155" y2="460"/>
+            <line x1="171" y1="164" x2="171" y2="460"/>
+
+            <path d="M 250 460 L 250 180 L 256 180 L 256 160 L 306 160 L 306 180 L 312 180 L 312 460"/>
+            <line x1="250" y1="210" x2="312" y2="210"/>
+            <line x1="250" y1="250" x2="312" y2="250"/>
+            <line x1="250" y1="290" x2="312" y2="290"/>
+            <line x1="250" y1="330" x2="312" y2="330"/>
+            <line x1="250" y1="370" x2="312" y2="370"/>
+            <line x1="250" y1="410" x2="312" y2="410"/>
+            <line x1="271" y1="180" x2="271" y2="460"/>
+            <line x1="291" y1="180" x2="291" y2="460"/>
           </g>
 
-          <!-- Center node + pulse -->
-          <g class="hero__orb-center">
-            <circle cx="240" cy="240" r="6" fill="#e0c874"/>
-            <circle class="hero__orb-pulse" cx="240" cy="240" r="6" fill="none" stroke="#e0c874" stroke-width="1"/>
+          <!-- Central landmark spire (brightest) -->
+          <g class="hero__city-spire" stroke="#e0c874" stroke-width="1.2">
+            <path d="M 192 460 L 192 120 L 186 120 L 186 100 L 196 100 L 196 80 L 216 80 L 216 100 L 226 100 L 226 120 L 220 120 L 220 460"/>
+            <line x1="192" y1="150" x2="220" y2="150"/>
+            <line x1="192" y1="190" x2="220" y2="190"/>
+            <line x1="192" y1="230" x2="220" y2="230"/>
+            <line x1="192" y1="270" x2="220" y2="270"/>
+            <line x1="192" y1="310" x2="220" y2="310"/>
+            <line x1="192" y1="350" x2="220" y2="350"/>
+            <line x1="192" y1="390" x2="220" y2="390"/>
+            <line x1="192" y1="430" x2="220" y2="430"/>
+            <line x1="206" y1="80" x2="206" y2="460"/>
+            <line x1="206" y1="20" x2="206" y2="80" stroke-width="1"/>
+            <circle cx="206" cy="14" r="3" fill="#e0c874" stroke="none"/>
+          </g>
+
+          <!-- Horizon accents -->
+          <g class="hero__city-accents" stroke="#c9a84c" opacity="0.35">
+            <line x1="0" y1="460" x2="400" y2="460" stroke-width="0.75"/>
+            <line x1="0" y1="140" x2="400" y2="140" stroke-width="0.5" stroke-dasharray="3 6"/>
+          </g>
+
+          <!-- Signal pulses -->
+          <g class="hero__city-pulses">
+            <circle cx="206" cy="14" r="6" stroke="#e0c874" stroke-width="1" fill="none"/>
+            <circle cx="155" cy="140" r="2" fill="#e0c874" stroke="none" opacity="0.85"/>
+            <circle cx="291" cy="160" r="2" fill="#e0c874" stroke="none" opacity="0.7"/>
           </g>
         </svg>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat">
+          <span class="hero__stat-num">7+</span>
+          <span class="hero__stat-label">Years Operating</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">20+</span>
+          <span class="hero__stat-label">Professionals</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">4</span>
+          <span class="hero__stat-label">European Offices</span>
+        </div>
+        <div class="hero__stat">
+          <span class="hero__stat-num">3</span>
+          <span class="hero__stat-label">Regulated Entities</span>
+        </div>
       </div>
     </div>
   </header>
