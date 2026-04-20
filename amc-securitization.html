@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AMCs & Securitization — Run Capital Partners</title>
+  <meta name="description" content="Securitisation services for fund managers and illiquid asset holders. Actively managed certificates structured by Run Capital Partners.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="amc-style.css">
+  <style>
+    /* ---- Hero video ---- */
+    .sv-hero {
+      position: relative;
+      overflow: hidden;
+      height: 88vh;
+      min-height: 600px;
+      background: var(--ink);
+      color: #fff;
+      display: flex;
+      align-items: flex-end;
+    }
+    .sv-hero__video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .sv-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(10,10,10,0.45) 0%, rgba(10,10,10,0.18) 32%, rgba(10,10,10,0.75) 85%, rgba(10,10,10,0.96) 100%);
+      z-index: 1;
+    }
+    .sv-hero__inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 40px 110px;
+    }
+    .sv-hero__meta {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 32px;
+      font-weight: 500;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease) 0.3s forwards;
+    }
+    .sv-hero__meta .sep { width: 48px; height: 1px; background: rgba(224,200,116,0.55); }
+    .sv-hero__title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(54px, 8vw, 120px);
+      line-height: 1;
+      letter-spacing: -0.022em;
+      margin: 0 0 28px;
+      max-width: 960px;
+      color: #fff;
+      opacity: 0;
+      animation: fadeUp 1.2s var(--ease) 0.5s forwards;
+    }
+    .sv-hero__title em {
+      font-style: italic;
+      background: linear-gradient(110deg, var(--gold-warm) 0%, var(--gold) 30%, var(--gold-light) 50%, var(--gold) 70%, var(--gold-warm) 100%);
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 7s ease-in-out 2s infinite;
+    }
+    .sv-hero__lede {
+      max-width: 580px;
+      font-size: 19px;
+      line-height: 1.55;
+      color: rgba(247,243,234,0.78);
+      font-weight: 300;
+      margin: 0;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease) 0.9s forwards;
+    }
+
+    /* ---- Intro ---- */
+    .sv-intro {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 140px 0 100px;
+    }
+    .sv-intro__grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 120px;
+      align-items: start;
+    }
+    .sv-intro__left { position: sticky; top: 120px; }
+    .sv-kicker {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin: 0 0 20px;
+      font-weight: 500;
+    }
+    .sv-intro__heading {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(34px, 4.2vw, 56px);
+      line-height: 1.06;
+      letter-spacing: -0.018em;
+      margin: 0;
+      color: var(--ink);
+    }
+    .sv-intro__heading em { font-style: italic; color: var(--gold); }
+    .sv-intro__body p {
+      font-size: 17px;
+      line-height: 1.75;
+      color: rgba(10,10,10,0.72);
+      font-weight: 300;
+      margin: 0 0 22px;
+    }
+    .sv-intro__body p strong { color: var(--ink); font-weight: 500; }
+
+    /* ---- Image full-width band ---- */
+    .sv-band {
+      position: relative;
+      width: 100%;
+      overflow: hidden;
+    }
+    .sv-band__img {
+      width: 100%;
+      height: 560px;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(15%);
+    }
+    .sv-band__caption {
+      position: absolute;
+      left: 40px; bottom: 32px;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(247,243,234,0.75);
+      font-weight: 500;
+      max-width: 380px;
+      line-height: 1.6;
+    }
+    .sv-band__caption::before {
+      content: "";
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--gold);
+      margin-bottom: 12px;
+    }
+
+    /* ---- Benefits (three-up) ---- */
+    .sv-benefits {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 140px 0;
+    }
+    .sv-benefits__inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .sv-benefits__head {
+      max-width: 720px;
+      margin-bottom: 80px;
+    }
+    .sv-benefits__head h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(34px, 4.2vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -0.015em;
+      margin: 0 0 24px;
+      color: #fff;
+    }
+    .sv-benefits__head h2 em { font-style: italic; color: var(--gold-light); }
+    .sv-benefits__head p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: rgba(247,243,234,0.65);
+      font-weight: 300;
+      margin: 0;
+    }
+    .sv-benefits__list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(247,243,234,0.12);
+    }
+    .sv-benefit {
+      padding: 48px 40px 48px 0;
+      border-right: 1px solid rgba(247,243,234,0.12);
+    }
+    .sv-benefit:last-child { border-right: none; padding-right: 0; }
+    .sv-benefit__num {
+      font-family: var(--serif);
+      font-size: 48px;
+      font-weight: 500;
+      background: linear-gradient(180deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: 32px;
+      line-height: 1;
+    }
+    .sv-benefit h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 1.18;
+      margin: 0 0 16px;
+      color: #fff;
+      letter-spacing: -0.005em;
+    }
+    .sv-benefit p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(247,243,234,0.58);
+      font-weight: 300;
+      margin: 0;
+    }
+
+    /* ---- Split section (text + image) ---- */
+    .sv-split {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 140px 0;
+    }
+    .sv-split__grid {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .sv-split__img {
+      width: 100%;
+      aspect-ratio: 3 / 4;
+      object-fit: cover;
+      filter: grayscale(10%);
+    }
+    .sv-split__body h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(32px, 3.8vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.015em;
+      margin: 0 0 28px;
+      color: var(--ink);
+    }
+    .sv-split__body h2 em { font-style: italic; color: var(--gold); }
+    .sv-split__body p {
+      font-size: 17px;
+      line-height: 1.7;
+      color: rgba(10,10,10,0.7);
+      font-weight: 300;
+      margin: 0 0 20px;
+    }
+    .sv-bullets {
+      list-style: none;
+      padding: 0;
+      margin: 32px 0 0;
+    }
+    .sv-bullets li {
+      font-size: 16px;
+      line-height: 1.65;
+      color: rgba(10,10,10,0.78);
+      font-weight: 300;
+      padding: 18px 0 18px 30px;
+      border-bottom: 1px solid rgba(10,10,10,0.1);
+      position: relative;
+    }
+    .sv-bullets li:first-child { border-top: 1px solid rgba(10,10,10,0.1); }
+    .sv-bullets li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 28px;
+      width: 18px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    /* ---- Specs (fact sheet) ---- */
+    .sv-specs {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 140px 0;
+    }
+    .sv-specs__inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .sv-specs__head {
+      max-width: 720px;
+      margin-bottom: 72px;
+    }
+    .sv-specs__head h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(34px, 4.2vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.015em;
+      margin: 0;
+      color: var(--ink);
+    }
+    .sv-specs__head h2 em { font-style: italic; color: var(--gold); }
+    .sv-specs__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 72px;
+      row-gap: 0;
+      margin: 0;
+      border-top: 1px solid rgba(10,10,10,0.14);
+    }
+    .sv-spec {
+      padding: 26px 0;
+      border-bottom: 1px solid rgba(10,10,10,0.14);
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 24px;
+      align-items: baseline;
+    }
+    .sv-spec dt {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+    .sv-spec dd {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.4;
+      color: var(--ink);
+      font-weight: 500;
+      letter-spacing: -0.005em;
+    }
+
+    /* ---- Issuers ---- */
+    .sv-issuers {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 120px 0 140px;
+      border-top: 1px solid rgba(10,10,10,0.08);
+    }
+    .sv-issuers__inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+      text-align: center;
+    }
+    .sv-issuers .sv-kicker { margin-bottom: 18px; }
+    .sv-issuers__title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(30px, 3.6vw, 48px);
+      line-height: 1.08;
+      letter-spacing: -0.012em;
+      margin: 0 0 72px;
+      color: var(--ink);
+    }
+    .sv-issuers__title em { font-style: italic; color: var(--gold); }
+    .sv-issuers__grid {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      gap: 48px;
+      align-items: center;
+      justify-items: center;
+      padding-top: 48px;
+      border-top: 1px solid rgba(10,10,10,0.14);
+    }
+    .sv-issuer {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 72px;
+      transition: transform 0.3s var(--ease);
+    }
+    .sv-issuer:hover {
+      transform: translateY(-2px);
+    }
+    .sv-issuer img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+
+    @media (max-width: 900px) {
+      .sv-issuers { padding: 80px 0 100px; }
+      .sv-issuers__grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+    }
+    @media (max-width: 520px) {
+      .sv-issuers__grid { grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    }
+
+    /* ---- Process ---- */
+    .sv-process {
+      background: var(--ink);
+      color: var(--cream);
+      padding: 140px 0;
+    }
+    .sv-process__inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .sv-process__head {
+      max-width: 720px;
+      margin-bottom: 72px;
+    }
+    .sv-process__head .sv-kicker { color: var(--gold-light); }
+    .sv-process__head h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(34px, 4.2vw, 60px);
+      line-height: 1.06;
+      letter-spacing: -0.015em;
+      margin: 0;
+      color: #fff;
+    }
+    .sv-process__head h2 em { font-style: italic; color: var(--gold-light); }
+    .sv-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid rgba(247,243,234,0.14);
+    }
+    .sv-step {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 40px;
+      padding: 36px 0;
+      border-bottom: 1px solid rgba(247,243,234,0.14);
+      align-items: baseline;
+    }
+    .sv-step__num {
+      font-family: var(--serif);
+      font-size: 32px;
+      line-height: 1;
+      font-weight: 500;
+      background: linear-gradient(180deg, var(--gold-light), var(--gold));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      letter-spacing: 0.02em;
+    }
+    .sv-step h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 1.2;
+      margin: 0 0 8px;
+      color: #fff;
+      letter-spacing: -0.005em;
+    }
+    .sv-step p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: rgba(247,243,234,0.6);
+      font-weight: 300;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .sv-specs { padding: 80px 0; }
+      .sv-specs__grid { grid-template-columns: 1fr; column-gap: 0; }
+      .sv-spec { grid-template-columns: 1fr; gap: 6px; padding: 22px 0; }
+      .sv-process { padding: 80px 0; }
+      .sv-step { grid-template-columns: 1fr; gap: 10px; padding: 28px 0; }
+    }
+
+    /* ---- CTA ---- */
+    .sv-cta {
+      background: var(--ink);
+      color: #fff;
+      padding: 140px 40px;
+      text-align: center;
+    }
+    .sv-cta h3 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(40px, 5vw, 76px);
+      line-height: 1.06;
+      letter-spacing: -0.015em;
+      margin: 0 0 32px;
+      color: #fff;
+    }
+    .sv-cta h3 em { font-style: italic; color: var(--gold-light); }
+    .sv-cta__btn {
+      display: inline-block;
+      padding: 20px 44px;
+      background: linear-gradient(180deg, var(--gold-light) 0%, var(--gold) 100%);
+      color: #141414;
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.26em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 10px;
+      box-shadow: 0 14px 40px rgba(201,168,76,0.28);
+      transition: transform 0.3s var(--ease), box-shadow 0.3s;
+    }
+    .sv-cta__btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 50px rgba(201,168,76,0.42);
+    }
+    .sv-back {
+      display: inline-block;
+      margin-top: 36px;
+      font-size: 11px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: rgba(247,243,234,0.5);
+      font-weight: 500;
+    }
+    .sv-back:hover { color: var(--gold-light); }
+
+    @media (max-width: 900px) {
+      .sv-hero { min-height: 500px; }
+      .sv-hero__inner { padding: 0 24px 60px; }
+      .sv-intro { padding: 80px 0 60px; }
+      .sv-intro__grid { grid-template-columns: 1fr; gap: 40px; }
+      .sv-intro__left { position: static; }
+      .sv-band__img { height: 360px; }
+      .sv-band__caption { left: 24px; bottom: 20px; }
+      .sv-benefits { padding: 80px 0; }
+      .sv-benefits__list { grid-template-columns: 1fr; }
+      .sv-benefit { padding: 36px 0; border-right: none; border-bottom: 1px solid rgba(247,243,234,0.12); }
+      .sv-benefit:last-child { border-bottom: none; }
+      .sv-split { padding: 80px 0; }
+      .sv-split__grid { grid-template-columns: 1fr; gap: 40px; }
+      .sv-split__img { aspect-ratio: 4 / 3; }
+      .sv-cta { padding: 80px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="index.html" class="nav__logo">
+    <img src="rcp-logo.png" alt="Run Capital Partners">
+    <span>RUN CAPITAL PARTNERS</span>
+  </a>
+  <ul class="nav__links">
+    <li><a href="index.html#philosophy">Philosophy</a></li>
+    <li><a href="index.html#services">Services</a></li>
+    <li><a href="index.html#offices">Group</a></li>
+    <li><a href="index.html#insights">Journal</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<header class="sv-hero">
+  <video class="sv-hero__video" autoplay muted loop playsinline>
+    <source src="service-hero.mp4" type="video/mp4">
+  </video>
+  <div class="sv-hero__overlay"></div>
+  <div class="sv-hero__inner">
+    <div class="sv-hero__meta">
+      <span>Service 02</span>
+      <span class="sep"></span>
+      <span>Structured Issuance</span>
+    </div>
+    <h1 class="sv-hero__title">AMCs &amp; <em>Securitisation.</em></h1>
+    <p class="sv-hero__lede">Securitisation services for fund managers and illiquid asset holders.</p>
+  </div>
+</header>
+
+<!-- BENEFITS -->
+<section class="sv-benefits">
+  <div class="sv-benefits__inner">
+    <div class="sv-benefits__head">
+      <h2>Distribution for <em>asset managers.</em></h2>
+    </div>
+    <div class="sv-benefits__list">
+      <article class="sv-benefit">
+        <span class="sv-benefit__num">01</span>
+        <h3>Simpler subscription.</h3>
+        <p>AMCs offer investors simpler subscription and tracking than traditional funds.</p>
+      </article>
+      <article class="sv-benefit">
+        <span class="sv-benefit__num">02</span>
+        <h3>Lower cost to run.</h3>
+        <p>Generally less costly to administer and maintain than a traditional fund.</p>
+      </article>
+      <article class="sv-benefit">
+        <span class="sv-benefit__num">03</span>
+        <h3>Full manager control.</h3>
+        <p>Managers retain full control and flexibility in pursuing their active strategy.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ISSUERS -->
+<section class="sv-issuers">
+  <div class="sv-issuers__inner">
+    <p class="sv-kicker">— Issuers we work with</p>
+    <h2 class="sv-issuers__title">Six institutional <em>partners.</em></h2>
+    <div class="sv-issuers__grid">
+      <div class="sv-issuer"><img src="images/issuers/leonteq.png" alt="Leonteq"></div>
+      <div class="sv-issuer"><img src="images/issuers/marex.png" alt="Marex"></div>
+      <div class="sv-issuer"><img src="images/issuers/vontobel.png" alt="Vontobel"></div>
+      <div class="sv-issuer"><img src="images/issuers/bbva.png" alt="BBVA"></div>
+      <div class="sv-issuer"><img src="images/issuers/ubs.png" alt="UBS"></div>
+      <div class="sv-issuer"><img src="images/issuers/goldman-sachs.svg" alt="Goldman Sachs"></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="sv-process">
+  <div class="sv-process__inner">
+    <div class="sv-process__head">
+      <p class="sv-kicker">— How we work</p>
+      <h2>From term sheet <em>to tradable security.</em></h2>
+    </div>
+    <ol class="sv-steps">
+      <li class="sv-step">
+        <span class="sv-step__num">01</span>
+        <div>
+          <h3>Term sheet</h3>
+          <p>Strategy, underlying, currency, fee profile, target investor.</p>
+        </div>
+      </li>
+      <li class="sv-step">
+        <span class="sv-step__num">02</span>
+        <div>
+          <h3>Legal &amp; regulatory</h3>
+          <p>Issuance programme, prospectus or private placement memorandum, compartment setup.</p>
+        </div>
+      </li>
+      <li class="sv-step">
+        <span class="sv-step__num">03</span>
+        <div>
+          <h3>Listing &amp; ISIN</h3>
+          <p>Paying-agent and calculation-agent mandates, ISIN assignment, Clearstream eligibility.</p>
+        </div>
+      </li>
+      <li class="sv-step">
+        <span class="sv-step__num">04</span>
+        <div>
+          <h3>Distribution &amp; lifecycle</h3>
+          <p>Placement through banking partners, ongoing NAV, corporate actions, investor reporting.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="sv-cta">
+  <h3>Structuring an <em>issuance?</em></h3>
+  <a href="index.html#contact" class="sv-cta__btn">Get in touch →</a>
+  <div><a href="index.html#services" class="sv-back">← All services</a></div>
+</section>
+
+</body>
+</html>
