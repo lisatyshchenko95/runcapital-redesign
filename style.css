@@ -59,6 +59,10 @@ body {
   align-items: start;
 }
 
+.split__right {
+  padding-top: 44px;
+}
+
 /* ---- Nav ---- */
 
 .nav {
