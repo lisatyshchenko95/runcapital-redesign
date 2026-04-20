@@ -2269,6 +2269,7 @@ a.group-card {
   background: linear-gradient(135deg, var(--gray-200), var(--cream-2));
   margin: 0 auto 24px;
   position: relative;
+  box-shadow: 0 0 0 2px rgba(201,168,76,0.5);
   overflow: hidden;
 }
 
