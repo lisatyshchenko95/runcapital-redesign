@@ -2263,8 +2263,8 @@ a.group-card {
 }
 
 .team-card__photo {
-  width: 160px;
-  height: 160px;
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--gray-200), var(--cream-2));
   margin: 0 auto 24px;
