@@ -2597,6 +2597,10 @@ a.group-card {
   flex-shrink: 0;
   box-shadow: 0 2px 8px rgba(201,168,76,0.25);
 }
+img.author-avatar {
+  object-fit: cover;
+  background: none;
+}
 
 .author-name {
   display: flex;
