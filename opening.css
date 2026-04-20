@@ -554,8 +554,8 @@
   /* Hero: bigger title, smaller buttons on mobile */
   .v2-hero { padding: 24px; }
   .v2-hero__title { font-size: clamp(48px, 14vw, 68px); line-height: 1.05; }
-  .v2-hero__locations { flex-wrap: wrap; gap: 8px; margin-top: 18px; }
-  .v2-hero__pill { font-size: 10px; padding: 6px 12px; }
+  .v2-hero__locations { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 10px; margin: 24px auto 0; max-width: 280px; }
+  .v2-hero__pill { font-size: 10px; padding: 7px 10px; text-align: center; }
   .v2-hero__actions { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 24px; }
   .v2-hero__actions .v2-btn { padding: 12px 20px; font-size: 11px; letter-spacing: 0.12em; width: auto; }
 
