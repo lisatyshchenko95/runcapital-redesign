@@ -27,8 +27,8 @@
 
     .nasdaq-hero__illustration {
       position: relative;
-      aspect-ratio: 1 / 1.05;
-      max-width: 360px;
+      aspect-ratio: 3 / 4.4;
+      max-width: 420px;
       margin: 0 auto;
     }
 
@@ -37,6 +37,21 @@
       height: 100%;
       filter: drop-shadow(0 0 30px rgba(0,150,214,0.25));
     }
+
+    /* Pinterest video replaces the MarketSite illustration */
+    .nasdaq-hero__illustration svg { display: none; }
+    .nasdaq-hero__screen-video {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow:
+        0 20px 60px rgba(0,0,0,0.5),
+        0 0 80px rgba(0,150,214,0.25);
+      display: block;
+    }
+    .nasdaq-hero__screen-frame { display: none; }
 
     /* Ticker strip */
     .ticker-strip {
@@ -249,7 +264,7 @@
           <h1 class="service-hero__title">Take your company to <span class="nasdaq-accent-text">Times Square.</span></h1>
           <p class="service-hero__sub">Supporting high-potential Southern European companies on the journey to list on the Nasdaq. End-to-end advisory from preparation through listing, connecting European excellence with US capital markets.</p>
           <div class="service-hero__actions">
-            <a href="#contact-us" class="btn btn--primary">Contact Us About This Service</a>
+            <a href="#contact-us" class="btn btn--primary">Contact Us</a>
             <a href="#process" class="btn btn--outline">How It Works</a>
           </div>
         </div>
@@ -336,6 +351,10 @@
             <!-- Ground line -->
             <line x1="0" y1="380" x2="360" y2="380" stroke="rgba(201,168,76,0.35)" stroke-width="0.75"/>
           </svg>
+          <video class="nasdaq-hero__screen-video" autoplay muted loop playsinline>
+            <source src="nasdaq-overlay.mp4" type="video/mp4">
+          </video>
+          <div class="nasdaq-hero__screen-frame" aria-hidden="true"></div>
         </div>
       </div>
     </div>
@@ -365,11 +384,10 @@
           <h2 class="section__title">European excellence,<br>US public markets.</h2>
         </div>
         <div class="split__right">
-          <p class="text-lg">Southern European companies often have the strength, the market, and the growth profile to thrive as publicly listed companies &mdash; but the path to a US listing is unfamiliar. Our Nasdaq Listings practice, delivered by 3DOTS UK, is designed specifically for this transition.</p>
           <p>We work with founders and management teams from the preparation phase through listing day and beyond. Our role is to demystify the process, align the company with US market expectations, and introduce the right banks, counsel, and investor relations partners to make the listing successful.</p>
           <div class="service-stats">
             <div class="service-stats__item">
-              <span class="service-stats__num">Nasdaq</span>
+              <span class="service-stats__num"><img src="nasdaq-logo.png" alt="Nasdaq" style="height: 32px; width: auto; display: block;"></span>
               <span class="service-stats__label">Target Market</span>
             </div>
             <div class="service-stats__item">
@@ -382,21 +400,6 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <div class="feature-highlight feature-highlight--light">
-        <div class="feature-highlight__icon">
-          <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M6 40 H42"/>
-            <rect x="10" y="30" width="6" height="10"/>
-            <rect x="20" y="22" width="6" height="18"/>
-            <rect x="30" y="12" width="6" height="28"/>
-            <path d="M8 36 L16 30 L26 22 L38 10"/>
-            <path d="M34 10 L38 10 L38 14"/>
-          </svg>
-        </div>
-        <div class="feature-highlight__num"><img src="logos/nasdaq.svg" alt="Nasdaq" style="height: 36px; width: auto;"></div>
-        <div class="feature-highlight__label">US Capital Markets Access</div>
       </div>
 
       <div class="section-divider" aria-hidden="true">
@@ -580,7 +583,7 @@
       <h2 class="service-cta__title">Considering a Nasdaq listing?</h2>
       <p class="service-cta__sub">A confidential conversation about your company, your timeline, and whether a US listing is the right next step. No fee, no commitment.</p>
       <div class="service-cta__actions">
-        <a href="index.html#contact?service=nasdaq" class="btn btn--primary">Contact Us About Nasdaq Listings</a>
+        <a href="index.html#contact?service=nasdaq" class="btn btn--primary">Contact Us</a>
         <a href="index.html#services" class="btn btn--outline">View All Services</a>
       </div>
     </div>

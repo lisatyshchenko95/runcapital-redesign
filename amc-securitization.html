@@ -7,9 +7,29 @@
   <meta name="description" content="Securitisation services for fund managers and illiquid asset holders. Actively managed certificates structured by Run Capital Partners.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="amc-style.css">
   <style>
+    /* ---- Service-hero video overrides (match sport-wealth) ---- */
+    .service-hero { min-height: 88vh; background: #0a0a0a; }
+    .service-hero__video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .service-hero__bg {
+      background:
+        linear-gradient(180deg, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.35) 40%, rgba(8,8,8,0.85) 100%),
+        radial-gradient(ellipse 70% 50% at 80% 30%, rgba(201,168,76,0.12) 0%, transparent 60%);
+      z-index: 1;
+    }
+    .service-hero__content { z-index: 2; }
+    .service-hero__illustration { display: none; }
+
     /* ---- Hero video ---- */
     .sv-hero {
       position: relative;
@@ -182,7 +202,8 @@
     }
     .sv-benefits__head {
       max-width: 720px;
-      margin-bottom: 80px;
+      margin: 0 auto 80px;
+      text-align: center;
     }
     .sv-benefits__head h2 {
       font-family: var(--serif);
@@ -208,10 +229,11 @@
       border-top: 1px solid rgba(247,243,234,0.12);
     }
     .sv-benefit {
-      padding: 48px 40px 48px 0;
+      padding: 48px 40px;
       border-right: 1px solid rgba(247,243,234,0.12);
+      text-align: center;
     }
-    .sv-benefit:last-child { border-right: none; padding-right: 0; }
+    .sv-benefit:last-child { border-right: none; }
     .sv-benefit__num {
       font-family: var(--serif);
       font-size: 48px;
@@ -566,34 +588,47 @@
 <body>
 
 <!-- NAV -->
-<nav class="nav">
-  <a href="index.html" class="nav__logo">
-    <img src="rcp-logo.png" alt="Run Capital Partners">
-    <span>RUN CAPITAL PARTNERS</span>
-  </a>
-  <ul class="nav__links">
-    <li><a href="index.html#philosophy">Philosophy</a></li>
-    <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#offices">Group</a></li>
-    <li><a href="index.html#insights">Journal</a></li>
-    <li><a href="index.html#contact">Contact</a></li>
-  </ul>
+<nav class="nav nav--scrolled" id="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span></a>
+    <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul class="nav__links" id="navLinks">
+      <li><a href="index.html#about">About</a></li>
+      <li><a href="index.html#services">Services</a></li>
+      <li><a href="index.html#group">Group</a></li>
+      <li><a href="index.html#team">Team</a></li>
+      <li><a href="index.html#insights">Insights</a></li>
+      <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+      <li class="nav__lang"><button type="button" class="lang-switch" id="langSwitch" aria-label="Change language"><span class="lang-switch__opt lang-switch__opt--active" data-lang="en">EN</span><span class="lang-switch__sep">/</span><span class="lang-switch__opt" data-lang="it">IT</span></button></li>
+    </ul>
+  </div>
 </nav>
 
 <!-- HERO -->
-<header class="sv-hero">
-  <video class="sv-hero__video" autoplay muted loop playsinline>
-    <source src="service-hero.mp4" type="video/mp4">
+<header class="service-hero">
+  <video class="service-hero__video" autoplay muted loop playsinline>
+    <source src="amc-hero.mp4" type="video/mp4">
   </video>
-  <div class="sv-hero__overlay"></div>
-  <div class="sv-hero__inner">
-    <div class="sv-hero__meta">
-      <span>Service 02</span>
-      <span class="sep"></span>
-      <span>Structured Issuance</span>
+  <div class="service-hero__bg"></div>
+  <div class="service-hero__content">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="index.html">Home</a>
+      <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+      <a href="index.html#services">Services</a>
+      <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
+      <span class="breadcrumb__current">AMCs &amp; Securitisation</span>
+    </nav>
+    <div class="service-hero__layout">
+      <div class="service-hero__text">
+        <p class="service-hero__eyebrow">Service 02 &middot; Structured Issuance</p>
+        <h1 class="service-hero__title">AMCs &amp; Securitisation</h1>
+        <p class="service-hero__sub">Securitisation services for fund managers and illiquid asset holders. Actively managed certificates structured across Luxembourg and Ireland, placed through tier-one private-banking rails.</p>
+        <div class="service-hero__actions">
+          <a href="index.html#contact" class="btn btn--primary">Contact Us</a>
+          <a href="#process" class="btn btn--outline">How It Works</a>
+        </div>
+      </div>
     </div>
-    <h1 class="sv-hero__title">AMCs &amp; <em>Securitisation.</em></h1>
-    <p class="sv-hero__lede">Securitisation services for fund managers and illiquid asset holders.</p>
   </div>
 </header>
 
@@ -685,6 +720,59 @@
   <a href="index.html#contact" class="sv-cta__btn">Get in touch →</a>
   <div><a href="index.html#services" class="sv-back">← All services</a></div>
 </section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+          <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
+          <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+        </div>
+        <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
+      </div>
+      <div class="footer__col">
+        <h4 style="color: var(--gold);">Services</h4>
+        <ul>
+          <li><a href="index.html#services">Asset Management</a></li>
+          <li><a href="index.html#services">Wealth Management</a></li>
+          <li><a href="index.html#services">Sport &amp; Wealth</a></li>
+          <li><a href="index.html#services">Certificate Issuance</a></li>
+          <li><a href="index.html#services">Nasdaq Listings</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 style="color: var(--gold);">Company</h4>
+        <ul>
+          <li><a href="index.html#about">About Us</a></li>
+          <li><a href="index.html#group">Group Structure</a></li>
+          <li><a href="index.html#team">Team</a></li>
+          <li><a href="index.html#insights">Insights</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <h4 style="color: var(--gold);">Offices</h4>
+        <ul>
+          <li><strong style="color: var(--gold);">London</strong> <span style="opacity: 0.5;">(HQ)</span><br><span style="font-size: 12px;">Exhibition House, Addison Bridge Place</span></li>
+          <li><strong style="color: var(--gold);">Luxembourg</strong><br><span style="font-size: 12px;">2 Rue Ste Zithe, 2763</span></li>
+          <li><strong style="color: var(--gold);">Milan</strong><br><span style="font-size: 12px;">Via Monte Napoleone 8, 20121</span></li>
+          <li><strong style="color: var(--gold);">Conegliano</strong><br><span style="font-size: 12px;">Viale Italia 203, 31015</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+      <p>&copy; 2026 Run Capital Partners LTD. All rights reserved.</p>
+      <div style="display: flex; gap: 24px; font-size: 12px;">
+        <a href="privacy-policy.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Privacy Policy</a>
+        <a href="cookie-policy.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Cookie Policy</a>
+        <a href="terms-of-service.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Terms of Service</a>
+        <a href="regulatory-disclosures.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Regulatory Disclosures</a>
+      </div>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>

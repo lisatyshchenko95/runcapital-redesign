@@ -10,6 +10,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <style>
+    .service-hero { min-height: 88vh; background: #0a0a0a; }
+    .service-hero__video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 0;
+    }
+    .service-hero__bg {
+      background:
+        linear-gradient(180deg, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.35) 40%, rgba(8,8,8,0.85) 100%),
+        radial-gradient(ellipse 70% 50% at 80% 30%, rgba(201,168,76,0.12) 0%, transparent 60%);
+      z-index: 1;
+    }
+    .service-hero__content { z-index: 2; }
+    .service-hero__illustration { display: none; }
+  </style>
 </head>
 <body>
 
@@ -30,6 +49,9 @@
   </nav>
 
   <header class="service-hero">
+    <video class="service-hero__video" autoplay muted loop playsinline>
+      <source src="sport-wealth-hero.mp4" type="video/mp4">
+    </video>
     <div class="service-hero__bg"></div>
     <div class="service-hero__content">
       <nav class="breadcrumb" aria-label="Breadcrumb">
@@ -45,7 +67,7 @@
           <h1 class="service-hero__title">Sport &amp; Wealth</h1>
           <p class="service-hero__sub">Bespoke wealth management and alternative-investment structures for professional athletes, sports-related high-net-worth clients, and institutional mandates with a sports footprint.</p>
           <div class="service-hero__actions">
-            <a href="#contact-us" class="btn btn--primary">Contact Us About This Service</a>
+            <a href="#contact-us" class="btn btn--primary">Contact Us</a>
             <a href="#process" class="btn btn--outline">How It Works</a>
           </div>
         </div>
@@ -92,7 +114,7 @@
           <h2 class="section__title">A career-cycle approach<br>to wealth in sport.</h2>
         </div>
         <div class="split__right">
-          <p class="text-lg">Professional athletes and sports executives face a wealth challenge few advisors understand: high earnings concentrated in a short career window, unusual contract structures, image rights, and the complexity of multi-jurisdictional residency. Off-the-shelf wealth management falls short.</p>
+          <p>Professional athletes and sports executives face a wealth challenge few advisors understand: high earnings concentrated in a short career window, unusual contract structures, image rights, and the complexity of multi-jurisdictional residency. Off-the-shelf wealth management falls short.</p>
           <p>Our Sport &amp; Wealth practice, led by Massimo Bocci, designs financial strategies for the full career arc &mdash; from first major contract through retirement transition. We also partner with institutional investors whose mandates touch the sport economy, structuring vehicles that serve both sides of the market.</p>
           <div class="service-stats">
             <div class="service-stats__item">
@@ -225,7 +247,7 @@
       <h2 class="service-cta__title">A career is short.<br>The right structure lasts.</h2>
       <p class="service-cta__sub">Speak with Massimo directly about a confidential review of your situation or your institutional mandate. Every conversation is private.</p>
       <div class="service-cta__actions">
-        <a href="index.html#contact?service=sport-wealth" class="btn btn--primary">Contact Us About Sport &amp; Wealth</a>
+        <a href="index.html#contact?service=sport-wealth" class="btn btn--primary">Contact Us</a>
         <a href="massimo-bocci.html" class="btn btn--outline">Meet Massimo Bocci</a>
       </div>
     </div>

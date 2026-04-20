@@ -225,29 +225,41 @@
     </header>
   </section>
 
+  <!-- ABOUT (Valeur-style black hero intro) -->
+  <section class="about-intro" id="about">
+    <span class="about-intro__line about-intro__line--left" aria-hidden="true"></span>
+    <span class="about-intro__line about-intro__line--right" aria-hidden="true"></span>
+    <div class="about-intro__inner">
+      <div class="about-intro__mark" aria-hidden="true">
+        <img src="rcp-logo.png" alt="" class="about-intro__logo">
+      </div>
+      <h2 class="about-intro__title"><span class="about-intro__line-wrap">Scale of an <em>institution.</em></span><br><span class="about-intro__line-wrap">Care of a <em>boutique.</em></span></h2>
+    </div>
+  </section>
+
   <!-- BY THE NUMBERS -->
-  <section style="background: var(--dark); padding: 100px 0;">
+  <section class="numbers-section" style="background: var(--dark); padding: 100px 0;">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
+      <div class="numbers-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
         <div>
           <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 20px;">— Run Capital Group</p>
           <h2 style="font-family: var(--font-serif); font-size: clamp(36px, 5vw, 52px); color: var(--white); font-weight: 600; line-height: 1.2;">By the <em style="color: var(--gold); font-style: italic;">numbers.</em></h2>
         </div>
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
           <div style="padding: 32px; border-top: 1px solid rgba(201,168,76,0.15);">
-            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);">7<sup style="font-size: 24px;">+</sup></span>
+            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);"><span class="count-up" data-target="7">0</span><sup style="font-size: 24px;">+</sup></span>
             <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Years Operating</span>
           </div>
           <div style="padding: 32px; border-top: 1px solid rgba(201,168,76,0.15);">
-            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);">20<sup style="font-size: 24px;">+</sup></span>
+            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);"><span class="count-up" data-target="20">0</span><sup style="font-size: 24px;">+</sup></span>
             <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Professionals</span>
           </div>
           <div style="padding: 32px; border-top: 1px solid rgba(201,168,76,0.15);">
-            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);">4</span>
+            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);"><span class="count-up" data-target="4">0</span></span>
             <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5);">European Offices</span>
           </div>
           <div style="padding: 32px; border-top: 1px solid rgba(201,168,76,0.15);">
-            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);">3</span>
+            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);"><span class="count-up" data-target="3">0</span></span>
             <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Regulated Entities</span>
           </div>
         </div>
@@ -255,22 +267,11 @@
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section class="section section--light" id="about">
-    <div class="container">
-      <div style="text-align: center;">
-        <p class="section__eyebrow" style="justify-content: center;">About Us</p>
-        <h2 class="section__title" style="font-size: clamp(36px, 5vw, 56px);"><span class="gold">Institutional</span> abilities<br>with a <span class="gold">boutique outlook.</span></h2>
-      </div>
-
-    </div>
-  </section>
-
   <!-- V2 SERVICES -->
   <section class="v2-services-section" id="services">
     <div class="v2-services-container">
       <p class="v2-services-eyebrow">— What We Do</p>
-      <h2 class="v2-services-title">Eight specialized <em>service lines.</em></h2>
+      <h2 class="v2-services-title">Eight specialized <em>services.</em></h2>
       <div class="v2-services">
         <a href="asset-management.html" class="v2-service">
           <span class="v2-service__num">01</span>
@@ -324,13 +325,31 @@
     </div>
   </section>
 
-  <!-- GROUP STRUCTURE -->
-  <section class="section section--light" id="group">
+  <!-- OFFICES + GROUP STRUCTURE -->
+  <section class="section section--dark" id="group">
     <div class="container">
-      <p class="section__eyebrow" data-en="Group Structure" data-it="Struttura del Gruppo">Group Structure</p>
-      <h2 class="section__title">Our <span class="gold">operational</span> structure.</h2>
+      <p class="section__eyebrow section__eyebrow--light" data-en="Where We Operate" data-it="Dove Operiamo">Where We Operate</p>
+      <h2 class="section__title" style="color: var(--white);">Operating across three <span class="gold">jurisdictions.</span></h2>
 
-      <div class="group-diagram">
+      <div class="v2r-offices">
+        <div class="v2r-office">
+          <span class="v2r-office__label">Headquarters</span>
+          <h3>Luxembourg</h3>
+          <p>46a, Avenue John F. Kennedy<br>L-1855 Luxembourg</p>
+        </div>
+        <div class="v2r-office">
+          <span class="v2r-office__label">Capital Markets</span>
+          <h3>United Kingdom</h3>
+          <p>London</p>
+        </div>
+        <div class="v2r-office">
+          <span class="v2r-office__label">Advisory &amp; Wealth</span>
+          <h3>Italy</h3>
+          <p>Milan &middot; Conegliano</p>
+        </div>
+      </div>
+
+      <div class="group-diagram group-diagram--dark">
         <div class="group-parent">
           <div class="group-card group-card--parent">
             <div class="group-card__lockup">
@@ -894,6 +913,34 @@
         heroBg.style.transform = 'translateY(' + (scrolled * 0.3) + 'px)';
       }
     }, { passive: true });
+  </script>
+
+  <script>
+    (function() {
+      const counters = document.querySelectorAll('.count-up');
+      if (!counters.length || !('IntersectionObserver' in window)) {
+        counters.forEach(c => c.textContent = c.dataset.target);
+        return;
+      }
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting || entry.target.dataset.done) return;
+          entry.target.dataset.done = '1';
+          const target = parseInt(entry.target.dataset.target, 10);
+          const duration = 1400;
+          const start = performance.now();
+          const step = (now) => {
+            const p = Math.min((now - start) / duration, 1);
+            const eased = 1 - Math.pow(1 - p, 3);
+            entry.target.textContent = Math.round(target * eased);
+            if (p < 1) requestAnimationFrame(step);
+            else entry.target.textContent = target;
+          };
+          requestAnimationFrame(step);
+        });
+      }, { threshold: 0.4 });
+      counters.forEach(c => io.observe(c));
+    })();
   </script>
 </body>
 </html>
