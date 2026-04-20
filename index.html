@@ -8,9 +8,8 @@
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="opening.css">
 </head>
 <body>
 
@@ -44,213 +43,303 @@
     </div>
   </nav>
 
-  <!-- V2 OPENING: water hero + institutional partners -->
-  <section class="v2-opening" id="main-content">
-    <header class="v2-top">
-      <video class="v2-top__video" autoplay muted loop playsinline poster="">
-        <source src="hero.mp4" type="video/mp4">
-      </video>
-      <div class="v2-top__overlay"></div>
+  <!-- HERO -->
+  <header class="hero" id="main-content">
+    <div class="hero__bg"></div>
 
-      <div class="v2-hero">
-        <div class="v2-hero__content">
-          <p class="v2-hero__eyebrow">EST. 2018 &middot; LUXEMBOURG</p>
-          <h1 class="v2-hero__title">Shape Your<br><em>Wealth Journey.</em></h1>
+    <!-- Full-width flowing-line background (motion layer) -->
+    <svg class="hero__flowlines" viewBox="0 0 1600 900" preserveAspectRatio="none" aria-hidden="true">
+      <defs>
+        <linearGradient id="fl-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
+          <stop offset="45%" stop-color="#e0c874" stop-opacity="0.85"/>
+          <stop offset="55%" stop-color="#e0c874" stop-opacity="0.85"/>
+          <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="fl-grad-soft" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stop-color="#c9a84c" stop-opacity="0"/>
+          <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.45"/>
+          <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <path class="fl-line fl-line--1" d="M -200 260 Q 300 120 760 280 T 1800 260" stroke="url(#fl-grad)" stroke-width="1.1" fill="none"/>
+      <path class="fl-line fl-line--2" d="M -200 440 Q 340 640 820 440 T 1800 440" stroke="url(#fl-grad-soft)" stroke-width="0.9" fill="none"/>
+      <path class="fl-line fl-line--3" d="M -200 580 Q 300 380 760 600 T 1800 560" stroke="url(#fl-grad)" stroke-width="1" fill="none"/>
+      <path class="fl-line fl-line--4" d="M -200 720 Q 420 560 900 720 T 1800 700" stroke="url(#fl-grad-soft)" stroke-width="0.8" fill="none"/>
+      <path class="fl-line fl-line--5" d="M -200 150 Q 500 260 1000 140 T 1800 160" stroke="url(#fl-grad-soft)" stroke-width="0.7" fill="none"/>
+    </svg>
 
-          <div class="v2-hero__locations">
-            <span class="v2-hero__pill">London</span>
-            <span class="v2-hero__pill">Luxembourg</span>
-            <span class="v2-hero__pill">Milan</span>
-            <span class="v2-hero__pill">Conegliano</span>
-          </div>
-
-          <div class="v2-hero__actions">
-            <a href="#services" class="v2-btn v2-btn--primary">Explore Our Services</a>
-            <a href="#contact" class="v2-btn v2-btn--ghost">Schedule a Consultation</a>
-          </div>
+    <canvas id="heroCanvas"></canvas>
+    <div class="hero__content hero__content--split">
+      <div class="hero__text">
+        <p class="hero__eyebrow">Founded 2018</p>
+        <h1 class="hero__title"><span class="gold">Alternative investments,</span><br>structured for those who <span class="gold">think beyond</span> the ordinary.</h1>
+        <div class="hero__locations">
+          <span class="hero__loc-pill">London</span>
+          <span class="hero__loc-pill">Luxembourg</span>
+          <span class="hero__loc-pill">Milan</span>
+          <span class="hero__loc-pill">Conegliano</span>
+        </div>
+        <div class="hero__actions">
+          <a href="#services" class="btn btn--primary">Explore Our Services</a>
+          <a href="#contact" class="btn btn--outline">Schedule a Consultation</a>
         </div>
       </div>
+      <div class="hero__visual" aria-hidden="true">
+        <svg class="hero__network" viewBox="0 0 400 480" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <defs>
+            <radialGradient id="cityGlow" cx="50%" cy="100%" r="80%">
+              <stop offset="0%" stop-color="#e0c874" stop-opacity="0.35"/>
+              <stop offset="50%" stop-color="#c9a84c" stop-opacity="0.15"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="lineFade" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#e0c874" stop-opacity="1"/>
+              <stop offset="100%" stop-color="#c9a84c" stop-opacity="0.35"/>
+            </linearGradient>
+          </defs>
 
-      <div class="v2-partners">
-        <p class="v2-partners__label">— Institutional Partners</p>
-        <div class="v2-partners__marquee" aria-hidden="true">
-          <div class="v2-partners__track">
-            <span class="v2-partner v2-partner--logo" aria-label="Actarus Renewables">
-              <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <text x="0" y="26" font-family="Georgia, 'Playfair Display', serif" font-size="26" font-weight="700" letter-spacing="1">AR</text>
-                <circle cx="55" cy="17" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M 51 17 L 59 17 M 55 13 L 55 21" stroke="currentColor" stroke-width="1.2"/>
-                <text x="0" y="44" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="0.5">Actarus Renewables</text>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="Deutsche Bank">
-              <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <defs>
-                  <mask id="dbMaskA">
-                    <rect x="2" y="6" width="36" height="36" fill="#fff"/>
-                    <rect x="8" y="12" width="24" height="24" fill="#000"/>
-                    <path d="M 12 33 L 17 33 L 28 15 L 23 15 Z" fill="#fff"/>
-                  </mask>
-                </defs>
-                <rect x="2" y="6" width="36" height="36" mask="url(#dbMaskA)"/>
-                <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="400" letter-spacing="0.5">Deutsche Bank</text>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="BNP Paribas">
-              <svg viewBox="0 0 230 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <defs>
-                  <mask id="bnpMaskA">
-                    <rect x="2" y="6" width="36" height="36" rx="4" ry="4" fill="#fff"/>
-                    <g fill="#000" transform="translate(6,10)">
-                      <path d="M 8 4 Q 12 2 14 6 Q 12 8 10 8 Q 8 7 8 4 Z"/>
-                      <path d="M 18 4 Q 22 2 24 6 Q 22 8 20 8 Q 18 7 18 4 Z"/>
-                      <path d="M 3 14 Q 7 13 9 16 Q 8 19 5 19 Q 2 18 3 14 Z"/>
-                      <path d="M 14 14 Q 18 13 20 16 Q 19 19 16 19 Q 13 18 14 14 Z"/>
-                      <path d="M 23 14 Q 27 13 29 16 Q 28 19 25 19 Q 22 18 23 14 Z"/>
-                      <path d="M 8 24 Q 12 23 14 26 Q 13 29 10 29 Q 7 28 8 24 Z"/>
-                      <path d="M 18 24 Q 22 23 24 26 Q 23 29 20 29 Q 17 28 18 24 Z"/>
-                    </g>
-                  </mask>
-                </defs>
-                <rect x="2" y="6" width="36" height="36" rx="4" ry="4" mask="url(#bnpMaskA)"/>
-                <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">BNP PARIBAS</text>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="Leonteq">
-              <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <g transform="translate(4,12)">
-                  <line x1="6" y1="6" x2="14" y2="2" stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="6" y1="6" x2="14" y2="12" stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="14" y1="2" x2="24" y2="6" stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="14" y1="12" x2="24" y2="16" stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="6" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.5"/>
-                  <circle cx="6" cy="6" r="3.5"/>
-                  <circle cx="14" cy="2" r="2.8"/>
-                  <circle cx="14" cy="12" r="2.8"/>
-                  <circle cx="24" cy="6" r="2.8"/>
-                  <circle cx="24" cy="16" r="2.8"/>
-                  <circle cx="6" cy="18" r="2.8"/>
-                </g>
-                <text x="40" y="34" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1">LEONTEQ</text>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="Marex">
-              <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <text x="0" y="36" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="300" letter-spacing="2">MAREX</text>
-                <path d="M 160 16 L 176 4 L 176 18 L 172 18 L 172 11 L 162 19 Z"/>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="Rebel Fund">
-              <svg viewBox="0 0 170 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <text x="0" y="28" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" font-style="italic" letter-spacing="-1">REBEL</text>
-                <text x="70" y="42" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="300" letter-spacing="2">FUND</text>
-              </svg>
-            </span>
-          </div>
-          <div class="v2-partners__track" aria-hidden="true">
-            <span class="v2-partner v2-partner--logo" aria-label="Actarus Renewables">
-              <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <text x="0" y="26" font-family="Georgia, 'Playfair Display', serif" font-size="26" font-weight="700" letter-spacing="1">AR</text>
-                <circle cx="55" cy="17" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
-                <path d="M 51 17 L 59 17 M 55 13 L 55 21" stroke="currentColor" stroke-width="1.2"/>
-                <text x="0" y="44" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="0.5">Actarus Renewables</text>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="Deutsche Bank">
-              <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <defs>
-                  <mask id="dbMaskB">
-                    <rect x="2" y="6" width="36" height="36" fill="#fff"/>
-                    <rect x="8" y="12" width="24" height="24" fill="#000"/>
-                    <path d="M 12 33 L 17 33 L 28 15 L 23 15 Z" fill="#fff"/>
-                  </mask>
-                </defs>
-                <rect x="2" y="6" width="36" height="36" mask="url(#dbMaskB)"/>
-                <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="400" letter-spacing="0.5">Deutsche Bank</text>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="BNP Paribas">
-              <svg viewBox="0 0 230 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <defs>
-                  <mask id="bnpMaskB">
-                    <rect x="2" y="6" width="36" height="36" rx="4" ry="4" fill="#fff"/>
-                    <g fill="#000" transform="translate(6,10)">
-                      <path d="M 8 4 Q 12 2 14 6 Q 12 8 10 8 Q 8 7 8 4 Z"/>
-                      <path d="M 18 4 Q 22 2 24 6 Q 22 8 20 8 Q 18 7 18 4 Z"/>
-                      <path d="M 3 14 Q 7 13 9 16 Q 8 19 5 19 Q 2 18 3 14 Z"/>
-                      <path d="M 14 14 Q 18 13 20 16 Q 19 19 16 19 Q 13 18 14 14 Z"/>
-                      <path d="M 23 14 Q 27 13 29 16 Q 28 19 25 19 Q 22 18 23 14 Z"/>
-                      <path d="M 8 24 Q 12 23 14 26 Q 13 29 10 29 Q 7 28 8 24 Z"/>
-                      <path d="M 18 24 Q 22 23 24 26 Q 23 29 20 29 Q 17 28 18 24 Z"/>
-                    </g>
-                  </mask>
-                </defs>
-                <rect x="2" y="6" width="36" height="36" rx="4" ry="4" mask="url(#bnpMaskB)"/>
-                <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">BNP PARIBAS</text>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="Leonteq">
-              <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <g transform="translate(4,12)">
-                  <line x1="6" y1="6" x2="14" y2="2" stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="6" y1="6" x2="14" y2="12" stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="14" y1="2" x2="24" y2="6" stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="14" y1="12" x2="24" y2="16" stroke="currentColor" stroke-width="1.5"/>
-                  <line x1="6" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.5"/>
-                  <circle cx="6" cy="6" r="3.5"/>
-                  <circle cx="14" cy="2" r="2.8"/>
-                  <circle cx="14" cy="12" r="2.8"/>
-                  <circle cx="24" cy="6" r="2.8"/>
-                  <circle cx="24" cy="16" r="2.8"/>
-                  <circle cx="6" cy="18" r="2.8"/>
-                </g>
-                <text x="40" y="34" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1">LEONTEQ</text>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="Marex">
-              <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <text x="0" y="36" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="300" letter-spacing="2">MAREX</text>
-                <path d="M 160 16 L 176 4 L 176 18 L 172 18 L 172 11 L 162 19 Z"/>
-              </svg>
-            </span>
-            <span class="v2-partner v2-partner--logo" aria-label="Rebel Fund">
-              <svg viewBox="0 0 170 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
-                <text x="0" y="28" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" font-style="italic" letter-spacing="-1">REBEL</text>
-                <text x="70" y="42" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="300" letter-spacing="2">FUND</text>
-              </svg>
-            </span>
-          </div>
-        </div>
+          <!-- Back-layer towers (very thin, muted lines) -->
+          <g class="hero__city-back" stroke="#c9a84c" stroke-width="0.75" opacity="0.4">
+            <path d="M 30 460 L 30 240 L 72 240 L 72 460"/>
+            <line x1="30" y1="280" x2="72" y2="280"/>
+            <line x1="30" y1="340" x2="72" y2="340"/>
+            <line x1="30" y1="400" x2="72" y2="400"/>
+            <line x1="51" y1="240" x2="51" y2="460"/>
+
+            <path d="M 330 460 L 330 220 L 378 220 L 378 460"/>
+            <line x1="330" y1="260" x2="378" y2="260"/>
+            <line x1="330" y1="320" x2="378" y2="320"/>
+            <line x1="330" y1="380" x2="378" y2="380"/>
+            <line x1="354" y1="220" x2="354" y2="460"/>
+
+            <path d="M 86 460 L 86 200 L 122 200 L 122 460"/>
+            <line x1="86" y1="250" x2="122" y2="250"/>
+            <line x1="86" y1="310" x2="122" y2="310"/>
+            <line x1="86" y1="370" x2="122" y2="370"/>
+            <line x1="104" y1="200" x2="104" y2="460"/>
+          </g>
+
+          <!-- Mid-layer towers -->
+          <g class="hero__city-mid" stroke="url(#lineFade)" stroke-width="1" opacity="0.85">
+            <path d="M 138 460 L 138 140 L 180 140 L 180 164 L 188 164 L 188 460"/>
+            <line x1="138" y1="180" x2="188" y2="180"/>
+            <line x1="138" y1="220" x2="188" y2="220"/>
+            <line x1="138" y1="260" x2="188" y2="260"/>
+            <line x1="138" y1="300" x2="188" y2="300"/>
+            <line x1="138" y1="340" x2="188" y2="340"/>
+            <line x1="138" y1="380" x2="188" y2="380"/>
+            <line x1="138" y1="420" x2="188" y2="420"/>
+            <line x1="155" y1="140" x2="155" y2="460"/>
+            <line x1="171" y1="164" x2="171" y2="460"/>
+
+            <path d="M 250 460 L 250 180 L 256 180 L 256 160 L 306 160 L 306 180 L 312 180 L 312 460"/>
+            <line x1="250" y1="210" x2="312" y2="210"/>
+            <line x1="250" y1="250" x2="312" y2="250"/>
+            <line x1="250" y1="290" x2="312" y2="290"/>
+            <line x1="250" y1="330" x2="312" y2="330"/>
+            <line x1="250" y1="370" x2="312" y2="370"/>
+            <line x1="250" y1="410" x2="312" y2="410"/>
+            <line x1="271" y1="180" x2="271" y2="460"/>
+            <line x1="291" y1="180" x2="291" y2="460"/>
+          </g>
+
+          <!-- Central landmark spire (brightest) -->
+          <g class="hero__city-spire" stroke="#e0c874" stroke-width="1.2">
+            <path d="M 192 460 L 192 120 L 186 120 L 186 100 L 196 100 L 196 80 L 216 80 L 216 100 L 226 100 L 226 120 L 220 120 L 220 460"/>
+            <line x1="192" y1="150" x2="220" y2="150"/>
+            <line x1="192" y1="190" x2="220" y2="190"/>
+            <line x1="192" y1="230" x2="220" y2="230"/>
+            <line x1="192" y1="270" x2="220" y2="270"/>
+            <line x1="192" y1="310" x2="220" y2="310"/>
+            <line x1="192" y1="350" x2="220" y2="350"/>
+            <line x1="192" y1="390" x2="220" y2="390"/>
+            <line x1="192" y1="430" x2="220" y2="430"/>
+            <line x1="206" y1="80" x2="206" y2="460"/>
+            <line x1="206" y1="20" x2="206" y2="80" stroke-width="1"/>
+            <circle cx="206" cy="14" r="3" fill="#e0c874" stroke="none"/>
+          </g>
+
+          <!-- Horizon accents -->
+          <g class="hero__city-accents" stroke="#c9a84c" opacity="0.35">
+            <line x1="0" y1="460" x2="400" y2="460" stroke-width="0.75"/>
+            <line x1="0" y1="140" x2="400" y2="140" stroke-width="0.5" stroke-dasharray="3 6"/>
+          </g>
+
+          <!-- Signal pulses -->
+          <g class="hero__city-pulses">
+            <circle cx="206" cy="14" r="6" stroke="#e0c874" stroke-width="1" fill="none"/>
+            <circle cx="155" cy="140" r="2" fill="#e0c874" stroke="none" opacity="0.85"/>
+            <circle cx="291" cy="160" r="2" fill="#e0c874" stroke="none" opacity="0.7"/>
+          </g>
+        </svg>
       </div>
-    </header>
-  </section>
 
-  <!-- BY THE NUMBERS -->
-  <section style="background: var(--dark); padding: 100px 0;">
+    </div>
+  </header>
+
+  <!-- TRUST BAR -->
+  <section class="trust-bar">
     <div class="container">
-      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center;">
-        <div>
-          <p class="section__eyebrow" style="color: var(--gold);">— Run Capital Group</p>
-          <h2 style="font-family: var(--font-serif); font-size: clamp(36px, 5vw, 52px); color: var(--white); font-weight: 600; line-height: 1.2;">By the <em style="color: var(--gold); font-style: italic;">numbers.</em></h2>
-        </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0;">
-          <div style="padding: 32px; border-top: 1px solid rgba(201,168,76,0.15);">
-            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);">7<sup style="font-size: 24px;">+</sup></span>
-            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Years Operating</span>
-          </div>
-          <div style="padding: 32px; border-top: 1px solid rgba(201,168,76,0.15);">
-            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);">20<sup style="font-size: 24px;">+</sup></span>
-            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Professionals</span>
-          </div>
-          <div style="padding: 32px; border-top: 1px solid rgba(201,168,76,0.15);">
-            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);">4</span>
-            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5);">European Offices</span>
-          </div>
-          <div style="padding: 32px; border-top: 1px solid rgba(201,168,76,0.15);">
-            <span style="display: block; font-family: var(--font-serif); font-size: 48px; font-weight: 700; color: var(--gold);">3</span>
-            <span style="font-size: 11px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(255,255,255,0.5);">Regulated Entities</span>
-          </div>
-        </div>
+      <p class="trust-bar__label">Institutional Partners</p>
+    </div>
+    <div class="trust-bar__track">
+      <div class="trust-bar__logos">
+        <!-- Actarus Renewables: serif with diamond symbol -->
+        <span class="trust-bar__logo partner-logo partner-logo--actarus">
+          <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Actarus Renewables">
+            <text x="0" y="26" font-family="Georgia, 'Playfair Display', serif" font-size="26" font-weight="700" letter-spacing="1">AR</text>
+            <circle cx="55" cy="17" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M 51 17 L 59 17 M 55 13 L 55 21" stroke="currentColor" stroke-width="1.2"/>
+            <text x="0" y="44" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="0.5">Actarus Renewables</text>
+          </svg>
+        </span>
+
+        <!-- Deutsche Bank: thick square border with parallelogram slash -->
+        <span class="trust-bar__logo partner-logo partner-logo--db">
+          <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Deutsche Bank">
+            <defs>
+              <mask id="dbMask">
+                <rect x="2" y="6" width="36" height="36" fill="#fff"/>
+                <rect x="8" y="12" width="24" height="24" fill="#000"/>
+                <path d="M 12 33 L 17 33 L 28 15 L 23 15 Z" fill="#fff"/>
+              </mask>
+            </defs>
+            <rect x="2" y="6" width="36" height="36" mask="url(#dbMask)"/>
+            <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="400" letter-spacing="0.5">Deutsche Bank</text>
+          </svg>
+        </span>
+
+        <!-- BNP Paribas: rounded square with 4 stylized wing marks (via mask) -->
+        <span class="trust-bar__logo partner-logo partner-logo--bnp">
+          <svg viewBox="0 0 230 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="BNP Paribas">
+            <defs>
+              <mask id="bnpMask">
+                <rect x="2" y="6" width="36" height="36" rx="4" ry="4" fill="#fff"/>
+                <g fill="#000" transform="translate(6,10)">
+                  <path d="M 8 4 Q 12 2 14 6 Q 12 8 10 8 Q 8 7 8 4 Z"/>
+                  <path d="M 18 4 Q 22 2 24 6 Q 22 8 20 8 Q 18 7 18 4 Z"/>
+                  <path d="M 3 14 Q 7 13 9 16 Q 8 19 5 19 Q 2 18 3 14 Z"/>
+                  <path d="M 14 14 Q 18 13 20 16 Q 19 19 16 19 Q 13 18 14 14 Z"/>
+                  <path d="M 23 14 Q 27 13 29 16 Q 28 19 25 19 Q 22 18 23 14 Z"/>
+                  <path d="M 8 24 Q 12 23 14 26 Q 13 29 10 29 Q 7 28 8 24 Z"/>
+                  <path d="M 18 24 Q 22 23 24 26 Q 23 29 20 29 Q 17 28 18 24 Z"/>
+                </g>
+              </mask>
+            </defs>
+            <rect x="2" y="6" width="36" height="36" rx="4" ry="4" mask="url(#bnpMask)"/>
+            <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">BNP PARIBAS</text>
+          </svg>
+        </span>
+
+        <!-- Leonteq: molecular dot cluster + clean sans -->
+        <span class="trust-bar__logo partner-logo partner-logo--leonteq">
+          <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Leonteq">
+            <g transform="translate(4,12)">
+              <line x1="6" y1="6" x2="14" y2="2" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="6" x2="14" y2="12" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="2" x2="24" y2="6" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="12" x2="24" y2="16" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="6" cy="6" r="3.5"/>
+              <circle cx="14" cy="2" r="2.8"/>
+              <circle cx="14" cy="12" r="2.8"/>
+              <circle cx="24" cy="6" r="2.8"/>
+              <circle cx="24" cy="16" r="2.8"/>
+              <circle cx="6" cy="18" r="2.8"/>
+            </g>
+            <text x="40" y="34" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1">LEONTEQ</text>
+          </svg>
+        </span>
+
+        <!-- Marex: thin sans with upward arrow off the E -->
+        <span class="trust-bar__logo partner-logo partner-logo--marex">
+          <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Marex">
+            <text x="0" y="36" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="300" letter-spacing="2">MAREX</text>
+            <path d="M 160 16 L 176 4 L 176 18 L 172 18 L 172 11 L 162 19 Z"/>
+          </svg>
+        </span>
+
+        <!-- Rebel Fund: bold italic REBEL with FUND subtitle -->
+        <span class="trust-bar__logo partner-logo partner-logo--rebel">
+          <svg viewBox="0 0 170 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-label="Rebel Fund">
+            <text x="0" y="28" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" font-style="italic" letter-spacing="-1">REBEL</text>
+            <text x="70" y="42" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="300" letter-spacing="2">FUND</text>
+          </svg>
+        </span>
+      </div>
+      <div class="trust-bar__logos" aria-hidden="true">
+        <span class="trust-bar__logo partner-logo partner-logo--actarus">
+          <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <text x="0" y="26" font-family="Georgia, 'Playfair Display', serif" font-size="26" font-weight="700" letter-spacing="1">AR</text>
+            <circle cx="55" cy="17" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/>
+            <path d="M 51 17 L 59 17 M 55 13 L 55 21" stroke="currentColor" stroke-width="1.2"/>
+            <text x="0" y="44" font-family="Georgia, serif" font-size="10" font-style="italic" letter-spacing="0.5">Actarus Renewables</text>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--db">
+          <svg viewBox="0 0 220 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <defs>
+              <mask id="dbMask2">
+                <rect x="2" y="6" width="36" height="36" fill="#fff"/>
+                <rect x="8" y="12" width="24" height="24" fill="#000"/>
+                <path d="M 12 33 L 17 33 L 28 15 L 23 15 Z" fill="#fff"/>
+              </mask>
+            </defs>
+            <rect x="2" y="6" width="36" height="36" mask="url(#dbMask2)"/>
+            <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="400" letter-spacing="0.5">Deutsche Bank</text>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--bnp">
+          <svg viewBox="0 0 230 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <defs>
+              <mask id="bnpMask2">
+                <rect x="2" y="6" width="36" height="36" rx="4" ry="4" fill="#fff"/>
+                <g fill="#000" transform="translate(6,10)">
+                  <path d="M 8 4 Q 12 2 14 6 Q 12 8 10 8 Q 8 7 8 4 Z"/>
+                  <path d="M 18 4 Q 22 2 24 6 Q 22 8 20 8 Q 18 7 18 4 Z"/>
+                  <path d="M 3 14 Q 7 13 9 16 Q 8 19 5 19 Q 2 18 3 14 Z"/>
+                  <path d="M 14 14 Q 18 13 20 16 Q 19 19 16 19 Q 13 18 14 14 Z"/>
+                  <path d="M 23 14 Q 27 13 29 16 Q 28 19 25 19 Q 22 18 23 14 Z"/>
+                  <path d="M 8 24 Q 12 23 14 26 Q 13 29 10 29 Q 7 28 8 24 Z"/>
+                  <path d="M 18 24 Q 22 23 24 26 Q 23 29 20 29 Q 17 28 18 24 Z"/>
+                </g>
+              </mask>
+            </defs>
+            <rect x="2" y="6" width="36" height="36" rx="4" ry="4" mask="url(#bnpMask2)"/>
+            <text x="48" y="32" font-family="Helvetica, Arial, sans-serif" font-size="22" font-weight="800" letter-spacing="1">BNP PARIBAS</text>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--leonteq">
+          <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <g transform="translate(4,12)">
+              <line x1="6" y1="6" x2="14" y2="2" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="6" x2="14" y2="12" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="2" x2="24" y2="6" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="14" y1="12" x2="24" y2="16" stroke="currentColor" stroke-width="1.5"/>
+              <line x1="6" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="1.5"/>
+              <circle cx="6" cy="6" r="3.5"/>
+              <circle cx="14" cy="2" r="2.8"/>
+              <circle cx="14" cy="12" r="2.8"/>
+              <circle cx="24" cy="6" r="2.8"/>
+              <circle cx="24" cy="16" r="2.8"/>
+              <circle cx="6" cy="18" r="2.8"/>
+            </g>
+            <text x="40" y="34" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="700" letter-spacing="1">LEONTEQ</text>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--marex">
+          <svg viewBox="0 0 200 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <text x="0" y="36" font-family="Helvetica, Arial, sans-serif" font-size="38" font-weight="300" letter-spacing="2">MAREX</text>
+            <path d="M 160 16 L 176 4 L 176 18 L 172 18 L 172 11 L 162 19 Z"/>
+          </svg>
+        </span>
+        <span class="trust-bar__logo partner-logo partner-logo--rebel">
+          <svg viewBox="0 0 170 48" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+            <text x="0" y="28" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="900" font-style="italic" letter-spacing="-1">REBEL</text>
+            <text x="70" y="42" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="300" letter-spacing="2">FUND</text>
+          </svg>
+        </span>
       </div>
     </div>
   </section>
@@ -261,46 +350,74 @@
       <div style="text-align: center;">
         <p class="section__eyebrow" style="justify-content: center;">About Us</p>
         <h2 class="section__title" style="font-size: clamp(36px, 5vw, 56px);"><span class="gold">Institutional</span> abilities<br>with a <span class="gold">boutique outlook.</span></h2>
+        <div class="hero__stats" style="margin-top: 48px; border-top: 1px solid rgba(201,168,76,0.15); padding-top: 36px;">
+          <div class="hero__stat">
+            <span class="hero__stat-num" style="color: var(--dark);">7+</span>
+            <span class="hero__stat-label" style="color: var(--gray-600);">Years Operating</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" style="color: var(--dark);">20+</span>
+            <span class="hero__stat-label" style="color: var(--gray-600);">Professionals</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" style="color: var(--dark);">4</span>
+            <span class="hero__stat-label" style="color: var(--gray-600);">European Offices</span>
+          </div>
+          <div class="hero__stat">
+            <span class="hero__stat-num" style="color: var(--dark);">3</span>
+            <span class="hero__stat-label" style="color: var(--gray-600);">Regulated Entities</span>
+          </div>
+        </div>
       </div>
 
     </div>
   </section>
 
-  <!-- V2 SERVICES -->
-  <section class="v2-services-section" id="services">
-    <div class="v2-services-container">
-      <p class="v2-services-eyebrow">— What We Do</p>
-      <h2 class="v2-services-title">Five specialized <em>service lines.</em></h2>
-      <div class="v2-services">
-        <a href="asset-management.html" class="v2-service">
-          <span class="v2-service__num">01</span>
-          <h3>Asset Management</h3>
-          <p>Bespoke alternative funds structured under Luxembourg and UK regulatory frameworks.</p>
-          <span class="v2-service__link">Discover more &rarr;</span>
+  <!-- SERVICES -->
+  <section class="section section--dark" id="services">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light" data-en="What We Do" data-it="Cosa Facciamo">What We Do</p>
+      <h2 class="section__title section__title--light" data-en-html='<span class="gold">One partner.</span><br>Five specialized service lines.' data-it-html='<span class="gold">Un solo partner.</span><br>Cinque linee di servizio specializzate.'><span class="gold">One partner.</span><br>Five specialized service lines.</h2>
+
+      <!-- Services grid -->
+      <div class="services-grid services-grid--compact">
+        <a href="asset-management.html" class="service-compact">
+          <span class="service-compact__number">01</span>
+          <h3 class="service-compact__title" data-en="Asset Management" data-it="Gestione Patrimoniale">Asset Management</h3>
+          <p class="service-compact__entity">Run Asset Management &middot; Luxembourg</p>
+          <p class="service-compact__body">Creation and management of alternative investment funds, securitization vehicles, notes, and bonds. Domiciled in Luxembourg for EU regulatory alignment, political stability, and a favorable tax framework.</p>
+          <span class="service-compact__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
-        <a href="wealth-management.html" class="v2-service">
-          <span class="v2-service__num">02</span>
-          <h3>Wealth Management</h3>
-          <p>Dedicated multi-family-office advisory for entrepreneurs and principals.</p>
-          <span class="v2-service__link">Discover more &rarr;</span>
+        <a href="wealth-management.html" class="service-compact">
+          <span class="service-compact__number">02</span>
+          <h3 class="service-compact__title" data-en="Wealth Management" data-it="Gestione del Patrimonio">Wealth Management</h3>
+          <p class="service-compact__entity">Systematic &middot; Independent &middot; Institutional-grade</p>
+          <p class="service-compact__body">Quantitative portfolio strategy with objective market analysis, continuous monitoring, and disciplined risk management. Data-led, bias-free wealth management.</p>
+          <span class="service-compact__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
-        <a href="certificate-issuance.html" class="v2-service">
-          <span class="v2-service__num">03</span>
-          <h3>Certificate Issuance</h3>
-          <p>Securitization vehicles and structured product issuance across asset classes.</p>
-          <span class="v2-service__link">Discover more &rarr;</span>
+
+        <a href="sport-wealth.html" class="service-compact">
+          <span class="service-compact__number">03</span>
+          <h3 class="service-compact__title" data-en="Sport &amp; Wealth" data-it="Sport &amp; Wealth">Sport &amp; Wealth</h3>
+          <p class="service-compact__entity">Institutional &middot; Athletes &middot; Private</p>
+          <p class="service-compact__body">Bespoke wealth management and alternative-investment structures for professional athletes, sports-related clients, and institutional mandates with a sports footprint.</p>
+          <span class="service-compact__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
-        <a href="nasdaq-listings.html" class="v2-service">
-          <span class="v2-service__num">04</span>
-          <h3>Nasdaq Listings</h3>
-          <p>End-to-end advisory for private companies pursuing a US public market debut.</p>
-          <span class="v2-service__link">Discover more &rarr;</span>
+
+        <a href="certificate-issuance.html" class="service-compact">
+          <span class="service-compact__number">04</span>
+          <h3 class="service-compact__title" data-en="Certificate Issuance" data-it="Emissione di Certificati">Certificate Issuance</h3>
+          <p class="service-compact__entity">With BNP Paribas, Leonteq, Marex, Vontobel, BBVA, UBS</p>
+          <p class="service-compact__body">Actively and passively managed certificates structured with leading investment banks across equities, indices, and thematic baskets.</p>
+          <span class="service-compact__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
-        <a href="sport-wealth.html" class="v2-service">
-          <span class="v2-service__num">05</span>
-          <h3>Sport &amp; Wealth</h3>
-          <p>Tailored capital strategies for professional athletes and sports executives.</p>
-          <span class="v2-service__link">Discover more &rarr;</span>
+
+        <a href="nasdaq-listings.html" class="service-compact">
+          <span class="service-compact__number">05</span>
+          <h3 class="service-compact__title" data-en="Nasdaq Listings" data-it="Quotazioni Nasdaq">Nasdaq Listings</h3>
+          <p class="service-compact__entity">3DOTS UK</p>
+          <p class="service-compact__body">Supporting high-potential Southern European companies from preparation through listing, connecting European excellence with US capital markets.</p>
+          <span class="service-compact__cta" data-en-html='Learn more <span aria-hidden="true">&rarr;</span>' data-it-html='Scopri di pi&ugrave; <span aria-hidden="true">&rarr;</span>'>Learn more <span aria-hidden="true">&rarr;</span></span>
         </a>
       </div>
     </div>
