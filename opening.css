@@ -578,4 +578,17 @@
 
   /* Services grid safety */
   .v2-services { grid-template-columns: 1fr; }
+
+  /* Footer: hide redundant Services + Company columns on mobile (already in nav) */
+  .footer { padding: 48px 0 24px !important; }
+  .footer__grid { gap: 32px !important; }
+  .footer__col:nth-child(2),
+  .footer__col:nth-child(3) { display: none; }
+  .footer__brand { margin-bottom: 0; }
+  .footer__legal { font-size: 12px; line-height: 1.5; }
+  .footer__col h4 { font-size: 13px; margin-bottom: 12px; }
+  .footer__col ul { gap: 8px; }
+  .footer__col ul li { font-size: 13px; }
+  .footer__bottom { margin-top: 24px !important; padding-top: 16px !important; font-size: 11px; gap: 10px !important; flex-direction: column; text-align: center; }
+  .footer__bottom > div { justify-content: center; flex-wrap: wrap; gap: 14px !important; }
 }
