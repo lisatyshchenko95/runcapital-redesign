@@ -485,10 +485,32 @@ span.gold {
   animation: heroFadeUp 0.8s var(--ease-out-expo) 0.6s forwards;
 }
 
+.hero__locations {
+  display: flex;
+  gap: 14px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroFadeUp 0.8s var(--ease-out-expo) 0.7s forwards;
+}
+
+.hero__loc-pill {
+  display: inline-block;
+  padding: 8px 24px;
+  border: 1.5px solid rgba(201,168,76,0.5);
+  border-radius: 40px;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
 .hero__actions {
   display: flex;
   gap: 16px;
-  margin-top: 88px;
+  margin-top: 40px;
   margin-bottom: 72px;
   opacity: 0;
   transform: translateY(20px);
@@ -2238,8 +2260,8 @@ a.group-card {
 }
 
 .team-card__photo {
-  width: 130px;
-  height: 130px;
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
   background: linear-gradient(135deg, var(--gray-200), var(--cream-2));
   margin: 0 auto 24px;
