@@ -2286,35 +2286,18 @@ a.group-card {
   position: absolute;
   inset: -3px;
   border-radius: 50%;
-  border: 2px solid var(--gold);
-  opacity: 0.3;
-  transition: opacity 0.4s, border-width 0.3s;
+  border: 1.5px solid var(--gold);
+  opacity: 0.5;
+  transition: opacity 0.4s;
   z-index: 1;
 }
 
 .team-card:hover .team-card__photo::before {
   opacity: 1;
-  border-width: 3px;
 }
 
 .team-card__photo::after {
-  content: '\2192';
-  position: absolute;
-  inset: 0;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.45);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 28px;
-  color: #fff;
-  opacity: 0;
-  transition: opacity 0.3s;
-  z-index: 2;
-}
-
-.team-card:hover .team-card__photo::after {
-  opacity: 1;
+  display: none;
 }
 
 .team-card__name {
