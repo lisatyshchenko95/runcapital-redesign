@@ -560,10 +560,7 @@ span.gold {
   font-family: var(--font-serif);
   font-size: 36px;
   font-weight: 700;
-  background: linear-gradient(135deg, var(--gold-light), var(--gold));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: var(--dark);
 }
 
 .hero__stat-label {
@@ -4156,4 +4153,151 @@ select:focus-visible,
   #heroCanvas {
     display: none;
   }
+
+  .hero__flowlines,
+  .hero__orb {
+    animation: none !important;
+  }
+
+  .hero__flowlines .fl-line,
+  .hero__orb * {
+    animation: none !important;
+  }
+}
+
+/* ============================================================
+   Hero v2 — cinematic motion layer
+   Flowing-line background + orbital right-side visual + shimmer
+   ============================================================ */
+
+/* Full-width flowing lines (absolute inside .hero) */
+.hero__flowlines {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: 0.55;
+  z-index: 0;
+}
+
+.fl-line {
+  stroke-dasharray: 120 220;
+  stroke-dashoffset: 0;
+  filter: drop-shadow(0 0 6px rgba(224, 200, 116, 0.25));
+  animation: flFlow 14s linear infinite;
+}
+.fl-line--1 { animation-duration: 13s; }
+.fl-line--2 { animation-duration: 17s; animation-delay: -3s; }
+.fl-line--3 { animation-duration: 21s; animation-delay: -7s; }
+.fl-line--4 { animation-duration: 25s; animation-delay: -11s; }
+.fl-line--5 { animation-duration: 19s; animation-delay: -5s; }
+
+@keyframes flFlow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -340; }
+}
+
+/* Orbital right-side visual */
+.hero__orb {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  filter: drop-shadow(0 0 60px rgba(201, 168, 76, 0.18));
+}
+
+.hero__orb-ring--outer {
+  transform-origin: 50% 50%;
+  transform-box: view-box;
+  animation: orbSpin 80s linear infinite;
+}
+
+.hero__orb-rot {
+  transform-origin: 50% 50%;
+  transform-box: view-box;
+}
+.hero__orb-rot--a { animation: orbSpin 26s linear infinite; }
+.hero__orb-rot--b { animation: orbSpin 38s linear infinite reverse; }
+.hero__orb-rot--c { animation: orbSpin 48s linear infinite; }
+
+.hero__orb-dot {
+  filter: drop-shadow(0 0 6px rgba(224, 200, 116, 0.8));
+}
+
+.hero__orb-waves path {
+  stroke-dasharray: 60 160;
+  animation: waveFlow 8s linear infinite;
+}
+.hero__orb-wave--1 { animation-duration: 7s; }
+.hero__orb-wave--2 { animation-duration: 11s; animation-delay: -2s; }
+.hero__orb-wave--3 { animation-duration: 15s; animation-delay: -5s; }
+
+@keyframes waveFlow {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -220; }
+}
+
+@keyframes orbSpin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.hero__orb-center circle:first-child {
+  filter: drop-shadow(0 0 10px rgba(224, 200, 116, 0.8));
+}
+
+.hero__orb-pulse {
+  transform-origin: 50% 50%;
+  transform-box: view-box;
+  animation: orbPulse 2.6s ease-out infinite;
+}
+
+@keyframes orbPulse {
+  0%   { r: 6;  opacity: 0.9; stroke-width: 1.2; }
+  100% { r: 50; opacity: 0;   stroke-width: 0.3; }
+}
+
+/* Upgrade .hero__visual stacking so it sits above flowlines */
+.hero__visual {
+  position: relative;
+  z-index: 2;
+}
+
+.hero__content { z-index: 2; }
+#heroCanvas    { z-index: 1; }
+
+/* Shimmer sweep across the .gold spans inside the hero headline */
+.hero__title .gold {
+  background: linear-gradient(
+    110deg,
+    #a8882f 0%,
+    #c9a84c 25%,
+    #f3dd8e 45%,
+    #ffe9a0 50%,
+    #f3dd8e 55%,
+    #c9a84c 75%,
+    #a8882f 100%
+  );
+  background-size: 250% 100%;
+  background-position: 100% 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: goldShimmer 6s ease-in-out 1.6s infinite;
+}
+
+@keyframes goldShimmer {
+  0%, 15%   { background-position: 100% 0; }
+  50%       { background-position: 0% 0; }
+  85%, 100% { background-position: -100% 0; }
+}
+
+/* Small drift on the floating orb glow for extra life */
+.hero__bg::after {
+  animation: float 10s ease-in-out infinite, pulseGlow 6s ease-in-out infinite;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.55; }
 }
