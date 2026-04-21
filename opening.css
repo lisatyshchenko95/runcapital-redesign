@@ -430,7 +430,6 @@
 .group-diagram--dark .group-children > .group-card .group-card__num { color: rgba(201,168,76,0.8); }
 .group-diagram--dark .group-children > .group-card .group-card__loc { color: #fff; }
 .group-diagram--dark .group-children > .group-card .group-card__reg { color: #e0c874; }
-.group-diagram--dark .group-children > .group-card.group-card--external .group-card__reg { color: #e0c874; font-weight: 600; }
 .group-diagram--dark .group-children > .group-card .group-card__cta { color: #e0c874; }
 .group-diagram--dark .group-children > .group-card:hover .group-card__cta,
 .group-diagram--dark .group-children > .group-card:hover .group-card__reg { color: #f0dc9a; }

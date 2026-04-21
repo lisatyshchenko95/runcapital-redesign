@@ -60,44 +60,6 @@
             </div>
           </div>
         </div>
-        <div class="article-hero__visual" aria-hidden="true">
-          <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="usdGold" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#e0c874"/>
-                <stop offset="100%" stop-color="#8a6f2e"/>
-              </linearGradient>
-            </defs>
-            <!-- Outer frame/bill -->
-            <rect x="40" y="70" width="240" height="180" rx="6" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.6"/>
-            <rect x="50" y="80" width="220" height="160" rx="4" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.35"/>
-            <!-- Corner ornaments -->
-            <circle cx="70" cy="100" r="14" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="250" cy="100" r="14" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="70" cy="220" r="14" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
-            <circle cx="250" cy="220" r="14" fill="none" stroke="#c9a84c" stroke-width="0.8" opacity="0.5"/>
-            <!-- Dollar sign centerpiece -->
-            <g transform="translate(160 160)">
-              <circle r="50" fill="none" stroke="url(#usdGold)" stroke-width="2" opacity="0.7"/>
-              <text x="0" y="18" text-anchor="middle" font-family="Playfair Display, serif" font-size="72" font-weight="600" fill="url(#usdGold)">$</text>
-            </g>
-            <!-- Upward arrow (growth) -->
-            <g stroke="#e0c874" stroke-width="2" fill="none" opacity="0.85">
-              <line x1="95" y1="155" x2="95" y2="100"/>
-              <polyline points="85,112 95,100 105,112"/>
-            </g>
-            <text x="95" y="92" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#c9a84c" letter-spacing="1.5">GROWTH</text>
-            <!-- Downward arrow (debt) -->
-            <g stroke="#c9a84c" stroke-width="2" fill="none" opacity="0.7">
-              <line x1="225" y1="165" x2="225" y2="220"/>
-              <polyline points="215,208 225,220 235,208"/>
-            </g>
-            <text x="225" y="238" text-anchor="middle" font-family="Inter, sans-serif" font-size="8" fill="#c9a84c" letter-spacing="1.5">DEBT</text>
-            <!-- Top/bottom ornamental lines -->
-            <line x1="120" y1="88" x2="200" y2="88" stroke="#c9a84c" stroke-width="0.6" opacity="0.6"/>
-            <line x1="120" y1="232" x2="200" y2="232" stroke="#c9a84c" stroke-width="0.6" opacity="0.6"/>
-          </svg>
-        </div>
       </div>
     </div>
   </header>
@@ -199,7 +161,7 @@
             <li><a href="index.html#group">Group Structure</a></li>
             <li><a href="index.html#team">Team</a></li>
             <li><a href="insights.html">Insights</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C">Contact</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -248,5 +210,7 @@
   </script>
 
 <script>(function(){var K='rcp_lang';function ap(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(e){var t=e.getAttribute('data-'+l);if(t!=null)e.textContent=t;});document.querySelectorAll('[data-en-html]').forEach(function(e){var h=e.getAttribute('data-'+l+'-html');if(h!=null)e.innerHTML=h;});document.querySelectorAll('.lang-switch__opt').forEach(function(o){o.classList.toggle('lang-switch__opt--active',o.getAttribute('data-lang')===l);});try{localStorage.setItem(K,l);}catch(e){}}var sv;try{sv=localStorage.getItem(K);}catch(e){}if(sv==='it')ap('it');var sw=document.getElementById('langSwitch');if(sw)sw.addEventListener('click',function(e){e.preventDefault();var c=e.target.closest('.lang-switch__opt');var cur=document.documentElement.lang==='it'?'it':'en';if(c&&c.getAttribute('data-lang'))ap(c.getAttribute('data-lang'));else ap(cur==='en'?'it':'en');});})();</script>
+  <script defer src="contact-modal.js"></script>
+  <script defer src="video-fallback.js"></script>
 </body>
 </html>

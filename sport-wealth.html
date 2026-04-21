@@ -28,6 +28,144 @@
     }
     .service-hero__content { z-index: 2; }
     .service-hero__illustration { display: none; }
+
+    /* ---- TEAM (circular portraits) ---- */
+    .sw-team {
+      background: var(--cream);
+      color: #0a0a0a;
+      padding: 100px 0 120px;
+    }
+    .sw-team__inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .sw-team__head {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 64px;
+    }
+    .sw-team__eyebrow {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin: 0 0 20px;
+    }
+    .sw-team__h {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: clamp(34px, 4.2vw, 52px);
+      line-height: 1.08;
+      letter-spacing: -0.018em;
+      margin: 0;
+      color: #0a0a0a;
+    }
+    .sw-team__h em {
+      font-style: italic;
+      background: linear-gradient(110deg, var(--gold-dark), var(--gold), var(--gold-light), var(--gold), var(--gold-dark));
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .sw-team__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 56px;
+      max-width: 640px;
+      margin: 0 auto;
+    }
+    .sw-member {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .sw-member__photo {
+      position: relative;
+      width: 100%;
+      max-width: 220px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ece7da;
+      box-shadow:
+        0 2px 8px rgba(10,10,10,0.06),
+        0 14px 40px rgba(10,10,10,0.1);
+      transition: transform 0.45s var(--ease-out-expo), box-shadow 0.45s var(--ease-out-expo);
+      margin-bottom: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .sw-member__photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.35);
+      pointer-events: none;
+      transition: border-color 0.45s var(--ease-out-expo), inset 0.45s var(--ease-out-expo);
+    }
+    .sw-member__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      transition: transform 0.6s var(--ease-out-expo);
+    }
+    .sw-member__initials {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 64px;
+      letter-spacing: 0.02em;
+      color: var(--gold-dark);
+      background: linear-gradient(135deg, var(--gold-light), var(--gold-dark));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .sw-member:hover .sw-member__photo {
+      transform: translateY(-6px);
+      box-shadow:
+        0 4px 12px rgba(10,10,10,0.08),
+        0 24px 60px rgba(201,168,76,0.22);
+    }
+    .sw-member:hover .sw-member__photo::after {
+      border-color: var(--gold);
+      inset: -4px;
+    }
+    .sw-member:hover .sw-member__photo img {
+      transform: scale(1.04);
+    }
+    .sw-member__name {
+      font-family: var(--font-serif);
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.2;
+      letter-spacing: -0.005em;
+      color: #0a0a0a;
+      margin: 0 0 6px;
+    }
+    .sw-member__role {
+      font-family: var(--font-sans);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin: 0;
+    }
+    @media (max-width: 640px) {
+      .sw-team { padding: 72px 0 88px; }
+      .sw-team__inner { padding: 0 24px; }
+      .sw-team__grid { gap: 40px; }
+      .sw-member__initials { font-size: 52px; }
+    }
   </style>
 </head>
 <body>
@@ -79,7 +217,7 @@
           <h1 class="service-hero__title">Sport &amp; Wealth</h1>
           <p class="service-hero__sub">Bespoke wealth management and alternative-investment structures for professional athletes, sports-related high-net-worth clients, and institutional mandates with a sports footprint.</p>
           <div class="service-hero__actions">
-            <a href="#contact-us" class="btn btn--primary">Contact Us</a>
+            <a href="mailto:m.bocci@runcapital.partners?cc=info@runcapital.partners&amp;subject=Inquiry%20-%20Sport%20%26%20Wealth&amp;body=Dear%20Massimo%2C%0D%0A%0D%0AI%27d%20like%20to%20learn%20more%20about%20your%20Sport%20%26%20Wealth%20offering.%0D%0A%0D%0AKind%20regards%2C" class="btn btn--primary">Contact Us</a>
             <a href="#process" class="btn btn--outline">How It Works</a>
           </div>
         </div>
@@ -127,16 +265,17 @@
         </div>
         <div class="split__right">
           <p>Our Sport &amp; Wealth practice, led by <a href="massimo-bocci.html" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.35);">Massimo Bocci</a>, designs financial strategies for the full career arc &mdash; from first major contract through retirement transition. We also partner with institutional investors whose mandates touch the sport economy, structuring vehicles that serve both sides of the market.</p>
-          <div style="margin-top: 32px; padding: 24px; background: rgba(201,168,76,0.06); border-left: 2px solid var(--gold); border-radius: 4px;">
+          <a href="massimo-bocci.html" style="display: block; text-decoration: none; color: inherit; margin-top: 32px; padding: 24px; background: rgba(201,168,76,0.06); border-left: 2px solid var(--gold); border-radius: 4px; transition: background 0.25s ease;" onmouseover="this.style.background='rgba(201,168,76,0.12)'" onmouseout="this.style.background='rgba(201,168,76,0.06)'">
             <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
               <img src="massimo-bocci.jpg" alt="Massimo Bocci" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover;">
               <div>
-                <p style="margin: 0; font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--ink);"><a href="massimo-bocci.html" style="color: inherit; text-decoration: none;">Massimo Bocci</a></p>
+                <p style="margin: 0; font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--ink);">Massimo Bocci</p>
                 <p style="margin: 2px 0 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold);">Institutional &middot; Sport &amp; Wealth</p>
               </div>
             </div>
-            <p style="margin: 0; font-size: 14px; line-height: 1.6; color: rgba(10,10,10,0.7);">Structures wealth-management and alternative-investment solutions for institutional investors and high-net-worth clients, with a focus on sports professionals and sport-economy mandates.</p>
-          </div>
+            <p style="margin: 0 0 14px; font-size: 14px; line-height: 1.6; color: rgba(10,10,10,0.7);">Structures wealth-management and alternative-investment solutions for institutional investors and high-net-worth clients, with a focus on sports professionals and sport-economy mandates.</p>
+            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--gold);">View profile <span aria-hidden="true">&rarr;</span></span>
+          </a>
           <div class="service-stats">
             <div class="service-stats__item">
               <span class="service-stats__num">Career-Cycle</span>
@@ -252,13 +391,38 @@
     </div>
   </section>
 
+  <section class="sw-team">
+    <div class="sw-team__inner">
+      <div class="sw-team__head">
+        <p class="sw-team__eyebrow">— The Team</p>
+        <h2 class="sw-team__h">The people <em>behind it.</em></h2>
+      </div>
+      <div class="sw-team__grid">
+        <div class="sw-member">
+          <div class="sw-member__photo">
+            <img src="images/team/luca-padovan.jpg" alt="Luca Padovan">
+          </div>
+          <h3 class="sw-member__name">Luca Padovan</h3>
+          <p class="sw-member__role">CEO &amp; Founder</p>
+        </div>
+        <div class="sw-member">
+          <div class="sw-member__photo">
+            <span class="sw-member__initials" aria-hidden="true">MB</span>
+          </div>
+          <h3 class="sw-member__name">Massimo Bocci</h3>
+          <p class="sw-member__role">Head of Sport &amp; Wealth</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="section section--dark" id="contact-us">
     <div class="container service-cta">
       <h2 class="service-cta__title">A career is short.<br>The right structure lasts.</h2>
       <p class="service-cta__sub">Speak with Massimo directly about a confidential review of your situation or your institutional mandate. Every conversation is private.</p>
       <div class="service-cta__actions">
-        <a href="index.html#contact?service=sport-wealth" class="btn btn--primary">Contact Us</a>
-        <a href="massimo-bocci.html" class="btn btn--outline">Meet Massimo Bocci</a>
+        <a href="mailto:m.bocci@runcapital.partners?cc=info@runcapital.partners&amp;subject=Inquiry%20-%20Sport%20%26%20Wealth&amp;body=Dear%20Massimo%2C%0D%0A%0D%0AI%27d%20like%20to%20learn%20more%20about%20your%20Sport%20%26%20Wealth%20offering.%0D%0A%0D%0AKind%20regards%2C" class="btn btn--primary">Contact Us</a>
+        <a href="index.html#services" class="btn btn--outline">Back to services</a>
       </div>
     </div>
   </section>
@@ -290,7 +454,7 @@
             <li><a href="index.html#group">Group Structure</a></li>
             <li><a href="index.html#team">Team</a></li>
             <li><a href="index.html#insights">Insights</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C">Contact</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -337,5 +501,7 @@
   </script>
 
 <script>(function(){var K='rcp_lang';function ap(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(e){var t=e.getAttribute('data-'+l);if(t!=null)e.textContent=t;});document.querySelectorAll('[data-en-html]').forEach(function(e){var h=e.getAttribute('data-'+l+'-html');if(h!=null)e.innerHTML=h;});document.querySelectorAll('.lang-switch__opt').forEach(function(o){o.classList.toggle('lang-switch__opt--active',o.getAttribute('data-lang')===l);});try{localStorage.setItem(K,l);}catch(e){}}var sv;try{sv=localStorage.getItem(K);}catch(e){}if(sv==='it')ap('it');var sw=document.getElementById('langSwitch');if(sw)sw.addEventListener('click',function(e){e.preventDefault();var c=e.target.closest('.lang-switch__opt');var cur=document.documentElement.lang==='it'?'it':'en';if(c&&c.getAttribute('data-lang'))ap(c.getAttribute('data-lang'));else ap(cur==='en'?'it':'en');});})();</script>
+  <script defer src="contact-modal.js"></script>
+  <script defer src="video-fallback.js"></script>
 </body>
 </html>

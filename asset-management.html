@@ -85,6 +85,614 @@
       .sv-cta { padding: 80px 24px; }
     }
   </style>
+  <!-- merged-8765-css -->
+  <style>
+/* ========================================================
+       Asset Management — Luxembourg jurisdiction aesthetic
+       ======================================================== */
+
+    body { background: var(--cream); color: var(--ink); }
+
+    /* ---- HERO (static Luxembourg image) ---- */
+    .am-hero {
+      position: relative;
+      overflow: hidden;
+      height: 92vh;
+      min-height: 640px;
+      background: var(--ink);
+      color: #fff;
+      display: flex;
+      align-items: flex-end;
+    }
+    .am-hero__img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      z-index: 0;
+    }
+    .am-hero__overlay {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(10,10,10,0.35) 0%, rgba(10,10,10,0.12) 30%, rgba(10,10,10,0.65) 78%, rgba(10,10,10,0.95) 100%);
+      z-index: 1;
+    }
+    .am-hero__inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 40px 120px;
+    }
+    .am-hero__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      font-weight: 500;
+      margin: 0 0 32px;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease) 0.3s forwards;
+    }
+    .am-hero__eyebrow .sep { width: 48px; height: 1px; background: rgba(224,200,116,0.55); }
+    .am-hero__title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(54px, 8vw, 120px);
+      line-height: 1;
+      letter-spacing: -0.022em;
+      margin: 0 0 24px;
+      max-width: 1060px;
+      color: #fff;
+      opacity: 0;
+      animation: fadeUp 1.2s var(--ease) 0.5s forwards;
+    }
+    .am-hero__title em {
+      font-style: italic;
+      background: linear-gradient(110deg, var(--gold-warm), var(--gold), var(--gold-light), var(--gold), var(--gold-warm));
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 7s ease-in-out 2s infinite;
+    }
+    .am-hero__sub {
+      max-width: 640px;
+      font-size: 18px;
+      line-height: 1.55;
+      color: rgba(247,243,234,0.82);
+      font-weight: 300;
+      margin: 0;
+      opacity: 0;
+      animation: fadeUp 1s var(--ease) 0.9s forwards;
+    }
+
+    /* ---- INTRO (one-stop) ---- */
+    .am-intro {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 140px 0 100px;
+      text-align: center;
+    }
+    .am-intro__inner {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .am-intro__eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold-warm);
+      font-weight: 600;
+      margin: 0 0 22px;
+    }
+    .am-intro__h {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(38px, 4.8vw, 60px);
+      line-height: 1.08;
+      letter-spacing: -0.02em;
+      margin: 0 0 32px;
+      color: var(--ink);
+    }
+    .am-intro__h em {
+      font-style: italic;
+      background: linear-gradient(110deg, var(--gold-warm), var(--gold), var(--gold-light), var(--gold), var(--gold-warm));
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .am-intro__lede {
+      font-family: var(--serif);
+      font-size: clamp(18px, 1.5vw, 22px);
+      line-height: 1.55;
+      color: rgba(10,10,10,0.74);
+      margin: 0;
+      font-weight: 400;
+    }
+
+    /* ---- SERVICES (3 premium cards) ---- */
+    .am-svc {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 40px 0 160px;
+      position: relative;
+    }
+    .am-svc__inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .am-svc__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+    }
+    .am-col {
+      position: relative;
+      padding: 64px 48px 56px;
+      background: linear-gradient(180deg, #fdfaf2 0%, #f9f4e8 100%);
+      border: 1px solid rgba(201,168,76,0.22);
+      border-radius: 2px;
+      box-shadow:
+        0 2px 6px rgba(10,10,10,0.04),
+        0 12px 32px rgba(10,10,10,0.06),
+        0 24px 60px rgba(201,168,76,0.05);
+      transition:
+        transform 0.5s var(--ease),
+        box-shadow 0.5s var(--ease),
+        border-color 0.5s var(--ease);
+      overflow: hidden;
+      isolation: isolate;
+    }
+    .am-col::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold-warm) 0%, var(--gold-light) 50%, var(--gold-warm) 100%);
+      opacity: 0.9;
+      z-index: 2;
+    }
+    .am-col::after {
+      content: '';
+      position: absolute;
+      top: -80px; right: -80px;
+      width: 240px;
+      height: 240px;
+      background: radial-gradient(circle, rgba(201,168,76,0.14) 0%, transparent 65%);
+      pointer-events: none;
+      z-index: 0;
+    }
+    .am-col > * { position: relative; z-index: 1; }
+    .am-col:hover {
+      transform: translateY(-8px);
+      box-shadow:
+        0 4px 10px rgba(10,10,10,0.05),
+        0 28px 60px rgba(10,10,10,0.12),
+        0 40px 80px rgba(201,168,76,0.14);
+      border-color: rgba(201,168,76,0.5);
+    }
+    .am-col__head {
+      padding-bottom: 24px;
+      border-bottom: 1px solid rgba(201,168,76,0.32);
+      margin-bottom: 28px;
+    }
+    .am-col__num {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: 76px;
+      line-height: 1;
+      font-weight: 500;
+      background: linear-gradient(110deg, var(--gold-warm), var(--gold), var(--gold-light), var(--gold), var(--gold-warm));
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin-bottom: 18px;
+      letter-spacing: 0.01em;
+    }
+    .am-col__h {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(24px, 2.3vw, 30px);
+      line-height: 1.18;
+      letter-spacing: -0.012em;
+      margin: 0 0 10px;
+      color: var(--ink);
+    }
+    .am-col__sub {
+      font-family: var(--sans);
+      font-size: 13px;
+      line-height: 1.6;
+      color: rgba(10,10,10,0.6);
+      font-weight: 400;
+      margin: 0;
+    }
+    .am-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .am-list li {
+      font-family: var(--sans);
+      font-size: 14.5px;
+      line-height: 1.5;
+      color: rgba(10,10,10,0.82);
+      font-weight: 500;
+      padding: 12px 0 12px 22px;
+      position: relative;
+      border-bottom: 1px solid rgba(10,10,10,0.06);
+      transition: padding-left 0.3s var(--ease), color 0.3s;
+    }
+    .am-list li:last-child { border-bottom: none; }
+    .am-list li::before {
+      content: '';
+      position: absolute;
+      left: 2px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--gold-warm);
+      transition: transform 0.3s var(--ease), background 0.3s;
+    }
+    .am-list li:hover {
+      padding-left: 28px;
+      color: var(--gold-warm);
+    }
+    .am-list li:hover::before {
+      transform: translateY(-50%) scale(1.3);
+      background: var(--gold-light);
+    }
+
+    /* ---- TEAM (Luxembourg, circular portraits) ---- */
+    .am-team {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 40px 0 140px;
+    }
+    .am-team__inner {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .am-team__head {
+      text-align: center;
+      max-width: 780px;
+      margin: 0 auto 72px;
+    }
+    .am-team__eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold-warm);
+      font-weight: 600;
+      margin: 0 0 22px;
+    }
+    .am-team__h {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(36px, 4.4vw, 56px);
+      line-height: 1.08;
+      letter-spacing: -0.018em;
+      margin: 0 0 22px;
+      color: var(--ink);
+    }
+    .am-team__h em {
+      font-style: italic;
+      background: linear-gradient(110deg, var(--gold-warm), var(--gold), var(--gold-light), var(--gold), var(--gold-warm));
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .am-team__lede {
+      font-family: var(--serif);
+      font-size: clamp(16px, 1.3vw, 19px);
+      line-height: 1.55;
+      color: rgba(10,10,10,0.68);
+      margin: 0;
+      font-weight: 400;
+    }
+    .am-team__grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 40px;
+    }
+    .am-member {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .am-member__photo {
+      position: relative;
+      width: 100%;
+      max-width: 200px;
+      aspect-ratio: 1 / 1;
+      border-radius: 50%;
+      overflow: hidden;
+      background: #ece7da;
+      box-shadow:
+        0 2px 8px rgba(10,10,10,0.06),
+        0 14px 40px rgba(10,10,10,0.1);
+      transition: transform 0.45s var(--ease), box-shadow 0.45s var(--ease);
+      margin-bottom: 24px;
+    }
+    .am-member__photo::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.35);
+      pointer-events: none;
+      transition: border-color 0.45s var(--ease), inset 0.45s var(--ease);
+    }
+    .am-member__photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 25%;
+      transition: transform 0.6s var(--ease);
+    }
+    .am-member:hover .am-member__photo {
+      transform: translateY(-6px);
+      box-shadow:
+        0 4px 12px rgba(10,10,10,0.08),
+        0 24px 60px rgba(201,168,76,0.22);
+    }
+    .am-member:hover .am-member__photo::after {
+      border-color: var(--gold-warm);
+      inset: -4px;
+    }
+    .am-member:hover .am-member__photo img {
+      transform: scale(1.04);
+    }
+    .am-member__name {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: -0.005em;
+      color: var(--ink);
+      margin: 0 0 6px;
+    }
+    .am-member__role {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold-warm);
+      font-weight: 600;
+      margin: 0;
+    }
+
+    /* ---- WHY LUXEMBOURG (atmospheric) ---- */
+    .am-why {
+      position: relative;
+      overflow: hidden;
+      background: #0a0908;
+      color: var(--cream);
+      padding: 160px 0;
+      isolation: isolate;
+    }
+    .am-why::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('images/asset/luxembourg-arch.jpg') center 30% / cover no-repeat;
+      opacity: 0.38;
+      z-index: 0;
+    }
+    .am-why::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at 50% 50%, rgba(10,9,8,0.5) 0%, rgba(10,9,8,0.75) 70%, rgba(10,9,8,0.92) 100%),
+        linear-gradient(180deg, rgba(10,9,8,0.4) 0%, rgba(10,9,8,0.35) 40%, rgba(10,9,8,0.75) 85%, rgba(10,9,8,0.95) 100%);
+      z-index: 1;
+    }
+    .am-why__inner {
+      position: relative;
+      z-index: 2;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 40px;
+    }
+    .am-why__head {
+      max-width: 820px;
+      margin: 0 0 72px;
+    }
+    .am-why__eyebrow {
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.34em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      font-weight: 600;
+      margin: 0 0 22px;
+    }
+    .am-why__h {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(40px, 5vw, 72px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 24px;
+      color: #fff;
+    }
+    .am-why__h em { font-style: italic; color: var(--gold-light); }
+    .am-why__lede {
+      font-family: var(--serif);
+      font-size: clamp(18px, 1.5vw, 21px);
+      line-height: 1.5;
+      color: rgba(247,243,234,0.8);
+      margin: 0;
+      font-weight: 400;
+    }
+    .am-why__grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(201,168,76,0.24);
+    }
+    .am-why__item {
+      padding: 40px 28px 8px 0;
+      border-right: 1px solid rgba(247,243,234,0.12);
+      padding-left: 28px;
+    }
+    .am-why__item:first-child { padding-left: 0; }
+    .am-why__item:last-child { border-right: none; }
+    .am-why__item-num {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 500;
+      font-size: 64px;
+      line-height: 1;
+      letter-spacing: 0.01em;
+      background: linear-gradient(110deg, var(--gold-warm), var(--gold), var(--gold-light), var(--gold), var(--gold-warm));
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      display: block;
+      margin: 0 0 22px;
+    }
+    .am-why__item-h {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.22;
+      letter-spacing: -0.005em;
+      margin: 0 0 12px;
+      color: #fff;
+    }
+    .am-why__item-p {
+      font-family: var(--sans);
+      font-size: 13.5px;
+      line-height: 1.6;
+      color: rgba(247,243,234,0.65);
+      margin: 0;
+      font-weight: 300;
+    }
+
+    /* ---- CTA ---- */
+    .am-cta {
+      background: var(--cream);
+      color: var(--ink);
+      padding: 140px 40px;
+      text-align: center;
+    }
+    .am-cta h2 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(40px, 5.5vw, 80px);
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 40px;
+      color: var(--ink);
+    }
+    .am-cta h2 em {
+      font-style: italic;
+      background: linear-gradient(110deg, var(--gold-warm), var(--gold), var(--gold-light), var(--gold), var(--gold-warm));
+      background-size: 250% 100%;
+      background-position: 100% 0;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 7s ease-in-out 2s infinite;
+    }
+    .am-cta__btn {
+      display: inline-block;
+      padding: 20px 44px;
+      background: linear-gradient(180deg, var(--gold-light), var(--gold));
+      color: #141414;
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border-radius: 10px;
+      text-decoration: none;
+      box-shadow: 0 14px 40px rgba(201,168,76,0.28);
+      transition: transform 0.3s var(--ease);
+    }
+    .am-cta__btn:hover { transform: translateY(-2px); }
+    .am-cta__back {
+      display: inline-block;
+      margin-left: 14px;
+      padding: 20px 40px;
+      background: transparent;
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: 1px solid rgba(10,10,10,0.35);
+      border-radius: 10px;
+      text-decoration: none;
+      transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
+    }
+    .am-cta__back:hover {
+      border-color: var(--gold-warm);
+      background: rgba(201,168,76,0.08);
+      color: var(--ink);
+    }
+
+    /* ---- Responsive ---- */
+    @media (max-width: 1060px) {
+      .am-svc__grid { grid-template-columns: 1fr; }
+      .am-col { border-right: none; border-bottom: 1px solid rgba(10,10,10,0.12); padding: 48px 0; }
+      .am-col:last-child { border-bottom: none; }
+      .am-why__grid { grid-template-columns: repeat(2, 1fr); }
+      .am-why__item:nth-child(2) { border-right: none; }
+      .am-why__item { padding: 32px 20px; }
+      .am-why__item:first-child, .am-why__item:nth-child(3) { padding-left: 0; }
+      .am-team__grid { grid-template-columns: repeat(3, 1fr); gap: 32px; }
+      .am-team__grid .am-member:nth-child(n+4) { grid-column: span 1; }
+    }
+    @media (max-width: 720px) {
+      .am-hero { min-height: 520px; }
+      .am-hero__inner { padding: 0 24px 60px; }
+      .am-intro { padding: 80px 0 60px; }
+      .am-intro__inner { padding: 0 24px; }
+      .am-svc { padding: 40px 0 80px; }
+      .am-svc__inner { padding: 0 24px; }
+      .am-why { padding: 80px 0; }
+      .am-why__inner { padding: 0 24px; }
+      .am-why__grid { grid-template-columns: 1fr; }
+      .am-why__item { border-right: none; border-bottom: 1px solid rgba(247,243,234,0.12); padding: 28px 0; }
+      .am-why__item:last-child { border-bottom: none; }
+      .am-team { padding: 20px 0 80px; }
+      .am-team__inner { padding: 0 24px; }
+      .am-team__grid { grid-template-columns: repeat(2, 1fr); gap: 32px; }
+      .am-member__photo { max-width: 160px; }
+      .am-cta { padding: 80px 24px; }
+    }
+  </style>
+  <!-- /merged-8765-css -->
 </head>
 <body>
 
@@ -119,9 +727,7 @@
 
 <!-- HERO -->
 <header class="sv-hero">
-  <video class="sv-hero__video" autoplay muted loop playsinline>
-    <source src="videos/asset-mgmt-hero.mp4" type="video/mp4">
-  </video>
+  <img class="sv-hero__video" src="images/asset/luxembourg-arch.jpg" alt="" style="object-position: center 40%;">
   <div class="sv-hero__overlay"></div>
   <div class="sv-hero__inner">
     <div class="sv-hero__meta">
@@ -135,139 +741,161 @@
 </header>
 
 <!-- INTRO -->
-<section class="sv-intro">
-  <div class="sv-intro__grid">
-    <div class="sv-intro__left">
-      <p class="sv-kicker">— Overview</p>
-      <h2 class="sv-intro__heading">Luxembourg-domiciled. <em>Institutionally governed.</em></h2>
-    </div>
-    <div class="sv-intro__body">
-      <p><strong>Run Asset Management S.&agrave;.r.l</strong> is a CSSF-registered Alternative Investment Fund Manager operating from Luxembourg, the EU's foremost jurisdiction for fund domiciliation.</p>
-      <p>We provide a 360-degree service from initial structuring and regulatory approval through ongoing administration, accounting, and compliance. Every vehicle is built to institutional standards with EU passporting across all 27 member states.</p>
+<section class="am-intro">
+  <div class="am-intro__inner">
+    <p class="am-intro__eyebrow">— One Stop Shop</p>
+    <h2 class="am-intro__h">From <em>incorporation</em> to administration.</h2>
+    <p class="am-intro__lede">Corporate services, an investment-fund platform, and a family-office desk — under one roof, in the heart of Europe's alternatives hub.</p>
+  </div>
+</section>
+
+<!-- SERVICES: 3 columns -->
+<section class="am-svc">
+  <div class="am-svc__inner">
+    <div class="am-svc__grid">
+
+      <!-- I — Corporate Client Services -->
+      <div class="am-col">
+        <div class="am-col__head">
+          <h3 class="am-col__h">Corporate Client Services</h3>
+          <p class="am-col__sub">Entity setup, ongoing accounting, and holding structures — the chassis for every deal.</p>
+        </div>
+        <ul class="am-list">
+          <li>Company Formation</li>
+          <li>Accounting &amp; Corporate services</li>
+          <li>Private Equity</li>
+          <li>Holding companies</li>
+          <li>Real Estate SPVs</li>
+          <li>Co-investment &amp; partnership</li>
+          <li>Intellectual property management</li>
+        </ul>
+      </div>
+
+      <!-- II — Investment Fund Platform -->
+      <div class="am-col">
+        <div class="am-col__head">
+          <h3 class="am-col__h">Investment Fund Platform</h3>
+          <p class="am-col__sub">A regulated platform for launching funds, notes, and securitisation vehicles.</p>
+        </div>
+        <ul class="am-list">
+          <li>Investment Fund Set-up</li>
+          <li>Hedge Fund</li>
+          <li>Securitisation SPVs</li>
+          <li>Bond Issuance &amp; Listing</li>
+          <li>Special Limited Partnership — AIFM</li>
+          <li>Reserved Alternative Investment Fund</li>
+          <li>Actively Managed Certificates</li>
+        </ul>
+      </div>
+
+      <!-- III — Family Offices Services -->
+      <div class="am-col">
+        <div class="am-col__head">
+          <h3 class="am-col__h">Family Offices Services</h3>
+          <p class="am-col__sub">Wealth structuring, succession, and consolidation for principals and their families.</p>
+        </div>
+        <ul class="am-list">
+          <li>Wealth Structuring</li>
+          <li>Succession Planning</li>
+          <li>Private Investment Trust</li>
+          <li>Asset Consolidation</li>
+          <li>Foundations</li>
+          <li>Wealth Protection Plan</li>
+          <li>Redomiciliation</li>
+        </ul>
+      </div>
+
     </div>
   </div>
 </section>
 
-<!-- BENEFITS -->
-<section class="sv-benefits">
-  <div class="sv-benefits__inner">
-    <div class="sv-benefits__head">
-      <h2>Every vehicle. <em>One platform.</em></h2>
+<!-- TEAM (Luxembourg) -->
+<section class="am-team">
+  <div class="am-team__inner">
+    <div class="am-team__head">
+      <p class="am-team__eyebrow">— Luxembourg Team</p>
+      <h2 class="am-team__h">The people <em>behind it.</em></h2>
     </div>
-    <div class="sv-benefits__list">
-      <article class="sv-benefit">
-        <span class="sv-benefit__num">01</span>
-        <h3>Alternative Investment Funds.</h3>
-        <p>Private equity, real estate, private credit, infrastructure, and impact investing. Open and closed-ended structures.</p>
-      </article>
-      <article class="sv-benefit">
-        <span class="sv-benefit__num">02</span>
-        <h3>Reserved Alternative Investment Funds.</h3>
-        <p>Rapid time-to-market without prior CSSF approval. Institutional governance for well-informed investors.</p>
-      </article>
-      <article class="sv-benefit">
-        <span class="sv-benefit__num">03</span>
-        <h3>Securitization &amp; Partnerships.</h3>
-        <p>SPVs, bond issuance, SOPARFI holdings, Special Limited Partnerships, and SICAR vehicles. Setup in 2-4 weeks.</p>
-      </article>
+    <div class="am-team__grid">
+      <div class="am-member">
+        <div class="am-member__photo">
+          <img src="images/team/luca-padovan.jpg" alt="Luca Padovan">
+        </div>
+        <h3 class="am-member__name">Luca Padovan</h3>
+        <p class="am-member__role">CEO &amp; Founder</p>
+      </div>
+      <div class="am-member">
+        <div class="am-member__photo">
+          <img src="images/team/giordano-tomasini.jpg" alt="Giordano Tomasini">
+        </div>
+        <h3 class="am-member__name">Giordano Tomasini</h3>
+        <p class="am-member__role">General Counsel</p>
+      </div>
+      <div class="am-member">
+        <div class="am-member__photo">
+          <img src="images/team/enrico-de-angelis.jpg" alt="Enrico De Angelis">
+        </div>
+        <h3 class="am-member__name">Enrico De Angelis</h3>
+        <p class="am-member__role">Business Development</p>
+      </div>
+      <div class="am-member">
+        <div class="am-member__photo">
+          <img src="images/team/giovanni-campodallorto.jpg" alt="Giovanni Campodall'Orto">
+        </div>
+        <h3 class="am-member__name">Giovanni Campodall'Orto</h3>
+        <p class="am-member__role">Head of Operations</p>
+      </div>
+      <div class="am-member">
+        <div class="am-member__photo">
+          <img src="images/team/stefano-giuffra.jpg" alt="Stefano Giuffra">
+        </div>
+        <h3 class="am-member__name">Stefano Giuffra</h3>
+        <p class="am-member__role">Compliance Officer</p>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- SPECS -->
-<section class="sv-specs">
-  <div class="sv-specs__inner">
-    <div class="sv-specs__head">
-      <h2>Fund <em>specifications.</em></h2>
+<!-- WHY LUXEMBOURG -->
+<section class="am-why">
+  <div class="am-why__inner">
+    <div class="am-why__head">
+      <p class="am-why__eyebrow">— Jurisdiction</p>
+      <h2 class="am-why__h">Why <em>Luxembourg.</em></h2>
+      <p class="am-why__lede">The second-largest fund domicile in the world, built for cross-border alternatives — with the regulators, legal infrastructure, and service providers to match.</p>
     </div>
-    <dl class="sv-specs__grid">
-      <div class="sv-spec">
-        <dt>Regulator</dt>
-        <dd>CSSF Luxembourg</dd>
+    <div class="am-why__grid">
+      <div class="am-why__item">
+        <p class="am-why__item-num">01</p>
+        <h3 class="am-why__item-h">EU Passport</h3>
+        <p class="am-why__item-p">Distribute across the European Union from a single regulated vehicle.</p>
       </div>
-      <div class="sv-spec">
-        <dt>Registration</dt>
-        <dd>A00003107</dd>
+      <div class="am-why__item">
+        <p class="am-why__item-num">02</p>
+        <h3 class="am-why__item-h">AIFMD Regulated</h3>
+        <p class="am-why__item-p">Supervised by the CSSF under Europe's alternative-investment framework.</p>
       </div>
-      <div class="sv-spec">
-        <dt>Classification</dt>
-        <dd>AIFM</dd>
+      <div class="am-why__item">
+        <p class="am-why__item-num">03</p>
+        <h3 class="am-why__item-h">Alternatives Hub</h3>
+        <p class="am-why__item-p">A concentration of AIFMs, depositaries, and administrators unmatched in Europe.</p>
       </div>
-      <div class="sv-spec">
-        <dt>Domicile</dt>
-        <dd>Luxembourg</dd>
+      <div class="am-why__item">
+        <p class="am-why__item-num">04</p>
+        <h3 class="am-why__item-h">Legal Certainty</h3>
+        <p class="am-why__item-p">A stable civil-law tradition with bespoke vehicles for private capital.</p>
       </div>
-      <div class="sv-spec">
-        <dt>Passporting</dt>
-        <dd>27 EU member states</dd>
-      </div>
-      <div class="sv-spec">
-        <dt>Vehicle types</dt>
-        <dd>AIF, RAIF, SIF, SICAR, SLP, SPV, SOPARFI</dd>
-      </div>
-      <div class="sv-spec">
-        <dt>Asset classes</dt>
-        <dd>Private equity, credit, real estate, infrastructure</dd>
-      </div>
-      <div class="sv-spec">
-        <dt>Setup timeline</dt>
-        <dd>2-4 weeks (SLP/SCSp)</dd>
-      </div>
-    </dl>
-  </div>
-</section>
-
-<!-- PROCESS -->
-<section class="sv-process">
-  <div class="sv-process__inner">
-    <div class="sv-process__head">
-      <p class="sv-kicker">— How we work</p>
-      <h2>From concept to <em>operational fund.</em></h2>
     </div>
-    <ol class="sv-steps">
-      <li class="sv-step">
-        <span class="sv-step__num">01</span>
-        <div>
-          <h3>Structuring</h3>
-          <p>Strategy definition, vehicle selection, jurisdiction analysis, regulatory pathway.</p>
-        </div>
-      </li>
-      <li class="sv-step">
-        <span class="sv-step__num">02</span>
-        <div>
-          <h3>Regulatory approval</h3>
-          <p>CSSF registration, prospectus drafting, compliance framework, AML/KYC setup.</p>
-        </div>
-      </li>
-      <li class="sv-step">
-        <span class="sv-step__num">03</span>
-        <div>
-          <h3>Administration</h3>
-          <p>Fund accounting, NAV calculations, investor services, capital call management.</p>
-        </div>
-      </li>
-      <li class="sv-step">
-        <span class="sv-step__num">04</span>
-        <div>
-          <h3>Distribution</h3>
-          <p>EU passporting, investor onboarding, ongoing reporting, regulatory compliance.</p>
-        </div>
-      </li>
-    </ol>
   </div>
 </section>
 
 <!-- CTA -->
-<section class="sv-cta" style="background:var(--ink);color:#fff;padding:120px 40px;text-align:center;">
-  <h3 style="font-family:var(--serif);font-weight:500;font-size:clamp(36px,4.5vw,64px);line-height:1.08;letter-spacing:-0.015em;margin:0 0 20px;color:#fff;"><em style="font-style:italic;color:var(--gold-light);">Ready to structure your fund?</em></h3>
-  <p style="max-width:560px;margin:0 auto 36px;font-size:16px;line-height:1.65;color:rgba(247,243,234,0.6);font-weight:300;">From concept to operational fund. Our Luxembourg team guides you through structuring, regulatory approval, and launch.</p>
-  <div style="display:flex;justify-content:center;gap:16px;flex-wrap:wrap;">
-    <a href="mailto:info@runcapital.partners" style="display:inline-block;padding:16px 36px;background:linear-gradient(180deg,var(--gold-light) 0%,var(--gold) 100%);color:#141414;font-family:var(--sans);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;border-radius:8px;box-shadow:0 14px 40px rgba(201,168,76,0.28);transition:transform 0.3s,box-shadow 0.3s;text-decoration:none;">Contact Us About Asset Management</a>
-    <a href="index.html#services" style="display:inline-block;padding:16px 36px;border:1px solid rgba(255,255,255,0.25);color:#fff;font-family:var(--sans);font-size:12px;letter-spacing:0.2em;text-transform:uppercase;font-weight:600;border-radius:8px;text-decoration:none;transition:border-color 0.3s;">View All Services</a>
-  </div>
+<section class="am-cta">
+  <h2>Have <em>questions</em>?</h2>
+  <a href="mailto:info@runcapital.partners?subject=Inquiry%20-%20Asset%20Management&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%27d%20like%20to%20learn%20more%20about%20your%20asset%20management%20offering.%0D%0A%0D%0AKind%20regards%2C" class="am-cta__btn">Contact Us →</a>
+  <a href="index.html#services" class="am-cta__back">View All Services</a>
 </section>
 
-<!-- FOOTER -->
 <footer class="footer" style="background:#0a0a0a;color:rgba(247,243,234,0.7);padding:80px 0 0;">
   <div style="max-width:1280px;margin:0 auto;padding:0 40px;">
     <div style="display:grid;grid-template-columns:1.2fr 1fr 1fr 1.2fr;gap:60px;padding-bottom:60px;">
@@ -298,16 +926,17 @@
           <li><a href="index.html#group" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Group Structure</a></li>
           <li><a href="index.html#team" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Team</a></li>
           <li><a href="index.html#insights" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Insights</a></li>
-          <li><a href="index.html#contact" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Contact</a></li>
+          <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Contact</a></li>
         </ul>
       </div>
       <div>
         <h4 style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#c9a84c;margin:0 0 24px;font-weight:600;">Offices</h4>
         <div style="display:flex;flex-direction:column;gap:20px;">
-          <div><strong style="color:#c9a84c;font-size:14px;">London</strong> <span style="color:rgba(247,243,234,0.4);font-size:13px;">(HQ)</span><br><span style="font-size:13px;color:rgba(247,243,234,0.55);">Exhibition House, Addison Bridge Place</span></div>
-          <div><strong style="color:#c9a84c;font-size:14px;">Luxembourg</strong><br><span style="font-size:13px;color:rgba(247,243,234,0.55);">2 Rue Ste Zithe, 2763</span></div>
-          <div><strong style="color:#c9a84c;font-size:14px;">Milan</strong><br><span style="font-size:13px;color:rgba(247,243,234,0.55);">Via Monte Napoleone 8, 20121</span></div>
-          <div><strong style="color:#c9a84c;font-size:14px;">Conegliano</strong><br><span style="font-size:13px;color:rgba(247,243,234,0.55);">Viale Italia 203, 31015</span></div>
+          <div><strong style="color:#c9a84c;font-size:14px;">London</strong> <span style="color:rgba(247,243,234,0.4);font-size:13px;">(HQ)</span></div>
+          <div><strong style="color:#c9a84c;font-size:14px;">Luxembourg</strong></div>
+          <div><strong style="color:#c9a84c;font-size:14px;">Milan</strong></div>
+          <div><strong style="color:#c9a84c;font-size:14px;">Conegliano</strong></div>
+          <div><strong style="color:#c9a84c;font-size:14px;">Rome</strong></div>
         </div>
       </div>
     </div>
@@ -328,5 +957,7 @@
     if(t)t.addEventListener('click',function(){l.classList.toggle('nav__links--open');t.classList.toggle('nav__toggle--active');});
     if(l)l.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){l.classList.remove('nav__links--open');t.classList.remove('nav__toggle--active');});});
   </script>
+  <script defer src="contact-modal.js"></script>
+  <script defer src="video-fallback.js"></script>
 </body>
 </html>

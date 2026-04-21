@@ -423,15 +423,16 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      height: 72px;
+      height: 64px;
       transition: transform 0.3s var(--ease);
     }
     .sv-issuer:hover {
       transform: translateY(-2px);
     }
     .sv-issuer img {
+      height: 44px;
+      width: auto;
       max-width: 100%;
-      max-height: 100%;
       object-fit: contain;
       display: block;
     }
@@ -557,14 +558,25 @@
     }
     .sv-back {
       display: inline-block;
-      margin-top: 36px;
-      font-size: 11px;
+      margin-left: 14px;
+      padding: 20px 40px;
+      background: transparent;
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 12px;
       letter-spacing: 0.28em;
       text-transform: uppercase;
-      color: rgba(247,243,234,0.5);
-      font-weight: 500;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 10px;
+      text-decoration: none;
+      transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
     }
-    .sv-back:hover { color: var(--gold-light); }
+    .sv-back:hover {
+      border-color: var(--gold-light);
+      background: rgba(201,168,76,0.15);
+      color: #fff;
+    }
 
     @media (max-width: 900px) {
       .sv-hero { min-height: 500px; }
@@ -636,7 +648,7 @@
         <h1 class="service-hero__title">AMCs &amp; Securitisation</h1>
         <p class="service-hero__sub">Securitisation services for fund managers and illiquid asset holders. Actively managed certificates structured across Luxembourg and Ireland, placed through tier-one private-banking rails.</p>
         <div class="service-hero__actions">
-          <a href="index.html#contact" class="btn btn--primary">Contact Us</a>
+          <a href="mailto:info@runcapital.partners?subject=Inquiry%20-%20AMC%20%26%20Securitization&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%27d%20like%20to%20learn%20more%20about%20your%20AMC%20and%20securitization%20services.%0D%0A%0D%0AKind%20regards%2C" class="btn btn--primary">Contact Us</a>
           <a href="#process" class="btn btn--outline">How It Works</a>
         </div>
       </div>
@@ -674,14 +686,14 @@
 <section class="sv-issuers">
   <div class="sv-issuers__inner">
     <p class="sv-kicker">— Issuers we work with</p>
-    <h2 class="sv-issuers__title">Six institutional <em>partners.</em></h2>
+    <h2 class="sv-issuers__title">Some of the <em>partners</em> <em style="color: var(--ink);">we work with.</em></h2>
     <div class="sv-issuers__grid">
       <div class="sv-issuer"><img src="images/issuers/leonteq.png" alt="Leonteq"></div>
       <div class="sv-issuer"><img src="images/issuers/marex.png" alt="Marex"></div>
       <div class="sv-issuer"><img src="images/issuers/vontobel.png" alt="Vontobel"></div>
       <div class="sv-issuer"><img src="images/issuers/bbva.png" alt="BBVA"></div>
       <div class="sv-issuer"><img src="images/issuers/ubs.png" alt="UBS"></div>
-      <div class="sv-issuer"><img src="images/issuers/goldman-sachs.svg" alt="Goldman Sachs"></div>
+      <div class="sv-issuer"><img src="images/issuers/goldman-sachs.png" alt="Goldman Sachs"></div>
     </div>
   </div>
 </section>
@@ -728,9 +740,9 @@
 
 <!-- CTA -->
 <section class="sv-cta">
-  <h3>Structuring an <em>issuance?</em></h3>
-  <a href="index.html#contact" class="sv-cta__btn">Get in touch →</a>
-  <div><a href="index.html#services" class="sv-back">← All services</a></div>
+  <h3>Have <em>questions?</em></h3>
+  <a href="mailto:info@runcapital.partners?subject=Inquiry%20-%20AMC%20%26%20Securitization&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%27d%20like%20to%20learn%20more%20about%20your%20AMC%20%26%20Securitization%20offering.%0D%0A%0D%0AKind%20regards%2C" class="sv-cta__btn">Contact Us →</a>
+  <a href="index.html#services" class="sv-back">View All Services</a>
 </section>
 
 <!-- FOOTER -->
@@ -761,16 +773,17 @@
           <li><a href="index.html#group">Group Structure</a></li>
           <li><a href="index.html#team">Team</a></li>
           <li><a href="index.html#insights">Insights</a></li>
-          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C">Contact</a></li>
         </ul>
       </div>
       <div class="footer__col">
         <h4 style="color: var(--gold);">Offices</h4>
         <ul>
-          <li><strong style="color: var(--gold);">London</strong> <span style="opacity: 0.5;">(HQ)</span><br><span style="font-size: 12px;">Exhibition House, Addison Bridge Place</span></li>
-          <li><strong style="color: var(--gold);">Luxembourg</strong><br><span style="font-size: 12px;">2 Rue Ste Zithe, 2763</span></li>
-          <li><strong style="color: var(--gold);">Milan</strong><br><span style="font-size: 12px;">Via Monte Napoleone 8, 20121</span></li>
-          <li><strong style="color: var(--gold);">Conegliano</strong><br><span style="font-size: 12px;">Viale Italia 203, 31015</span></li>
+          <li><strong style="color: var(--gold);">London</strong> <span style="opacity: 0.5;">(HQ)</span></li>
+            <li><strong style="color: var(--gold);">Luxembourg</strong></li>
+            <li><strong style="color: var(--gold);">Milan</strong></li>
+            <li><strong style="color: var(--gold);">Conegliano</strong></li>
+            <li><strong style="color: var(--gold);">Rome</strong></li>
         </ul>
       </div>
     </div>
@@ -786,5 +799,7 @@
   </div>
 </footer>
 
+  <script defer src="contact-modal.js"></script>
+  <script defer src="video-fallback.js"></script>
 </body>
 </html>

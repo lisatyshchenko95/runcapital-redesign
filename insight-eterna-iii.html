@@ -60,55 +60,6 @@
             </div>
           </div>
         </div>
-        <div class="article-hero__visual" aria-hidden="true">
-          <svg viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <linearGradient id="colGold" x1="0%" y1="0%" x2="0%" y2="100%">
-                <stop offset="0%" stop-color="#e0c874"/>
-                <stop offset="50%" stop-color="#c9a84c"/>
-                <stop offset="100%" stop-color="#8a6f2e"/>
-              </linearGradient>
-            </defs>
-            <!-- Pediment (triangle top) -->
-            <polygon points="60,78 260,78 160,28" fill="none" stroke="url(#colGold)" stroke-width="2" opacity="0.85"/>
-            <line x1="60" y1="78" x2="260" y2="78" stroke="#c9a84c" stroke-width="1" opacity="0.5"/>
-            <!-- Entablature -->
-            <rect x="50" y="82" width="220" height="16" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.8"/>
-            <line x1="50" y1="90" x2="270" y2="90" stroke="#c9a84c" stroke-width="0.6" opacity="0.5"/>
-            <!-- Capitals -->
-            <rect x="70" y="98" width="40" height="10" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.8"/>
-            <rect x="140" y="98" width="40" height="10" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.8"/>
-            <rect x="210" y="98" width="40" height="10" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.8"/>
-            <!-- Columns with fluting -->
-            <g stroke="url(#colGold)" stroke-width="1.3" opacity="0.85" fill="none">
-              <rect x="76" y="108" width="28" height="130"/>
-              <line x1="84" y1="108" x2="84" y2="238"/>
-              <line x1="90" y1="108" x2="90" y2="238"/>
-              <line x1="96" y1="108" x2="96" y2="238"/>
-              <rect x="146" y="108" width="28" height="130"/>
-              <line x1="154" y1="108" x2="154" y2="238"/>
-              <line x1="160" y1="108" x2="160" y2="238"/>
-              <line x1="166" y1="108" x2="166" y2="238"/>
-              <rect x="216" y="108" width="28" height="130"/>
-              <line x1="224" y1="108" x2="224" y2="238"/>
-              <line x1="230" y1="108" x2="230" y2="238"/>
-              <line x1="236" y1="108" x2="236" y2="238"/>
-            </g>
-            <!-- Bases -->
-            <rect x="70" y="238" width="40" height="8" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.8"/>
-            <rect x="140" y="238" width="40" height="8" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.8"/>
-            <rect x="210" y="238" width="40" height="8" fill="none" stroke="#c9a84c" stroke-width="1.2" opacity="0.8"/>
-            <!-- Stylobate -->
-            <rect x="50" y="248" width="220" height="14" fill="none" stroke="#c9a84c" stroke-width="1.5" opacity="0.8"/>
-            <line x1="40" y1="262" x2="280" y2="262" stroke="#c9a84c" stroke-width="1" opacity="0.6"/>
-            <!-- Infinity symbol below -->
-            <g transform="translate(160 290)" fill="none" stroke="url(#colGold)" stroke-width="2" opacity="0.9">
-              <path d="M -26 0 C -26 -10, -16 -10, -10 0 C -4 10, 6 10, 12 0 C 18 -10, 28 -10, 28 0 C 28 10, 18 10, 12 0 C 6 -10, -4 -10, -10 0 C -16 10, -26 10, -26 0 Z"/>
-            </g>
-            <!-- Pediment ornament -->
-            <circle cx="160" cy="60" r="3" fill="#e0c874"/>
-          </svg>
-        </div>
       </div>
     </div>
   </header>
@@ -214,7 +165,7 @@
             <li><a href="index.html#group">Group Structure</a></li>
             <li><a href="index.html#team">Team</a></li>
             <li><a href="insights.html">Insights</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C">Contact</a></li>
           </ul>
         </div>
         <div class="footer__col">
@@ -263,5 +214,7 @@
   </script>
 
 <script>(function(){var K='rcp_lang';function ap(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(e){var t=e.getAttribute('data-'+l);if(t!=null)e.textContent=t;});document.querySelectorAll('[data-en-html]').forEach(function(e){var h=e.getAttribute('data-'+l+'-html');if(h!=null)e.innerHTML=h;});document.querySelectorAll('.lang-switch__opt').forEach(function(o){o.classList.toggle('lang-switch__opt--active',o.getAttribute('data-lang')===l);});try{localStorage.setItem(K,l);}catch(e){}}var sv;try{sv=localStorage.getItem(K);}catch(e){}if(sv==='it')ap('it');var sw=document.getElementById('langSwitch');if(sw)sw.addEventListener('click',function(e){e.preventDefault();var c=e.target.closest('.lang-switch__opt');var cur=document.documentElement.lang==='it'?'it':'en';if(c&&c.getAttribute('data-lang'))ap(c.getAttribute('data-lang'));else ap(cur==='en'?'it':'en');});})();</script>
+  <script defer src="contact-modal.js"></script>
+  <script defer src="video-fallback.js"></script>
 </body>
 </html>

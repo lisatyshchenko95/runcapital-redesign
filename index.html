@@ -333,19 +333,19 @@
 
       <div class="v2r-offices">
         <div class="v2r-office">
-          <span class="v2r-office__label">Headquarters</span>
-          <h3>Luxembourg</h3>
-          <p>46a, Avenue John F. Kennedy<br>L-1855 Luxembourg</p>
-        </div>
-        <div class="v2r-office">
-          <span class="v2r-office__label">Capital Markets</span>
+          <span class="v2r-office__label">Headquarters &middot; Global Markets</span>
           <h3>United Kingdom</h3>
           <p>London</p>
         </div>
         <div class="v2r-office">
+          <span class="v2r-office__label">Asset Management</span>
+          <h3>Luxembourg</h3>
+          <p>Luxembourg</p>
+        </div>
+        <div class="v2r-office">
           <span class="v2r-office__label">Advisory &amp; Wealth</span>
           <h3>Italy</h3>
-          <p>Milan &middot; Conegliano</p>
+          <p>Milan &middot; Conegliano &middot; Rome</p>
         </div>
       </div>
 
@@ -396,13 +396,13 @@
           </a>
           <a class="group-card group-card--external" href="nasdaq-listings.html">
             <span class="group-card__num">04</span>
-            <span class="group-card__badge">Spinoff</span>
             <h4>3DOTS Capital Advisory</h4>
             <p>Nasdaq listing advisory for Southern European companies.</p>
             <div class="group-card__meta">
               <span class="group-card__loc">New York</span>
-              <span class="group-card__reg">Learn more &rarr;</span>
+              <span class="group-card__reg">Spin off</span>
             </div>
+            <span class="group-card__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
           </a>
         </div>
       </div>
@@ -502,7 +502,7 @@
           <a href="enrico-de-angelis.html">
             <div class="team-card__photo"><img src="enrico-de-angelis.jpg" alt="Enrico De Angelis" loading="lazy"></div>
             <h3 class="team-card__name">Enrico De Angelis</h3>
-            <p class="team-card__role">Business Development Manager</p>
+            <p class="team-card__role">Business Development</p>
           </a>
         </div>
         <div class="team-card">
@@ -649,11 +649,66 @@
 
   <!-- CONTACT -->
   <section class="section section--cream" id="contact" style="padding: 120px 0;">
-    <div class="container" style="text-align: center; max-width: 800px;">
-      <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px;">— Get in Touch</p>
-      <h2 style="font-family: var(--font-serif); font-size: clamp(36px, 5vw, 56px); font-weight: 600; color: var(--dark); line-height: 1.15; margin-bottom: 20px;">Let's discuss your <span class="gold" style="font-style: italic;">strategy.</span></h2>
-      <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7; margin-bottom: 40px;">Whether you're structuring a fund or exploring wealth strategies,<br>we'd like to hear from you.</p>
-      <a href="mailto:info@runcapital.partners" style="display: inline-block; padding: 18px 48px; background: var(--dark); color: #fff; text-decoration: none; font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; transition: background 0.3s;">Schedule a Consultation &rarr;</a>
+    <div class="container" style="max-width: 760px;">
+      <div style="text-align: center; margin-bottom: 48px;">
+        <p style="font-size: 11px; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 24px;">— Get in Touch</p>
+        <h2 style="font-family: var(--font-serif); font-size: clamp(36px, 5vw, 56px); font-weight: 600; color: var(--dark); line-height: 1.15;">Let's discuss your <span class="gold" style="font-style: italic;">strategy.</span></h2>
+      </div>
+
+      <form id="rcpContactForm" class="rcp-form" action="https://formsubmit.co/ajax/info@runcapital.partners" method="POST" novalidate>
+        <input type="hidden" name="_subject" value="New inquiry from runcapital.partners">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true">
+
+        <div class="rcp-form__row">
+          <label class="rcp-form__field">
+            <span class="rcp-form__label">Name <em>*</em></span>
+            <input type="text" name="name" required autocomplete="name">
+          </label>
+          <label class="rcp-form__field">
+            <span class="rcp-form__label">Email <em>*</em></span>
+            <input type="email" name="email" required autocomplete="email">
+          </label>
+        </div>
+
+        <div class="rcp-form__row">
+          <label class="rcp-form__field">
+            <span class="rcp-form__label">Company</span>
+            <input type="text" name="company" autocomplete="organization">
+          </label>
+          <label class="rcp-form__field">
+            <span class="rcp-form__label">Interested in</span>
+            <select name="interest">
+              <option value="General inquiry">General inquiry</option>
+              <option value="01 — Asset Management">01 — Asset Management</option>
+              <option value="02 — AMC &amp; Securitization">02 — AMC &amp; Securitization</option>
+              <option value="03 — Structured Products">03 — Structured Products</option>
+              <option value="04 — Funds">04 — Funds</option>
+              <option value="05 — Direct Deals">05 — Direct Deals</option>
+              <option value="06 — Wealth Advisory">06 — Wealth Advisory</option>
+              <option value="07 — Sport &amp; Wealth">07 — Sport &amp; Wealth</option>
+              <option value="08 — Nasdaq &amp; IPO">08 — Nasdaq &amp; IPO</option>
+              <option value="Other">Other</option>
+            </select>
+          </label>
+        </div>
+
+        <label class="rcp-form__field">
+          <span class="rcp-form__label">Message <em>*</em></span>
+          <textarea name="message" rows="5" required placeholder="Tell us a bit about what you're looking for..."></textarea>
+        </label>
+
+        <div class="rcp-form__foot">
+          <button type="submit" class="rcp-form__submit">
+            <span class="rcp-form__submit-label">Send Message</span>
+            <span class="rcp-form__submit-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+          <p class="rcp-form__note">Or email us directly at <a href="mailto:info@runcapital.partners">info@runcapital.partners</a></p>
+        </div>
+
+        <div class="rcp-form__status" id="rcpFormStatus" role="status" aria-live="polite"></div>
+      </form>
     </div>
   </section>
 
@@ -685,16 +740,17 @@
             <li><a href="#group">Group Structure</a></li>
             <li><a href="#team">Team</a></li>
             <li><a href="#insights">Insights</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C">Contact</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h4 style="color: var(--gold);">Offices</h4>
           <ul>
-            <li><strong style="color: var(--gold);">London</strong> <span style="opacity: 0.5;">(HQ)</span><br><span style="font-size: 12px;">Exhibition House, Addison Bridge Place</span></li>
-            <li><strong style="color: var(--gold);">Luxembourg</strong><br><span style="font-size: 12px;">2 Rue Ste Zithe, 2763</span></li>
-            <li><strong style="color: var(--gold);">Milan</strong><br><span style="font-size: 12px;">Via Monte Napoleone 8, 20121</span></li>
-            <li><strong style="color: var(--gold);">Conegliano</strong><br><span style="font-size: 12px;">Viale Italia 203, 31015</span></li>
+            <li><strong style="color: var(--gold);">London</strong> <span style="opacity: 0.5;">(HQ)</span></li>
+            <li><strong style="color: var(--gold);">Luxembourg</strong></li>
+            <li><strong style="color: var(--gold);">Milan</strong></li>
+            <li><strong style="color: var(--gold);">Conegliano</strong></li>
+            <li><strong style="color: var(--gold);">Rome</strong></li>
           </ul>
         </div>
       </div>
@@ -940,6 +996,56 @@
         });
       }, { threshold: 0.4 });
       counters.forEach(c => io.observe(c));
+    })();
+  </script>
+  <script defer src="contact-modal.js"></script>
+  <script defer src="video-fallback.js"></script>
+  <script>
+    // Contact form submission via FormSubmit.co (no backend, free, no signup).
+    (function () {
+      var form = document.getElementById('rcpContactForm');
+      if (!form) return;
+      var status = document.getElementById('rcpFormStatus');
+      var submitBtn = form.querySelector('.rcp-form__submit');
+      var submitLabel = form.querySelector('.rcp-form__submit-label');
+      var originalLabel = submitLabel ? submitLabel.textContent : 'Send Message';
+
+      function setStatus(msg, kind) {
+        status.textContent = msg;
+        status.classList.remove('is-success', 'is-error');
+        if (kind) status.classList.add('is-' + kind);
+      }
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        if (form.querySelector('input[name="_honey"]').value) return; // bot
+        var data = new FormData(form);
+        submitBtn.disabled = true;
+        if (submitLabel) submitLabel.textContent = 'Sending...';
+        setStatus('', null);
+
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(function (res) {
+          if (res.ok) {
+            form.classList.add('is-submitted');
+            status.innerHTML = '<span class="rcp-form__success-mark" aria-hidden="true"></span>' +
+              '<h3 class="rcp-form__success-title">Thank you.</h3>' +
+              '<p class="rcp-form__success-text">Your message has been received. Someone from the team will be in touch as soon as possible.</p>';
+            status.classList.remove('is-error');
+            status.classList.add('is-success');
+            form.reset();
+          } else {
+            return res.json().then(function (j) { throw new Error(j && j.message || 'Submission failed'); });
+          }
+        }).catch(function (err) {
+          setStatus('Something went wrong. Please email us directly at info@runcapital.partners.', 'error');
+          submitBtn.disabled = false;
+          if (submitLabel) submitLabel.textContent = originalLabel;
+        });
+      });
     })();
   </script>
 </body>
