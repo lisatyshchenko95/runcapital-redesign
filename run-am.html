@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260422b">
   <style>
     .entity-mark {
       display: inline-flex;
@@ -39,6 +39,12 @@
       max-width: 900px;
       margin: 0 auto;
     }
+    .regulatory-card--dark {
+      border: 1px solid rgba(201,168,76,0.32);
+      background: linear-gradient(160deg, rgba(201,168,76,0.08), rgba(201,168,76,0.02));
+    }
+    .regulatory-card--dark .regulatory-card__label { color: rgba(255,255,255,0.55); }
+    .regulatory-card--dark .regulatory-card__body { color: rgba(255,255,255,0.72); }
     .regulatory-card__ref {
       font-family: var(--font-serif);
       font-size: 42px;
@@ -117,7 +123,7 @@
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
         <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img">
-        <span class="nav__logo-text">Run Capital Partners LTD</span>
+        <span class="nav__logo-text">Run Capital Partners</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -157,7 +163,11 @@
             Group Entity 02 &middot; Luxembourg
           </span>
           <h1 class="service-hero__title">Run <span class="gold">Asset Management</span> S.&agrave;.r.l</h1>
-          <p class="service-hero__sub">The Luxembourg AIFM of the Run Capital Partners Group. CSSF-regulated, managing vehicles for private clients, family offices, and institutions across Europe.</p>
+          <p class="service-hero__sub">CSSF-regulated, managing vehicles for private clients, family offices, and institutions across Europe.</p>
+          <div class="service-hero__actions">
+            <a href="index.html#contact" class="btn btn--primary">Get in Touch</a>
+            <a href="index.html" class="btn btn--outline">Back to main page</a>
+          </div>
         </div>
         <div class="hero-illustration" aria-hidden="true">
           <svg viewBox="0 0 260 320" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
@@ -222,12 +232,10 @@
       <div class="split">
         <div class="split__left">
           <p class="section__eyebrow">Overview</p>
-          <h2 class="section__title">Luxembourg AIFM,<br>at the heart of European funds.</h2>
-          <p class="section__intro">Run Asset Management S.&agrave;.r.l operates from Luxembourg, providing the regulated management layer for the group's alternative strategies.</p>
+          <h2 class="section__title"><span style="white-space: nowrap;">Luxembourg AIFM,</span><br>at the <span style="color: var(--gold, #c9a84c);">heart</span> of European <span style="color: var(--gold, #c9a84c);">funds</span>.</h2>
         </div>
         <div class="split__right">
           <p class="text-lg">Authorised by the Commission de Surveillance du Secteur Financier (CSSF), Run Asset Management structures and manages alternative investment funds, securitisation vehicles, and holding arrangements for the Group.</p>
-          <p>Luxembourg regulatory rigour meets the group's investment philosophy: patient capital, privileged access, long-term alignment. Every vehicle is built to institutional standards.</p>
           <div class="service-stats">
             <div class="service-stats__item">
               <span class="service-stats__num">AIFM</span>
@@ -250,60 +258,21 @@
   <section class="section section--dark">
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light">Capabilities</p>
-      <h2 class="section__title section__title--light">What Run Asset Management does.</h2>
-      <p class="section__intro">Four capabilities within a CSSF-regulated Luxembourg framework.</p>
+      <h2 class="section__title section__title--light">What <span style="color: var(--gold, #c9a84c);">Run Asset Management</span> does.</h2>
 
       <div class="capability-grid">
-        <div class="capability-card">
-          <div class="cap-icon" aria-hidden="true">
-            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="22,6 38,14 22,22 6,14"/>
-              <polygon points="22,16 38,24 22,32 6,24"/>
-              <polygon points="22,26 38,34 22,42 6,34"/>
-            </svg>
-          </div>
+        <a class="capability-card" href="asset-management.html" style="display:block;text-decoration:none;color:inherit;">
           <h3 class="capability-card__title">Securitization</h3>
-          <p>Structuring and administration under the Luxembourg Securitisation Law. Bespoke instruments that turn illiquid exposures into tradable form for institutional investors.</p>
-        </div>
-        <div class="capability-card">
-          <div class="cap-icon" aria-hidden="true">
-            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="22,6 38,36 6,36"/>
-              <line x1="22" y1="6" x2="22" y2="36" opacity="0.5"/>
-              <line x1="14" y1="26" x2="30" y2="26" opacity="0.5"/>
-              <line x1="18" y1="16" x2="26" y2="16" opacity="0.5"/>
-            </svg>
-          </div>
+          <p>Structuring and administration under the Luxembourg Securitisation Law. Bespoke instruments that turn illiquid exposures into tradable form for institutional investors.</p>        </a>
+        <a class="capability-card" href="asset-management.html" style="display:block;text-decoration:none;color:inherit;">
           <h3 class="capability-card__title">Alternative Investment Funds (AIF)</h3>
-          <p>Authorised AIF management across private equity, private credit, and multi-strategy mandates. Full AIFM services: risk, portfolio management, valuation, and reporting.</p>
-        </div>
-        <div class="capability-card">
-          <div class="cap-icon" aria-hidden="true">
-            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <polygon points="22,4 38,18 22,40 6,18"/>
-              <line x1="6" y1="18" x2="38" y2="18" opacity="0.6"/>
-              <line x1="22" y1="4" x2="22" y2="18" opacity="0.5"/>
-              <line x1="14" y1="11" x2="14" y2="18" opacity="0.5"/>
-              <line x1="30" y1="11" x2="30" y2="18" opacity="0.5"/>
-            </svg>
-          </div>
+          <p>Authorised AIF management across private equity, private credit, and multi-strategy mandates. Full AIFM services: risk, portfolio management, valuation, and reporting.</p>        </a>
+        <a class="capability-card" href="asset-management.html" style="display:block;text-decoration:none;color:inherit;">
           <h3 class="capability-card__title">Securitization Vehicles (SPV)</h3>
-          <p>Setup and administration of Luxembourg SPVs for single-asset, single-strategy, or compartmentalised exposures. Ring-fenced structures for club deals and co-investments.</p>
-        </div>
-        <div class="capability-card">
-          <div class="cap-icon" aria-hidden="true">
-            <svg viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M6 24 L6 16 L12 20 L16 12 L22 18 L28 12 L32 20 L38 16 L38 24 Z"/>
-              <line x1="6" y1="24" x2="38" y2="24"/>
-              <rect x="6" y="24" width="32" height="10"/>
-              <circle cx="12" cy="14" r="1.5" fill="currentColor"/>
-              <circle cx="22" cy="10" r="1.5" fill="currentColor"/>
-              <circle cx="32" cy="14" r="1.5" fill="currentColor"/>
-            </svg>
-          </div>
+          <p>Setup and administration of Luxembourg SPVs for single-asset, single-strategy, or compartmentalised exposures. Ring-fenced structures for club deals and co-investments.</p>        </a>
+        <a class="capability-card" href="asset-management.html" style="display:block;text-decoration:none;color:inherit;">
           <h3 class="capability-card__title">Holding Arrangements</h3>
-          <p>Holding structures for family offices, entrepreneurs, and institutional groups. Tax-aware, treaty-efficient arrangements for businesses, financial assets, and real estate.</p>
-        </div>
+          <p>Holding structures for family offices, entrepreneurs, and institutional groups. Tax-aware, treaty-efficient arrangements for businesses and financial assets.</p>        </a>
       </div>
     </div>
   </section>
@@ -314,7 +283,7 @@
       <div class="split">
         <div class="split__left">
           <p class="section__eyebrow section__eyebrow--light">Why Luxembourg</p>
-          <h2 class="section__title section__title--light">The #1 EU hub for funds.</h2>
+          <h2 class="section__title section__title--light">The <span style="color: var(--gold, #c9a84c);">#1 EU</span> hub for <span style="color: var(--gold, #c9a84c);">funds</span>.</h2>
           <p class="section__intro">Why clients trust us to structure vehicles here.</p>
         </div>
         <div class="split__right">
@@ -341,13 +310,13 @@
     </div>
   </section>
 
-  <section class="section section--cream" id="team">
-    <div class="container">
-      <p class="section__eyebrow">Luxembourg Team</p>
-      <h2 class="section__title">The Run Asset Management team</h2>
-      <p class="section__intro">Management, compliance, and operations at Run Asset Management S.&agrave;.r.l.</p>
-
-      <div class="team-grid">
+  <section id="team" style="background: var(--cream, #f7f3ea); padding: 100px 0;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px;">
+      <div style="text-align: center; margin-bottom: 56px;">
+        <p style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-warm, #c9a84c); font-weight: 600; margin: 0 0 16px;">&mdash; Run Asset Management</p>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.06; letter-spacing: -0.018em; margin: 0; color: var(--ink, #0a0a0a);">The people <em style="font-style: italic; color: var(--gold, #c9a84c);">behind it.</em></h2>
+      </div>
+      <div class="team-grid" style="grid-template-columns: repeat(3, minmax(0, 280px)); justify-content: center; max-width: 900px; margin: 0 auto;">
         <div class="team-card">
           <a href="ceo.html">
             <div class="team-card__photo"><img src="luca-padovan.jpg" alt="Luca Padovan" loading="lazy"></div>
@@ -357,9 +326,9 @@
         </div>
         <div class="team-card">
           <a href="giordano.html">
-            <div class="team-card__photo"><img src="giordano-tomasini.jpg" alt="Giordano Tomasini" loading="lazy"></div>
+            <div class="team-card__photo"><img src="giordano-tomasini.jpg?v=2" alt="Giordano Tomasini" loading="lazy"></div>
             <h3 class="team-card__name">Giordano Tomasini</h3>
-            <p class="team-card__role">General Counsel | Run Asset Management</p>
+            <p class="team-card__role">General Counsel</p>
           </a>
         </div>
         <div class="team-card">
@@ -373,35 +342,33 @@
           <a href="enrico-de-angelis.html">
             <div class="team-card__photo"><img src="enrico-de-angelis.jpg" alt="Enrico De Angelis" loading="lazy"></div>
             <h3 class="team-card__name">Enrico De Angelis</h3>
-            <p class="team-card__role">Business Development</p>
+            <p class="team-card__role">Board Member &amp; Business Dev</p>
           </a>
         </div>
         <div class="team-card">
           <a href="giovanni-campodallorto.html">
             <div class="team-card__photo"><img src="giovanni-campodallorto.jpg" alt="Giovanni Campodall'Orto" loading="lazy"></div>
             <h3 class="team-card__name">Giovanni Campodall'Orto</h3>
-            <p class="team-card__role">Head of Operations | Run Asset Management</p>
+            <p class="team-card__role">Operations</p>
+          </a>
+        </div>
+        <div class="team-card">
+          <a href="alice-pozzobon.html">
+            <div class="team-card__photo"><img src="alice-pozzobon.jpg" alt="Alice Pozzobon" loading="lazy"></div>
+            <h3 class="team-card__name">Alice Pozzobon</h3>
+            <p class="team-card__role">Operations Manager</p>
           </a>
         </div>
       </div>
     </div>
   </section>
 
-  <div class="section-divider" aria-hidden="true">
-    <span></span>
-    <svg viewBox="0 0 20 20" width="20" height="20" fill="currentColor">
-      <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
-    </svg>
-    <span></span>
-  </div>
-
-  <section class="section section--light">
+  <section class="section section--dark-alt">
     <div class="container">
-      <p class="section__eyebrow" style="text-align: center;">Regulatory Status</p>
-      <h2 class="section__title" style="text-align: center;">CSSF registered.</h2>
-      <p class="section__intro" style="text-align: center;">Run Asset Management S.&agrave;.r.l operates under CSSF oversight.</p>
+      <p class="section__eyebrow section__eyebrow--light" style="text-align: center;">Regulatory Status</p>
+      <h2 class="section__title section__title--light" style="text-align: center;">CSSF registered.</h2>
 
-      <div class="regulatory-card">
+      <div class="regulatory-card regulatory-card--dark">
         <div class="regulatory-card__ref">A00003107</div>
         <div class="regulatory-card__label">CSSF Registration Number</div>
         <p class="regulatory-card__body">Run Asset Management S.&agrave;.r.l is part of Run Capital Partners Group. An Alternative Investment Fund Manager registered with the CSSF (Luxembourg Commission for the Supervision of the Financial Sector), registration number A00003107, under the Luxembourg Law of 12 July 2013.</p>
@@ -411,10 +378,10 @@
 
   <section class="section section--dark" id="contact-us">
     <div class="container service-cta">
-      <h2 class="service-cta__title">Contact Us</h2>
-      <p class="service-cta__sub">For alternative investment funds, securitisation vehicles, or holding arrangements, contact our Luxembourg office directly.</p>
+      <h2 class="service-cta__title">Have <em>questions</em>?</h2>
       <div class="service-cta__actions">
-        <a href="mailto:info@runcapital.partners?subject=Inquiry%20-%20Run%20Asset%20Management%20(Luxembourg)&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%27d%20like%20to%20speak%20with%20the%20Luxembourg%20team%20about%20Run%20Asset%20Management.%0D%0A%0D%0AKind%20regards%2C" class="btn btn--primary">Contact the Luxembourg Team</a>
+        <a href="index.html#contact" class="service-cta__btn">Contact Us &rarr;</a>
+        <a href="index.html#services" class="service-cta__back">View All Services</a>
       </div>
     </div>
   </section>
@@ -425,9 +392,9 @@
         <div class="footer__brand">
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
             <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
-            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners</span>
           </div>
-          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with. 3DOTS Capital Advisory operates as an independent spinoff.</p>
+          <p class="footer__legal">Run Capital Partners is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with. 3DOTS Capital Advisory operates as an independent spinoff.</p>
         </div>
         <div class="footer__col">
           <h4>Services</h4>
@@ -459,7 +426,7 @@
           </ul>
         </div>
       </div>
-      <div class="footer__bottom"><p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p></div>
+      <div class="footer__bottom"><p>&copy; 2025 Run Capital Partners. All rights reserved.</p></div>
     </div>
   </footer>
 

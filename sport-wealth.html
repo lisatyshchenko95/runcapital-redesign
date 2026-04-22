@@ -4,14 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sport &amp; Wealth | Run Capital Partners</title>
-  <meta name="description" content="Wealth management and alternative-investment structures for professional athletes, sports-related high-net-worth clients, and institutional mandates with a sports footprint.">
+  <meta name="description" content="Wealth management and alternative-investment structures for professional athletes and sports-related high-net-worth clients.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css?v=20260422b">
   <style>
-    .service-hero { min-height: 88vh; background: #0a0a0a; }
+    .service-hero {
+      min-height: 88vh;
+      background: #0a0a0a;
+      align-items: flex-end;
+    }
     .service-hero__video {
       position: absolute;
       inset: 0;
@@ -22,12 +26,71 @@
     }
     .service-hero__bg {
       background:
-        linear-gradient(180deg, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.35) 40%, rgba(8,8,8,0.85) 100%),
-        radial-gradient(ellipse 70% 50% at 80% 30%, rgba(201,168,76,0.12) 0%, transparent 60%);
+        linear-gradient(180deg, rgba(10,10,10,0.45) 0%, rgba(10,10,10,0.25) 40%, rgba(10,10,10,0.75) 85%, rgba(10,10,10,0.95) 100%),
+        radial-gradient(ellipse at center, transparent 0%, rgba(10,10,10,0.4) 85%);
       z-index: 1;
     }
-    .service-hero__content { z-index: 2; }
+    .service-hero__content {
+      z-index: 2;
+      max-width: 1280px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 40px 110px;
+      text-align: left;
+    }
+    .service-hero .breadcrumb { display: none; }
+    .service-hero__layout { display: block; }
+    .service-hero__text { max-width: 880px; }
     .service-hero__illustration { display: none; }
+
+    .service-hero__eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 18px;
+      font-family: var(--sans);
+      font-size: 11px;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      font-weight: 600;
+      color: var(--gold-light);
+      margin-bottom: 32px;
+    }
+    .service-hero__eyebrow .sep {
+      width: 48px;
+      height: 1px;
+      background: rgba(224,200,116,0.45);
+    }
+    .service-hero__eyebrow .meta {
+      color: rgba(224,200,116,0.72);
+      letter-spacing: 0.28em;
+      font-weight: 500;
+    }
+
+    .service-hero__title {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(56px, 8vw, 120px);
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 0 0 28px;
+    }
+    .service-hero__title em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+
+    .service-hero__sub {
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(18px, 1.6vw, 22px);
+      line-height: 1.55;
+      color: rgba(247,243,234,0.78);
+      max-width: 640px;
+      margin: 0 0 40px;
+    }
+
+    .service-hero__actions { gap: 14px; }
 
     /* ---- TEAM (circular portraits) ---- */
     .sw-team {
@@ -74,10 +137,13 @@
     }
     .sw-team__grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 56px;
-      max-width: 640px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 48px;
+      max-width: 860px;
       margin: 0 auto;
+    }
+    @media (max-width: 720px) {
+      .sw-team__grid { grid-template-columns: 1fr; max-width: 340px; gap: 40px; }
     }
     .sw-member {
       text-align: center;
@@ -175,7 +241,7 @@
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
         <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img">
-        <span class="nav__logo-text">Run Capital Partners LTD</span>
+        <span class="nav__logo-text">Run Capital Partners</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -204,22 +270,15 @@
     </video>
     <div class="service-hero__bg"></div>
     <div class="service-hero__content">
-      <nav class="breadcrumb" aria-label="Breadcrumb">
-        <a href="index.html">Home</a>
-        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
-        <a href="index.html#services">Services</a>
-        <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
-        <span class="breadcrumb__current">Sport &amp; Wealth</span>
-      </nav>
       <div class="service-hero__layout">
         <div class="service-hero__text">
-          <p class="service-hero__eyebrow">Service 03 &middot; Led by Massimo Bocci</p>
-          <h1 class="service-hero__title">Sport &amp; Wealth</h1>
-          <p class="service-hero__sub">Bespoke wealth management and alternative-investment structures for professional athletes, sports-related high-net-worth clients, and institutional mandates with a sports footprint.</p>
-          <div class="service-hero__actions">
-            <a href="mailto:m.bocci@runcapital.partners?cc=info@runcapital.partners&amp;subject=Inquiry%20-%20Sport%20%26%20Wealth&amp;body=Dear%20Massimo%2C%0D%0A%0D%0AI%27d%20like%20to%20learn%20more%20about%20your%20Sport%20%26%20Wealth%20offering.%0D%0A%0D%0AKind%20regards%2C" class="btn btn--primary">Contact Us</a>
-            <a href="#process" class="btn btn--outline">How It Works</a>
-          </div>
+          <p class="service-hero__eyebrow">
+            <span>Service 07</span>
+            <span class="sep" aria-hidden="true"></span>
+            <span class="meta">Athletes &middot; Federations &middot; Sport Economy</span>
+          </p>
+          <h1 class="service-hero__title">Sport &amp; <em>Wealth.</em></h1>
+          <p class="service-hero__sub">Bespoke wealth management and alternative-investment structures for professional athletes and sports-related high-net-worth clients.</p>
         </div>
         <div class="service-hero__illustration" aria-hidden="true">
           <!-- Laurel wreath with central shield -->
@@ -256,26 +315,15 @@
     </div>
   </header>
 
-  <section class="section section--light">
+  <section class="section section--light" style="padding-bottom: 60px;">
     <div class="container">
       <div class="split">
         <div class="split__left">
           <p class="section__eyebrow">Overview</p>
-          <h2 class="section__title">A career-cycle approach<br>to wealth in sport.</h2>
+          <h2 class="section__title">A career-cycle approach<br>to <em style="font-style: italic; color: var(--gold, #c9a84c);">wealth</em> in <em style="font-style: italic; color: var(--gold, #c9a84c);">sport</em>.</h2>
         </div>
         <div class="split__right">
-          <p>Our Sport &amp; Wealth practice, led by <a href="massimo-bocci.html" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.35);">Massimo Bocci</a>, designs financial strategies for the full career arc &mdash; from first major contract through retirement transition. We also partner with institutional investors whose mandates touch the sport economy, structuring vehicles that serve both sides of the market.</p>
-          <a href="massimo-bocci.html" style="display: block; text-decoration: none; color: inherit; margin-top: 32px; padding: 24px; background: rgba(201,168,76,0.06); border-left: 2px solid var(--gold); border-radius: 4px; transition: background 0.25s ease;" onmouseover="this.style.background='rgba(201,168,76,0.12)'" onmouseout="this.style.background='rgba(201,168,76,0.06)'">
-            <div style="display: flex; align-items: center; gap: 16px; margin-bottom: 12px;">
-              <img src="massimo-bocci.jpg" alt="Massimo Bocci" style="width: 56px; height: 56px; border-radius: 50%; object-fit: cover;">
-              <div>
-                <p style="margin: 0; font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--ink);">Massimo Bocci</p>
-                <p style="margin: 2px 0 0; font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold);">Institutional &middot; Sport &amp; Wealth</p>
-              </div>
-            </div>
-            <p style="margin: 0 0 14px; font-size: 14px; line-height: 1.6; color: rgba(10,10,10,0.7);">Structures wealth-management and alternative-investment solutions for institutional investors and high-net-worth clients, with a focus on sports professionals and sport-economy mandates.</p>
-            <span style="display: inline-flex; align-items: center; gap: 6px; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 600; color: var(--gold);">View profile <span aria-hidden="true">&rarr;</span></span>
-          </a>
+          <p>Our Sport &amp; Wealth practice, co-led by <a href="massimo-bocci.html" style="color: var(--gold); text-decoration: none; border-bottom: 1px solid rgba(201,168,76,0.35);">Massimo Bocci</a> and <span style="color: var(--gold); border-bottom: 1px solid rgba(201,168,76,0.35);">Denis Rondanini</span>, designs financial strategies for the full career arc &mdash; from first major contract through retirement transition. We also partner with institutional investors whose mandates touch the sport economy, structuring vehicles that serve both sides of the market.</p>
           <div class="service-stats">
             <div class="service-stats__item">
               <span class="service-stats__num">Career-Cycle</span>
@@ -293,7 +341,7 @@
         </div>
       </div>
 
-      <div class="section-divider" aria-hidden="true">
+      <div class="section-divider" aria-hidden="true" style="margin-top: 56px;">
         <span></span>
         <svg viewBox="0 0 20 20" width="16" height="16" fill="currentColor">
           <path d="M 10 2 L 12 8 L 18 10 L 12 12 L 10 18 L 8 12 L 2 10 L 8 8 Z"/>
@@ -302,6 +350,110 @@
       </div>
     </div>
   </section>
+
+  <!-- CINEMATIC BAND -->
+  <section class="sw-band">
+    <div class="sw-band__grid">
+      <figure class="sw-band__pane">
+        <img src="images/sport/tennis-cliff.jpg" alt="Cliffside tennis court above the sea" loading="lazy">
+      </figure>
+      <figure class="sw-band__pane sw-band__pane--right">
+        <img src="images/sport/forest-pitch.jpg" alt="Football pitch carved into the forest" loading="lazy">
+      </figure>
+    </div>
+    <div class="sw-band__veil"></div>
+    <div class="sw-band__content">
+      <h2 class="sw-band__title">The long <em>game.</em></h2>
+      <p class="sw-band__sub">Great sporting lives are built like great estates &mdash; in generations, not seasons.</p>
+    </div>
+  </section>
+  <style>
+    .sw-band {
+      position: relative;
+      width: 100%;
+      min-height: 82vh;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0908;
+    }
+    .sw-band__grid {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+    }
+    .sw-band__pane {
+      position: relative;
+      margin: 0;
+      overflow: hidden;
+    }
+    .sw-band__pane img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      display: block;
+    }
+    .sw-band__pane--right img {
+      object-position: center 40%;
+    }
+    .sw-band__veil {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse at center, rgba(10,9,8,0.45) 0%, rgba(10,9,8,0.72) 70%, rgba(10,9,8,0.82) 100%),
+        linear-gradient(180deg, rgba(10,9,8,0.18) 0%, rgba(10,9,8,0.35) 100%);
+      z-index: 1;
+    }
+    .sw-band__content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: 40px 24px;
+      color: #f7f3ea;
+      max-width: 760px;
+    }
+    .sw-band__eyebrow {
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--gold-light, #e0c874);
+      font-weight: 600;
+      margin: 0 0 20px;
+    }
+    .sw-band__title {
+      font-family: var(--serif, 'Cormorant Garamond', Georgia, serif);
+      font-weight: 400;
+      font-size: clamp(48px, 7vw, 104px);
+      line-height: 1.0;
+      letter-spacing: -0.012em;
+      margin: 0 0 24px;
+      color: #fff;
+      text-shadow: 0 2px 22px rgba(0,0,0,0.45);
+      white-space: nowrap;
+    }
+    .sw-band__title em {
+      font-style: italic;
+      color: var(--gold-light, #e0c874);
+    }
+    .sw-band__sub {
+      font-family: var(--serif, 'Cormorant Garamond', Georgia, serif);
+      font-style: italic;
+      font-size: clamp(19px, 1.7vw, 24px);
+      line-height: 1.5;
+      color: rgba(247,243,234,0.92);
+      margin: 0 auto;
+      max-width: 580px;
+    }
+    @media (max-width: 768px) {
+      .sw-band { min-height: 86vh; }
+      .sw-band__grid { grid-template-columns: 1fr; grid-template-rows: 1fr 1fr; }
+    }
+  </style>
 
   <section class="section section--dark" id="process">
     <div class="container">
@@ -326,7 +478,7 @@
           <span class="process-step__num">03</span>
           <span class="process-step__badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12 L10 17 L19 7"/></svg></span>
           <h3 class="process-step__title">Implementation</h3>
-          <p>We coordinate the rollout across legal, banking, and investment providers. You work with one point of contact &mdash; Massimo &mdash; and one team that knows the full picture.</p>
+          <p>We coordinate the rollout across legal, banking, and investment providers. You work with a dedicated team that knows the full picture &mdash; end to end.</p>
         </div>
         <div class="process-step">
           <span class="process-step__num">04</span>
@@ -338,10 +490,10 @@
     </div>
   </section>
 
-  <section class="section section--cream">
+  <section class="section section--cream" style="padding-bottom: 60px;">
     <div class="container">
       <p class="section__eyebrow">What We Deliver</p>
-      <h2 class="section__title">Specialized for a specialized client base.</h2>
+      <h2 class="section__title">Specialized for a <em style="font-style: italic; color: var(--gold, #c9a84c);">specialized</em> client base.</h2>
       <div class="capability-grid">
         <div class="capability-card">
           <h3 class="capability-card__title">Athlete Wealth Planning</h3>
@@ -391,26 +543,32 @@
     </div>
   </section>
 
-  <section class="sw-team">
-    <div class="sw-team__inner">
-      <div class="sw-team__head">
-        <p class="sw-team__eyebrow">— The Team</p>
-        <h2 class="sw-team__h">The people <em>behind it.</em></h2>
+  <!-- TEAM -->
+  <section style="background: var(--cream, #f7f3ea); padding: 20px 0 100px;">
+    <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px;">
+      <div style="text-align: center; margin-bottom: 64px;">
+        <p style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-warm, #c9a84c); font-weight: 600; margin: 0 0 16px;">— Sport &amp; Wealth Team</p>
+        <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.06; letter-spacing: -0.018em; margin: 0; color: var(--ink, #0a0a0a);">The people <em style="font-style: italic; color: var(--gold, #c9a84c);">behind it.</em></h2>
       </div>
-      <div class="sw-team__grid">
-        <div class="sw-member">
-          <div class="sw-member__photo">
-            <img src="images/team/luca-padovan.jpg" alt="Luca Padovan">
-          </div>
-          <h3 class="sw-member__name">Luca Padovan</h3>
-          <p class="sw-member__role">CEO &amp; Founder</p>
+      <div class="team-grid" style="grid-template-columns: repeat(3, 1fr); max-width: 720px; margin: 0 auto;">
+        <div class="team-card">
+          <a href="ceo.html">
+            <div class="team-card__photo"><img src="luca-padovan.jpg" alt="Luca Padovan" loading="lazy"></div>
+            <h3 class="team-card__name">Luca Padovan</h3>
+            <p class="team-card__role">CEO &amp; Founder</p>
+          </a>
         </div>
-        <div class="sw-member">
-          <div class="sw-member__photo">
-            <span class="sw-member__initials" aria-hidden="true">MB</span>
-          </div>
-          <h3 class="sw-member__name">Massimo Bocci</h3>
-          <p class="sw-member__role">Head of Sport &amp; Wealth</p>
+        <div class="team-card team-card--no-profile">
+          <div class="team-card__photo"><img src="denis-rondanini.jpg" alt="Denis Rondanini" loading="lazy" style="transform: scale(1.2); transform-origin: center top;"></div>
+          <h3 class="team-card__name">Denis Rondanini</h3>
+          <p class="team-card__role">Sport &amp; Wealth</p>
+        </div>
+        <div class="team-card">
+          <a href="massimo-bocci.html">
+            <div class="team-card__photo"><img src="massimo-bocci.jpg" alt="Massimo Bocci" loading="lazy"></div>
+            <h3 class="team-card__name">Massimo Bocci</h3>
+            <p class="team-card__role">Sport &amp; Wealth</p>
+          </a>
         </div>
       </div>
     </div>
@@ -418,11 +576,10 @@
 
   <section class="section section--dark" id="contact-us">
     <div class="container service-cta">
-      <h2 class="service-cta__title">A career is short.<br>The right structure lasts.</h2>
-      <p class="service-cta__sub">Speak with Massimo directly about a confidential review of your situation or your institutional mandate. Every conversation is private.</p>
+      <h2 class="service-cta__title">Have <em>questions</em>?</h2>
       <div class="service-cta__actions">
-        <a href="mailto:m.bocci@runcapital.partners?cc=info@runcapital.partners&amp;subject=Inquiry%20-%20Sport%20%26%20Wealth&amp;body=Dear%20Massimo%2C%0D%0A%0D%0AI%27d%20like%20to%20learn%20more%20about%20your%20Sport%20%26%20Wealth%20offering.%0D%0A%0D%0AKind%20regards%2C" class="btn btn--primary">Contact Us</a>
-        <a href="index.html#services" class="btn btn--outline">Back to services</a>
+        <a href="mailto:info@runcapital.partners?cc=m.bocci@runcapital.partners&amp;subject=Inquiry%20-%20Sport%20%26%20Wealth&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%27d%20like%20to%20learn%20more%20about%20your%20Sport%20%26%20Wealth%20offering.%0D%0A%0D%0AKind%20regards%2C" class="service-cta__btn">Contact Us &rarr;</a>
+        <a href="index.html#services" class="service-cta__back">View All Services</a>
       </div>
     </div>
   </section>
@@ -433,22 +590,23 @@
         <div class="footer__brand">
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
             <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
-            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners</span>
           </div>
-          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
+          <p class="footer__legal">Run Capital Partners operates through group entities in the UK, Luxembourg, and Italy, each regulated in its home jurisdiction.</p>
+          <a href="mailto:info@runcapital.partners" class="footer__email">info@runcapital.partners</a>
         </div>
         <div class="footer__col">
-          <h4>Services</h4>
+          <h4 style="color: var(--gold);">Services</h4>
           <ul>
-            <li><a href="asset-management.html">Asset Management</a></li>
-            <li><a href="wealth-management.html">Wealth Management</a></li>
-            <li><a href="sport-wealth.html">Sport &amp; Wealth</a></li>
-            <li><a href="certificate-issuance.html">Certificate Issuance</a></li>
-            <li><a href="nasdaq-listings.html">Nasdaq Listings</a></li>
+            <li><a href="index.html#services">Asset Management</a></li>
+            <li><a href="index.html#services">Wealth Management</a></li>
+            <li><a href="index.html#services">Sport &amp; Wealth</a></li>
+            <li><a href="index.html#services">Certificate Issuance</a></li>
+            <li><a href="index.html#services">Nasdaq Listings</a></li>
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Company</h4>
+          <h4 style="color: var(--gold);">Company</h4>
           <ul>
             <li><a href="index.html#about">About Us</a></li>
             <li><a href="index.html#group">Group Structure</a></li>
@@ -457,17 +615,49 @@
             <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C">Contact</a></li>
           </ul>
         </div>
-        <div class="footer__col">
-          <h4>Legal</h4>
-          <ul>
-            <li><a href="privacy-policy.html">Privacy Policy</a></li>
-            <li><a href="cookie-policy.html">Cookie Policy</a></li>
-            <li><a href="terms-of-service.html">Terms of Service</a></li>
-            <li><a href="regulatory-disclosures.html">Regulatory Disclosures</a></li>
+        <div class="footer__col footer__col--offices">
+          <h4 style="color: var(--gold);">Offices</h4>
+          <ul class="footer-offices">
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city">London <span class="footer-office__tag">HQ</span></span>
+                <span class="footer-office__addr">Exhibition House, Addison Bridge Place, W14 8XP</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city">Luxembourg</span>
+                <span class="footer-office__addr">2 Rue Ste Zithe, 2763</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city">Milan</span>
+                <span class="footer-office__addr">Via Monte Napoleone 8, 20121</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city">Conegliano</span>
+                <span class="footer-office__addr">Viale Italia 203, 31015</span>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
-      <div class="footer__bottom"><p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p></div>
+      <div class="footer__bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <p>&copy; 2026 Run Capital Partners. All rights reserved.</p>
+        <div style="display: flex; gap: 24px; font-size: 12px;">
+          <a href="privacy-policy.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Privacy Policy</a>
+          <a href="cookie-policy.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Cookie Policy</a>
+          <a href="terms-of-service.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Terms of Service</a>
+          <a href="regulatory-disclosures.html" style="color: rgba(255,255,255,0.4); text-decoration: none;">Regulatory Disclosures</a>
+        </div>
+      </div>
     </div>
   </footer>
 

@@ -3,11 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fund — Run Capital Partners</title>
-  <meta name="description" content="Provider and distributor of alternative investment funds across private equity, private credit, infrastructure, and impact investing.">
+  <title>Funds Distribution — Run Capital Partners</title>
+  <meta name="description" content="Provider and distributor of alternative investment funds across private equity, private credit, venture capital, and hedge funds.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="amc-style.css">
   <style>
@@ -135,13 +135,7 @@
     }
     .fd-role__h em {
       font-style: italic;
-      background: linear-gradient(110deg, var(--gold-warm), var(--gold), var(--gold-light), var(--gold), var(--gold-warm));
-      background-size: 250% 100%;
-      background-position: 100% 0;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      animation: shimmer 7s ease-in-out 2s infinite;
+      color: var(--gold-warm);
     }
     .fd-role__pair {
       display: inline-flex;
@@ -258,8 +252,8 @@
 
     /* ---- SPECS (fact sheet) ---- */
     .fd-specs {
-      background: var(--cream);
-      color: var(--ink);
+      background: #0a0908;
+      color: #f7f3ea;
       padding: 140px 0;
     }
     .fd-specs__inner {
@@ -287,23 +281,23 @@
       line-height: 1.08;
       letter-spacing: -0.015em;
       margin: 0;
-      color: var(--ink);
+      color: #f7f3ea;
     }
-    .fd-specs__h em { font-style: italic; color: var(--gold-warm); }
+    .fd-specs__h em { font-style: italic; color: var(--gold-light); }
 
     .fd-specs__grid {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       column-gap: 72px;
       row-gap: 0;
-      border-top: 1px solid rgba(10,10,10,0.18);
+      border-top: 1px solid rgba(247,243,234,0.18);
     }
     .fd-spec {
       display: grid;
       grid-template-columns: 200px 1fr;
       gap: 24px;
       padding: 22px 0;
-      border-bottom: 1px solid rgba(10,10,10,0.14);
+      border-bottom: 1px solid rgba(247,243,234,0.14);
       align-items: baseline;
     }
     .fd-spec dt {
@@ -319,7 +313,7 @@
       font-family: var(--serif);
       font-size: 19px;
       line-height: 1.4;
-      color: var(--ink);
+      color: #f7f3ea;
       font-weight: 500;
       letter-spacing: -0.005em;
     }
@@ -371,13 +365,13 @@
       margin-left: 14px;
       padding: 20px 40px;
       background: transparent;
-      color: var(--ink);
+      color: #f7f3ea;
       font-family: var(--sans);
       font-size: 12px;
       letter-spacing: 0.28em;
       text-transform: uppercase;
       font-weight: 600;
-      border: 1px solid rgba(10,10,10,0.35);
+      border: 1px solid rgba(247,243,234,0.35);
       border-radius: 10px;
       text-decoration: none;
       transition: border-color 0.3s var(--ease), background 0.3s var(--ease);
@@ -385,7 +379,7 @@
     .fd-cta__back:hover {
       border-color: var(--gold-warm);
       background: rgba(201,168,76,0.08);
-      color: var(--ink);
+      color: #f7f3ea;
     }
 
     /* ---- Responsive ---- */
@@ -414,7 +408,7 @@
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
         <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img">
-        <span class="nav__logo-text">Run Capital Partners LTD</span>
+        <span class="nav__logo-text">Run Capital Partners</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -448,7 +442,7 @@
       <span class="sep"></span>
       <span>Alternative investments</span>
     </div>
-    <h1 class="sv-hero__title"><em>Fund.</em></h1>
+    <h1 class="sv-hero__title">Funds <em>Distribution.</em></h1>
     <p class="sv-hero__lede">Provider and distributor of alternative investment funds across multiple asset classes, strategies, and geographies.</p>
   </div>
 </header>
@@ -474,11 +468,11 @@
     <div class="fd-alt__body-inner">
       <p class="fd-alt__eyebrow">— Products</p>
       <h2 class="fd-alt__h">Alternatives</h2>
-      <p class="fd-alt__lede">We distribute best-in-class alternative funds across <em>private equity, real estate, private credit</em> and <em>infrastructure</em> — helping our clients obtain unique return profiles and achieve greater portfolio diversification.</p>
+      <p class="fd-alt__lede">We distribute best-in-class alternative funds across <em>private equity, private credit, venture capital</em> and <em>hedge funds</em> — helping our clients obtain unique return profiles and achieve greater portfolio diversification.</p>
 
       <div class="fd-alt__block">
         <h3>Multiple Asset Classes</h3>
-        <p>From traditional private equity and real estate funds to the latest innovative strategies in private credit, infrastructure, impact investing and emerging alternatives.</p>
+        <p>From traditional private equity and private credit funds to venture capital and hedge fund strategies — covering the full spectrum of alternative asset classes.</p>
       </div>
 
       <div class="fd-alt__block">
@@ -516,7 +510,7 @@
       </div>
       <div class="fd-spec">
         <dt>Jurisdictions</dt>
-        <dd>Luxembourg</dd>
+        <dd>US &middot; UK &middot; Luxembourg &middot; Ireland &middot; Cayman &middot; BVI &middot; Israel</dd>
       </div>
       <div class="fd-spec">
         <dt>Share Classes</dt>
@@ -527,6 +521,46 @@
         <dd>FCA (UK) · CSSF (Luxembourg)</dd>
       </div>
     </dl>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section style="background: var(--cream, #f7f3ea); padding: 120px 0 100px;">
+  <div style="max-width: 1280px; margin: 0 auto; padding: 0 40px;">
+    <div style="text-align: center; margin-bottom: 64px;">
+      <p style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-warm, #c9a84c); font-weight: 600; margin: 0 0 16px;">— Funds Distribution Team</p>
+      <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.06; letter-spacing: -0.018em; margin: 0; color: var(--ink, #0a0a0a);">The people <em style="font-style: italic; color: var(--gold, #c9a84c);">behind it.</em></h2>
+    </div>
+    <div class="team-grid" style="grid-template-columns: repeat(4, 1fr); max-width: 960px; margin: 0 auto;">
+      <div class="team-card">
+        <a href="ceo.html">
+          <div class="team-card__photo"><img src="luca-padovan.jpg" alt="Luca Padovan" loading="lazy"></div>
+          <h3 class="team-card__name">Luca Padovan</h3>
+          <p class="team-card__role">CEO &amp; Founder</p>
+        </a>
+      </div>
+      <div class="team-card">
+        <a href="giovanni-randazzo.html">
+          <div class="team-card__photo"><img src="giovanni-randazzo.jpg" alt="Giovanni Randazzo" loading="lazy"></div>
+          <h3 class="team-card__name">Giovanni Randazzo</h3>
+          <p class="team-card__role">VP Institutional Clients</p>
+        </a>
+      </div>
+      <div class="team-card">
+        <a href="danilo-carolini.html">
+          <div class="team-card__photo"><img src="danilo-carolini.jpg" alt="Danilo Carolini" loading="lazy"></div>
+          <h3 class="team-card__name">Danilo Carolini</h3>
+          <p class="team-card__role">Alternative Investments</p>
+        </a>
+      </div>
+      <div class="team-card">
+        <a href="davide-de-luca.html">
+          <div class="team-card__photo"><img src="davide-de-luca.jpg" alt="Davide De Luca" loading="lazy"></div>
+          <h3 class="team-card__name">Davide De Luca</h3>
+          <p class="team-card__role">Analyst</p>
+        </a>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -543,9 +577,9 @@
       <div>
         <div style="display:flex;align-items:center;gap:14px;margin-bottom:24px;">
           <img src="rcp-logo.png" alt="Run Capital Partners" style="height:48px;width:auto;">
-          <span style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;letter-spacing:0.08em;color:#c9a84c;text-transform:uppercase;">Run Capital Partners LTD</span>
+          <span style="font-family:'Cinzel',serif;font-size:14px;font-weight:600;letter-spacing:0.08em;color:#c9a84c;text-transform:uppercase;">Run Capital Partners</span>
         </div>
-        <p style="font-size:13px;line-height:1.7;color:rgba(247,243,234,0.5);max-width:340px;">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
+        <p style="font-size:13px;line-height:1.7;color:rgba(247,243,234,0.5);max-width:340px;">Run Capital Partners is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
       </div>
       <div>
         <h4 style="font-family:'Cinzel',serif;font-size:11px;letter-spacing:0.22em;text-transform:uppercase;color:#c9a84c;margin:0 0 24px;font-weight:600;">Services</h4>
@@ -553,7 +587,7 @@
           <li><a href="asset-management.html" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;transition:color 0.3s;">Asset Management</a></li>
           <li><a href="amc-securitization.html" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">AMC &amp; Securitization</a></li>
           <li><a href="structured-products.html" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Structured Products</a></li>
-          <li><a href="fund.html" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Fund</a></li>
+          <li><a href="fund.html" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Funds Distribution</a></li>
           <li><a href="direct-deals.html" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Direct Deals</a></li>
           <li><a href="wealth-advisory.html" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Wealth Advisory</a></li>
           <li><a href="sport-wealth.html" style="color:rgba(247,243,234,0.65);text-decoration:none;font-size:14px;">Sport &amp; Wealth</a></li>
@@ -582,7 +616,7 @@
       </div>
     </div>
     <div style="border-top:1px solid rgba(247,243,234,0.1);padding:28px 0;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
-      <p style="margin:0;font-size:12px;color:rgba(247,243,234,0.4);">&copy; 2026 Run Capital Partners LTD. All rights reserved.</p>
+      <p style="margin:0;font-size:12px;color:rgba(247,243,234,0.4);">&copy; 2026 Run Capital Partners. All rights reserved.</p>
       <div style="display:flex;gap:28px;">
         <a href="privacy-policy.html" style="font-size:12px;color:rgba(247,243,234,0.4);text-decoration:none;">Privacy Policy</a>
         <a href="cookie-policy.html" style="font-size:12px;color:rgba(247,243,234,0.4);text-decoration:none;">Cookie Policy</a>

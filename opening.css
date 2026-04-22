@@ -316,7 +316,8 @@
   position: relative;
   transition: background 0.4s var(--v2-ease), color 0.4s var(--v2-ease);
   cursor: pointer;
-  display: block;
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: inherit;
 }
@@ -343,6 +344,7 @@
   line-height: 1.15;
   margin: 0 0 16px;
   letter-spacing: -0.005em;
+  min-height: 60px;
 }
 .v2-service p {
   font-family: var(--v2-sans);
@@ -360,6 +362,7 @@
   text-transform: uppercase;
   color: var(--v2-gold);
   font-weight: 500;
+  margin-top: auto;
 }
 
 @media (max-width: 800px) {
@@ -435,6 +438,25 @@
 .group-diagram--dark .group-children > .group-card:hover .group-card__reg { color: #f0dc9a; }
 .group-diagram--dark .group-children > .group-card:hover {
   border-color: rgba(224,200,116,0.55);
+}
+
+.group-diagram--dark .group-children > a.group-card.group-card--external,
+.group-diagram--dark .group-children > .group-card.group-card--external {
+  background: linear-gradient(160deg, #d4b45a 0%, #a88a44 45%, #5a4820 100%) !important;
+  border: 1px solid rgba(20,20,20,0.35) !important;
+  box-shadow: 0 6px 22px rgba(0,0,0,0.35) !important;
+  color: #141414 !important;
+}
+.group-diagram--dark .group-children > .group-card.group-card--external h4 { color: #141414 !important; }
+.group-diagram--dark .group-children > .group-card.group-card--external p { color: rgba(20,20,20,0.82) !important; }
+.group-diagram--dark .group-children > .group-card.group-card--external .group-card__num { color: rgba(20,20,20,0.55) !important; }
+.group-diagram--dark .group-children > .group-card.group-card--external .group-card__meta { border-top-color: rgba(20,20,20,0.25) !important; }
+.group-diagram--dark .group-children > .group-card.group-card--external .group-card__loc { color: #141414 !important; }
+.group-diagram--dark .group-children > .group-card.group-card--external .group-card__reg { color: #141414 !important; background: rgba(20,20,20,0.1) !important; border-color: rgba(20,20,20,0.45) !important; font-style: normal !important; font-weight: 700 !important; }
+.group-diagram--dark .group-children > .group-card.group-card--external .group-card__cta { color: #141414 !important; font-weight: 700 !important; }
+.group-diagram--dark .group-children > .group-card.group-card--external:hover {
+  border-color: rgba(20,20,20,0.6) !important;
+  box-shadow: 0 0 0 1px rgba(20,20,20,0.35), 0 18px 40px rgba(0,0,0,0.4) !important;
 }
 
 /* ---- About intro (Valeur-style chapter intro on pure black) ---- */

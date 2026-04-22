@@ -327,6 +327,8 @@
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
     }
+      .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
+    .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
   </style>
 </head>
 <body>
@@ -335,7 +337,7 @@
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
-        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span>
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -368,7 +370,11 @@
         <p class="bio-intro__eyebrow">Relationship Manager</p>
         <h1 class="bio-intro__name">Marco Falsarella</h1>
         <p class="bio-intro__title">Run Capital Partners</p>
-        <p class="bio-intro__summary">Marco Falsarella is a Relationship Manager at Run Capital Partners, responsible for building and maintaining client relationships with institutional and private investors. He supports the firm's alternative-investment and financial-engineering platforms by aligning client portfolios with suitable fund and securitization structures.</p>
+        <a href="https://www.linkedin.com/in/marco-falsarella-ab7195198" target="_blank" rel="noopener" class="bio-linkedin">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn Profile
+        </a>
+        <p class="bio-intro__summary">Marco is the client-facing lead for a book of institutional and private investors, matching mandate constraints to Run Capital's fund and securitization platforms. He owns the relationship through onboarding, allocation, and ongoing monitoring &mdash; making sure what gets built actually fits what the investor needed.</p>
         <div class="bio-intro__meta">
           <div class="bio-meta-item">
             <span class="bio-meta-item__label">Based in</span>
@@ -460,9 +466,9 @@
         <div class="footer__brand">
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
             <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
-            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners</span>
           </div>
-          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
+          <p class="footer__legal">Run Capital Partners is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
         </div>
         <div class="footer__col">
           <h4>Services</h4>
@@ -495,7 +501,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p>
+        <p>&copy; 2025 Run Capital Partners. All rights reserved.</p>
       </div>
     </div>
   </footer>

@@ -71,6 +71,8 @@
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
     }
+      .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
+    .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
   </style>
 </head>
 <body>
@@ -79,7 +81,7 @@
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
-        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span>
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -112,7 +114,11 @@
         <p class="bio-intro__eyebrow">Business Development</p>
         <h1 class="bio-intro__name">Enrico De Angelis</h1>
         <p class="bio-intro__title">Run Capital Partners</p>
-        <p class="bio-intro__summary">Enrico De Angelis is a Business Development Manager at Run Capital Partners, focused on expanding the firm's institutional and private-client relationships in financial engineering and alternative-investment solutions. He brings over a decade of experience in fund distribution, asset-management sales, and client-coverage roles, primarily within Luxembourg's fund ecosystem.</p>
+        <a href="https://www.linkedin.com/in/enrico-de-angelis-173042126" target="_blank" rel="noopener" class="bio-linkedin">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn Profile
+        </a>
+        <p class="bio-intro__summary">Enrico drives Run Capital's business development across institutional and private-client channels in financial engineering and alternative investments. Over a decade in Luxembourg's fund ecosystem &mdash; fund distribution, asset-management sales, and client coverage &mdash; gives him a working map of where capital sits and what mandates actually need.</p>
         <div class="bio-intro__meta">
           <div class="bio-meta-item">
             <span class="bio-meta-item__label">Location</span>
@@ -185,7 +191,7 @@
             <div class="timeline-item timeline-item--current">
               <p class="timeline-item__date">January 2026 &mdash; Present</p>
               <h3 class="timeline-item__role">Director</h3>
-              <p class="timeline-item__company">I.A.R. Art Resources Ltd &mdash; "The Dali Universe"</p>
+              <p class="timeline-item__company">I.A.R. Art Resources &mdash; "The Dali Universe"</p>
               <p class="timeline-item__desc">Board member of a Luxembourg-registered art and cultural-asset company.</p>
             </div>
             <div class="timeline-item">
@@ -203,7 +209,7 @@
             <div class="timeline-item">
               <p class="timeline-item__date">July 2021 &mdash; September 2022</p>
               <h3 class="timeline-item__role">Vice President, Business Development</h3>
-              <p class="timeline-item__company">Apex Group Ltd</p>
+              <p class="timeline-item__company">Apex Group</p>
               <p class="timeline-item__desc">Represented Apex's fund-services arm in London, selling administration, custody, and compliance-related services to fund managers.</p>
             </div>
             <div class="timeline-item">
@@ -245,9 +251,9 @@
         <div class="footer__brand">
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
             <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
-            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners</span>
           </div>
-          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
+          <p class="footer__legal">Run Capital Partners is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
         </div>
         <div class="footer__col">
           <h4>Services</h4>
@@ -280,7 +286,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p>
+        <p>&copy; 2025 Run Capital Partners. All rights reserved.</p>
       </div>
     </div>
   </footer>

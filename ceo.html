@@ -9,7 +9,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=20260422b">
+  <link rel="stylesheet" href="opening.css?v=20260422b">
   <style>
     /* CEO Bio Page Styles */
     .bio-hero {
@@ -592,7 +593,7 @@
   <nav class="nav nav--scrolled" id="nav">
     <div class="nav__inner">
       <a href="index.html" class="nav__logo">
-        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners LTD</span>
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners</span>
       </a>
       <button class="nav__toggle" id="navToggle" aria-label="Menu">
         <span></span><span></span><span></span>
@@ -688,37 +689,66 @@
   </section>
 
   <!-- VENTURES -->
-  <section class="section section--dark-alt" id="ventures">
+  <section class="section section--dark" id="ventures">
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light">The Group</p>
-      <h2 class="section__title section__title--light">Built from scratch. Three <span class="gold">regulated</span> entities.</h2>
-      <p class="section__intro">Since 2018, Luca has built an international group spanning alternative asset management, structured products advisory, and corporate insurance services. Each entity is regulated in its jurisdiction and serves a distinct market need.</p>
+      <h2 class="section__title section__title--light">Built from scratch. Four <span class="gold">regulated</span> entities.</h2>
 
-      <div class="ventures-grid">
-        <div class="venture-card">
-          <h3 class="venture-card__name">RCP Group</h3>
-          <p class="venture-card__role">CEO &amp; Founder</p>
-          <p class="venture-card__desc">The holding company. London-based, coordinating strategy across the group's regulated entities in the UK, Luxembourg, and Italy.</p>
+      <div class="group-diagram group-diagram--dark">
+        <div class="group-parent">
+          <div class="group-card group-card--parent">
+            <div class="group-card__lockup">
+              <img src="rcp-logo.png" alt="" class="group-card__crest-img">
+              <div class="group-card__lockup-text">
+                <h3>Run Capital Partners</h3>
+                <p class="group-card__tag">Group Holding</p>
+              </div>
+            </div>
+            <span class="group-card__loc group-card__loc--parent">London &middot; United Kingdom</span>
+          </div>
         </div>
-        <div class="venture-card">
-          <h3 class="venture-card__name">RCP Global Markets UK</h3>
-          <p class="venture-card__role">Founder</p>
-          <p class="venture-card__desc">London-based advisory, distribution, and sport &amp; wealth platform. FCA Appointed Representative (Ref. 1043763). Partner on alternatives and structured products.</p>
-        </div>
-        <div class="venture-card">
-          <h3 class="venture-card__name">Run Asset Management S.&agrave;.r.l</h3>
-          <p class="venture-card__role">Founder</p>
-          <p class="venture-card__desc">Luxembourg AIFM registered with CSSF (A00003107). Alternative investment funds, securitization vehicles, SPVs, and holding structures under the 2013 AIFM Law.</p>
-        </div>
-        <div class="venture-card">
-          <h3 class="venture-card__name">RCP S.r.l</h3>
-          <p class="venture-card__role">Group Entity</p>
-          <p class="venture-card__desc">Italian corporate consultancy and regulated insurance services. Registered with IVASS (Section E, E000657518).</p>
-        </div>
-        <div class="venture-card">
-          <h3 class="venture-card__name">3DOTS Capital Advisory</h3>
-          <p class="venture-card__role">Co-Founder &middot; Spinoff</p>
-          <p class="venture-card__desc">Independent Nasdaq listing advisory spinoff guiding Southern European companies into US capital markets. Visit <a href="https://3dots.com" target="_blank" rel="noopener" style="color: var(--gold);">3dots.com</a>.</p>
+        <div class="group-line"></div>
+        <div class="group-children">
+          <a class="group-card" href="rcp-global-markets.html">
+            <span class="group-card__num">01</span>
+            <h4>RCP Global Markets</h4>
+            <p>Advisory, distribution, sport &amp; wealth, and structured products partnerships.</p>
+            <div class="group-card__meta">
+              <span class="group-card__loc">United Kingdom</span>
+              <span class="group-card__reg">FCA Ref. 1043763</span>
+            </div>
+            <span class="group-card__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="group-card" href="run-am.html">
+            <span class="group-card__num">02</span>
+            <h4>Run Asset Management</h4>
+            <p>Alternative investment funds, securitization vehicles, SPVs, holding structures.</p>
+            <div class="group-card__meta">
+              <span class="group-card__loc">Luxembourg</span>
+              <span class="group-card__reg">CSSF A00003107</span>
+            </div>
+            <span class="group-card__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="group-card" href="rcp-srl.html">
+            <span class="group-card__num">03</span>
+            <h4>Run Capital Partners</h4>
+            <p>Corporate consultancy and regulated insurance services.</p>
+            <div class="group-card__meta">
+              <span class="group-card__loc">Italy</span>
+              <span class="group-card__reg">IVASS E000657518</span>
+            </div>
+            <span class="group-card__cta">Learn more <span aria-hidden="true">&rarr;</span></span>
+          </a>
+          <a class="group-card group-card--external" href="nasdaq-listings.html" style="background: linear-gradient(160deg, #d4b45a 0%, #a88a44 45%, #5a4820 100%); border: 1px solid rgba(20,20,20,0.35); box-shadow: 0 6px 22px rgba(0,0,0,0.35); color: #141414;">
+            <span class="group-card__num" style="color: rgba(20,20,20,0.55);">04</span>
+            <h4 style="color: #141414;">3DOTS Capital Advisory</h4>
+            <p style="color: rgba(20,20,20,0.82);">Nasdaq listing advisory for Southern European companies.</p>
+            <div class="group-card__meta" style="border-top-color: rgba(20,20,20,0.25);">
+              <span class="group-card__loc" style="color: #141414;">New York</span>
+              <span class="group-card__reg" style="align-self: flex-start; display: inline-block; padding: 4px 14px; border-radius: 999px; background: rgba(20,20,20,0.1); border: 1px solid rgba(20,20,20,0.45); color: #141414; font-style: normal; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; font-size: 10px;">Spin off</span>
+            </div>
+            <span class="group-card__cta" style="color: #141414; font-weight: 700;">Learn more <span aria-hidden="true">&rarr;</span></span>
+          </a>
         </div>
       </div>
     </div>
@@ -730,7 +760,7 @@
       <div class="split">
         <div class="split__left">
           <p class="section__eyebrow">Career</p>
-          <h2 class="section__title">From trading floors to building institutions.</h2>
+          <h2 class="section__title">From trading floors to <span class="gold">building institutions.</span></h2>
           <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">Luca's career spans professional trading, financial advisory, and institutional building. He combines hands-on market experience with entrepreneurial vision to create financial infrastructure that serves clients, not intermediaries.</p>
         </div>
         <div class="split__right">
@@ -745,7 +775,7 @@
               <p class="timeline-item__date">2018 - Present</p>
               <h3 class="timeline-item__role">CEO &amp; Founder</h3>
               <p class="timeline-item__company">Run Capital Partners</p>
-              <p class="timeline-item__desc">Founded the group from scratch. Grew to 20+ professionals across 4 offices in London, Luxembourg, Milan, and Conegliano. Built regulated entities under FCA, CSSF, and IVASS oversight. Signed partnership with Nasdaq (2023).</p>
+              <p class="timeline-item__desc">Grew to 20+ professionals across 4 offices in London, Luxembourg, Milan, and Conegliano. Built regulated entities under FCA, CSSF, and IVASS oversight.</p>
             </div>
             <div class="timeline-item timeline-item--current">
               <p class="timeline-item__date">2020+</p>
@@ -759,13 +789,50 @@
     </div>
   </section>
 
+  <!-- YPO -->
+  <section class="section section--cream" id="ypo">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Leadership Community</p>
+          <h2 class="section__title">Proud <span class="gold">member</span> of <img src="ypo-logo.png" alt="YPO - Young Presidents' Organization" style="height: 0.95em; vertical-align: -0.08em; display: inline-block;"></h2>
+          <figure style="margin: 32px 0 0; max-width: 420px;">
+            <img src="luca-ypo.jpg" alt="Luca Padovan at YPO event" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+          </figure>
+        </div>
+        <div class="split__right" style="align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end;">
+          <p class="text-lg">Luca is an active member of <a href="https://www.ypo.org/membership-requirements/" target="_blank" rel="noopener" style="color: inherit; font-weight: 700; text-decoration: underline; text-decoration-color: rgba(201,168,76,0.5); text-underline-offset: 3px;">YPO (Young Presidents' Organization)</a>. Membership is by invitation only and requires leading a qualifying company before the age of 45 &mdash; a high bar that makes YPO one of the most selective peer communities in the world. Through YPO, Luca now has direct access to a global network of 35,000+ chief executives across 140+ countries: a trusted circle he draws on to inform decisions and open doors for Run Capital Partners and its clients.</p>
+          <div style="margin-top: 32px; padding-top: 24px; display: flex; gap: 32px; border-top: 1px solid rgba(201,168,76,0.12);">
+            <div>
+              <span style="display: block; font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--gold-dark);">35,000+</span>
+              <span style="font-size: 12px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.05em;">Members Worldwide</span>
+            </div>
+            <div>
+              <span style="display: block; font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--gold-dark);">140+</span>
+              <span style="font-size: 12px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.05em;">Countries</span>
+            </div>
+            <div>
+              <span style="display: block; font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--gold-dark);">$9T+</span>
+              <span style="font-size: 12px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.05em;">Combined Revenue</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- CREDENTIALS -->
-  <section class="section section--cream" id="credentials">
+  <section class="section section--light" id="credentials">
     <div class="container">
       <p class="section__eyebrow">Credentials &amp; Affiliations</p>
       <h2 class="section__title">Education, memberships, and <span class="gold">recognition.</span></h2>
 
       <div class="cred-grid">
+        <div class="cred-card">
+          <p class="cred-card__year">2025 &mdash; on going</p>
+          <h3 class="cred-card__title">IMD &mdash; High Performance Leadership</h3>
+          <p class="cred-card__detail">Participant in IMD Lausanne's HPL program, an elite multi-year executive education journey in leadership development.</p>
+        </div>
         <div class="cred-card">
           <p class="cred-card__year">2024</p>
           <h3 class="cred-card__title">Queen Elizabeth II Commonwealth Trust</h3>
@@ -787,14 +854,42 @@
           <p class="cred-card__detail">Advanced certification in family wealth management, governance, and multi-generational planning.</p>
         </div>
         <div class="cred-card">
-          <p class="cred-card__year">2019</p>
-          <h3 class="cred-card__title">Master in Trading Strategies</h3>
-          <p class="cred-card__detail">Specialized program covering algorithmic trading, macro strategies, and quantitative portfolio management.</p>
+          <p class="cred-card__year">2018 &mdash; 2019</p>
+          <h3 class="cred-card__title">Masters in Trading Strategies &amp; Independent Financial Advisory</h3>
+          <p class="cred-card__detail">Specialized programs in algorithmic trading, portfolio management, and independent financial advisory.</p>
         </div>
-        <div class="cred-card">
-          <p class="cred-card__year">2018</p>
-          <h3 class="cred-card__title">Master in Independent Financial Advisory</h3>
-          <p class="cred-card__detail">Professional qualification for independent financial advisory and wealth management.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMD HPL -->
+  <section class="section section--cream" id="imd">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Executive Education</p>
+          <h2 class="section__title"><span class="gold">HPL</span> Program</h2>
+          <figure style="margin: 32px 0 0; max-width: 420px;">
+            <img src="luca-imd.jpg" alt="Luca Padovan at IMD High Performance Leadership program" style="width: 100%; height: auto; display: block; border-radius: 8px;">
+          </figure>
+        </div>
+        <div class="split__right" style="align-self: stretch; display: flex; flex-direction: column; justify-content: flex-end;">
+          <p class="text-lg">Luca is a participant in IMD's <a href="https://www.imd.org/leadership/hpl/leadership-training/" target="_blank" rel="noopener" style="color: inherit; font-weight: 700; text-decoration: underline; text-decoration-color: rgba(201,168,76,0.5); text-underline-offset: 3px;">High Performance Leadership (HPL)</a> program in Lausanne &mdash; one of the world's most respected executive education programs in leadership development. HPL is an immersive, multi-year journey designed for senior executives who lead high-stakes organizations, with annual modules that combine personal leadership work, applied case studies, and peer learning inside a global cohort.</p>
+          <div style="margin-top: 32px; padding-top: 24px; display: flex; gap: 32px; align-items: center; border-top: 1px solid rgba(201,168,76,0.12);">
+            <div>
+              <span style="display: block; font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--gold-dark);">Ranked&nbsp;#1</span>
+              <span style="font-size: 12px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.05em;">FT Open Programs</span>
+            </div>
+            <div>
+              <span style="display: block; font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--gold-dark);">Multi-year</span>
+              <span style="font-size: 12px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.05em;">Annual Modules</span>
+            </div>
+            <div>
+              <span style="display: block; font-family: var(--font-serif); font-size: 28px; font-weight: 700; color: var(--gold-dark);">Global</span>
+              <span style="font-size: 12px; color: var(--gray-400); text-transform: uppercase; letter-spacing: 0.05em;">Peer Cohort</span>
+            </div>
+            <img src="imd-logo-square.jpg" alt="IMD Business School" style="height: 52px; margin-left: auto; display: block; border-radius: 6px;">
+          </div>
         </div>
       </div>
     </div>
@@ -821,9 +916,9 @@
         <div class="footer__brand">
           <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
             <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
-            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners LTD</span>
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners</span>
           </div>
-          <p class="footer__legal">Run Capital Partners LTD is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
+          <p class="footer__legal">Run Capital Partners is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
         </div>
         <div class="footer__col">
           <h4>Services</h4>
@@ -856,7 +951,7 @@
         </div>
       </div>
       <div class="footer__bottom">
-        <p>&copy; 2025 Run Capital Partners LTD. All rights reserved.</p>
+        <p>&copy; 2025 Run Capital Partners. All rights reserved.</p>
       </div>
     </div>
   </footer>
