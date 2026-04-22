@@ -2623,10 +2623,6 @@ a.group-card {
   padding: 18px;
 }
 
-.insight-card__cover img[src*="american-economy-nyc"] {
-  object-fit: cover;
-  object-position: center 78%;
-}
 
 .insight-card--magazine:hover .insight-card__cover img {
   transform: scale(1.04);
