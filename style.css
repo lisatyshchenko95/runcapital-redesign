@@ -3860,6 +3860,11 @@ select:focus-visible,
   .nav__logo {
     gap: 12px;
   }
+  .lang-switch {
+    min-height: 44px;
+    padding: 10px 18px;
+    font-size: 12px;
+  }
 }
 
 @media (max-width: 1024px) {
