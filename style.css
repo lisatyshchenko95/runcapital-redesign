@@ -4315,7 +4315,7 @@ select:focus-visible,
 
   .threedots-grid {
     display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
+    grid-template-columns: 1fr !important;
     overflow-x: visible !important;
     gap: 16px !important;
     margin-top: 32px !important;
