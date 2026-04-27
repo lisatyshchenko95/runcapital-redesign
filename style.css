@@ -4811,3 +4811,12 @@ select:focus-visible,
   .rcp-form__foot { flex-direction: column; align-items: stretch; text-align: center; }
   .rcp-form__submit { justify-content: center; }
 }
+
+/* Compact contact section on every team profile page */
+.section:has(> .container.bio-cta) {
+  padding-top: 40px !important;
+  padding-bottom: 40px !important;
+}
+.bio-cta {
+  padding: 24px 0 !important;
+}

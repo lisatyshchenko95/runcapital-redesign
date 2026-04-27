@@ -355,6 +355,45 @@
   font-weight: 300;
 }
 .v2-service:hover p { color: rgba(247,243,234,0.7); }
+.v2-service__entity {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 14px 0;
+  margin: 0 0 22px;
+  border-top: 1px solid rgba(10,10,10,0.09);
+  border-bottom: 1px solid rgba(10,10,10,0.09);
+  transition: border-color 0.4s var(--v2-ease);
+  margin-top: auto;
+}
+.v2-service:hover .v2-service__entity {
+  border-top-color: rgba(247,243,234,0.16);
+  border-bottom-color: rgba(247,243,234,0.16);
+}
+.v2-service__entity-name {
+  font-family: "Playfair Display", Georgia, serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: rgba(10,10,10,0.82);
+  letter-spacing: 0.005em;
+  transition: color 0.4s var(--v2-ease);
+}
+.v2-service:hover .v2-service__entity-name {
+  color: rgba(247,243,234,0.95);
+}
+.v2-service__entity-reg {
+  font-family: var(--v2-sans);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8a6e1f;
+  transition: color 0.4s var(--v2-ease);
+}
+.v2-service:hover .v2-service__entity-reg {
+  color: var(--v2-gold);
+}
+
 .v2-service__link {
   font-family: var(--v2-sans);
   font-size: 11px;
@@ -362,7 +401,6 @@
   text-transform: uppercase;
   color: var(--v2-gold);
   font-weight: 500;
-  margin-top: auto;
 }
 
 @media (max-width: 800px) {
