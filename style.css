@@ -2638,9 +2638,8 @@ a.group-card {
 
 .insight-card__cover img[src*="eterna"],
 .insight-card__cover img[src*="maha-keo"] {
-  object-fit: contain;
+  object-fit: cover;
   background: #000;
-  padding: 48px 18px 8px 18px;
 }
 
 
