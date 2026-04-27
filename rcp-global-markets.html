@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
   <title>RCP Global Markets | London Advisory & Distribution | Run Capital Partners</title>
   <meta name="description" content="RCP Global Markets: London advisory and distribution arm of Run Capital Partners. FCA Appointed Representative, Ref. 1043763.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
@@ -60,6 +61,14 @@
       font-size: 15px;
       line-height: 1.8;
       max-width: 780px;
+    }
+    .regulatory-panel a,
+    .regulatory-panel__text a,
+    .regulatory-grid a,
+    .regulatory-grid__item-value a {
+      color: inherit !important;
+      text-decoration: none !important;
+      pointer-events: none;
     }
     .regulatory-grid {
       display: grid;
