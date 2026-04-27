@@ -4190,7 +4190,8 @@ select:focus-visible,
   }
 
   .group-card h4 {
-    font-size: 14px;
+    font-size: 20px;
+    font-weight: 700;
   }
 
   .group-card p {
