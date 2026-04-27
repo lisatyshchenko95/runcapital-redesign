@@ -4273,8 +4273,9 @@ select:focus-visible,
     grid-template-columns: repeat(3, 1fr) !important;
     gap: 20px 12px !important;
     max-width: none !important;
-    padding: 0 16px;
-    margin: 0 !important;
+    padding: 0 !important;
+    margin: 0 auto !important;
+    justify-items: center;
   }
   .three-col-team-grid .team-card__photo {
     width: 100px;
