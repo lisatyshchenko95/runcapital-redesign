@@ -4253,6 +4253,41 @@ select:focus-visible,
     display: none;
   }
 
+  .two-col-team-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px 24px !important;
+    max-width: none !important;
+    padding: 0 20px;
+    margin: 0 !important;
+  }
+  .two-col-team-grid .team-card__photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 12px;
+  }
+  .two-col-team-grid .team-card__name {
+    font-size: 14px;
+  }
+
+  .three-col-team-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 20px 12px !important;
+    max-width: none !important;
+    padding: 0 16px;
+    margin: 0 !important;
+  }
+  .three-col-team-grid .team-card__photo {
+    width: 100px;
+    height: 100px;
+    margin: 0 auto 10px;
+  }
+  .three-col-team-grid .team-card__name {
+    font-size: 13px;
+  }
+  .three-col-team-grid .team-card__role {
+    font-size: 9px;
+  }
+
   .five-team-grid {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 32px 24px !important;
