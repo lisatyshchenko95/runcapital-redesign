@@ -1849,10 +1849,14 @@ span.gold {
     text-align: center;
   }
   .service-stats {
-    gap: 20px;
+    gap: 16px;
+    flex-wrap: nowrap;
   }
   .service-stats__num {
-    font-size: 18px;
+    font-size: 16px;
+  }
+  .service-stats__label {
+    font-size: 9px;
   }
   .process-step {
     padding: 28px 24px 26px;
@@ -4310,24 +4314,14 @@ select:focus-visible,
   }
 
   .threedots-grid {
-    display: flex !important;
-    grid-template-columns: none !important;
-    overflow-x: auto;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    overflow-x: visible !important;
     gap: 16px !important;
-    padding: 0 24px 16px 0 !important;
-    margin-top: 56px !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
+    margin-top: 32px !important;
   }
   .threedots-grid .threedots-card {
-    flex: 0 0 75vw;
-    min-width: 75vw;
-    scroll-snap-align: start;
-  }
-  .threedots-grid::-webkit-scrollbar {
-    display: none;
+    min-width: 0;
   }
 
   /* Luxembourg */
