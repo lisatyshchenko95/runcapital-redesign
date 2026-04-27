@@ -4254,6 +4254,25 @@ select:focus-visible,
     display: none;
   }
 
+  .threedots-grid {
+    display: flex !important;
+    grid-template-columns: none !important;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    gap: 16px !important;
+    padding: 0 20px 16px !important;
+    margin: 56px -40px 0 !important;
+  }
+  .threedots-grid .threedots-card {
+    flex: 0 0 260px;
+    min-width: 260px;
+    scroll-snap-align: start;
+  }
+  .threedots-grid::-webkit-scrollbar {
+    display: none;
+  }
+
   /* Luxembourg */
   .lux-grid {
     grid-template-columns: 1fr;
