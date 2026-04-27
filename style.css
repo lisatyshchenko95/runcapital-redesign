@@ -4261,12 +4261,14 @@ select:focus-visible,
     -webkit-overflow-scrolling: touch;
     scroll-snap-type: x mandatory;
     gap: 16px !important;
-    padding: 0 20px 16px 20px !important;
-    margin: 56px -20px 0 !important;
+    padding: 0 24px 16px 0 !important;
+    margin-top: 56px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
   }
   .threedots-grid .threedots-card {
-    flex: 0 0 280px;
-    min-width: 280px;
+    flex: 0 0 75vw;
+    min-width: 75vw;
     scroll-snap-align: start;
   }
   .threedots-grid::-webkit-scrollbar {
