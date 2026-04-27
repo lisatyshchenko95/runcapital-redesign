@@ -94,8 +94,8 @@ body {
   right: 0;
   bottom: 0;
   height: 1px;
-  background: linear-gradient(90deg, transparent 0%, var(--gold) 20%, var(--gold) 80%, transparent 100%);
-  opacity: 0.55;
+  background: var(--gold);
+  opacity: 0.35;
 }
 
 .nav--scrolled {
