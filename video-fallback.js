@@ -9,9 +9,12 @@
 
   var style = document.createElement('style');
   style.textContent = [
-    'video::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none;}',
-    'video::-webkit-media-controls-overlay-play-button{display:none!important;-webkit-appearance:none;}',
-    'video::-webkit-media-controls{display:none!important;}'
+    'video[autoplay]::-webkit-media-controls-start-playback-button{display:none!important;-webkit-appearance:none;}',
+    'video[autoplay]::-webkit-media-controls-overlay-play-button{display:none!important;-webkit-appearance:none;}',
+    'video[autoplay]::-webkit-media-controls{display:none!important;}',
+    'video[autoplay]::-webkit-media-controls-panel{display:none!important;}',
+    'video[autoplay]::-webkit-media-controls-play-button{display:none!important;}',
+    'video[autoplay]{pointer-events:none;}'
   ].join('');
   document.head.appendChild(style);
 
@@ -39,6 +42,9 @@
   function wire(video) {
     if (video.dataset.rcpWired) return;
     video.dataset.rcpWired = '1';
+    video.removeAttribute('controls');
+    video.setAttribute('webkit-playsinline', '');
+    video.muted = true;
     if (video.readyState >= 2) {
       capturePoster(video);
       tryPlay(video);
