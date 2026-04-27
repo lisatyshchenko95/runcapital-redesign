@@ -1701,7 +1701,7 @@ span.gold {
 }
 .section--dark .capability-card__title,
 .section--dark-alt .capability-card__title {
-  color: #fff;
+  color: var(--gold);
 }
 .section--dark .capability-card p,
 .section--dark-alt .capability-card p {
