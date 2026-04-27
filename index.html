@@ -410,6 +410,54 @@
     </div>
   </section>
 
+  <!-- WHO WE SERVE -->
+  <section class="who-serve">
+    <div class="who-serve__inner">
+      <p class="who-serve__eyebrow" data-en="&mdash; Who We Serve" data-it="&mdash; A Chi Ci Rivolgiamo">&mdash; Who We Serve</p>
+      <h2 class="who-serve__statement">
+        Our clients include
+        <span class="who-serve__rotate">
+          <span class="who-serve__track">
+            <span class="who-serve__word">UHNW individuals.</span>
+            <span class="who-serve__word">Family offices.</span>
+            <span class="who-serve__word">Wealth managers.</span>
+            <span class="who-serve__word">Private banks.</span>
+            <span class="who-serve__word">Corporate treasuries.</span>
+            <span class="who-serve__word">Pension funds.</span>
+            <span class="who-serve__word">Institutional allocators.</span>
+            <span class="who-serve__word" aria-hidden="true">UHNW individuals.</span>
+          </span>
+        </span>
+      </h2>
+    </div>
+  </section>
+  <style>
+    .who-serve { background: var(--cream, #f7f3ea); padding: 96px 0; }
+    .who-serve__inner { max-width: 1280px; margin: 0 auto; padding: 0 40px; text-align: center; }
+    .who-serve__eyebrow { font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-warm, #c9a84c); font-weight: 600; margin: 0 0 32px; }
+    .who-serve__statement { font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(32px, 3.8vw, 52px); line-height: 1.2; letter-spacing: -0.012em; color: var(--ink, #0a0a0a); margin: 0; }
+    .who-serve__rotate { display: block; height: 1.2em; overflow: hidden; margin-top: 8px; }
+    .who-serve__track { display: flex; flex-direction: column; animation: who-serve-rotate 18s cubic-bezier(0.76, 0, 0.24, 1) infinite; will-change: transform; }
+    .who-serve__word { display: block; height: 1.2em; line-height: 1.2em; font-style: italic; color: var(--gold-warm, #c9a84c); white-space: nowrap; }
+    @keyframes who-serve-rotate {
+      0%, 10% { transform: translateY(0); }
+      12.5%, 22.5% { transform: translateY(-1.2em); }
+      25%, 35% { transform: translateY(-2.4em); }
+      37.5%, 47.5% { transform: translateY(-3.6em); }
+      50%, 60% { transform: translateY(-4.8em); }
+      62.5%, 72.5% { transform: translateY(-6em); }
+      75%, 85% { transform: translateY(-7.2em); }
+      87.5%, 100% { transform: translateY(-8.4em); }
+    }
+    @media (max-width: 768px) {
+      .who-serve { padding: 64px 0; }
+      .who-serve__statement { font-size: 24px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .who-serve__track { animation: none; }
+    }
+  </style>
+
   <!-- TEAM -->
   <section class="section section--cream" id="team">
     <div class="container">
@@ -576,7 +624,7 @@
         </div>
         <div class="team-card">
           <a href="sara-longo.html">
-            <div class="team-card__photo"><img src="sara-longo.jpg" alt="Sara Longo" loading="lazy"></div>
+            <div class="team-card__photo"><img src="sara-longo.jpg?v=2" alt="Sara Longo" loading="lazy"></div>
             <h3 class="team-card__name">Sara Longo</h3>
             <p class="team-card__role">Operations Associate</p>
           </a>
