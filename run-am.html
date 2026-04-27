@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="format-detection" content="telephone=no">
   <title>Run Asset Management S.à.r.l | Luxembourg AIFM | Run Capital Partners</title>
   <meta name="description" content="Run Asset Management S.à.r.l is the Luxembourg AIFM of the Run Capital Partners Group. CSSF reference A00003107.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
@@ -95,6 +96,12 @@
       .hero-layout { grid-template-columns: 1fr; gap: 32px; }
       .hero-illustration { order: -1; }
       .hero-illustration svg { max-width: 220px; }
+    }
+    .service-stats a,
+    .regulatory-card a {
+      color: inherit !important;
+      text-decoration: none !important;
+      pointer-events: none;
     }
     .cap-icon { width: 44px; height: 44px; color: var(--gold); margin-bottom: 16px; }
     .cap-icon svg { width: 100%; height: 100%; }
@@ -233,7 +240,7 @@
               <span class="service-stats__num">AIFM</span>
               <span class="service-stats__label">Regulated</span>
             </div>
-            <div class="service-stats__item">
+            <div class="service-stats__item" style="text-align: center;">
               <span class="service-stats__num">CSSF A00003107</span>
               <span class="service-stats__label">Reg. No.</span>
             </div>
