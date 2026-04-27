@@ -4227,7 +4227,7 @@ select:focus-visible,
     scroll-snap-type: x mandatory;
     gap: 24px !important;
     padding: 0 20px 16px !important;
-    margin: 0 -20px !important;
+    margin: 0 -40px !important;
     max-width: none !important;
     justify-content: flex-start !important;
   }
