@@ -4271,10 +4271,10 @@ select:focus-visible,
 
   .three-col-team-grid {
     grid-template-columns: repeat(3, 1fr) !important;
-    gap: 20px 12px !important;
+    gap: 20px 8px !important;
     max-width: none !important;
     padding: 0 !important;
-    margin: 0 auto !important;
+    margin: 0 -20px !important;
     justify-items: center;
   }
   .three-col-team-grid .team-card__photo {
