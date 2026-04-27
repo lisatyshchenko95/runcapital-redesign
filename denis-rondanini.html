@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Denis Rondanini | Sport &amp; Wealth | Run Capital Partners</title>
+  <meta name="description" content="Denis Rondanini, Sport &amp; Wealth at Run Capital Partners. Entrepreneur with over 25 years of experience in international business administration, bridging the worlds of sport and finance through tailored Family Office solutions.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#x25C6;</text></svg>">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bio-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--dark);
+      overflow: hidden;
+    }
+
+    .bio-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 75% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%);
+    }
+
+    .bio-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .bio-photo { position: relative; }
+
+    .bio-photo__frame {
+      width: 320px;
+      height: 380px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--dark-3), var(--dark-4));
+      border: 1px solid rgba(201,168,76,0.15);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bio-photo__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .bio-photo__frame::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(transparent, rgba(8,8,8,0.5));
+    }
+
+    .bio-photo__accent {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      opacity: 0.3;
+    }
+
+    .bio-photo__accent-2 {
+      position: absolute;
+      bottom: -8px;
+      left: -8px;
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      opacity: 0.2;
+    }
+
+    .bio-intro__eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .bio-intro__eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .bio-intro__name {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 5vw, 56px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .bio-intro__title {
+      font-size: 20px;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .bio-intro__summary {
+      font-size: 18px;
+      color: rgba(255,255,255,0.55);
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+
+    .bio-intro__meta {
+      display: flex;
+      gap: 32px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+
+    .bio-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .bio-meta-item__label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.35);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .bio-meta-item__value {
+      font-size: 14px;
+      color: rgba(255,255,255,0.7);
+      font-weight: 500;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: 2px solid var(--gold);
+      z-index: 1;
+    }
+
+    .timeline-item--current::before {
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+
+    .timeline-item__date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item__role {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+    }
+
+    .timeline-item__company {
+      font-size: 14px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .expertise-card { background: linear-gradient(135deg, var(--dark-2), var(--dark-3)); border: 1px solid rgba(201,168,76,0.06); border-radius: 16px; padding: 32px; transition: all 0.4s var(--ease-out-expo); position: relative; overflow: hidden; }
+    .expertise-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s var(--ease-out-expo); }
+    .expertise-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
+    .expertise-card:hover::before { height: 100%; }
+    .expertise-card__title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+    .expertise-card__desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+
+    .bio-cta {
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .bio-cta__title {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .bio-cta__sub {
+      font-size: 17px;
+      color: rgba(255,255,255,0.45);
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .bio-cta__links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .bio-hero__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 100px 20px 60px;
+      }
+
+      .bio-photo__frame { width: 240px; height: 300px; margin: 0 auto; }
+      .bio-photo { text-align: center; }
+      .bio-photo__accent, .bio-photo__accent-2 { display: none; }
+      .bio-intro__name { font-size: 36px; }
+      .bio-intro__summary { font-size: 16px; }
+      .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
+      .bio-meta-item { flex: 0 0 calc(50% - 10px); }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .bio-cta__title { font-size: 28px; }
+      .bio-cta__links { flex-direction: column; align-items: center; }
+      .timeline { padding-left: 36px; }
+    }
+    .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
+    .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#services">Services</a></li>
+        <li><a href="index.html#group">Group</a></li>
+        <li><a href="index.html#team">Team</a></li>
+        <li><a href="index.html#insights">Insights</a></li>
+        <li><a href="index.html#contact" class="nav__cta">Get in Touch</a></li>
+        <li class="nav__lang"><button type="button" class="lang-switch" id="langSwitch" aria-label="Change language"><span class="lang-switch__opt lang-switch__opt--active" data-lang="en">EN</span><span class="lang-switch__sep">/</span><span class="lang-switch__opt" data-lang="it">IT</span></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BIO HERO -->
+  <section class="bio-hero">
+    <div class="bio-hero__bg"></div>
+    <div class="bio-hero__content">
+      <div class="bio-photo">
+        <div class="bio-photo__frame">
+          <img src="denis-rondanini.jpg" alt="Denis Rondanini, Sport &amp; Wealth at Run Capital Partners" class="bio-photo__img">
+        </div>
+        <div class="bio-photo__accent"></div>
+        <div class="bio-photo__accent-2"></div>
+      </div>
+      <div class="bio-intro">
+        <a href="index.html#team" class="bio-back-link"><span aria-hidden="true">&larr;</span> Back to Team</a>
+        <h1 class="bio-intro__name">Denis Rondanini</h1>
+        <p class="bio-intro__title">Sport &amp; Wealth</p>
+        <p class="bio-intro__summary">Entrepreneur with over 25 years of experience in international business economics and corporate administration. His background in the world of sport, maintaining bonds of friendship and respect with many professionals, brings a deep understanding of their lives and needs. Combined with his experience in the financial world, this creates a solid foundation for the Family Office project.</p>
+        <div class="bio-intro__meta">
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Experience</span>
+            <span class="bio-meta-item__value">25+ Years</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Focus</span>
+            <span class="bio-meta-item__value">Sport &amp; Wealth</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label">Languages</span>
+            <span class="bio-meta-item__value">EN, DE, ES, IT, FR</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="section section--dark-alt">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light">Expertise</p>
+      <h2 class="section__title section__title--light">Where entrepreneurship meets the world of sport.</h2>
+      <p class="section__intro">Denis combines decades of business acumen with deep relationships in professional sport to deliver tailored Family Office solutions.</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Family Office Solutions</h3>
+          <p class="expertise-card__desc">Structuring bespoke Family Office frameworks for sports professionals, bridging the gap between athletic careers and long-term financial security.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">International Business</h3>
+          <p class="expertise-card__desc">Over 25 years of entrepreneurial experience in international business economics and corporate administration across multiple jurisdictions.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title">Sport &amp; Finance Bridge</h3>
+          <p class="expertise-card__desc">Leveraging lasting relationships with sports professionals and deep financial expertise to create tailored wealth-management strategies.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER TIMELINE -->
+  <section class="section section--light" id="career">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow">Career</p>
+          <h2 class="section__title">From entrepreneurship to sports wealth management.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;">A multilingual entrepreneur with deep roots in international business, Denis brings a rare combination of financial expertise and genuine understanding of the sports world. His long-standing relationships with professional athletes inform a client-first approach to wealth structuring.</p>
+        </div>
+        <div class="split__right">
+          <div class="timeline">
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date">Present</p>
+              <h3 class="timeline-item__role">Sport &amp; Wealth</h3>
+              <p class="timeline-item__company">Run Capital Partners</p>
+              <p class="timeline-item__desc">Develops Family Office solutions for sports professionals, combining financial structuring expertise with a deep understanding of athletes' careers and personal needs.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">25+ Years</p>
+              <h3 class="timeline-item__role">Entrepreneur</h3>
+              <p class="timeline-item__company">International</p>
+              <p class="timeline-item__desc">Built and managed businesses across international markets, developing expertise in economics, corporate administration, and cross-border operations. Fluent in five languages: English, German, Spanish, Italian, and French.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--dark">
+    <div class="container bio-cta">
+      <h2 class="bio-cta__title">Get in touch.</h2>
+      <p class="bio-cta__sub">For inquiries related to Family Office solutions, sports wealth management, and tailored financial structuring for professionals.</p>
+      <p style="margin-bottom: 32px;"><a href="mailto:info@runcapital.partners" style="color: var(--gold); font-size: 18px; text-decoration: none; font-weight: 500;">info@runcapital.partners</a></p>
+      <div class="bio-cta__links">
+        <a href="mailto:info@runcapital.partners" class="btn btn--primary">Send Email</a>
+        <a href="index.html#team" class="btn btn--outline">Back to Team</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+            <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners</span>
+          </div>
+          <p class="footer__legal">Run Capital Partners is registered in England and Wales. The group operates through regulated entities across the UK, Luxembourg, and Italy. Clients should verify the regulatory status of the specific entity they engage with.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="asset-management.html">Asset Management</a></li>
+            <li><a href="wealth-management.html">Wealth Management</a></li>
+            <li><a href="sport-wealth.html">Sport &amp; Wealth</a></li>
+            <li><a href="certificate-issuance.html">Certificate Issuance</a></li>
+            <li><a href="nasdaq-listings.html">Nasdaq Listings</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#group">Group Structure</a></li>
+            <li><a href="index.html#team">Team</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Legal</h4>
+          <ul>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="terms-of-service.html">Terms of Service</a></li>
+            <li><a href="regulatory-disclosures.html">Regulatory Disclosures</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Run Capital Partners. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.expertise-card, .timeline-item').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
+<script>(function(){var K='rcp_lang';function ap(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(e){var t=e.getAttribute('data-'+l);if(t!=null)e.textContent=t;});document.querySelectorAll('[data-en-html]').forEach(function(e){var h=e.getAttribute('data-'+l+'-html');if(h!=null)e.innerHTML=h;});document.querySelectorAll('.lang-switch__opt').forEach(function(o){o.classList.toggle('lang-switch__opt--active',o.getAttribute('data-lang')===l);});try{localStorage.setItem(K,l);}catch(e){}}var sv;try{sv=localStorage.getItem(K);}catch(e){}if(sv==='it')ap('it');var sw=document.getElementById('langSwitch');if(sw)sw.addEventListener('click',function(e){e.preventDefault();var c=e.target.closest('.lang-switch__opt');var cur=document.documentElement.lang==='it'?'it':'en';if(c&&c.getAttribute('data-lang'))ap(c.getAttribute('data-lang'));else ap(cur==='en'?'it':'en');});})();</script>
+  <script defer src="contact-modal.js"></script>
+  <script defer src="video-fallback.js"></script>
+<script src="contact-popup.js"></script>
+</body>
+</html>
