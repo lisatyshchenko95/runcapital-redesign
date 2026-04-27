@@ -4253,6 +4253,26 @@ select:focus-visible,
     display: none;
   }
 
+  .five-team-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 32px 24px !important;
+    max-width: none !important;
+    padding: 0 20px;
+    margin: 0 !important;
+  }
+  .five-team-grid .team-card__photo {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto 12px;
+  }
+  .five-team-grid .team-card__name {
+    font-size: 14px;
+  }
+  .five-team-grid .team-card:nth-child(3) {
+    grid-column: 1 / -1;
+    justify-self: center;
+  }
+
   .threedots-grid {
     display: flex !important;
     grid-template-columns: none !important;
