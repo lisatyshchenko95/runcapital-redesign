@@ -4408,11 +4408,25 @@ select:focus-visible,
 
   .footer__grid {
     grid-template-columns: 1fr;
-    gap: 24px;
+    gap: 32px;
   }
 
   .footer__brand {
     grid-column: auto;
+  }
+
+  .footer__col:not(.footer__col--offices) {
+    display: none;
+  }
+
+  .footer__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer__bottom div {
+    justify-content: center;
+    flex-wrap: wrap;
   }
 
   .section {
