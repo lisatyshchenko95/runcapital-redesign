@@ -247,8 +247,13 @@
     /* Expertise grid */
     .expertise-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 20px;
+    }
+    .expertise-grid .expertise-card:nth-child(3) {
+      grid-column: 1 / -1;
+      max-width: 50%;
+      justify-self: center;
     }
 
     .expertise-card {
