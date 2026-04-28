@@ -16,8 +16,34 @@ Static site. No framework, no bundler.
 - **opening.css, amc-style.css** — page-specific overrides
 - **contact-modal.js** — global mailto interceptor, shows a universal modal so people without a mail app can copy `info@runcapital.partners`
 - **video-fallback.js** — captures frame 0 of hero videos as poster for iOS Low Power Mode (no ffmpeg needed, pure canvas)
+- **lang-switch.js** — EN/IT language toggle. Reads `data-en` / `data-it` attributes on any element and swaps `textContent`. State persisted in `localStorage` under `rcp_lang`. See "Translation convention" below.
 
-Both JS files are injected into every HTML page via `<script defer src="...">` before `</body>`.
+All three JS files are injected into every HTML page via `<script defer src="...">` before `</body>`.
+
+## Translation convention (EN → IT)
+
+The site is bilingual. The toggle button (`#langSwitch`, top-right of nav) is on every page and the shared `lang-switch.js` handles the rest.
+
+**To translate any string, add the IT counterpart on the same element:**
+
+```html
+<!-- Plain text (most common) -->
+<h2 data-en="Capabilities" data-it="Competenze">Capabilities</h2>
+
+<!-- Element contains nested HTML (italic, gold spans, etc.) -->
+<h2 data-en-html="Have <em>questions</em>?" data-it-html="Hai <em>domande</em>?">Have <em>questions</em>?</h2>
+
+<!-- Form placeholders -->
+<input data-en-placeholder="Your email" data-it-placeholder="La tua email">
+```
+
+The script auto-discovers any element with `data-en*` attributes on page load — no JS edits needed when adding new content. **Always add `data-it` at the same time you add new English copy** (otherwise the page partly translates and looks broken when IT is selected).
+
+`rcp-global-markets.html` is the canonical reference page — fully translated, copy patterns from there.
+
+A page-by-page audit of remaining gaps lives in `TRANSLATION_AUDIT.md` (regenerate with the script in that file's footer).
+
+**Do not** add inline `<script>` blocks that duplicate `lang-switch.js`. Some older pages still have minified inline copies — they're idempotent so they don't break anything, but new pages should rely on the shared file only.
 
 ## Key conventions
 
