@@ -4435,6 +4435,16 @@ select:focus-visible,
 }
 
 @media (max-width: 480px) {
+  .bio-cta__links {
+    width: 100%;
+  }
+  .bio-cta__links .btn {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+    box-sizing: border-box;
+  }
+
   .hero__title {
     font-size: 28px;
   }
