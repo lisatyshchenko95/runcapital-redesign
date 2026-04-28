@@ -632,15 +632,15 @@ span.gold {
 }
 
 .btn--outline[href*="linkedin"] {
-  background: #0A66C2;
+  background: transparent;
   border-color: #0A66C2;
-  color: #fff;
+  color: #0A66C2;
 }
 .btn--outline[href*="linkedin"]:hover {
-  background: #004182;
-  border-color: #004182;
-  color: #fff;
-  box-shadow: 0 0 24px rgba(10,102,194,0.3);
+  background: rgba(10,102,194,0.1);
+  border-color: #0A66C2;
+  color: #0A66C2;
+  box-shadow: 0 0 24px rgba(10,102,194,0.2);
 }
 
 .btn--full {
