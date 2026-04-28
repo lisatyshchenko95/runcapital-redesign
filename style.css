@@ -1724,6 +1724,12 @@ span.gold {
   color: var(--gold);
 }
 
+/* Global expertise card overrides (bio pages) */
+.expertise-card { border: 1px solid rgba(201,168,76,0.25) !important; }
+.expertise-card::before { height: 100% !important; }
+.expertise-card__title { color: var(--gold) !important; }
+.cred-card { border: 2px solid var(--gold) !important; }
+
 .capability-card__title {
   font-family: var(--font-serif);
   font-size: 19px;
