@@ -659,6 +659,11 @@
         padding: 40px 0 !important;
       }
 
+      /* Fix: YPO $9T shift right */
+      #ypo .split__right > div[style*="display: flex"] > div:nth-child(3) {
+        padding-left: 16px;
+      }
+
       /* Fix 8: YPO - kill space */
       #ypo .split {
         gap: 0 !important;
