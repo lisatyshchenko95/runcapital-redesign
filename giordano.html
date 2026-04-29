@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giordano Tomasini | General Counsel | Run Capital Partners</title>
-  <meta name="description" content="Giordano Tomasini, General Counsel & Deal Coordination at Run Asset Management. Cambridge LL.M. graduate. Luxembourg-based alternative investment fund specialist.">
+  <meta name="description" content="Giordano Tomasini, General Counsel at Run Asset Management. Cambridge LL.M. graduate. Luxembourg-based alternative investment fund specialist.">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>◆</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -250,11 +250,6 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
     }
-    .expertise-grid .expertise-card:nth-child(3) {
-      grid-column: 1 / -1;
-      max-width: 50%;
-      justify-self: center;
-    }
 
     .expertise-card {
       background: linear-gradient(135deg, var(--dark-2), var(--dark-3));
@@ -475,6 +470,21 @@
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
+
+      /* Fix: 3rd expertise card full width on mobile */
+      .expertise-grid .expertise-card:nth-child(3) {
+        grid-column: auto !important;
+        max-width: none !important;
+        justify-self: stretch !important;
+      }
+
+      /* Fix: Cambridge edu card stack on mobile */
+      .edu-card[style*="grid-template-columns: 280px"] {
+        grid-template-columns: 1fr !important;
+      }
+      .edu-card[style*="grid-template-columns: 280px"] > div {
+        padding: 20px !important;
+      }
     }
       .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
     .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
@@ -517,7 +527,7 @@
       </div>
       <div class="bio-intro">
         <h1 class="bio-intro__name">Giordano Tomasini</h1>
-        <p class="bio-intro__title">General Counsel &amp; Deal Coordination</p>
+        <p class="bio-intro__title">General Counsel</p>
         <a href="https://www.linkedin.com/in/giordano-tomasini/" target="_blank" rel="noopener" class="bio-linkedin">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           LinkedIn Profile
@@ -566,10 +576,6 @@
           <p class="expertise-card__desc">Navigating the Luxembourg regulatory framework for fund vehicles. CSSF compliance, AIFMD requirements, and cross-border distribution rules across the EU.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title">Deal Coordination</h3>
-          <p class="expertise-card__desc">Managing complex multi-party transactions with global investors and service providers. Coordinating legal, financial, and operational workstreams to close.</p>
-        </div>
-        <div class="expertise-card">
           <h3 class="expertise-card__title">Investment Management</h3>
           <p class="expertise-card__desc">Investment vehicle management and structuring for private equity and alternative asset classes. Previously led vehicle management for major PE firms.</p>
         </div>
@@ -590,7 +596,7 @@
           <div class="timeline">
             <div class="timeline-item timeline-item--current">
               <p class="timeline-item__date">Present</p>
-              <h3 class="timeline-item__role">General Counsel &amp; Deal Coordination</h3>
+              <h3 class="timeline-item__role">General Counsel</h3>
               <p class="timeline-item__company">Run Asset Management S.à r.l. (Run Capital Partners Group)</p>
               <p class="timeline-item__desc">Leads legal and strategic functions at the group's Luxembourg AIFM. Guides fund structuring and governance, ensures regulatory compliance, and coordinates complex cross-border transactions with global investors.</p>
             </div>
