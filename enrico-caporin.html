@@ -71,6 +71,11 @@
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
+      .expertise-grid .expertise-card:nth-child(3) {
+        grid-column: auto !important;
+        max-width: none !important;
+        justify-self: stretch !important;
+      }
     }
       .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
     .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
@@ -141,7 +146,7 @@
   <section class="section section--dark-alt">
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light">Expertise</p>
-      <h2 class="section__title section__title--light">Capital markets, IPOs, and <span style="color: var(--gold);">three decades</span> of financial advisory.</h2>
+      <h2 class="section__title section__title--light"><span style="color: var(--gold);">Capital markets</span>, <span style="color: var(--gold);">IPOs</span>, and three decades of <span style="color: var(--gold);">financial advisory</span>.</h2>
       <p class="section__intro">Enrico brings a rare combination of entrepreneurial founding experience and institutional capital-markets expertise spanning over 20 years.</p>
 
       <div class="expertise-grid">
