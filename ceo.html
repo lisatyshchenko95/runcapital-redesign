@@ -584,6 +584,60 @@
       .timeline {
         padding-left: 36px;
       }
+
+      /* Fix 1: Center bio meta (Based In, Experience, etc) */
+      .bio-intro__meta {
+        justify-content: center;
+        text-align: center;
+      }
+      .bio-meta-item {
+        align-items: center;
+      }
+
+      /* Fix 2: Quote text not cut */
+      .bio-quote__text {
+        font-size: 20px !important;
+        padding: 0 16px;
+      }
+
+      /* Fix 3: Group Holding not cut */
+      .group-card__tag {
+        font-size: 10px !important;
+        letter-spacing: 0.1em !important;
+      }
+
+      /* Fix 4: Delete empty space around quote */
+      .bio-quote {
+        padding: 0 !important;
+      }
+
+      /* Fix 5: YPO photo not cut */
+      .section--light img[alt*="YPO"],
+      .section--light img[alt*="ypo"] {
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 8px;
+      }
+
+      /* Fix 6: HPL text not cut */
+      .section--light p {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+      }
+
+      /* Fix 7: HPL stats - stack vertically on mobile */
+      #imd .split__right > div[style*="display: flex"] {
+        flex-wrap: wrap;
+        gap: 16px !important;
+        justify-content: center;
+        text-align: center;
+      }
+      #imd .split__right > div[style*="display: flex"] > div {
+        flex: 0 0 auto;
+      }
+      #imd .split__right > div[style*="display: flex"] img {
+        display: none;
+      }
     }
   </style>
 </head>
