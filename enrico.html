@@ -395,6 +395,18 @@
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
+
+      /* Quote - visible, not cut, no empty space */
+      .bio-quote__text {
+        font-size: 18px !important;
+        padding: 0 16px;
+      }
+      .bio-quote {
+        padding: 0 !important;
+      }
+      .section--dark:has(.bio-quote) {
+        padding: 40px 0 !important;
+      }
     }
       .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
     .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
