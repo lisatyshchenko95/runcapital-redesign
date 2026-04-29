@@ -1633,7 +1633,7 @@ span.gold {
   top: 0;
   left: 0;
   width: 3px;
-  height: 0;
+  height: 100%;
   background: var(--gold);
   transition: height 0.4s var(--ease-out-expo);
 }
