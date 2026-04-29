@@ -2382,22 +2382,26 @@ a.group-card {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: transparent;
+  background: var(--gold);
   border: 1px solid var(--gold);
-  color: var(--gold);
+  color: var(--dark);
   padding: 14px 36px;
   font-family: var(--font-sans);
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.04em;
   cursor: pointer;
   border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(201, 168, 76, 0.28);
   transition: all 0.3s var(--ease-out-expo);
 }
 
 .team-expand__btn:hover {
-  background: var(--gold);
+  background: var(--gold-light, #e8cd7a);
+  border-color: var(--gold-light, #e8cd7a);
   color: var(--dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(201, 168, 76, 0.4);
 }
 
 .team-expand__btn--active {
