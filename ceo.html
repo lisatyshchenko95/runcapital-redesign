@@ -639,25 +639,35 @@
         overflow-wrap: break-word;
       }
 
-      /* Fix 7: HPL stats - show but hide Multi-year only */
+      /* Fix 7: HPL stats - hide Multi-year and IMD logo, center rest */
       #imd .split__right > div[style*="display: flex"] {
         flex-wrap: wrap;
         gap: 20px !important;
         justify-content: center;
+        text-align: center;
       }
       #imd .split__right > div[style*="display: flex"] > div:nth-child(2) {
         display: none;
       }
       #imd .split__right > div[style*="display: flex"] > img {
-        display: none;
+        display: none !important;
+      }
+      #imd .split {
+        gap: 16px !important;
+      }
+      #imd {
+        padding: 40px 0 !important;
       }
 
-      /* Fix 8: YPO - kill space between photo and text */
+      /* Fix 8: YPO - kill space */
       #ypo .split {
-        gap: 16px !important;
+        gap: 0 !important;
       }
       #ypo figure {
         margin-bottom: 0 !important;
+      }
+      #ypo {
+        padding: 40px 0 !important;
       }
     }
   </style>
