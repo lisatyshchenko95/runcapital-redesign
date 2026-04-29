@@ -332,6 +332,14 @@
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
+
+      /* LSE education card - stack on mobile */
+      [style*="grid-template-columns: 280px"] {
+        grid-template-columns: 1fr !important;
+      }
+      [style*="grid-template-columns: 280px"] > div {
+        padding: 20px !important;
+      }
     }
       .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
     .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
