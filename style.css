@@ -4432,6 +4432,35 @@ select:focus-visible,
     padding-top: 20px;
     font-size: 12px;
   }
+
+  /* Fix: Reduce space above Get in Touch on main page */
+  #contact {
+    padding-top: 60px !important;
+  }
+
+  /* Fix: Group Holding card visible */
+  .group-card.group-card--parent {
+    padding: 24px 20px 20px !important;
+    min-width: auto !important;
+  }
+  .group-card--parent h3 {
+    font-size: 16px !important;
+  }
+  .group-card__crest-img {
+    width: 56px !important;
+    height: 56px !important;
+  }
+
+  /* Fix: Service cards - disable hover on mobile, click opens directly */
+  .v2-service:hover {
+    background: var(--v2-cream, #f7f3ea) !important;
+    color: inherit !important;
+  }
+  .v2-service:hover .v2-service__num { color: inherit !important; }
+  .v2-service:hover p { color: inherit !important; }
+  .v2-service:hover .v2-service__entity-name { color: inherit !important; }
+  .v2-service:hover .v2-service__entity-reg { color: inherit !important; }
+  .v2-service:hover .v2-service__link { color: inherit !important; }
 }
 
 @media (max-width: 480px) {
