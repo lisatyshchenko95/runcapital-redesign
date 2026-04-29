@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Run Capital Partners — LinkedIn Banner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #c9a84c;
+      --gold-light: #e8cd7a;
+      --gold-dark: #8c6f1f;
+      --black: #0a0a0a;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      background: #1a1a1a;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+      padding: 40px 20px;
+      font-family: 'Inter', sans-serif;
+      color: #ddd;
+    }
+    .helper {
+      max-width: 1584px;
+      width: 100%;
+      font-size: 13px;
+      color: #888;
+      line-height: 1.6;
+    }
+    .helper strong { color: var(--gold); font-weight: 600; }
+    .helper code { background: #000; padding: 2px 8px; border-radius: 4px; color: var(--gold-light); }
+
+    /* Optional safe-zone overlay for preview only — toggle via .with-overlay on .banner */
+    .banner.with-overlay::before { z-index: 0; }
+
+    /* THE BANNER — LinkedIn personal banner spec: 1584 × 396 (4:1)
+       LinkedIn profile photo sits over the bottom-left ~400px. Content must live to the right. */
+    .banner {
+      width: 1584px;
+      height: 396px;
+      position: relative;
+      overflow: hidden;
+      background: var(--black);
+      flex-shrink: 0;
+    }
+    /* Layered gradients: deep black with a warm gold sweep from the right */
+    .banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 90% 110% at 100% 50%, rgba(201,168,76,0.30) 0%, rgba(201,168,76,0.06) 35%, transparent 65%),
+        radial-gradient(ellipse 60% 80% at 0% 100%, rgba(140,111,31,0.18) 0%, transparent 50%),
+        linear-gradient(135deg, #000 0%, #0a0805 50%, #1a1308 100%);
+      z-index: 0;
+    }
+
+    .banner__inner {
+      position: relative;
+      z-index: 2;
+      width: 100%;
+      height: 100%;
+      display: grid;
+      /* Left ~600px: reserved/empty so profile photo + breathing room. Center: tagline. Right: logo. */
+      grid-template-columns: 600px 1fr 360px;
+      align-items: center;
+      padding: 0 60px 0 0;
+    }
+
+    .banner__copy {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+      padding-left: 0;
+    }
+    .banner__tagline {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 500;
+      font-size: 56px;
+      line-height: 1.08;
+      letter-spacing: -0.005em;
+      color: #fff;
+    }
+    .banner__tagline em {
+      font-style: italic;
+      color: var(--gold);
+      font-weight: 500;
+    }
+    .banner__pillars {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      font-weight: 400;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+      margin-top: 6px;
+      white-space: nowrap;
+    }
+    .banner__pillars div { white-space: nowrap; }
+    .banner__pillars span { color: rgba(201,168,76,0.5); }
+
+    .banner__logo-wrap {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .banner__logo-img {
+      width: 140px;
+      height: 140px;
+      object-fit: contain;
+      filter: drop-shadow(0 0 32px rgba(201,168,76,0.4));
+      transform: translateY(-20px);
+    }
+
+    /* Safe zone overlay (preview only) */
+    .safe-zone-toggle {
+      max-width: 1584px;
+      width: 100%;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      font-size: 13px;
+      color: #888;
+    }
+    .safe-zone-toggle button {
+      background: #000;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 6px 14px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 12px;
+      letter-spacing: 0.05em;
+    }
+    .safe-zone-toggle button:hover { background: var(--gold); color: #000; }
+
+    .banner.show-safe-zone .safe-zone {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 400px;
+      height: 396px;
+      background: rgba(255,80,80,0.12);
+      border-right: 2px dashed rgba(255,80,80,0.6);
+      z-index: 5;
+      pointer-events: none;
+      display: block;
+    }
+    .safe-zone {
+      display: none;
+      position: absolute;
+      pointer-events: none;
+    }
+    .banner.show-safe-zone .safe-zone__label {
+      position: absolute;
+      bottom: 16px;
+      left: 16px;
+      color: #ff7070;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      z-index: 6;
+      display: block;
+    }
+    .safe-zone__label { display: none; }
+
+    /* Pill chips (gold-outlined, transparent) */
+    .banner__chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 8px;
+      max-width: 720px;
+    }
+    .banner__chip {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 1px solid rgba(201,168,76,0.65);
+      border-radius: 999px;
+      font-family: 'Inter', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: rgba(232,205,122,0.92);
+      background: rgba(201,168,76,0.04);
+      box-shadow: inset 0 0 12px rgba(201,168,76,0.05);
+    }
+
+    /* Circle badges (small round gold-outlined) */
+    .banner__circles {
+      display: grid;
+      gap: 10px 12px;
+      margin-top: 10px;
+    }
+    .banner__circles--services {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 540px;
+    }
+    .banner__circles--cities {
+      grid-template-columns: repeat(4, 1fr);
+      max-width: 540px;
+    }
+    .banner__circle {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      border: 1px solid rgba(201,168,76,0.65);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-family: 'Inter', sans-serif;
+      font-size: 9.5px;
+      font-weight: 500;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(232,205,122,0.95);
+      background: rgba(201,168,76,0.04);
+      box-shadow: inset 0 0 14px rgba(201,168,76,0.06);
+      line-height: 1.25;
+      padding: 6px;
+    }
+    .banner__circle--lg {
+      width: 120px;
+      height: 120px;
+      font-size: 11px;
+      letter-spacing: 0.2em;
+    }
+
+    /* Variant labels */
+    h2.section-label {
+      max-width: 1584px;
+      width: 100%;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--gold);
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-top: 32px;
+    }
+  </style>
+</head>
+<body>
+  <div class="helper">
+    <strong>LinkedIn banner — 1584 × 396px.</strong>
+    Content sits in the right-half so the LinkedIn profile photo doesn't cover it.
+    To export: open Chrome DevTools (Cmd+Option+I), select the <code>.banner</code> element, click the ⋮ menu next to it, choose <strong>"Capture node screenshot"</strong>. PNG downloads at exact 1584×396.
+  </div>
+
+  <div class="safe-zone-toggle">
+    <button onclick="document.querySelectorAll('.banner').forEach(b => b.classList.toggle('show-safe-zone'))">Toggle profile-photo safe zone</button>
+    <span>Red area = where your LinkedIn profile photo will overlap. Don't put copy there.</span>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+  <script>
+    function downloadBanner(idx, name) {
+      const banner = document.querySelectorAll('.banner')[idx];
+      const wasShowing = banner.classList.contains('show-safe-zone');
+      banner.classList.remove('show-safe-zone');
+      html2canvas(banner, {
+        width: 1584,
+        height: 396,
+        scale: 1,
+        backgroundColor: '#0a0a0a',
+        useCORS: true,
+        allowTaint: true,
+      }).then(canvas => {
+        if (wasShowing) banner.classList.add('show-safe-zone');
+        const link = document.createElement('a');
+        link.download = 'rcp-linkedin-banner-' + name + '.png';
+        link.href = canvas.toDataURL('image/png');
+        link.click();
+      }).catch(err => {
+        if (wasShowing) banner.classList.add('show-safe-zone');
+        alert('Download failed: ' + err.message + '\n\nFallback: open Chrome DevTools (Cmd+Option+I), right-click the banner element, choose Capture node screenshot.');
+      });
+    }
+  </script>
+
+  <h2 class="section-label">V1 — Services (text dot-separated) <button onclick="downloadBanner(0, 'v1-services')" style="margin-left: 16px; background: var(--gold); color: #000; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: 0.05em;">Download PNG</button></h2>
+  <div class="banner">
+    <div class="safe-zone"></div>
+    <div class="safe-zone__label">PROFILE PHOTO ZONE</div>
+    <div class="banner__inner">
+      <div></div>
+      <div class="banner__copy">
+        <h1 class="banner__tagline">Sophisticated capital.<br><em>Institutional standards.</em></h1>
+        <div class="banner__pillars">
+          <div>Funds</div><span>&bull;</span>
+          <div>Securitization</div><span>&bull;</span>
+          <div>Direct Deals</div><span>&bull;</span>
+          <div>Wealth</div>
+        </div>
+      </div>
+      <div class="banner__logo-wrap">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="banner__logo-img">
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-label">V2 — Cities (gold-outlined pills) <button onclick="downloadBanner(1, 'v2-cities')" style="margin-left: 16px; background: var(--gold); color: #000; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: 0.05em;">Download PNG</button></h2>
+  <div class="banner">
+    <div class="safe-zone"></div>
+    <div class="safe-zone__label">PROFILE PHOTO ZONE</div>
+    <div class="banner__inner">
+      <div></div>
+      <div class="banner__copy">
+        <h1 class="banner__tagline">Sophisticated capital.<br><em>Institutional standards.</em></h1>
+        <div class="banner__chips">
+          <span class="banner__chip">London</span>
+          <span class="banner__chip">Luxembourg</span>
+          <span class="banner__chip">Milan</span>
+          <span class="banner__chip">Conegliano</span>
+        </div>
+      </div>
+      <div class="banner__logo-wrap">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="banner__logo-img">
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-label">V3 — Services + Cities (two pill rows) <button onclick="downloadBanner(2, 'v3-services-cities')" style="margin-left: 16px; background: var(--gold); color: #000; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: 0.05em;">Download PNG</button></h2>
+  <div class="banner">
+    <div class="safe-zone"></div>
+    <div class="safe-zone__label">PROFILE PHOTO ZONE</div>
+    <div class="banner__inner">
+      <div></div>
+      <div class="banner__copy">
+        <h1 class="banner__tagline" style="font-size: 48px;">Sophisticated capital.<br><em>Institutional standards.</em></h1>
+        <div class="banner__chips">
+          <span class="banner__chip">Funds</span>
+          <span class="banner__chip">Securitization</span>
+          <span class="banner__chip">Direct Deals</span>
+          <span class="banner__chip">Wealth</span>
+        </div>
+        <div class="banner__chips" style="margin-top: 0;">
+          <span class="banner__chip">London</span>
+          <span class="banner__chip">Luxembourg</span>
+          <span class="banner__chip">Milan</span>
+          <span class="banner__chip">Conegliano</span>
+        </div>
+      </div>
+      <div class="banner__logo-wrap">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="banner__logo-img">
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-label">V4 — Alt tagline: Scale of an institution. Care of a boutique. <button onclick="downloadBanner(3, 'v4-scale-care')" style="margin-left: 16px; background: var(--gold); color: #000; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: 0.05em;">Download PNG</button></h2>
+  <div class="banner">
+    <div class="safe-zone"></div>
+    <div class="safe-zone__label">PROFILE PHOTO ZONE</div>
+    <div class="banner__inner">
+      <div></div>
+      <div class="banner__copy">
+        <h1 class="banner__tagline">Scale of an institution.<br><em>Care of a boutique.</em></h1>
+        <div class="banner__pillars">
+          <div>Funds</div><span>&bull;</span>
+          <div>Securitization</div><span>&bull;</span>
+          <div>Direct Deals</div><span>&bull;</span>
+          <div>Wealth</div>
+        </div>
+      </div>
+      <div class="banner__logo-wrap">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="banner__logo-img">
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-label">V5 — Alt tagline + 8 services as pills <button onclick="downloadBanner(4, 'v5-scale-care-8services-pills')" style="margin-left: 16px; background: var(--gold); color: #000; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: 0.05em;">Download PNG</button></h2>
+  <div class="banner">
+    <div class="safe-zone"></div>
+    <div class="safe-zone__label">PROFILE PHOTO ZONE</div>
+    <div class="banner__inner">
+      <div></div>
+      <div class="banner__copy" style="gap: 16px;">
+        <h1 class="banner__tagline" style="font-size: 44px;">Scale of an institution.<br><em>Care of a boutique.</em></h1>
+        <div class="banner__chips" style="max-width: 820px;">
+          <span class="banner__chip">Asset Management</span>
+          <span class="banner__chip">AMC &amp; Securitization</span>
+          <span class="banner__chip">Structured Products</span>
+          <span class="banner__chip">Funds Distribution</span>
+          <span class="banner__chip">Direct Deals</span>
+          <span class="banner__chip">Wealth Advisory</span>
+          <span class="banner__chip">Sport &amp; Wealth</span>
+          <span class="banner__chip">Nasdaq &amp; IPO</span>
+        </div>
+      </div>
+      <div class="banner__logo-wrap">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="banner__logo-img">
+      </div>
+    </div>
+  </div>
+
+  <h2 class="section-label">V6 — Alt tagline + 4 cities as pills <button onclick="downloadBanner(5, 'v6-scale-care-cities-pills')" style="margin-left: 16px; background: var(--gold); color: #000; border: none; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-size: 12px; font-weight: 600; letter-spacing: 0.05em;">Download PNG</button></h2>
+  <div class="banner">
+    <div class="safe-zone"></div>
+    <div class="safe-zone__label">PROFILE PHOTO ZONE</div>
+    <div class="banner__inner">
+      <div></div>
+      <div class="banner__copy">
+        <h1 class="banner__tagline">Scale of an institution.<br><em>Care of a boutique.</em></h1>
+        <div class="banner__chips">
+          <span class="banner__chip">London</span>
+          <span class="banner__chip">Luxembourg</span>
+          <span class="banner__chip">Milan</span>
+          <span class="banner__chip">Conegliano</span>
+        </div>
+      </div>
+      <div class="banner__logo-wrap">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="banner__logo-img">
+      </div>
+    </div>
+  </div>
+
+  <div class="helper" style="margin-top: 16px;">
+    <strong>Notes:</strong><br>
+    &bull; All banners are 1584×396 — exact LinkedIn spec.<br>
+    &bull; Left ~600px is reserved negative space for the profile photo.<br>
+    &bull; V1: services as dot-separated text. V2: cities as gold pills. V3: both rows of pills. V4: alt tagline + service text. V5: alt tagline + 8 services as small circles. V6: alt tagline + 4 cities as larger circles.<br>
+    &bull; Toggle the safe-zone overlay above to verify nothing important sits behind the profile photo.<br>
+    &bull; To export: click the gold "Download PNG" button next to each variant title (or use Chrome DevTools → Capture node screenshot as fallback).
+  </div>
+</body>
+</html>
