@@ -639,9 +639,25 @@
         overflow-wrap: break-word;
       }
 
-      /* Fix 7: HPL stats - hide on mobile */
+      /* Fix 7: HPL stats - show but hide Multi-year only */
       #imd .split__right > div[style*="display: flex"] {
-        display: none !important;
+        flex-wrap: wrap;
+        gap: 20px !important;
+        justify-content: center;
+      }
+      #imd .split__right > div[style*="display: flex"] > div:nth-child(2) {
+        display: none;
+      }
+      #imd .split__right > div[style*="display: flex"] > img {
+        display: none;
+      }
+
+      /* Fix 8: YPO - kill space between photo and text */
+      #ypo .split {
+        gap: 16px !important;
+      }
+      #ypo figure {
+        margin-bottom: 0 !important;
       }
     }
   </style>
