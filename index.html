@@ -284,12 +284,12 @@
         <div class="v2r-office">
           <span class="v2r-office__label" data-en="Headquarters &middot; Global Markets" data-it="Sede Centrale &middot; Mercati Globali">Headquarters &middot; Global Markets</span>
           <h3 data-en="United Kingdom" data-it="Regno Unito">United Kingdom</h3>
-          <p>London</p>
+          <p data-en="London" data-it="Londra">London</p>
         </div>
         <div class="v2r-office">
           <span class="v2r-office__label" data-en="Asset Management" data-it="Asset Management">Asset Management</span>
-          <h3>Luxembourg</h3>
-          <p>Luxembourg</p>
+          <h3 data-en="Luxembourg" data-it="Lussemburgo">Luxembourg</h3>
+          <p data-en="Luxembourg" data-it="Lussemburgo">Luxembourg</p>
         </div>
         <div class="v2r-office">
           <span class="v2r-office__label" data-en-html="Advisory &amp; Wealth" data-it-html="Consulenza e Patrimonio">Advisory &amp; Wealth</span>
@@ -663,7 +663,7 @@
             <p class="insight-card__excerpt" data-en="RCP assisted Maha Capital on the private placement, completing the acquisition of Keo World and executing capital raises of USD 27 million at SEK 16 per share." data-it="RCP ha assistito Maha Capital sul private placement, completando l&rsquo;acquisizione di Keo World ed eseguendo aumenti di capitale per 27 milioni di USD a 16 SEK per azione.">RCP assisted Maha Capital on the private placement, completing the acquisition of Keo World and executing capital raises of USD 27 million at SEK 16 per share.</p>
             <div class="insight-card__footer">
               <span class="insight-card__date" data-en="Apr 2026" data-it="Apr 2026">Apr 2026</span>
-              <span class="insight-card__cta">Read More <span aria-hidden="true">&rarr;</span></span>
+              <span class="insight-card__cta" data-en-html="Read More <span aria-hidden=&quot;true&quot;>&rarr;</span>" data-it-html="Leggi di Pi&ugrave; <span aria-hidden=&quot;true&quot;>&rarr;</span>">Read More <span aria-hidden="true">&rarr;</span></span>
             </div>
           </div>
         </a>
@@ -678,7 +678,7 @@
             <p class="insight-card__excerpt" data-en="An increasingly fragile balance. What US fiscal dynamics mean for European investors positioning in alternatives." data-it="Un equilibrio sempre pi&ugrave; fragile. Cosa significano le dinamiche fiscali USA per gli investitori europei posizionati negli alternativi.">An increasingly fragile balance. What US fiscal dynamics mean for European investors positioning in alternatives.</p>
             <div class="insight-card__footer">
               <span class="insight-card__date" data-en="Mar 5, 2025" data-it="5 Mar 2025">Mar 5, 2025</span>
-              <span class="insight-card__cta">Read More <span aria-hidden="true">&rarr;</span></span>
+              <span class="insight-card__cta" data-en-html="Read More <span aria-hidden=&quot;true&quot;>&rarr;</span>" data-it-html="Leggi di Pi&ugrave; <span aria-hidden=&quot;true&quot;>&rarr;</span>">Read More <span aria-hidden="true">&rarr;</span></span>
             </div>
           </div>
         </a>
@@ -693,7 +693,7 @@
             <p class="insight-card__excerpt" data-en="Why we committed to Eterna III and what the fund&rsquo;s thesis tells us about the next cycle of European private markets." data-it="Perch&eacute; ci siamo impegnati in Eterna III e cosa la tesi del fondo ci dice sul prossimo ciclo dei mercati privati europei.">Why we committed to Eterna III and what the fund&rsquo;s thesis tells us about the next cycle of European private markets.</p>
             <div class="insight-card__footer">
               <span class="insight-card__date" data-en="Feb 24, 2025" data-it="24 Feb 2025">Feb 24, 2025</span>
-              <span class="insight-card__cta">Read More <span aria-hidden="true">&rarr;</span></span>
+              <span class="insight-card__cta" data-en-html="Read More <span aria-hidden=&quot;true&quot;>&rarr;</span>" data-it-html="Leggi di Pi&ugrave; <span aria-hidden=&quot;true&quot;>&rarr;</span>">Read More <span aria-hidden="true">&rarr;</span></span>
             </div>
           </div>
         </a>
@@ -840,7 +840,7 @@
         </div>
       </div>
       <div class="footer__bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
-        <p>&copy; 2026 Run Capital Partners. All rights reserved.</p>
+        <p data-en="&copy; 2026 Run Capital Partners. All rights reserved." data-it="&copy; 2026 Run Capital Partners. Tutti i diritti riservati.">&copy; 2026 Run Capital Partners. All rights reserved.</p>
         <div style="display: flex; gap: 24px; font-size: 12px;">
           <a href="privacy-policy.html" style="color: rgba(255,255,255,0.4); text-decoration: none;" data-en="Privacy Policy" data-it="Privacy Policy">Privacy Policy</a>
           <a href="cookie-policy.html" style="color: rgba(255,255,255,0.4); text-decoration: none;" data-en="Cookie Policy" data-it="Cookie Policy">Cookie Policy</a>
@@ -1122,9 +1122,12 @@
         }).then(function (res) {
           if (res.ok) {
             form.classList.add('is-submitted');
+            var __isIt = document.documentElement.lang === 'it';
+            var __thankTitle = __isIt ? 'Grazie.' : 'Thank you.';
+            var __thankText = __isIt ? 'Il tuo messaggio &egrave; stato ricevuto. Qualcuno del team ti contatter&agrave; appena possibile.' : 'Your message has been received. Someone from the team will be in touch as soon as possible.';
             status.innerHTML = '<span class="rcp-form__success-mark" aria-hidden="true"></span>' +
-              '<h3 class="rcp-form__success-title">Thank you.</h3>' +
-              '<p class="rcp-form__success-text">Your message has been received. Someone from the team will be in touch as soon as possible.</p>';
+              '<h3 class="rcp-form__success-title">' + __thankTitle + '</h3>' +
+              '<p class="rcp-form__success-text">' + __thankText + '</p>';
             status.classList.remove('is-error');
             status.classList.add('is-success');
             form.reset();
