@@ -324,6 +324,11 @@
       .bio-meta-item { flex: none; }
       .cred-grid { grid-template-columns: 1fr; }
       .expertise-grid { grid-template-columns: 1fr; }
+      .expertise-grid .expertise-card:nth-child(3) {
+        grid-column: auto !important;
+        max-width: none !important;
+        justify-self: stretch !important;
+      }
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
