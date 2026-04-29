@@ -430,6 +430,7 @@
 .v2r-office {
   border-top: 1px solid rgba(201,168,76,0.22);
   padding-top: 28px;
+  text-align: center;
 }
 .v2r-office__label {
   display: block;
