@@ -4438,6 +4438,32 @@ select:focus-visible,
     padding-top: 60px !important;
   }
 
+  /* Fix: Reduce space above Run Capital Group / By the numbers */
+  .numbers-section {
+    padding: 60px 0 !important;
+  }
+
+  /* Fix: Center office texts */
+  .v2r-office {
+    text-align: center;
+  }
+
+  /* Fix: Reduce space below Nasdaq card and above Who We Serve */
+  .v2-services-section {
+    padding-bottom: 40px !important;
+  }
+  .who-serve {
+    padding-top: 40px !important;
+  }
+
+  /* Fix: Reduce space below email us directly */
+  .rcp-form__note {
+    margin-bottom: 0 !important;
+  }
+  #contact {
+    padding-bottom: 40px !important;
+  }
+
   /* Fix: Group Holding card visible */
   .group-card.group-card--parent {
     padding: 24px 20px 20px !important;
