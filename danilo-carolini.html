@@ -346,6 +346,9 @@
       .lse-card > div {
         padding: 24px !important;
       }
+      .lse-sub-cards {
+        grid-template-columns: 1fr !important;
+      }
     }
       .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
     .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
@@ -487,7 +490,7 @@
             <p class="cred-card__detail">London School of Economics. Advanced programme in corporate finance and capital-markets strategy.</p>
           </div>
         </div>
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+        <div class="lse-sub-cards" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
           <div class="cred-card">
             <p class="cred-card__year">Master Degree</p>
             <h3 class="cred-card__title">International Financial Management</h3>
