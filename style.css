@@ -2053,6 +2053,8 @@ span.gold {
 .group-card__lockup {
   display: inline-flex;
   align-items: center;
+  align-self: center;
+  justify-content: center;
   gap: 22px;
   margin-bottom: 22px;
 }
