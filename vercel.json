@@ -42,6 +42,15 @@
     { "source": "/en/news/a-doughnut-to-go-beyond-the-limits-of-traditional-economic-thinking", "destination": "/insight-doughnut-model", "permanent": true },
     { "source": "/en/news/a-doughnut-to-go-beyond-the-limits-of-traditional-economic-thinking/", "destination": "/insight-doughnut-model", "permanent": true },
 
+    { "source": "/news-en", "destination": "/insights", "permanent": true },
+    { "source": "/news-en/", "destination": "/insights", "permanent": true },
+    { "source": "/en/news-en", "destination": "/insights", "permanent": true },
+    { "source": "/en/news-en/", "destination": "/insights", "permanent": true },
+    { "source": "/news", "destination": "/insights", "permanent": true },
+    { "source": "/news/", "destination": "/insights", "permanent": true },
+    { "source": "/en/news", "destination": "/insights", "permanent": true },
+    { "source": "/en/news/", "destination": "/insights", "permanent": true },
+
     { "source": "/en/news/:path*", "destination": "/insights", "permanent": true },
     { "source": "/2024/:path*", "destination": "/insights", "permanent": true },
     { "source": "/2025/:path*", "destination": "/insights", "permanent": true },
