@@ -3,15 +3,56 @@
   "redirects": [
     { "source": "/fund", "destination": "/funds-distribution", "permanent": true },
     { "source": "/fund.html", "destination": "/funds-distribution", "permanent": true },
+
     { "source": "/run-capital-partners-ltd-en", "destination": "/", "permanent": true },
     { "source": "/who-we-are", "destination": "/#team", "permanent": true },
     { "source": "/en/who-we-are", "destination": "/#team", "permanent": true },
     { "source": "/en/who-we-are/", "destination": "/#team", "permanent": true },
     { "source": "/chi-siamo", "destination": "/#team", "permanent": true },
-    { "source": "/rcp-srl-en", "destination": "/rcp-srl", "permanent": true },
+    { "source": "/about-us", "destination": "/#group", "permanent": true },
+    { "source": "/company-profile", "destination": "/#group", "permanent": true },
+    { "source": "/corporate-data", "destination": "/#group", "permanent": true },
+
+    { "source": "/contatti", "destination": "/#contact", "permanent": true },
+    { "source": "/contatti/", "destination": "/#contact", "permanent": true },
+    { "source": "/contacts", "destination": "/#contact", "permanent": true },
+    { "source": "/contacts-2", "destination": "/#contact", "permanent": true },
+    { "source": "/en/contacts", "destination": "/#contact", "permanent": true },
+    { "source": "/en/contacts/", "destination": "/#contact", "permanent": true },
+
     { "source": "/services", "destination": "/#services", "permanent": true },
     { "source": "/en/services", "destination": "/#services", "permanent": true },
+    { "source": "/servizi", "destination": "/#services", "permanent": true },
+    { "source": "/servizi/", "destination": "/#services", "permanent": true },
+
+    { "source": "/rcp-srl-en", "destination": "/rcp-srl", "permanent": true },
+    { "source": "/en/rcp-srl-en", "destination": "/rcp-srl", "permanent": true },
     { "source": "/run-am-en", "destination": "/run-am", "permanent": true },
+
+    { "source": "/cookie", "destination": "/cookie-policy", "permanent": true },
+    { "source": "/en/cookie-policy-en", "destination": "/cookie-policy", "permanent": true },
+    { "source": "/en/privacy-policy-en", "destination": "/privacy-policy", "permanent": true },
+
+    { "source": "/en/investing-in-the-future-our-participation-in-the-eterna-iii-fund", "destination": "/insight-eterna-iii", "permanent": true },
+    { "source": "/en/investing-in-the-future-our-participation-in-the-eterna-iii-fund/", "destination": "/insight-eterna-iii", "permanent": true },
+    { "source": "/en/news/the-american-economy-between-growth-and-debt-a-growingly-fragile-balance", "destination": "/insight-american-economy", "permanent": true },
+    { "source": "/en/news/the-american-economy-between-growth-and-debt-a-growingly-fragile-balance/", "destination": "/insight-american-economy", "permanent": true },
+    { "source": "/en/a-doughnut-to-go-beyond-the-limits-of-traditional-economic-thinking", "destination": "/insight-doughnut-model", "permanent": true },
+    { "source": "/en/a-doughnut-to-go-beyond-the-limits-of-traditional-economic-thinking/", "destination": "/insight-doughnut-model", "permanent": true },
+    { "source": "/en/news/a-doughnut-to-go-beyond-the-limits-of-traditional-economic-thinking", "destination": "/insight-doughnut-model", "permanent": true },
+    { "source": "/en/news/a-doughnut-to-go-beyond-the-limits-of-traditional-economic-thinking/", "destination": "/insight-doughnut-model", "permanent": true },
+
+    { "source": "/en/news/:path*", "destination": "/insights", "permanent": true },
+    { "source": "/2024/:path*", "destination": "/insights", "permanent": true },
+    { "source": "/2025/:path*", "destination": "/insights", "permanent": true },
+    { "source": "/category/:path*", "destination": "/insights", "permanent": true },
+    { "source": "/consulenza-patrimoniale-il-blog", "destination": "/insights", "permanent": true },
+    { "source": "/consulenza-patrimoniale-il-blog/", "destination": "/insights", "permanent": true },
+
+    { "source": "/en", "destination": "/", "permanent": true },
+    { "source": "/en/", "destination": "/", "permanent": true },
+    { "source": "/it", "destination": "/", "permanent": true },
+    { "source": "/it/", "destination": "/", "permanent": true },
     { "source": "/en/:path*", "destination": "/:path*", "permanent": true },
     { "source": "/it/:path*", "destination": "/:path*", "permanent": true }
   ]
