@@ -2,6 +2,17 @@
   "cleanUrls": true,
   "redirects": [
     { "source": "/fund", "destination": "/funds-distribution", "permanent": true },
-    { "source": "/fund.html", "destination": "/funds-distribution", "permanent": true }
+    { "source": "/fund.html", "destination": "/funds-distribution", "permanent": true },
+    { "source": "/run-capital-partners-ltd-en", "destination": "/", "permanent": true },
+    { "source": "/who-we-are", "destination": "/#team", "permanent": true },
+    { "source": "/en/who-we-are", "destination": "/#team", "permanent": true },
+    { "source": "/en/who-we-are/", "destination": "/#team", "permanent": true },
+    { "source": "/chi-siamo", "destination": "/#team", "permanent": true },
+    { "source": "/rcp-srl-en", "destination": "/rcp-srl", "permanent": true },
+    { "source": "/services", "destination": "/#services", "permanent": true },
+    { "source": "/en/services", "destination": "/#services", "permanent": true },
+    { "source": "/run-am-en", "destination": "/run-am", "permanent": true },
+    { "source": "/en/:path*", "destination": "/:path*", "permanent": true },
+    { "source": "/it/:path*", "destination": "/:path*", "permanent": true }
   ]
 }
