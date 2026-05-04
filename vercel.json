@@ -1,3 +1,7 @@
 {
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/fund", "destination": "/funds-distribution", "permanent": true },
+    { "source": "/fund.html", "destination": "/funds-distribution", "permanent": true }
+  ]
 }

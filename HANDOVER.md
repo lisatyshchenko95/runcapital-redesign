@@ -49,7 +49,7 @@ runcapital-redesign/
 ├── asset-management.html
 ├── amc-securitization.html
 ├── structured-products.html
-├── fund.html
+├── funds-distribution.html
 ├── direct-deals.html
 ├── wealth-advisory.html
 ├── sport-wealth.html

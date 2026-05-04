@@ -63,7 +63,7 @@ for hero, capability cards, regulatory panel, and CTA sections.
 | `davide-de-luca.html` | 49 | Yes |
 | `insight-american-economy.html` | 48 | Yes |
 | `amc-securitization.html` | 47 | Yes |
-| `fund.html` | 46 | Yes |
+| `funds-distribution.html` | 46 | Yes |
 | `insight-eterna-iii.html` | 46 | Yes |
 | `insights.html` | 46 | Yes |
 | `insight-doughnut-model.html` | 44 | Yes |
@@ -75,7 +75,7 @@ for hero, capability cards, regulatory panel, and CTA sections.
 ## Recommended priority
 
 1. **High traffic, high content** — service pages: `asset-management.html`, `direct-deals.html`,
-   `structured-products.html`, `wealth-advisory.html`, `fund.html`, `amc-securitization.html`,
+   `structured-products.html`, `wealth-advisory.html`, `funds-distribution.html`, `amc-securitization.html`,
    `nasdaq-listings.html`, `certificate-issuance.html`, `wealth-management.html`, `sport-wealth.html`.
 2. **Group entity pages** — `rcp-srl.html`, `run-am.html`, `ceo.html`, `3dots.html`
    (`rcp-global-markets.html` already done as the reference).
