@@ -63,6 +63,10 @@
     { "source": "/it", "destination": "/", "permanent": true },
     { "source": "/it/", "destination": "/", "permanent": true },
     { "source": "/en/:path*", "destination": "/:path*", "permanent": true },
-    { "source": "/it/:path*", "destination": "/:path*", "permanent": true }
+    { "source": "/it/:path*", "destination": "/:path*", "permanent": true },
+    { "source": "/enrico", "destination": "/enrico-fiore", "permanent": true },
+    { "source": "/enrico.html", "destination": "/enrico-fiore", "permanent": true },
+    { "source": "/giordano", "destination": "/giordano-tomasini", "permanent": true },
+    { "source": "/giordano.html", "destination": "/giordano-tomasini", "permanent": true }
   ]
 }
