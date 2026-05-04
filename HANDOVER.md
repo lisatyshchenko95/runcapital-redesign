@@ -1,108 +1,228 @@
-# Run Capital Redesign — Handover
+# Run Capital Partners — Website Handover Document
 
-Lisa → Ice. Project is live, no blockers. This doc covers what matters day one.
-
-## What's deployed
-
-- **Production:** https://runcapital-redesign.vercel.app
-- **Host:** Vercel (lisa-tyshchenkos-projects team, project `runcapital-redesign`)
-- **Deploy:** `vercel --prod --yes` from the project root. No build step — it's static HTML/CSS/JS.
-
-## Stack
-
-Static site. No framework, no bundler.
-- **45 HTML pages** (homepage, 8 services, 8 group entities, team bios, insights, policies)
-- **style.css** — 3000+ lines, all shared styles
-- **opening.css, amc-style.css** — page-specific overrides
-- **contact-modal.js** — global mailto interceptor, shows a universal modal so people without a mail app can copy `info@runcapital.partners`
-- **video-fallback.js** — captures frame 0 of hero videos as poster for iOS Low Power Mode (no ffmpeg needed, pure canvas)
-- **lang-switch.js** — EN/IT language toggle. Reads `data-en` / `data-it` attributes on any element and swaps `textContent`. State persisted in `localStorage` under `rcp_lang`. See "Translation convention" below.
-
-All three JS files are injected into every HTML page via `<script defer src="...">` before `</body>`.
-
-## Translation convention (EN → IT)
-
-The site is bilingual. The toggle button (`#langSwitch`, top-right of nav) is on every page and the shared `lang-switch.js` handles the rest.
-
-**To translate any string, add the IT counterpart on the same element:**
-
-```html
-<!-- Plain text (most common) -->
-<h2 data-en="Capabilities" data-it="Competenze">Capabilities</h2>
-
-<!-- Element contains nested HTML (italic, gold spans, etc.) -->
-<h2 data-en-html="Have <em>questions</em>?" data-it-html="Hai <em>domande</em>?">Have <em>questions</em>?</h2>
-
-<!-- Form placeholders -->
-<input data-en-placeholder="Your email" data-it-placeholder="La tua email">
-```
-
-The script auto-discovers any element with `data-en*` attributes on page load — no JS edits needed when adding new content. **Always add `data-it` at the same time you add new English copy** (otherwise the page partly translates and looks broken when IT is selected).
-
-`rcp-global-markets.html` is the canonical reference page — fully translated, copy patterns from there.
-
-A page-by-page audit of remaining gaps lives in `TRANSLATION_AUDIT.md` (regenerate with the script in that file's footer).
-
-**Do not** add inline `<script>` blocks that duplicate `lang-switch.js`. Some older pages still have minified inline copies — they're idempotent so they don't break anything, but new pages should rely on the shared file only.
-
-## Key conventions
-
-- **CSS vars:** `--gold`, `--gold-light`, `--gold-dark`, `--cream`, `--dark`, `--white`, `--font-serif` (Playfair Display), `--font-sans` (Inter), `--ease-out-expo`
-- **"Get in Touch" nav button (top-right):** on EVERY page links to `index.html#contact` — the homepage contact form. Do not change this per-page; it's intentionally unified.
-- **Contact modal (`contact-modal.js`):** auto-catches any `<a href="mailto:...">` click and shows a modal with copy-to-clipboard. To bypass it (e.g., for the modal's own "Open in Email App" button or the footer email link), add `data-rcp-skip` to the anchor.
-- **Contact form (on index.html):** submits to FormSubmit.co AJAX at `https://formsubmit.co/ajax/info@runcapital.partners`. FormSubmit requires a one-time activation click the first time; if form submissions stop working, check the confirmation email.
-
-## Pages worth knowing
-
-- `index.html` — homepage. Contact form lives at `#contact` (anchor at the bottom).
-- `asset-management.html` — reference for the "Luxembourg Team" circular-portrait section. Photos in `images/team/`.
-- `sport-wealth.html` — has its own team section (Luca + Massimo, inline styles `.sw-team*`). Massimo has no photo yet — shows gold "MB" initials. Drop `images/team/massimo-bocci.jpg` and swap the `<span class="sw-member__initials">MB</span>` for `<img src="images/team/massimo-bocci.jpg" alt="Massimo Bocci">` to activate.
-- `insight-*.html` (3 pages) — article layout. Recently widened to 1140px content / 860px prose; SVG illustrations removed per request.
-- `rcp-global-markets.html`, `rcp-srl.html`, `run-am.html`, `fund.html`, `ceo.html`, `direct-deals.html`, `amc-securitization.html`, `3dots.html` — group entity pages.
-
-## Team photos
-
-Located in `images/team/`:
-- `luca-padovan.jpg`, `giordano-tomasini.jpg`, `enrico-de-angelis.jpg`, `giovanni-campodallorto.jpg`, `stefano-giuffra.jpg`
-
-Missing (fallback to initials on bylines/team cards):
-- `massimo-bocci.jpg` — Sport & Wealth page shows "MB"
-- `davide-de-luca.jpg` — insight-american-economy.html and insight-doughnut-model.html bylines show "DD"
-
-## Recent behavior changes (context, not code)
-
-- All `<a class="nav__cta">Get in Touch</a>` point to `index.html#contact` (done across 43 pages).
-- `article-hero__visual` SVG illustrations deleted from all 3 insight pages — title now spans full width.
-- IVASS registration paragraph removed from overview section of `rcp-srl.html` (stat badges and footer regulatory line still reference it — intentional).
-- "For advisory, distribution, and sport & wealth mandates..." line removed from `rcp-global-markets.html` contact section.
-- RCP Global Markets CTA button was "Speak with London" → now just "Contact Us".
-
-## How to deploy
-
-```bash
-cd /Users/lisatyshchenko/runcapital-redesign
-vercel --prod --yes
-```
-
-That's it. No build, no tests. Takes ~10 seconds.
-
-## Open items / nice-to-haves
-
-1. **Massimo Bocci photo** — drop `images/team/massimo-bocci.jpg` and swap the span in `sport-wealth.html` (~line 230ish of the new sw-team block).
-2. **Davide De Luca photo** — same pattern for `insight-american-economy.html` and `insight-doughnut-model.html` bylines (currently show "DD" gold circle via `.author-avatar--lg`).
-3. **Giovanni byline photo** — `giovanni-campodallorto.jpg` exists but `insight-eterna-iii.html` still shows "GC" initials. Swap `<span class="author-avatar author-avatar--lg">GC</span>` for `<img>` and wrap the byline in `<a href="giovanni-campodallorto.html">` to link to his profile.
-4. **FormSubmit activation** — if the contact form on index.html has never received a submission, the first one will bounce an activation email to `info@runcapital.partners`. Someone needs to click the link in that email once.
-
-## Don't touch
-
-- `contact-modal.js` and `video-fallback.js` — they work. Any change needs to be tested on iOS Safari Low Power Mode + a phone without a mail client configured.
-- The `data-rcp-skip` attribute pattern — removing it will cause infinite modal loops.
-
-## Contact
-
-- Email everything goes to: `info@runcapital.partners`
-- Vercel dashboard: https://vercel.com/lisa-tyshchenkos-projects/runcapital-redesign
+**Date:** May 2026  
+**Prepared for:** Alice (RCP Assistant) and any IT person taking over
 
 ---
 
-Good luck. Ping Lisa if anything is on fire.
+## 1. What This Is
+
+This is the complete source code for the Run Capital Partners website at **https://runcapital.partners**. It is a static HTML/CSS website — no backend, no database, no build step. You edit HTML files directly and deploy.
+
+---
+
+## 2. Where Everything Lives
+
+| What | Where |
+|---|---|
+| **Source Code** | GitHub: `https://github.com/lisatyshchenko95/runcapital-redesign` |
+| **Hosting** | Vercel: `https://vercel.com` (project: `runcapital-redesign`) |
+| **Domain DNS** | Squarespace (DNS managed via Google Cloud DNS) |
+| **Live Site** | `https://runcapital.partners` |
+| **Backup URL** | `https://runcapital-redesign-zeta.vercel.app` |
+
+---
+
+## 3. Tech Stack
+
+- **Pure HTML/CSS** — no framework, no React, no build tools
+- **Fonts:** Google Fonts (Playfair Display, Inter, Cinzel, Cormorant Garamond)
+- **Hosting:** Vercel (free tier, static files)
+- **Version Control:** Git + GitHub
+- **No database, no server, no backend**
+
+---
+
+## 4. Project Structure
+
+```
+runcapital-redesign/
+├── index.html                  # Homepage
+├── style.css                   # Main shared CSS
+├── opening.css                 # Homepage-specific CSS
+├── amc-style.css               # CSS for service pages
+├── video-fallback.js           # iOS video autoplay fix
+├── contact-modal.js            # Contact modal
+├── favicon.png                 # Browser tab icon (RCP logo)
+│
+├── # SERVICE PAGES
+├── asset-management.html
+├── amc-securitization.html
+├── structured-products.html
+├── fund.html
+├── direct-deals.html
+├── wealth-advisory.html
+├── sport-wealth.html
+├── nasdaq-listings.html
+├── wealth-management.html
+├── certificate-issuance.html
+│
+├── # GROUP ENTITY PAGES
+├── rcp-global-markets.html     # London
+├── run-am.html                 # Luxembourg
+├── rcp-srl.html                # Italy
+│
+├── # TEAM BIO PAGES (1 per person)
+├── ceo.html                    # Luca Padovan
+├── cesare-trebeschi.html
+├── enrico.html                 # Enrico Fiore
+├── enrico-caporin.html
+├── enrico-de-angelis.html
+├── michele-furlan.html
+├── matteo-bodini.html
+├── giordano.html               # Giordano Tomasini
+├── giovanni-randazzo.html
+├── giovanni-campodallorto.html
+├── stefano-giuffra.html
+├── danilo-carolini.html
+├── massimo-bocci.html
+├── denis-rondanini.html
+├── patrizio-caringi.html
+├── riccardo-perrone.html
+├── alice-pozzobon.html
+├── sara-longo.html
+├── lara-covre.html
+├── mario-fama.html
+├── davide-de-luca.html
+├── elena-bernardi.html
+│
+├── # INSIGHT ARTICLES
+├── insights.html
+├── insight-eterna-iii.html
+├── insight-american-economy.html
+├── insight-doughnut-model.html
+│
+├── # LEGAL PAGES
+├── privacy-policy.html
+├── cookie-policy.html
+├── terms-of-service.html
+├── regulatory-disclosures.html
+│
+├── # OTHER
+├── linkedin-banner.html        # LinkedIn banner generator
+│
+├── # IMAGES & ASSETS
+├── images/                     # Subfolder images
+├── videos/                     # Hero videos
+├── *.jpg                       # Team photos (root level)
+├── og-*.png, og-*.jpg          # Open Graph preview images
+├── rcp-logo.png                # RCP logo
+├── cambridge.jpg, trento.jpg, lse.jpg  # University photos
+└── ...
+```
+
+---
+
+## 5. How to Make Changes
+
+### Simple text/content changes:
+1. Open the `.html` file in any text editor (VS Code recommended)
+2. Find the text you want to change
+3. Edit and save
+4. Deploy (see section 6)
+
+### Adding a new team member:
+1. Copy an existing bio page (e.g., `denis-rondanini.html`)
+2. Replace name, title, photo, summary, expertise, career, contact email
+3. Add their photo as `firstname-lastname.jpg` in the root folder
+4. Add a link to them on `index.html` (team section) and relevant service pages
+5. Deploy
+
+### Updating the footer:
+The footer is duplicated in every HTML file. To change it, you must update it in **all** HTML files.
+
+### CSS:
+- **Global styles:** `style.css`
+- **Homepage:** `opening.css`
+- **Service pages:** `amc-style.css`
+- **Bio pages:** each has inline `<style>` in the `<head>`
+
+---
+
+## 6. How to Deploy
+
+### Option A: Vercel CLI
+```bash
+cd runcapital-redesign
+vercel --prod
+```
+
+### Option B: Git push (then deploy from Vercel)
+```bash
+git add .
+git commit -m "your change description"
+git push
+vercel --prod
+```
+
+### Option C: Vercel Dashboard
+1. Go to https://vercel.com
+2. Find project `runcapital-redesign`
+3. Click "Deployments" > "Redeploy"
+
+---
+
+## 7. How to Get the Files (Backup / ZIP)
+
+### Download as ZIP:
+1. Go to https://github.com/lisatyshchenko95/runcapital-redesign
+2. Click the green **"Code"** button
+3. Click **"Download ZIP"**
+
+### Or clone via Git:
+```bash
+git clone https://github.com/lisatyshchenko95/runcapital-redesign.git
+```
+
+---
+
+## 8. Domain & DNS Configuration
+
+| Setting | Value |
+|---|---|
+| **Domain** | `runcapital.partners` |
+| **DNS Provider** | Squarespace / Google Cloud DNS |
+| **A Record** | `@` → `216.198.79.1` (Vercel) |
+| **CNAME** | `www` → `69a14985654c6807.vercel-dns-O17.com.` |
+| **TXT** | `_vercel` → verification string |
+
+If the site goes down, check these DNS records in Squarespace are still pointing to Vercel.
+
+---
+
+## 9. Accounts Needed
+
+| Service | What For | Who Has Access |
+|---|---|---|
+| **GitHub** (`lisatyshchenko95`) | Source code repository | Lisa |
+| **Vercel** | Hosting & deployment | Isaiah / project team |
+| **Squarespace** | Domain DNS management | Luca / Lisa |
+
+---
+
+## 10. Important Notes
+
+- **No build step** — files are served exactly as they are. What you see in the folder is what goes live.
+- **Mobile responsive** — all pages work on desktop and mobile.
+- **EN/IT language toggle** — built into pages using `data-en` / `data-it` attributes.
+- **Footer** — same across all pages, must be updated in each file individually.
+- **OG meta tags** — each page has Open Graph tags for link preview images (WhatsApp, LinkedIn).
+- **Videos** — hero videos autoplay silently. `video-fallback.js` handles iOS.
+- **Future changes via Claude Code** — this project can continue to be maintained using Claude Code. Open the project folder and describe what you need.
+
+---
+
+## 11. Emergency: Site Down?
+
+1. Check if `https://runcapital-redesign-zeta.vercel.app` works (bypasses DNS)
+2. If yes → DNS issue. Check Squarespace DNS records match section 8 above.
+3. If no → Vercel issue. Log into Vercel and check deployment status.
+4. To quickly restore → redeploy from Vercel dashboard.
+
+---
+
+## 12. Future Development
+
+- Changes can be made by any developer with access to the GitHub repo
+- Claude Code can be used for AI-assisted changes — just open the project and describe what you need
+- No special environment setup needed — just a text editor and Git
