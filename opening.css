@@ -215,7 +215,6 @@
 }
 .v2-partners__marquee {
   display: flex;
-  gap: 72px;
   overflow: hidden;
   mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
@@ -226,6 +225,7 @@
   flex-shrink: 0;
   animation: v2PartnerScroll 55s linear infinite;
   padding-right: 72px;
+  align-items: center;
 }
 @keyframes v2PartnerScroll {
   from { transform: translateX(0); }
@@ -248,14 +248,17 @@
 .v2-partner--logo {
   display: inline-flex;
   align-items: center;
-  color: rgba(247,243,234,0.72);
+  color: #ffffff;
+  opacity: 0.85;
+  transition: opacity 0.3s;
 }
-.v2-partner--logo svg {
+.v2-partner--logo svg,
+.v2-partner--logo img {
   height: 48px;
   width: auto;
   display: block;
 }
-.v2-partner--logo:hover { color: var(--v2-gold-light); }
+.v2-partner--logo:hover { opacity: 1; }
 
 /* ---- V2 Services ---- */
 .v2-services-section {
