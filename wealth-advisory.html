@@ -27,6 +27,12 @@
 
     body { background: var(--cream); color: var(--ink); }
 
+    /* Wealth Advisory team grid: 4 cols desktop, 2 cols mobile */
+    .wealth-team-grid { grid-template-columns: repeat(4, minmax(0, 220px)); }
+    @media (max-width: 768px) {
+      .wealth-team-grid { grid-template-columns: repeat(2, 1fr) !important; max-width: 480px !important; }
+    }
+
     /* ---- HERO ---- */
     .wa-hero {
       position: relative;
@@ -477,7 +483,7 @@
       <p style="font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; color: var(--gold-warm, #c9a84c); font-weight: 600; margin: 0 0 16px;" data-en="&mdash; Wealth Advisory Team" data-it="&mdash; Team Consulenza Patrimoniale">&mdash; Wealth Advisory Team</p>
       <h2 style="font-family: 'Playfair Display', Georgia, serif; font-weight: 500; font-size: clamp(34px, 4.2vw, 56px); line-height: 1.06; letter-spacing: -0.018em; margin: 0; color: var(--ink, #0a0a0a);" data-en-html='The people <em style="font-style: italic; color: var(--gold, #c9a84c);">behind it.</em>' data-it-html='Le persone <em style="font-style: italic; color: var(--gold, #c9a84c);">dietro tutto questo.</em>'>The people <em style="font-style: italic; color: var(--gold, #c9a84c);">behind it.</em></h2>
     </div>
-    <div class="team-grid" style="grid-template-columns: repeat(4, minmax(0, 220px)); justify-content: center; max-width: 1100px; margin: 0 auto;">
+    <div class="team-grid wealth-team-grid" style="justify-content: center; max-width: 1100px; margin: 0 auto;">
       <div class="team-card">
         <a href="ceo.html">
           <div class="team-card__photo"><img src="luca-padovan.jpg" alt="Luca Padovan" loading="lazy"></div>
