@@ -221,10 +221,10 @@
 }
 .v2-partners__track {
   display: flex;
-  gap: 72px;
+  gap: 48px;
   flex-shrink: 0;
   animation: v2PartnerScroll 55s linear infinite;
-  padding-right: 72px;
+  padding-right: 48px;
   align-items: center;
 }
 @keyframes v2PartnerScroll {
