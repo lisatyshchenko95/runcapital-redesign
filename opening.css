@@ -216,6 +216,7 @@
 .v2-partners__marquee {
   display: flex;
   overflow: hidden;
+  padding: 10px 0;
   mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
   -webkit-mask-image: linear-gradient(90deg, transparent 0%, black 8%, black 92%, transparent 100%);
 }
