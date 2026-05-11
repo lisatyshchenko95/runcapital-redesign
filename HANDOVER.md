@@ -1,6 +1,7 @@
 # Run Capital Partners — Website Handover Document
 
-**Date:** May 2026  
+**Original date:** May 4, 2026  
+**Last updated:** May 11, 2026  
 **Prepared for:** Alice (RCP Assistant) and any IT person taking over
 
 ---
@@ -65,12 +66,12 @@ runcapital-redesign/
 ├── # TEAM BIO PAGES (1 per person)
 ├── ceo.html                    # Luca Padovan
 ├── cesare-trebeschi.html
-├── enrico.html                 # Enrico Fiore
+├── enrico-fiore.html           # Enrico Fiore
 ├── enrico-caporin.html
 ├── enrico-de-angelis.html
 ├── michele-furlan.html
 ├── matteo-bodini.html
-├── giordano.html               # Giordano Tomasini
+├── giordano-tomasini.html      # Giordano Tomasini
 ├── giovanni-randazzo.html
 ├── giovanni-campodallorto.html
 ├── stefano-giuffra.html
@@ -103,6 +104,7 @@ runcapital-redesign/
 │
 ├── # IMAGES & ASSETS
 ├── images/                     # Subfolder images
+├── logos/                      # Institutional-partner logos (white silhouettes + originals)
 ├── videos/                     # Hero videos
 ├── *.jpg                       # Team photos (root level)
 ├── og-*.png, og-*.jpg          # Open Graph preview images
@@ -221,7 +223,52 @@ If the site goes down, check these DNS records in Squarespace are still pointing
 
 ---
 
-## 12. Future Development
+## 12. Recent Updates (since first handover, May 4 2026)
+
+### New offices
+- **Rome office** added to the footer of all 44 pages: *Via Leonida Bissolati 54, 00187*
+- Hero locations pill on the homepage now includes **Rome / Roma**
+
+### Homepage
+- Institutional Partners marquee rebuilt with current partners: **Actarus Renewables, Eterna Capital, BBVA, Vontobel, Leonteq, UBS, Marex, J. Safra Sarasin, Goldman Sachs**
+- New `logos/` folder holds the original brand PNGs and the **white-silhouette** versions (`*-white.png`) actually rendered in the marquee
+- Italian hero title changed: *"Il Tuo Percorso Patrimoniale"* → *"La Tua Boutique Finanziaria"* (EN unchanged)
+- Marquee gap, ordering and per-logo size/position tuned (small inline `transform:` styles on a few entries — Leonteq, Marex, Goldman, Eterna)
+
+### Team
+- **Index team grid** re-ordered. Leadership tier: Luca Padovan · Cesare Trebeschi · Enrico Fiore · **Giovanni Randazzo** (promoted from full team) · Enrico Caporin. Michele Furlan moved to the full team.
+- **Wealth Advisory page** team grid expanded to 4 members: Luca Padovan, Riccardo Perrone, **Patrizio Caringi**, **Enrico Caporin**. Layout is 4 in a row on desktop, 2 per row on mobile.
+- Contact CTA on Wealth Advisory now mails `r.perrone@runcapital.partners`
+
+### Title changes (applied across all pages where the person appears)
+- **Riccardo Perrone**: `Relationship Manager` → **`Family Officer`** (EN + IT)
+- **Enrico De Angelis**: `Business Development` → **`Director, Run AM`** on the index, his bio, and `run-am.html`. Stays `Director` / `Direttore` on `asset-management.html`.
+- **Mario Famà** timeline (American Express role): IT label `Agente Commerciale` → `Sales Agent` (matches EN, no translation toggle for this term)
+
+### Bio page rewrites
+- **Giovanni Randazzo** — full rewrite from CV. New title direction (V. President RCP + Director RRCAPITAL Luxembourg), 25+ years experience, real career timeline (Run Capital Partners, SerendiEquity, Prisma SGR, Gruppo KGS, MIPAAF Technical Secretariat, Compagnia Fondiaria Nazionale, Gruppo Managest), real credentials (Univ. of Palermo Economics & Commerce 1996, Chartered Accountant 1994, IVASS Section E No. 00546121)
+- **Danilo Carolini** — rewritten to highlight his international career. Title is now **Head of Alternative Investments**. 7-entry timeline (Run Capital Partners, otala.markets London, Gold Grain Capital VP→Head, BZH Capital Partners NY, Collins Dale Capital Partners London, Macrobond Financial NY intern, Capvision Shanghai intern). Meta items: Based in London · Markets London · New York · Shanghai · Focus Alternative Investments
+- **Riccardo Perrone** — added a new credential card "Professional Registered with the Ministry" / *"Professionista nel Registro del Ministero"* (license authorising advisory to family offices)
+- **Enrico De Angelis** — removed the Finexia Capital Sarl timeline entry
+
+### Assets
+- **Sara Longo** — new portrait (`sara-longo.jpg` replaced; cache-busted via `?v=3`)
+- **Sport & Wealth page** — tennis-cliff pane removed from the cinematic band (now shows only the forest pitch). New og:image for `/sport-wealth` is `images/sport/forest-pitch-overhead.jpg`
+
+### Mobile / iOS fixes
+- Wealth Advisory team grid: 4-columns desktop, 2-columns mobile
+- Hero locations pill on mobile: **Rome** centered on its own row (5 pills total)
+- Danilo Carolini bio meta items: **Focus** now wraps to its own line on mobile so "Alternative Investments" isn't clipped
+- Giovanni Randazzo bio: `<meta name="format-detection" content="telephone=no">` added so iOS Safari no longer auto-links the IVASS registration number `00546121` as a phone number
+
+### Filename changes
+- `enrico.html` → `enrico-fiore.html`
+- `giordano.html` → `giordano-tomasini.html`
+- `fund.html` → `funds-distribution.html`
+
+---
+
+## 13. Future Development
 
 - Changes can be made by any developer with access to the GitHub repo
 - Claude Code can be used for AI-assisted changes — just open the project and describe what you need
