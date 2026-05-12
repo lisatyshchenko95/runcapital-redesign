@@ -1,5 +1,6 @@
 {
   "cleanUrls": true,
+  "trailingSlash": false,
   "redirects": [
     { "source": "/fund", "destination": "/funds-distribution", "permanent": true },
     { "source": "/fund.html", "destination": "/funds-distribution", "permanent": true },
@@ -21,7 +22,9 @@
     { "source": "/en/contacts/", "destination": "/#contact", "permanent": true },
 
     { "source": "/services", "destination": "/#services", "permanent": true },
+    { "source": "/services/", "destination": "/#services", "permanent": true },
     { "source": "/en/services", "destination": "/#services", "permanent": true },
+    { "source": "/en/services/", "destination": "/#services", "permanent": true },
     { "source": "/servizi", "destination": "/#services", "permanent": true },
     { "source": "/servizi/", "destination": "/#services", "permanent": true },
 
