@@ -204,7 +204,10 @@ If the site goes down, check these DNS records in Squarespace are still pointing
 
 ## 10. Important Notes
 
-- **No build step** — files are served exactly as they are. What you see in the folder is what goes live.
+- **No build step** — all HTML/CSS/JS files are served exactly as they are. No backend, no serverless functions, no npm dependencies.
+- **Contact = direct email, no backend.** The homepage contact section is **not a web form** — it shows `info@runcapital.partners` with a Copy button and an "Open in Email App" button (a plain `mailto:` link). Visitors email us directly from their own client; the website collects and transmits nothing. This was a GDPR decision: the old form posted to FormSubmit.co (a US processor with no DPA/SCC), which the privacy review flagged. Removing the form entirely is the cleanest fix — no third-party processor, no DNS, no API keys, and replies land in the inbox (not spam) because they're ordinary person-to-person email.
+  - The global `contact-modal.js` still intercepts other `mailto:` links across the site and shows a copy/open dialog. The homepage "Open in Email App" button carries `data-rcp-skip` so it opens the mail client directly instead of the modal.
+  - There is nothing to configure or deploy beyond the static files. (Historical note: an interim version used a Vercel serverless function + Resend; that was dropped in favour of the simpler direct-email approach.)
 - **Mobile responsive** — all pages work on desktop and mobile.
 - **EN/IT language toggle** — built into pages using `data-en` / `data-it` attributes.
 - **Footer** — same across all pages, must be updated in each file individually.
