@@ -640,10 +640,7 @@
         <h2 data-en-html='Let&rsquo;s discuss your <span class="gold" style="font-style: italic;">strategy.</span>' data-it-html='Parliamo della tua <span class="gold" style="font-style: italic;">strategia.</span>' style="font-family: var(--font-serif); font-size: clamp(36px, 5vw, 56px); font-weight: 600; color: var(--dark); line-height: 1.15;">Let's discuss your <span class="gold" style="font-style: italic;">strategy.</span></h2>
       </div>
 
-      <form id="rcpContactForm" class="rcp-form" action="https://formsubmit.co/ajax/info@runcapital.partners" method="POST" novalidate>
-        <input type="hidden" name="_subject" value="New inquiry from runcapital.partners">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_captcha" value="false">
+      <form id="rcpContactForm" class="rcp-form" action="/api/contact" method="POST" novalidate>
         <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true">
 
         <div class="rcp-form__row">
@@ -1029,7 +1026,9 @@
   <script defer src="lang-switch.js"></script>
   <script defer src="video-fallback.js"></script>
   <script>
-    // Contact form submission via FormSubmit.co (no backend, free, no signup).
+    // Contact form submission via our own EU serverless function (/api/contact,
+    // pinned to Frankfurt). Delivered to info@runcapital.partners over the
+    // company's Google Workspace inbox — no third-party form processor.
     (function () {
       var form = document.getElementById('rcpContactForm');
       if (!form) return;
@@ -1047,15 +1046,17 @@
       form.addEventListener('submit', function (e) {
         e.preventDefault();
         if (form.querySelector('input[name="_honey"]').value) return; // bot
-        var data = new FormData(form);
+        var fd = new FormData(form);
+        var payload = {};
+        fd.forEach(function (v, k) { payload[k] = v; });
         submitBtn.disabled = true;
         if (submitLabel) submitLabel.textContent = 'Sending...';
         setStatus('', null);
 
         fetch(form.action, {
           method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
+          body: JSON.stringify(payload),
+          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
         }).then(function (res) {
           if (res.ok) {
             form.classList.add('is-submitted');

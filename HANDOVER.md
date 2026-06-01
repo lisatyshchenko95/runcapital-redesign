@@ -204,7 +204,11 @@ If the site goes down, check these DNS records in Squarespace are still pointing
 
 ## 10. Important Notes
 
-- **No build step** — files are served exactly as they are. What you see in the folder is what goes live.
+- **No build step** — all HTML/CSS/JS files are served exactly as they are, including `api/contact.js`, which uses Node's built-in `fetch` and has **zero npm dependencies** (no `package.json`).
+- **Contact form → EU serverless function.** The homepage form posts JSON to `/api/contact` (a Vercel Serverless Function), **not** to a third-party form service. The function is pinned to Vercel's **Frankfurt region (`fra1`, set in `vercel.json`)** so submitted personal data is received inside the EU, then delivered by email to `info@runcapital.partners` via **Resend (EU region)**. This was a GDPR requirement — FormSubmit.co (US, no DPA/SCC) was removed. Resend was chosen over Google-Workspace SMTP because it needs only an API key we control, with no dependency on RCP's Google admin settings.
+  - **Required Vercel env var** (Project → Settings → Environment Variables): `RESEND_API_KEY` = a Resend API key (create the Resend account in the **EU region**). Optional: `MAIL_TO` (default `info@runcapital.partners`), `MAIL_FROM` (default `Run Capital Partners <noreply@runcapital.partners>` — must be an address on a domain verified in Resend).
+  - **One-time Resend setup:** create a Resend account (EU region), verify the `runcapital.partners` domain by adding the DNS records Resend provides (SPF/DKIM, added in Squarespace / Google Cloud DNS), then generate the API key.
+  - Without the API key the form returns a 500 and the user is told to email directly. Set it before/right after deploy.
 - **Mobile responsive** — all pages work on desktop and mobile.
 - **EN/IT language toggle** — built into pages using `data-en` / `data-it` attributes.
 - **Footer** — same across all pages, must be updated in each file individually.
