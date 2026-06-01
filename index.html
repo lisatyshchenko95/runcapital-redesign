@@ -640,62 +640,16 @@
         <h2 data-en-html='Let&rsquo;s discuss your <span class="gold" style="font-style: italic;">strategy.</span>' data-it-html='Parliamo della tua <span class="gold" style="font-style: italic;">strategia.</span>' style="font-family: var(--font-serif); font-size: clamp(36px, 5vw, 56px); font-weight: 600; color: var(--dark); line-height: 1.15;">Let's discuss your <span class="gold" style="font-style: italic;">strategy.</span></h2>
       </div>
 
-      <form id="rcpContactForm" class="rcp-form" action="/api/contact" method="POST" novalidate>
-        <input type="text" name="_honey" tabindex="-1" autocomplete="off" style="position:absolute;left:-9999px;opacity:0;" aria-hidden="true">
+      <div class="rcp-contact" style="max-width: 540px; margin: 0 auto; text-align: center;">
+        <p data-en="Send us a message at the address below and we&rsquo;ll be in touch. We reply within one business day." data-it="Scrivici all&rsquo;indirizzo qui sotto e ti ricontatteremo. Rispondiamo entro un giorno lavorativo." style="font-size: 16px; line-height: 1.65; color: rgba(8,8,8,0.66); margin-bottom: 36px;">Send us a message at the address below and we&rsquo;ll be in touch. We reply within one business day.</p>
 
-        <div class="rcp-form__row">
-          <label class="rcp-form__field">
-            <span class="rcp-form__label" data-en-html="Name <em>*</em>" data-it-html="Nome <em>*</em>">Name <em>*</em></span>
-            <input type="text" name="name" required autocomplete="name">
-          </label>
-          <label class="rcp-form__field">
-            <span class="rcp-form__label" data-en-html="Email <em>*</em>" data-it-html="Email <em>*</em>">Email <em>*</em></span>
-            <input type="email" name="email" required autocomplete="email">
-          </label>
+        <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; background: rgba(201,168,76,0.08); border: 1px solid rgba(201,168,76,0.35); border-radius: 10px; padding: 16px 20px; margin-bottom: 26px;">
+          <span id="rcpEmail" style="font-family: 'SF Mono', Menlo, Consolas, monospace; font-size: clamp(14px, 2.6vw, 18px); color: var(--gold-dark); word-break: break-all; user-select: all; text-align: left;">info@runcapital.partners</span>
+          <button type="button" id="rcpCopyBtn" data-en="Copy" data-it="Copia" style="flex-shrink: 0; background: transparent; border: 1px solid var(--gold); color: var(--gold-dark); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 700; padding: 9px 16px; border-radius: 5px; cursor: pointer; transition: all .15s ease;">Copy</button>
         </div>
 
-        <div class="rcp-form__row">
-          <label class="rcp-form__field">
-            <span class="rcp-form__label" data-en="Company" data-it="Azienda">Company</span>
-            <input type="text" name="company" autocomplete="organization">
-          </label>
-          <label class="rcp-form__field">
-            <span class="rcp-form__label" data-en="Interested in" data-it="Interessato a">Interested in</span>
-            <select name="interest">
-              <option value="General inquiry" data-en="General inquiry" data-it="Richiesta generale">General inquiry</option>
-              <option value="01 — Asset Management" data-en="01 — Asset Management" data-it="01 — Gestione Patrimoniale">01 — Asset Management</option>
-              <option value="02 — AMC &amp; Securitization" data-en-html="02 — AMC &amp; Securitization" data-it-html="02 — AMC e Cartolarizzazione">02 — AMC &amp; Securitization</option>
-              <option value="03 — Structured Products" data-en="03 — Structured Products" data-it="03 — Prodotti Strutturati">03 — Structured Products</option>
-              <option value="04 — Funds Distribution" data-en="04 — Funds Distribution" data-it="04 — Distribuzione di Fondi">04 — Funds Distribution</option>
-              <option value="05 — Direct Deals" data-en="05 — Direct Deals" data-it="05 — Direct Deals">05 — Direct Deals</option>
-              <option value="06 — Wealth Advisory" data-en="06 — Wealth Advisory" data-it="06 — Consulenza Patrimoniale">06 — Wealth Advisory</option>
-              <option value="07 — Sport &amp; Wealth" data-en-html="07 — Sport &amp; Wealth" data-it-html="07 — Sport &amp; Wealth">07 — Sport &amp; Wealth</option>
-              <option value="08 — Nasdaq &amp; IPO" data-en-html="08 — Nasdaq &amp; IPO" data-it-html="08 — Nasdaq &amp; IPO">08 — Nasdaq &amp; IPO</option>
-              <option value="Other" data-en="Other" data-it="Altro">Other</option>
-            </select>
-          </label>
-        </div>
-
-        <label class="rcp-form__field">
-          <span class="rcp-form__label" data-en-html="Message <em>*</em>" data-it-html="Messaggio <em>*</em>">Message <em>*</em></span>
-          <textarea name="message" rows="5" required placeholder="Tell us a bit about what you're looking for..." data-en-placeholder="Tell us a bit about what you're looking for..." data-it-placeholder="Raccontaci cosa stai cercando..."></textarea>
-        </label>
-
-        <label class="rcp-form__check">
-          <input type="checkbox" name="professional_investor" value="Yes" required>
-          <span class="rcp-form__check-label" data-en-html="I confirm I am a <strong>professional investor or qualified counterparty</strong>, as defined under applicable regulation.<em>*</em>" data-it-html="Confermo di essere un <strong>investitore professionale o controparte qualificata</strong>, come definito dalla normativa applicabile.<em>*</em>">I confirm I am a <strong>professional investor or qualified counterparty</strong>, as defined under applicable regulation.<em>*</em></span>
-        </label>
-
-        <div class="rcp-form__foot">
-          <button type="submit" class="rcp-form__submit">
-            <span class="rcp-form__submit-label" data-en="Send Message" data-it="Invia Messaggio">Send Message</span>
-            <span class="rcp-form__submit-arrow" aria-hidden="true">&rarr;</span>
-          </button>
-          <p class="rcp-form__note" data-en-html='Or email us directly at <a href="mailto:info@runcapital.partners">info@runcapital.partners</a>' data-it-html='Oppure scrivici direttamente a <a href="mailto:info@runcapital.partners">info@runcapital.partners</a>'>Or email us directly at <a href="mailto:info@runcapital.partners">info@runcapital.partners</a></p>
-        </div>
-
-        <div class="rcp-form__status" id="rcpFormStatus" role="status" aria-live="polite"></div>
-      </form>
+        <a href="mailto:info@runcapital.partners" data-rcp-skip data-en-html="Open in Email App <span aria-hidden=&quot;true&quot;>&rarr;</span>" data-it-html="Apri nell&rsquo;app Email <span aria-hidden=&quot;true&quot;>&rarr;</span>" style="display: inline-flex; align-items: center; gap: 10px; background: linear-gradient(135deg, var(--gold), var(--gold-dark)); color: #fff; text-decoration: none; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 700; padding: 16px 34px; border-radius: 6px;">Open in Email App <span aria-hidden="true">&rarr;</span></a>
+      </div>
     </div>
   </section>
 
@@ -1026,57 +980,32 @@
   <script defer src="lang-switch.js"></script>
   <script defer src="video-fallback.js"></script>
   <script>
-    // Contact form submission via our own EU serverless function (/api/contact,
-    // pinned to Frankfurt). Delivered to info@runcapital.partners over the
-    // company's Google Workspace inbox — no third-party form processor.
+    // Contact: direct email only — no form, no backend, no third-party
+    // processor. The Copy button copies the address; "Open in Email App" is a
+    // plain mailto: link (data-rcp-skip keeps the global modal from intercepting
+    // it, so it opens the visitor's own email client directly).
     (function () {
-      var form = document.getElementById('rcpContactForm');
-      if (!form) return;
-      var status = document.getElementById('rcpFormStatus');
-      var submitBtn = form.querySelector('.rcp-form__submit');
-      var submitLabel = form.querySelector('.rcp-form__submit-label');
-      var originalLabel = submitLabel ? submitLabel.textContent : 'Send Message';
-
-      function setStatus(msg, kind) {
-        status.textContent = msg;
-        status.classList.remove('is-success', 'is-error');
-        if (kind) status.classList.add('is-' + kind);
-      }
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        if (form.querySelector('input[name="_honey"]').value) return; // bot
-        var fd = new FormData(form);
-        var payload = {};
-        fd.forEach(function (v, k) { payload[k] = v; });
-        submitBtn.disabled = true;
-        if (submitLabel) submitLabel.textContent = 'Sending...';
-        setStatus('', null);
-
-        fetch(form.action, {
-          method: 'POST',
-          body: JSON.stringify(payload),
-          headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' }
-        }).then(function (res) {
-          if (res.ok) {
-            form.classList.add('is-submitted');
-            var __isIt = document.documentElement.lang === 'it';
-            var __thankTitle = __isIt ? 'Grazie.' : 'Thank you.';
-            var __thankText = __isIt ? 'Il tuo messaggio &egrave; stato ricevuto. Qualcuno del team ti contatter&agrave; appena possibile.' : 'Your message has been received. Someone from the team will be in touch as soon as possible.';
-            status.innerHTML = '<span class="rcp-form__success-mark" aria-hidden="true"></span>' +
-              '<h3 class="rcp-form__success-title">' + __thankTitle + '</h3>' +
-              '<p class="rcp-form__success-text">' + __thankText + '</p>';
-            status.classList.remove('is-error');
-            status.classList.add('is-success');
-            form.reset();
-          } else {
-            return res.json().then(function (j) { throw new Error(j && j.message || 'Submission failed'); });
-          }
-        }).catch(function (err) {
-          setStatus('Something went wrong. Please email us directly at info@runcapital.partners.', 'error');
-          submitBtn.disabled = false;
-          if (submitLabel) submitLabel.textContent = originalLabel;
-        });
+      var btn = document.getElementById('rcpCopyBtn');
+      var email = document.getElementById('rcpEmail');
+      if (!btn || !email) return;
+      function label() { return document.documentElement.lang === 'it' ? 'Copia' : 'Copy'; }
+      function copied() { return document.documentElement.lang === 'it' ? 'Copiato' : 'Copied'; }
+      btn.addEventListener('click', function () {
+        var text = email.textContent.trim();
+        var done = function () {
+          btn.textContent = copied();
+          setTimeout(function () { btn.textContent = label(); }, 1800);
+        };
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+          navigator.clipboard.writeText(text).then(done, done);
+        } else {
+          try {
+            var r = document.createRange(); r.selectNode(email);
+            var sel = window.getSelection(); sel.removeAllRanges(); sel.addRange(r);
+            document.execCommand('copy'); sel.removeAllRanges();
+          } catch (e) {}
+          done();
+        }
       });
     })();
   </script>

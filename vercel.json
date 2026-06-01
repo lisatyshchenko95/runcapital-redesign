@@ -1,7 +1,6 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
-  "regions": ["fra1"],
   "redirects": [
     { "source": "/fund", "destination": "/funds-distribution", "permanent": true },
     { "source": "/fund.html", "destination": "/funds-distribution", "permanent": true },
