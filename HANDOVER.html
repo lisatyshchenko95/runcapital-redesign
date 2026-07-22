@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><title>Run Capital Partners - Website Handover</title>
+<style>
+  @page { size: A4; margin: 18mm 16mm; }
+  body { font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; font-size: 11pt; line-height: 1.55; color: #1a1a1a; max-width: 760px; margin: 0 auto; padding: 24px 28px; }
+  h1 { font-size: 22pt; font-weight: 600; color: #0a0a0a; border-bottom: 2px solid #c9a84c; padding-bottom: 8px; margin-top: 0; }
+  h2 { font-size: 15pt; font-weight: 600; color: #0a0a0a; margin-top: 28px; padding-top: 8px; border-top: 1px solid #e5e5e5; }
+  h3 { font-size: 12pt; font-weight: 600; color: #555; margin-top: 18px; }
+  hr { display: none; }
+  p, li { margin: 6px 0; }
+  ul { padding-left: 22px; }
+  li { margin-bottom: 4px; }
+  table { border-collapse: collapse; margin: 12px 0; font-size: 10pt; }
+  th, td { border: 1px solid #ccc; padding: 6px 10px; text-align: left; vertical-align: top; }
+  th { background: #f5f1e6; font-weight: 600; }
+  code { background: #f4f4f4; padding: 1px 5px; border-radius: 3px; font-size: 9.5pt; font-family: Menlo, Monaco, monospace; }
+  pre { background: #f6f6f6; border: 1px solid #e5e5e5; padding: 12px 14px; border-radius: 6px; font-size: 9.5pt; line-height: 1.4; overflow-x: auto; }
+  pre code { background: none; padding: 0; }
+  strong { color: #0a0a0a; }
+  a { color: #8a6f2a; text-decoration: none; }
+</style></head><body>
+<h1>Run Capital Partners — Website Handover Document</h1>
+<p><strong>Original date:</strong> May 4, 2026<br />
+<strong>Last updated:</strong> May 11, 2026<br />
+<strong>Prepared for:</strong> Alice (RCP Assistant) and any IT person taking over</p>
+<hr />
+<h2>1. What This Is</h2>
+<p>This is the complete source code for the Run Capital Partners website at <strong>https://runcapital.partners</strong>. It is a static HTML/CSS website — no backend, no database, no build step. You edit HTML files directly and deploy.</p>
+<hr />
+<h2>2. Where Everything Lives</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Source Code</strong></td>
+<td>GitHub: <code>https://github.com/lisatyshchenko95/runcapital-redesign</code></td>
+</tr>
+<tr>
+<td><strong>Hosting</strong></td>
+<td>Vercel: <code>https://vercel.com</code> (project: <code>runcapital-redesign</code>)</td>
+</tr>
+<tr>
+<td><strong>Domain DNS</strong></td>
+<td>Squarespace (DNS managed via Google Cloud DNS)</td>
+</tr>
+<tr>
+<td><strong>Live Site</strong></td>
+<td><code>https://runcapital.partners</code></td>
+</tr>
+<tr>
+<td><strong>Backup URL</strong></td>
+<td><code>https://runcapital-redesign-zeta.vercel.app</code></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>3. Tech Stack</h2>
+<ul>
+<li><strong>Pure HTML/CSS</strong> — no framework, no React, no build tools</li>
+<li><strong>Fonts:</strong> Google Fonts (Playfair Display, Inter, Cinzel, Cormorant Garamond)</li>
+<li><strong>Hosting:</strong> Vercel (free tier, static files)</li>
+<li><strong>Version Control:</strong> Git + GitHub</li>
+<li><strong>No database, no server, no backend</strong></li>
+</ul>
+<hr />
+<h2>4. Project Structure</h2>
+<pre><code>runcapital-redesign/
+├── index.html                  # Homepage
+├── style.css                   # Main shared CSS
+├── opening.css                 # Homepage-specific CSS
+├── amc-style.css               # CSS for service pages
+├── video-fallback.js           # iOS video autoplay fix
+├── contact-modal.js            # Contact modal
+├── favicon.png                 # Browser tab icon (RCP logo)
+│
+├── # SERVICE PAGES
+├── asset-management.html
+├── amc-securitization.html
+├── structured-products.html
+├── funds-distribution.html
+├── direct-deals.html
+├── wealth-advisory.html
+├── sport-wealth.html
+├── nasdaq-listings.html
+├── wealth-management.html
+├── certificate-issuance.html
+│
+├── # GROUP ENTITY PAGES
+├── rcp-global-markets.html     # London
+├── run-am.html                 # Luxembourg
+├── rcp-srl.html                # Italy
+│
+├── # TEAM BIO PAGES (1 per person)
+├── ceo.html                    # Luca Padovan
+├── cesare-trebeschi.html
+├── enrico-fiore.html           # Enrico Fiore
+├── enrico-caporin.html
+├── enrico-de-angelis.html
+├── michele-furlan.html
+├── matteo-bodini.html
+├── giordano-tomasini.html      # Giordano Tomasini
+├── giovanni-randazzo.html
+├── giovanni-campodallorto.html
+├── stefano-giuffra.html
+├── danilo-carolini.html
+├── massimo-bocci.html
+├── denis-rondanini.html
+├── patrizio-caringi.html
+├── riccardo-perrone.html
+├── alice-pozzobon.html
+├── sara-longo.html
+├── lara-covre.html
+├── mario-fama.html
+├── davide-de-luca.html
+├── elena-bernardi.html
+│
+├── # INSIGHT ARTICLES
+├── insights.html
+├── insight-eterna-iii.html
+├── insight-american-economy.html
+├── insight-doughnut-model.html
+│
+├── # LEGAL PAGES
+├── privacy-policy.html
+├── cookie-policy.html
+├── terms-of-service.html
+├── regulatory-disclosures.html
+│
+├── # OTHER
+├── linkedin-banner.html        # LinkedIn banner generator
+│
+├── # IMAGES &amp; ASSETS
+├── images/                     # Subfolder images
+├── logos/                      # Institutional-partner logos (white silhouettes + originals)
+├── videos/                     # Hero videos
+├── *.jpg                       # Team photos (root level)
+├── og-*.png, og-*.jpg          # Open Graph preview images
+├── rcp-logo.png                # RCP logo
+├── cambridge.jpg, trento.jpg, lse.jpg  # University photos
+└── ...
+</code></pre>
+<hr />
+<h2>5. How to Make Changes</h2>
+<h3>Simple text/content changes:</h3>
+<ol>
+<li>Open the <code>.html</code> file in any text editor (VS Code recommended)</li>
+<li>Find the text you want to change</li>
+<li>Edit and save</li>
+<li>Deploy (see section 6)</li>
+</ol>
+<h3>Adding a new team member:</h3>
+<ol>
+<li>Copy an existing bio page (e.g., <code>denis-rondanini.html</code>)</li>
+<li>Replace name, title, photo, summary, expertise, career, contact email</li>
+<li>Add their photo as <code>firstname-lastname.jpg</code> in the root folder</li>
+<li>Add a link to them on <code>index.html</code> (team section) and relevant service pages</li>
+<li>Deploy</li>
+</ol>
+<h3>Updating the footer:</h3>
+<p>The footer is duplicated in every HTML file. To change it, you must update it in <strong>all</strong> HTML files.</p>
+<h3>CSS:</h3>
+<ul>
+<li><strong>Global styles:</strong> <code>style.css</code></li>
+<li><strong>Homepage:</strong> <code>opening.css</code></li>
+<li><strong>Service pages:</strong> <code>amc-style.css</code></li>
+<li><strong>Bio pages:</strong> each has inline <code>&lt;style&gt;</code> in the <code>&lt;head&gt;</code></li>
+</ul>
+<hr />
+<h2>6. How to Deploy</h2>
+<h3>Option A: Vercel CLI</h3>
+<pre><code class="language-bash">cd runcapital-redesign
+vercel --prod
+</code></pre>
+<h3>Option B: Git push (then deploy from Vercel)</h3>
+<pre><code class="language-bash">git add .
+git commit -m &quot;your change description&quot;
+git push
+vercel --prod
+</code></pre>
+<h3>Option C: Vercel Dashboard</h3>
+<ol>
+<li>Go to https://vercel.com</li>
+<li>Find project <code>runcapital-redesign</code></li>
+<li>Click "Deployments" &gt; "Redeploy"</li>
+</ol>
+<hr />
+<h2>7. How to Get the Files (Backup / ZIP)</h2>
+<h3>Download as ZIP:</h3>
+<ol>
+<li>Go to https://github.com/lisatyshchenko95/runcapital-redesign</li>
+<li>Click the green <strong>"Code"</strong> button</li>
+<li>Click <strong>"Download ZIP"</strong></li>
+</ol>
+<h3>Or clone via Git:</h3>
+<pre><code class="language-bash">git clone https://github.com/lisatyshchenko95/runcapital-redesign.git
+</code></pre>
+<hr />
+<h2>8. Domain &amp; DNS Configuration</h2>
+<table>
+<thead>
+<tr>
+<th>Setting</th>
+<th>Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Domain</strong></td>
+<td><code>runcapital.partners</code></td>
+</tr>
+<tr>
+<td><strong>DNS Provider</strong></td>
+<td>Squarespace / Google Cloud DNS</td>
+</tr>
+<tr>
+<td><strong>A Record</strong></td>
+<td><code>@</code> → <code>216.198.79.1</code> (Vercel)</td>
+</tr>
+<tr>
+<td><strong>CNAME</strong></td>
+<td><code>www</code> → <code>69a14985654c6807.vercel-dns-O17.com.</code></td>
+</tr>
+<tr>
+<td><strong>TXT</strong></td>
+<td><code>_vercel</code> → verification string</td>
+</tr>
+</tbody>
+</table>
+<p>If the site goes down, check these DNS records in Squarespace are still pointing to Vercel.</p>
+<hr />
+<h2>9. Accounts Needed</h2>
+<table>
+<thead>
+<tr>
+<th>Service</th>
+<th>What For</th>
+<th>Who Has Access</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>GitHub</strong> (<code>lisatyshchenko95</code>)</td>
+<td>Source code repository</td>
+<td>Lisa</td>
+</tr>
+<tr>
+<td><strong>Vercel</strong></td>
+<td>Hosting &amp; deployment</td>
+<td>Isaiah / project team</td>
+</tr>
+<tr>
+<td><strong>Squarespace</strong></td>
+<td>Domain DNS management</td>
+<td>Luca / Lisa</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2>10. Important Notes</h2>
+<ul>
+<li><strong>No build step</strong> — files are served exactly as they are. What you see in the folder is what goes live.</li>
+<li><strong>Mobile responsive</strong> — all pages work on desktop and mobile.</li>
+<li><strong>EN/IT language toggle</strong> — built into pages using <code>data-en</code> / <code>data-it</code> attributes.</li>
+<li><strong>Footer</strong> — same across all pages, must be updated in each file individually.</li>
+<li><strong>OG meta tags</strong> — each page has Open Graph tags for link preview images (WhatsApp, LinkedIn).</li>
+<li><strong>Videos</strong> — hero videos autoplay silently. <code>video-fallback.js</code> handles iOS.</li>
+<li><strong>Future changes via Claude Code</strong> — this project can continue to be maintained using Claude Code. Open the project folder and describe what you need.</li>
+</ul>
+<hr />
+<h2>11. Emergency: Site Down?</h2>
+<ol>
+<li>Check if <code>https://runcapital-redesign-zeta.vercel.app</code> works (bypasses DNS)</li>
+<li>If yes → DNS issue. Check Squarespace DNS records match section 8 above.</li>
+<li>If no → Vercel issue. Log into Vercel and check deployment status.</li>
+<li>To quickly restore → redeploy from Vercel dashboard.</li>
+</ol>
+<hr />
+<h2>12. Recent Updates (since first handover, May 4 2026)</h2>
+<h3>New offices</h3>
+<ul>
+<li><strong>Rome office</strong> added to the footer of all 44 pages: <em>Via Leonida Bissolati 54, 00187</em></li>
+<li>Hero locations pill on the homepage now includes <strong>Rome / Roma</strong></li>
+</ul>
+<h3>Homepage</h3>
+<ul>
+<li>Institutional Partners marquee rebuilt with current partners: <strong>Actarus Renewables, Eterna Capital, BBVA, Vontobel, Leonteq, UBS, Marex, J. Safra Sarasin, Goldman Sachs</strong></li>
+<li>New <code>logos/</code> folder holds the original brand PNGs and the <strong>white-silhouette</strong> versions (<code>*-white.png</code>) actually rendered in the marquee</li>
+<li>Italian hero title changed: <em>"Il Tuo Percorso Patrimoniale"</em> → <em>"La Tua Boutique Finanziaria"</em> (EN unchanged)</li>
+<li>Marquee gap, ordering and per-logo size/position tuned (small inline <code>transform:</code> styles on a few entries — Leonteq, Marex, Goldman, Eterna)</li>
+</ul>
+<h3>Team</h3>
+<ul>
+<li><strong>Index team grid</strong> re-ordered. Leadership tier: Luca Padovan · Cesare Trebeschi · Enrico Fiore · <strong>Giovanni Randazzo</strong> (promoted from full team) · Enrico Caporin. Michele Furlan moved to the full team.</li>
+<li><strong>Wealth Advisory page</strong> team grid expanded to 4 members: Luca Padovan, Riccardo Perrone, <strong>Patrizio Caringi</strong>, <strong>Enrico Caporin</strong>. Layout is 4 in a row on desktop, 2 per row on mobile.</li>
+<li>Contact CTA on Wealth Advisory now mails <code>r.perrone@runcapital.partners</code></li>
+</ul>
+<h3>Title changes (applied across all pages where the person appears)</h3>
+<ul>
+<li><strong>Riccardo Perrone</strong>: <code>Relationship Manager</code> → <strong><code>Family Officer</code></strong> (EN + IT)</li>
+<li><strong>Enrico De Angelis</strong>: <code>Business Development</code> → <strong><code>Director, Run AM</code></strong> on the index, his bio, and <code>run-am.html</code>. Stays <code>Director</code> / <code>Direttore</code> on <code>asset-management.html</code>.</li>
+<li><strong>Mario Famà</strong> timeline (American Express role): IT label <code>Agente Commerciale</code> → <code>Sales Agent</code> (matches EN, no translation toggle for this term)</li>
+</ul>
+<h3>Bio page rewrites</h3>
+<ul>
+<li><strong>Giovanni Randazzo</strong> — full rewrite from CV. New title direction (V. President RCP + Director RRCAPITAL Luxembourg), 25+ years experience, real career timeline (Run Capital Partners, SerendiEquity, Prisma SGR, Gruppo KGS, MIPAAF Technical Secretariat, Compagnia Fondiaria Nazionale, Gruppo Managest), real credentials (Univ. of Palermo Economics &amp; Commerce 1996, Chartered Accountant 1994, IVASS Section E No. 00546121)</li>
+<li><strong>Danilo Carolini</strong> — rewritten to highlight his international career. Title is now <strong>Head of Alternative Investments</strong>. 7-entry timeline (Run Capital Partners, otala.markets London, Gold Grain Capital VP→Head, BZH Capital Partners NY, Collins Dale Capital Partners London, Macrobond Financial NY intern, Capvision Shanghai intern). Meta items: Based in London · Markets London · New York · Shanghai · Focus Alternative Investments</li>
+<li><strong>Riccardo Perrone</strong> — added a new credential card "Professional Registered with the Ministry" / <em>"Professionista nel Registro del Ministero"</em> (license authorising advisory to family offices)</li>
+<li><strong>Enrico De Angelis</strong> — removed the Finexia Capital Sarl timeline entry</li>
+</ul>
+<h3>Assets</h3>
+<ul>
+<li><strong>Sara Longo</strong> — new portrait (<code>sara-longo.jpg</code> replaced; cache-busted via <code>?v=3</code>)</li>
+<li><strong>Sport &amp; Wealth page</strong> — tennis-cliff pane removed from the cinematic band (now shows only the forest pitch). New og:image for <code>/sport-wealth</code> is <code>images/sport/forest-pitch-overhead.jpg</code></li>
+</ul>
+<h3>Mobile / iOS fixes</h3>
+<ul>
+<li>Wealth Advisory team grid: 4-columns desktop, 2-columns mobile</li>
+<li>Hero locations pill on mobile: <strong>Rome</strong> centered on its own row (5 pills total)</li>
+<li>Danilo Carolini bio meta items: <strong>Focus</strong> now wraps to its own line on mobile so "Alternative Investments" isn't clipped</li>
+<li>Giovanni Randazzo bio: <code>&lt;meta name="format-detection" content="telephone=no"&gt;</code> added so iOS Safari no longer auto-links the IVASS registration number <code>00546121</code> as a phone number</li>
+</ul>
+<h3>Filename changes</h3>
+<ul>
+<li><code>enrico.html</code> → <code>enrico-fiore.html</code></li>
+<li><code>giordano.html</code> → <code>giordano-tomasini.html</code></li>
+<li><code>fund.html</code> → <code>funds-distribution.html</code></li>
+</ul>
+<hr />
+<h2>13. Future Development</h2>
+<ul>
+<li>Changes can be made by any developer with access to the GitHub repo</li>
+<li>Claude Code can be used for AI-assisted changes — just open the project and describe what you need</li>
+<li>No special environment setup needed — just a text editor and Git</li>
+</ul>
+</body></html>
