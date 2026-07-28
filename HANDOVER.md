@@ -117,6 +117,33 @@ runcapital-redesign/
 
 ## 5. How to Make Changes
 
+### Before you start — every time, on every machine
+
+More than one person commits to this repo, and **merging to `main` publishes to the
+live site immediately**. Always begin from what is actually deployed:
+
+```bash
+git checkout main
+git pull                          # get everyone else's work first
+git checkout -b my-change         # never edit main directly
+```
+
+Then make your changes, and:
+
+```bash
+git add .
+git commit -m "describe the change"
+git push -u origin my-change      # then open a Pull Request on GitHub
+```
+
+Opening a PR gives you a Vercel preview link — a private copy of the site with your
+changes on it. Check that link before merging; it is the last point where a mistake
+is still free to fix. Merging the PR is what puts it live.
+
+Skipping the `git pull` is the main way work gets lost here: the HTML pages are single
+large files, so two people starting from different versions produce conflicts that are
+painful to untangle.
+
 ### Simple text/content changes:
 1. Open the `.html` file in any text editor (VS Code recommended)
 2. Find the text you want to change
@@ -129,6 +156,40 @@ runcapital-redesign/
 3. Add their photo as `firstname-lastname.jpg` in the root folder
 4. Add a link to them on `index.html` (team section) and relevant service pages
 5. Deploy
+
+### Temporarily hidden team members — DO NOT DELETE THESE COMMENTS
+
+Some people are hidden from the site **temporarily**, with the intention of bringing
+them back later. They are not deleted. Their card is wrapped in an HTML comment that
+looks like this:
+
+```html
+<!-- RCP-TEMP-HIDE 2026-07-29 | Giordano Tomasini, General Counsel | original slot 3 of full team grid | restore: delete this comment wrapper
+<div class="team-card">
+  ... their card ...
+</div>
+RCP-TEMP-HIDE END -->
+```
+
+A related marker, `RCP-TEMP-MOVE`, records anyone who was shifted to fill a gap and
+where they originally sat.
+
+**These comments are not dead code. Do not tidy them away.** They are the only record
+of the original ordering. Delete them and restoring these people means rebuilding the
+team grid by hand.
+
+To see every hidden person and every relocation:
+
+```bash
+grep -rn "RCP-TEMP" .
+```
+
+To bring someone back: delete their `RCP-TEMP-HIDE` opening and closing comment lines
+(leaving the card markup between them), and undo the `RCP-TEMP-MOVE` notes nearby.
+Their profile page, photo and bio were never touched and are still in the repo.
+
+Currently hidden (since 2026-07-29): Giordano Tomasini, Danilo Carolini,
+Giovanni Campodall'Orto — on `index.html`, six service pages, and `sitemap.xml`.
 
 ### Updating the footer:
 The footer is duplicated in every HTML file. To change it, you must update it in **all** HTML files.
