@@ -18,7 +18,10 @@
   <link rel="stylesheet" href="amc-style.css">
   <style>
     /* ---- Service-hero video overrides (match sport-wealth) ---- */
-    .service-hero { min-height: 88vh; background: #0a0a0a; }
+    .service-hero { background: #0a0a0a; }
+    @media (min-width: 769px) {
+      .service-hero { min-height: 88vh; }
+    }
     .service-hero__video {
       position: absolute;
       inset: 0;
