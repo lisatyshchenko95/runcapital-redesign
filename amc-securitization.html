@@ -17,28 +17,6 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="amc-style.css">
   <style>
-    /* ---- Service-hero video overrides (match sport-wealth) ---- */
-    .service-hero { background: #0a0a0a; }
-    @media (min-width: 769px) {
-      .service-hero { min-height: 88vh; }
-    }
-    .service-hero__video {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: 0;
-    }
-    .service-hero__bg {
-      background:
-        linear-gradient(180deg, rgba(8,8,8,0.55) 0%, rgba(8,8,8,0.35) 40%, rgba(8,8,8,0.85) 100%),
-        radial-gradient(ellipse 70% 50% at 80% 30%, rgba(201,168,76,0.12) 0%, transparent 60%);
-      z-index: 1;
-    }
-    .service-hero__content { z-index: 2; }
-    .service-hero__illustration { display: none; }
-
     /* ---- Hero video ---- */
     .sv-hero {
       position: relative;
@@ -641,26 +619,19 @@
   </nav>
 
 <!-- HERO -->
-<header class="service-hero">
-  <video class="service-hero__video" autoplay muted loop playsinline>
+<header class="sv-hero">
+  <video class="sv-hero__video" autoplay muted loop playsinline>
     <source src="amc-hero.mp4" type="video/mp4">
   </video>
-  <div class="service-hero__bg"></div>
-  <div class="service-hero__content">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="index.html" data-en="Home" data-it="Home">Home</a>
-      <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
-      <a href="index.html#services" data-en="Services" data-it="Servizi">Services</a>
-      <span class="breadcrumb__sep" aria-hidden="true">&rarr;</span>
-      <span class="breadcrumb__current" data-en-html="AMCs &amp; Securitisation" data-it-html="AMC e Cartolarizzazione">AMCs &amp; Securitisation</span>
-    </nav>
-    <div class="service-hero__layout">
-      <div class="service-hero__text">
-        <p class="service-hero__eyebrow" data-en="Service 02 &middot; Structured Issuance" data-it="Servizio 02 &middot; Emissione Strutturata">Service 02 &middot; Structured Issuance</p>
-        <h1 class="service-hero__title" data-en-html="AMCs &amp; Securitisation" data-it-html="AMC e Cartolarizzazione">AMCs &amp; Securitisation</h1>
-        <p class="service-hero__sub" data-en="Securitisation services for fund managers and illiquid asset holders. Actively managed certificates structured across Luxembourg and Ireland, placed through tier-one private-banking rails." data-it="Servizi di cartolarizzazione per gestori di fondi e detentori di asset illiquidi. Certificati a gestione attiva strutturati tra Lussemburgo e Irlanda, collocati attraverso le piattaforme di private banking di primo livello.">Securitisation services for fund managers and illiquid asset holders. Actively managed certificates structured across Luxembourg and Ireland, placed through tier-one private-banking rails.</p>
-      </div>
+  <div class="sv-hero__overlay"></div>
+  <div class="sv-hero__inner">
+    <div class="sv-hero__meta">
+      <span data-en="Service 02" data-it="Servizio 02">Service 02</span>
+      <span class="sep"></span>
+      <span data-en="Structured Issuance" data-it="Emissione Strutturata">Structured Issuance</span>
     </div>
+    <h1 class="sv-hero__title" data-en-html="AMCs &amp; <em>Securitisation.</em>" data-it-html="AMC e <em>Cartolarizzazione.</em>">AMCs &amp; <em>Securitisation.</em></h1>
+    <p class="sv-hero__lede" data-en="Securitisation services for fund managers and illiquid asset holders. Actively managed certificates structured across Luxembourg and Ireland, placed through tier-one private-banking rails." data-it="Servizi di cartolarizzazione per gestori di fondi e detentori di asset illiquidi. Certificati a gestione attiva strutturati tra Lussemburgo e Irlanda, collocati attraverso le piattaforme di private banking di primo livello.">Securitisation services for fund managers and illiquid asset holders. Actively managed certificates structured across Luxembourg and Ireland, placed through tier-one private-banking rails.</p>
   </div>
 </header>
 
