@@ -74,7 +74,7 @@ runcapital-redesign/
 ├── giordano-tomasini.html      # Giordano Tomasini
 ├── giovanni-randazzo.html
 ├── giovanni-campodallorto.html
-├── stefano-giuffra.html
+├── bogdan-virgil.html
 ├── danilo-carolini.html
 ├── massimo-bocci.html
 ├── denis-rondanini.html
