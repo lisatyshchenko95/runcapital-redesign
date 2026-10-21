@@ -75,6 +75,7 @@ runcapital-redesign/
 ├── giovanni-randazzo.html
 ├── giovanni-campodallorto.html
 ├── bogdan-virgil.html
+├── antonio-franchino.html
 ├── danilo-carolini.html
 ├── massimo-bocci.html
 ├── denis-rondanini.html
