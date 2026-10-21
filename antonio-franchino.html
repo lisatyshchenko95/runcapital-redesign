@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Antonio Franchino | Director, Run Asset Management | Run Capital Partners</title>
+  <meta name="description" content="Antonio Franchino, Director of Run Asset Management, the Luxembourg AIFM of Run Capital Partners. Over 25 years in compliance, AML and legal affairs across Italian banking and insurance groups and Luxembourg RAIF fund boards.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="canonical" href="https://runcapital.partners/antonio-franchino">
+  <meta property="og:url" content="https://runcapital.partners/antonio-franchino">
+  <meta property="og:title" content="Antonio Franchino | Director, Run Asset Management | Run Capital Partners">
+  <meta property="og:description" content="Antonio Franchino, Director of Run Asset Management, the Luxembourg AIFM of Run Capital Partners. Over 25 years in compliance, AML and legal affairs across Italian banking and insurance groups and Luxembourg RAIF fund boards.">
+  <meta property="og:image" content="https://www.runcapital.partners/antonio-franchino.jpg">
+  <meta property="og:image:width" content="900">
+  <meta property="og:image:height" content="1200">
+  <meta property="og:type" content="profile">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bio-hero { position: relative; min-height: 100vh; display: flex; align-items: center; background: var(--dark); overflow: hidden; }
+    .bio-hero__bg { position: absolute; inset: 0; background: radial-gradient(ellipse 60% 50% at 75% 50%, rgba(201,168,76,0.06) 0%, transparent 60%), linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%); }
+    .bio-hero__content { position: relative; z-index: 1; max-width: 1200px; margin: 0 auto; padding: 120px 24px 80px; display: grid; grid-template-columns: 320px 1fr; gap: 72px; align-items: center; }
+    .bio-photo { position: relative; }
+    .bio-photo__frame { width: 320px; height: 380px; border-radius: 20px; background: linear-gradient(135deg, var(--dark-3), var(--dark-4)); border: 1px solid rgba(201,168,76,0.15); overflow: hidden; position: relative; display: flex; align-items: center; justify-content: center; }
+    .bio-photo__placeholder { font-family: var(--font-serif); font-size: 64px; color: rgba(201,168,76,0.3); }
+    .bio-photo__img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+    .bio-photo__frame::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 80px; background: linear-gradient(transparent, rgba(8,8,8,0.5)); pointer-events: none; }
+    .bio-photo__accent { position: absolute; top: -12px; right: -12px; width: 80px; height: 80px; border: 2px solid var(--gold); border-radius: 16px; opacity: 0.3; }
+    .bio-photo__accent-2 { position: absolute; bottom: -8px; left: -8px; width: 60px; height: 60px; border: 1px solid var(--gold); border-radius: 12px; opacity: 0.2; }
+    .bio-intro__eyebrow { color: var(--gold); font-size: 12px; font-weight: 600; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+    .bio-intro__eyebrow::before { content: ''; width: 32px; height: 1px; background: var(--gold); }
+    .bio-intro__name { font-family: var(--font-serif); font-size: clamp(40px, 5vw, 56px); font-weight: 600; color: var(--white); line-height: 1.1; margin-bottom: 12px; }
+    .bio-intro__title { font-size: 20px; color: var(--gold); font-weight: 500; margin-bottom: 28px; }
+    .bio-intro__summary { font-size: 18px; color: rgba(255,255,255,0.55); line-height: 1.8; margin-bottom: 36px; max-width: 540px; }
+    .bio-intro__meta { display: flex; gap: 32px; padding-top: 28px; border-top: 1px solid rgba(201,168,76,0.12); }
+    .bio-meta-item { display: flex; flex-direction: column; gap: 4px; }
+    .bio-meta-item__label { font-size: 11px; color: rgba(255,255,255,0.35); text-transform: uppercase; letter-spacing: 0.08em; }
+    .bio-meta-item__value { font-size: 14px; color: rgba(255,255,255,0.7); font-weight: 500; }
+    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .expertise-card { background: linear-gradient(135deg, var(--dark-2), var(--dark-3)); border: 1px solid rgba(201,168,76,0.06); border-radius: 16px; padding: 32px; transition: all 0.4s var(--ease-out-expo); position: relative; overflow: hidden; }
+    .expertise-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s var(--ease-out-expo); }
+    .expertise-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
+    .expertise-card:hover::before { height: 100%; }
+    .expertise-card__title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+    .expertise-card__desc { font-size: 14px; color: rgba(255,255,255,0.45); line-height: 1.7; }
+    .timeline { position: relative; padding-left: 48px; }
+    .timeline::before { content: ''; position: absolute; left: 16px; top: 0; bottom: 0; width: 1px; background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1)); }
+    .timeline-item { position: relative; margin-bottom: 48px; }
+    .timeline-item:last-child { margin-bottom: 0; }
+    .timeline-item::before { content: ''; position: absolute; left: -36px; top: 6px; width: 10px; height: 10px; border-radius: 50%; background: var(--dark); border: 2px solid var(--gold); z-index: 1; }
+    .timeline-item--current::before { background: var(--gold); box-shadow: 0 0 12px var(--gold-glow); }
+    .timeline-item__date { font-size: 12px; color: var(--gold); font-weight: 600; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 6px; }
+    .timeline-item__role { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--gray-800); margin-bottom: 4px; }
+    .timeline-item__company { font-size: 14px; color: var(--gold-dark); font-weight: 600; margin-bottom: 10px; }
+    .timeline-item__desc { font-size: 14px; color: var(--gray-600); line-height: 1.7; max-width: 480px; }
+    .bio-cta { text-align: center; padding: 80px 0; }
+    .bio-cta__title { font-family: var(--font-serif); font-size: 36px; font-weight: 600; color: var(--white); margin-bottom: 16px; }
+    .bio-cta__sub { font-size: 17px; color: rgba(255,255,255,0.45); margin-bottom: 36px; max-width: 480px; margin-left: auto; margin-right: auto; line-height: 1.7; }
+    .bio-cta__links { display: flex; justify-content: center; gap: 16px; }
+    @media (max-width: 768px) {
+      .bio-hero__content { grid-template-columns: 1fr; gap: 40px; padding: 100px 20px 60px; }
+      .bio-photo__frame { width: 240px; height: 300px; margin: 0 auto; }
+      .bio-photo { text-align: center; }
+      .bio-photo__accent, .bio-photo__accent-2 { display: none; }
+      .bio-intro__name { font-size: 36px; }
+      .bio-intro__summary { font-size: 16px; }
+      .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
+      .bio-meta-item { flex: 0 0 calc(50% - 10px); }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .bio-cta__title { font-size: 28px; }
+      .bio-cta__links { flex-direction: column; align-items: center; }
+      .timeline { padding-left: 36px; }
+    }
+      .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
+    .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
+  </style>
+</head>
+<body>
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo"><img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners</span></a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about" data-en="About" data-it="Chi Siamo">About</a></li>
+        <li><a href="index.html#services" data-en="Services" data-it="Servizi">Services</a></li>
+        <li><a href="index.html#group" data-en="Group" data-it="Gruppo">Group</a></li>
+        <li><a href="index.html#team" data-en="Team" data-it="Team">Team</a></li>
+        <li><a href="index.html#insights" data-en="Insights" data-it="News">Insights</a></li>
+        <li><a href="index.html#contact" class="nav__cta" data-en="Get in Touch" data-it="Contattaci">Get in Touch</a></li>
+        <li class="nav__lang"><button type="button" class="lang-switch" id="langSwitch" aria-label="Change language"><span class="lang-switch__opt lang-switch__opt--active" data-lang="en">EN</span><span class="lang-switch__sep">/</span><span class="lang-switch__opt" data-lang="it">IT</span></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <section class="bio-hero">
+    <div class="bio-hero__bg"></div>
+    <div class="bio-hero__content">
+      <a href="index.html#team" class="bio-back-link" style="grid-column: 1 / -1; margin-bottom: -40px;" data-en-html='<span aria-hidden="true">&larr;</span> Back to Team' data-it-html='<span aria-hidden="true">&larr;</span> Torna al Team'><span aria-hidden="true">&larr;</span> Back to Team</a>
+      <div class="bio-photo">
+        <div class="bio-photo__frame">
+          <img src="antonio-franchino.jpg?v=2" alt="Antonio Franchino" class="bio-photo__img">
+        </div>
+        <div class="bio-photo__accent"></div>
+        <div class="bio-photo__accent-2"></div>
+      </div>
+      <div class="bio-intro">
+        <h1 class="bio-intro__name">Antonio Franchino</h1>
+        <p class="bio-intro__title" data-en="Director, Run Asset Management" data-it="Director, Run Asset Management">Director, Run Asset Management</p>
+        <p class="bio-intro__summary" data-en="Antonio leads Run Asset Management, the group&rsquo;s Luxembourg AIFM. A lawyer by training, he brings more than 25 years in compliance, anti-money laundering and legal affairs across Italian banking and insurance groups, and since 2019 has sat on the boards of Luxembourg RAIF funds, overseeing internal compliance and the relationship with management companies, auditors and depositary banks." data-it="Antonio guida Run Asset Management, l&rsquo;AIFM lussemburghese del gruppo. Avvocato di formazione, vanta oltre 25 anni di esperienza in compliance, antiriciclaggio e affari legali presso gruppi bancari e assicurativi italiani e, dal 2019, siede nei consigli di amministrazione di fondi RAIF lussemburghesi, dove presidia la compliance interna e i rapporti con management company, revisori e banche depositarie.">Antonio leads Run Asset Management, the group&rsquo;s Luxembourg AIFM. A lawyer by training, he brings more than 25 years in compliance, anti-money laundering and legal affairs across Italian banking and insurance groups, and since 2019 has sat on the boards of Luxembourg RAIF funds, overseeing internal compliance and the relationship with management companies, auditors and depositary banks.</p>
+        <div class="bio-intro__meta">
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label" data-en="Entity" data-it="Entit&agrave;">Entity</span>
+            <span class="bio-meta-item__value" data-en="Luxembourg AIFM" data-it="AIFM Lussemburgo">Luxembourg AIFM</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label" data-en="Experience" data-it="Esperienza">Experience</span>
+            <span class="bio-meta-item__value" data-en="25+ Years" data-it="Oltre 25 Anni">25+ Years</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label" data-en="Focus" data-it="Focus">Focus</span>
+            <span class="bio-meta-item__value" data-en="Compliance &amp; AML" data-it="Compliance e AML">Compliance &amp; AML</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark-alt">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light" data-en="Expertise" data-it="Competenze">Expertise</p>
+      <h2 class="section__title section__title--light" data-en-html='Governance and compliance at the core of <span style="color: var(--gold);">every fund</span>.' data-it-html='Governance e compliance al centro di <span style="color: var(--gold);">ogni fondo</span>.'>Governance and compliance at the core of <span style="color: var(--gold);">every fund</span>.</h2>
+      <p class="section__intro" data-en="Antonio combines board-level fund governance in Luxembourg with more than two decades of compliance, AML and litigation work inside Italian banking and insurance groups." data-it="Antonio unisce la governance di fondi lussemburghesi a livello di consiglio di amministrazione a oltre vent&rsquo;anni di compliance, antiriciclaggio e contenzioso all&rsquo;interno di gruppi bancari e assicurativi italiani.">Antonio combines board-level fund governance in Luxembourg with more than two decades of compliance, AML and litigation work inside Italian banking and insurance groups.</p>
+
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3 class="expertise-card__title" data-en="Fund Governance" data-it="Governance dei Fondi">Fund Governance</h3>
+          <p class="expertise-card__desc" data-en="Board member and former chairman of Luxembourg RAIF funds, acting as legal counsel and managing the relationship with the ManCo, auditors and depositary bank." data-it="Membro del consiglio ed ex presidente di fondi RAIF lussemburghesi, con il ruolo di legal counsel e la gestione dei rapporti con ManCo, revisori e banca depositaria.">Board member and former chairman of Luxembourg RAIF funds, acting as legal counsel and managing the relationship with the ManCo, auditors and depositary bank.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title" data-en="Compliance &amp; AML/CFT" data-it="Compliance e AML/CFT">Compliance &amp; AML/CFT</h3>
+          <p class="expertise-card__desc" data-en="Seven years in the Compliance and Anti-Money Laundering function of UnipolSai: customer due diligence, suspicious transaction reporting, FIU relations, FATCA and Solvency II policies." data-it="Sette anni nella funzione Compliance e Antiriciclaggio di UnipolSai: adeguata verifica, segnalazione di operazioni sospette, rapporti con l&rsquo;UIF, FATCA e politiche Solvency II.">Seven years in the Compliance and Anti-Money Laundering function of UnipolSai: customer due diligence, suspicious transaction reporting, FIU relations, FATCA and Solvency II policies.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title" data-en="Legal &amp; Litigation" data-it="Legale e Contenzioso">Legal &amp; Litigation</h3>
+          <p class="expertise-card__desc" data-en="Led civil and criminal litigation for Italian banking groups, built the group criminal-litigation procedure at Banco Popolare and managed external counsel and settlements." data-it="Ha guidato il contenzioso civile e penale per gruppi bancari italiani, ha costruito la procedura di gestione del contenzioso penale di gruppo in Banco Popolare e gestito legali esterni e transazioni.">Led civil and criminal litigation for Italian banking groups, built the group criminal-litigation procedure at Banco Popolare and managed external counsel and settlements.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--light">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow" data-en="Career" data-it="Carriera">Career</p>
+          <h2 class="section__title" data-en-html='Over 25 years in <span style="color: var(--gold);">regulated finance</span>.' data-it-html='Oltre 25 anni nella <span style="color: var(--gold);">finanza regolamentata</span>.'>Over 25 years in <span style="color: var(--gold);">regulated finance</span>.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;" data-en="Antonio brings a career spanning Deutsche Bank&rsquo;s Finanza e Futuro, Banca Popolare di Vicenza, Banca Lombarda, Banco Popolare and UnipolSai to the leadership of Run Asset Management. He holds a law degree from Universit&agrave; Cattolica del Sacro Cuore, Milan." data-it="Antonio porta alla guida di Run Asset Management un percorso che attraversa Finanza e Futuro (Gruppo Deutsche Bank), Banca Popolare di Vicenza, Banca Lombarda, Banco Popolare e UnipolSai. &Egrave; laureato in Giurisprudenza all&rsquo;Universit&agrave; Cattolica del Sacro Cuore di Milano.">Antonio brings a career spanning Deutsche Bank&rsquo;s Finanza e Futuro, Banca Popolare di Vicenza, Banca Lombarda, Banco Popolare and UnipolSai to the leadership of Run Asset Management. He holds a law degree from Universit&agrave; Cattolica del Sacro Cuore, Milan.</p>
+        </div>
+        <div class="split__right">
+          <div class="timeline">
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date" data-en="Present" data-it="Attuale">Present</p>
+              <h3 class="timeline-item__role" data-en="Director" data-it="Director">Director</h3>
+              <p class="timeline-item__company">Run Asset Management S.&agrave;.r.l, Luxembourg</p>
+              <p class="timeline-item__desc" data-en="Leads Run Asset Management, the Luxembourg AIFM of the Run Capital Partners Group." data-it="Guida Run Asset Management, l&rsquo;AIFM lussemburghese del Gruppo Run Capital Partners.">Leads Run Asset Management, the Luxembourg AIFM of the Run Capital Partners Group.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="2020 &ndash; Present" data-it="2020 &ndash; Oggi">2020 &ndash; Present</p>
+              <h3 class="timeline-item__role" data-en="Member of the Board" data-it="Membro del Consiglio di Amministrazione">Member of the Board</h3>
+              <p class="timeline-item__company">Art &amp; Luxury Investment Fund, Luxembourg</p>
+              <p class="timeline-item__desc" data-en="Legal counsel, AML/CFT and internal compliance lead; manages relations with the ManCo, auditors and depositary bank." data-it="Legal counsel, AML/CFT e referente per la compliance interna; gestisce i rapporti con ManCo, revisori e banca depositaria.">Legal counsel, AML/CFT and internal compliance lead; manages relations with the ManCo, auditors and depositary bank.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">2019 &ndash; 2020</p>
+              <h3 class="timeline-item__role" data-en="Chairman" data-it="Presidente">Chairman</h3>
+              <p class="timeline-item__company">Galaxia SCA SICAV RAIF, Luxembourg</p>
+              <p class="timeline-item__desc" data-en="Chaired the fund board, acting as legal counsel and AML/CFT and internal compliance lead." data-it="Ha presieduto il consiglio del fondo, con il ruolo di legal counsel e referente AML/CFT e compliance interna.">Chaired the fund board, acting as legal counsel and AML/CFT and internal compliance lead.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">2012 &ndash; 2019</p>
+              <h3 class="timeline-item__role" data-en="Compliance, AML &amp; Legal" data-it="Compliance, Antiriciclaggio e Legale">Compliance, AML &amp; Legal</h3>
+              <p class="timeline-item__company">UnipolSai Assicurazioni</p>
+              <p class="timeline-item__desc" data-en="Compliance assessments, AML due diligence and suspicious transaction reporting, FATCA and Solvency II, and management of civil and criminal litigation." data-it="Valutazioni di compliance, adeguata verifica e segnalazione di operazioni sospette, FATCA e Solvency II, gestione del contenzioso civile e penale.">Compliance assessments, AML due diligence and suspicious transaction reporting, FATCA and Solvency II, and management of civil and criminal litigation.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">2006 &ndash; 2012</p>
+              <h3 class="timeline-item__role" data-en="Litigation" data-it="Contenzioso">Litigation</h3>
+              <p class="timeline-item__company">Gruppo Banco Popolare</p>
+              <p class="timeline-item__desc" data-en="Managed civil litigation for the group&rsquo;s banks and led group criminal litigation, introducing a new procedure for it." data-it="Ha gestito il contenzioso civile per le banche del gruppo e guidato il contenzioso penale di gruppo, introducendo una nuova procedura dedicata.">Managed civil litigation for the group&rsquo;s banks and led group criminal litigation, introducing a new procedure for it.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">2003 &ndash; 2006</p>
+              <h3 class="timeline-item__role" data-en="Litigation &amp; Audit" data-it="Contenzioso e Audit">Litigation &amp; Audit</h3>
+              <p class="timeline-item__company">Gruppo Banca Lombarda</p>
+              <p class="timeline-item__desc" data-en="Operational internal audit and compliance engagements and credit exposure reviews." data-it="Incarichi di internal audit operativo e compliance e valutazione dell&rsquo;esposizione creditizia.">Operational internal audit and compliance engagements and credit exposure reviews.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">2002 &ndash; 2003</p>
+              <h3 class="timeline-item__role" data-en="Network Risk Management" data-it="Risk Management Rete">Network Risk Management</h3>
+              <p class="timeline-item__company">Banca Popolare di Vicenza</p>
+              <p class="timeline-item__desc" data-en="Head of network risk management and litigation for the financial advisor network." data-it="Responsabile del risk management della rete e del contenzioso per la rete di promotori finanziari.">Head of network risk management and litigation for the financial advisor network.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">2000 &ndash; 2002</p>
+              <h3 class="timeline-item__role" data-en="Internal Control &amp; Compliance" data-it="Controllo Interno e Compliance">Internal Control &amp; Compliance</h3>
+              <p class="timeline-item__company">Finanza e Futuro (Deutsche Bank Group)</p>
+              <p class="timeline-item__desc" data-en="Internal control and compliance oversight of the national financial advisor network, including special investigations." data-it="Controllo interno e compliance sulla rete nazionale di promotori finanziari, incluse le attivit&agrave; di Special Investigation.">Internal control and compliance oversight of the national financial advisor network, including special investigations.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--dark">
+    <div class="container bio-cta">
+      <h2 class="bio-cta__title" data-en="Get in touch." data-it="Mettiti in contatto.">Get in touch.</h2>
+      <p style="margin-bottom: 28px;"><a href="mailto:a.franchino@runcapital.partners" style="color: var(--gold); font-size: 17px; text-decoration: none; font-weight: 500;">a.franchino@runcapital.partners</a></p>
+      <div class="bio-cta__links">
+        <a href="mailto:a.franchino@runcapital.partners" class="btn btn--primary" data-en="Send Email" data-it="Invia Email">Send Email</a>
+        <a href="index.html#team" class="btn btn--outline" data-en="Back to Team" data-it="Torna al Team">Back to Team</a>
+      </div>
+    </div>
+  </section>  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+            <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners</span>
+          </div>
+          <p class="footer__legal" data-en="Run Capital Partners operates through group entities in the UK, Luxembourg, and Italy, each regulated in its home jurisdiction." data-it="Run Capital Partners opera attraverso entit&agrave; del gruppo in UK, Lussemburgo e Italia, ciascuna regolamentata nella propria giurisdizione.">Run Capital Partners operates through group entities in the UK, Luxembourg, and Italy, each regulated in its home jurisdiction.</p>
+          <p class="footer__legal footer__disclaimer" data-en="Content on this website does not constitute investment advice." data-it="I contenuti di questo sito non costituiscono consulenza di investimento.">Content on this website does not constitute investment advice.</p>
+          <a href="mailto:info@runcapital.partners" class="footer__email">info@runcapital.partners</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-en="Services" data-it="Servizi" style="color: var(--gold);">Services</h4>
+          <ul>
+            <li><a href="asset-management.html" data-en="Asset Management" data-it="Gestione Patrimoniale">Asset Management</a></li>
+            <li><a href="sport-wealth.html" data-en-html="Sport &amp; Wealth" data-it-html="Sport &amp; Wealth">Sport &amp; Wealth</a></li>
+            <li><a href="nasdaq-listings.html" data-en="Nasdaq Listings" data-it="Quotazioni Nasdaq">Nasdaq Listings</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-en="Company" data-it="Azienda" style="color: var(--gold);">Company</h4>
+          <ul>
+            <li><a href="index.html#about" data-en="About Us" data-it="Chi Siamo">About Us</a></li>
+            <li><a href="index.html#group" data-en="Group Structure" data-it="Struttura del Gruppo">Group Structure</a></li>
+            <li><a href="index.html#team" data-en="Team" data-it="Team">Team</a></li>
+            <li><a href="insights.html" data-en="Insights" data-it="News">Insights</a></li>
+            <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C" data-en="Contact" data-it="Contatti">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--offices">
+          <h4 data-en="Offices" data-it="Uffici" style="color: var(--gold);">Offices</h4>
+          <ul class="footer-offices">
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city" data-en-html='London <span class="footer-office__tag">HQ</span>' data-it-html='Londra <span class="footer-office__tag">HQ</span>'>London <span class="footer-office__tag">HQ</span></span>
+                <span class="footer-office__addr">Exhibition House, Addison Bridge Place, W14 8XP</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city" data-en="Luxembourg" data-it="Lussemburgo">Luxembourg</span>
+                <span class="footer-office__addr">2 Rue Ste Zithe, 2763</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city" data-en="Milan" data-it="Milano">Milan</span>
+                <span class="footer-office__addr">Via Monte Napoleone 8, 20121</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city" data-en="Conegliano" data-it="Conegliano">Conegliano</span>
+                <span class="footer-office__addr">Viale Italia 203, 31015</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city" data-en="Rome" data-it="Roma">Rome</span>
+                <span class="footer-office__addr">Via Leonida Bissolati 54, 00187</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <p data-en="&copy; 2026 Run Capital Partners. All rights reserved." data-it="&copy; 2026 Run Capital Partners. Tutti i diritti riservati.">&copy; 2026 Run Capital Partners. All rights reserved.</p>
+        <div style="display: flex; gap: 24px; font-size: 12px;">
+          <a href="privacy-policy.html" style="color: rgba(255,255,255,0.4); text-decoration: none;" data-en="Privacy Policy" data-it="Privacy Policy">Privacy Policy</a>
+          <a href="cookie-policy.html" style="color: rgba(255,255,255,0.4); text-decoration: none;" data-en="Cookie Policy" data-it="Cookie Policy">Cookie Policy</a>
+          <a href="terms-of-service.html" style="color: rgba(255,255,255,0.4); text-decoration: none;" data-en="Terms of Service" data-it="Termini di Servizio">Terms of Service</a>
+          <a href="regulatory-disclosures.html" style="color: rgba(255,255,255,0.4); text-decoration: none;" data-en="Regulatory Disclosures" data-it="Informative Regolamentari">Regulatory Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => { links.classList.toggle('nav__links--open'); toggle.classList.toggle('nav__toggle--active'); });
+    links.querySelectorAll('a').forEach(a => { a.addEventListener('click', () => { links.classList.remove('nav__links--open'); toggle.classList.remove('nav__toggle--active'); }); });
+    const observer = new IntersectionObserver((entries) => { entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); }); }, { threshold: 0.08 });
+    document.querySelectorAll('.expertise-card, .timeline-item').forEach(el => { el.classList.add('fade-in'); observer.observe(el); });
+  </script>
+<script>(function(){var K='rcp_lang';function ap(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(e){var t=e.getAttribute('data-'+l);if(t!=null)e.textContent=t;});document.querySelectorAll('[data-en-html]').forEach(function(e){var h=e.getAttribute('data-'+l+'-html');if(h!=null)e.innerHTML=h;});document.querySelectorAll('.lang-switch__opt').forEach(function(o){o.classList.toggle('lang-switch__opt--active',o.getAttribute('data-lang')===l);});try{localStorage.setItem(K,l);}catch(e){}}var sv;try{sv=localStorage.getItem(K);}catch(e){}if(sv==='it')ap('it');var sw=document.getElementById('langSwitch');if(sw)sw.addEventListener('click',function(e){e.preventDefault();var c=e.target.closest('.lang-switch__opt');var cur=document.documentElement.lang==='it'?'it':'en';if(c&&c.getAttribute('data-lang'))ap(c.getAttribute('data-lang'));else ap(cur==='en'?'it':'en');});})();</script>
+  <script defer src="contact-modal.js"></script>
+  <script defer src="lang-switch.js"></script>
+  <script defer src="video-fallback.js"></script>
+</body>
+</html>
