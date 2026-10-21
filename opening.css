@@ -107,7 +107,7 @@
   max-width: 560px;
   font-size: 16px;
   line-height: 1.6;
-  color: #8a8a8a;
+  color: #ffffff;
   font-weight: 300;
   opacity: 0;
   animation: v2FadeUp 1s var(--v2-ease) 0.9s forwards;
@@ -238,7 +238,7 @@
   font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.1em;
-  color: rgba(247,243,234,0.7);
+  color: #ffffff;
   white-space: nowrap;
   transition: color 0.3s;
 }
@@ -358,7 +358,7 @@
   margin: 0 0 24px;
   font-weight: 300;
 }
-.v2-service:hover p { color: rgba(247,243,234,0.7); }
+.v2-service:hover p { color: #ffffff; }
 .v2-service__entity {
   display: flex;
   flex-direction: column;
@@ -378,12 +378,12 @@
   font-family: "Playfair Display", Georgia, serif;
   font-size: 13px;
   font-weight: 600;
-  color: rgba(10,10,10,0.82);
+  color: #111827;
   letter-spacing: 0.005em;
   transition: color 0.4s var(--v2-ease);
 }
 .v2-service:hover .v2-service__entity-name {
-  color: rgba(247,243,234,0.95);
+  color: #ffffff;
 }
 .v2-service__entity-reg {
   font-family: var(--v2-sans);
@@ -459,7 +459,7 @@
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 14px;
   line-height: 1.6;
-  color: rgba(247,243,234,0.55);
+  color: #ffffff;
   font-weight: 300;
   margin: 0;
 }
@@ -472,7 +472,7 @@
   color: #f7f3ea;
 }
 .group-diagram--dark .group-children > .group-card h4 { color: #fff; }
-.group-diagram--dark .group-children > .group-card p { color: rgba(247,243,234,0.62); }
+.group-diagram--dark .group-children > .group-card p { color: #ffffff; }
 .group-diagram--dark .group-children > .group-card .group-card__num { color: rgba(201,168,76,0.8); }
 .group-diagram--dark .group-children > .group-card .group-card__loc { color: #fff; }
 .group-diagram--dark .group-children > .group-card .group-card__reg { color: #e0c874; }
@@ -491,8 +491,8 @@
   color: #141414 !important;
 }
 .group-diagram--dark .group-children > .group-card.group-card--external h4 { color: #141414 !important; }
-.group-diagram--dark .group-children > .group-card.group-card--external p { color: rgba(20,20,20,0.82) !important; }
-.group-diagram--dark .group-children > .group-card.group-card--external .group-card__num { color: rgba(20,20,20,0.55) !important; }
+.group-diagram--dark .group-children > .group-card.group-card--external p { color: #111827 !important; }
+.group-diagram--dark .group-children > .group-card.group-card--external .group-card__num { color: #111827 !important; }
 .group-diagram--dark .group-children > .group-card.group-card--external .group-card__meta { border-top-color: rgba(20,20,20,0.25) !important; }
 .group-diagram--dark .group-children > .group-card.group-card--external .group-card__loc { color: #141414 !important; }
 .group-diagram--dark .group-children > .group-card.group-card--external .group-card__reg { color: #141414 !important; background: rgba(20,20,20,0.1) !important; border-color: rgba(20,20,20,0.45) !important; font-style: normal !important; font-weight: 700 !important; }
@@ -588,7 +588,7 @@
   font-family: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 18px;
   line-height: 1.75;
-  color: rgba(247,243,234,0.72);
+  color: #ffffff;
   font-weight: 300;
   max-width: 620px;
   margin: 0 auto;
