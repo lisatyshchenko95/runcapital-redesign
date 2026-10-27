@@ -72,7 +72,6 @@ runcapital-redesign/
 ├── michele-furlan.html
 ├── matteo-bodini.html
 ├── giordano-tomasini.html      # Giordano Tomasini
-├── giovanni-randazzo.html
 ├── giovanni-campodallorto.html
 ├── bogdan-virgil.html
 ├── antonio-franchino.html
