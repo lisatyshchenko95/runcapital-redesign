@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emanuele Rigo | Operations Manager | Run Capital Partners</title>
+  <meta name="description" content="Emanuele Rigo, Operations Manager at Run Capital Partners. More than 15 years in financial services management, compliance and risk across Italy, Malta and the United Kingdom.">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="canonical" href="https://runcapital.partners/emanuele-rigo">
+  <meta property="og:url" content="https://runcapital.partners/emanuele-rigo">
+  <meta property="og:title" content="Emanuele Rigo | Operations Manager | Run Capital Partners">
+  <meta property="og:description" content="Emanuele Rigo, Operations Manager at Run Capital Partners. More than 15 years in financial services management, compliance and risk across Italy, Malta and the United Kingdom.">
+  <meta property="og:image" content="https://runcapital-redesign-zeta.vercel.app/emanuele-rigo.jpg">
+  <meta property="og:image:width" content="896">
+  <meta property="og:image:height" content="1195">
+  <meta property="og:type" content="profile">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .bio-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      background: var(--dark);
+      overflow: hidden;
+    }
+
+    .bio-hero__bg {
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 60% 50% at 75% 50%, rgba(201,168,76,0.06) 0%, transparent 60%),
+        linear-gradient(180deg, rgba(8,8,8,1) 0%, rgba(8,8,8,0.97) 100%);
+    }
+
+    .bio-hero__content {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 120px 24px 80px;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 72px;
+      align-items: center;
+    }
+
+    .bio-photo { position: relative; }
+
+    .bio-photo__frame {
+      width: 320px;
+      height: 380px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, var(--dark-3), var(--dark-4));
+      border: 1px solid rgba(201,168,76,0.15);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .bio-photo__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
+    }
+
+    .bio-photo__frame::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 80px;
+      background: linear-gradient(transparent, rgba(8,8,8,0.5));
+    }
+
+    .bio-photo__accent {
+      position: absolute;
+      top: -12px;
+      right: -12px;
+      width: 80px;
+      height: 80px;
+      border: 2px solid var(--gold);
+      border-radius: 16px;
+      opacity: 0.3;
+    }
+
+    .bio-photo__accent-2 {
+      position: absolute;
+      bottom: -8px;
+      left: -8px;
+      width: 60px;
+      height: 60px;
+      border: 1px solid var(--gold);
+      border-radius: 12px;
+      opacity: 0.2;
+    }
+
+    .bio-intro__eyebrow {
+      color: var(--gold);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .bio-intro__eyebrow::before {
+      content: '';
+      width: 32px;
+      height: 1px;
+      background: var(--gold);
+    }
+
+    .bio-intro__name {
+      font-family: var(--font-serif);
+      font-size: clamp(40px, 5vw, 56px);
+      font-weight: 600;
+      color: var(--white);
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .bio-intro__title {
+      font-size: 20px;
+      color: var(--gold);
+      font-weight: 500;
+      margin-bottom: 28px;
+    }
+
+    .bio-intro__summary {
+      font-size: 18px;
+      color: #ffffff;
+      line-height: 1.8;
+      margin-bottom: 36px;
+      max-width: 540px;
+    }
+
+    .bio-intro__meta {
+      display: flex;
+      gap: 32px;
+      padding-top: 28px;
+      border-top: 1px solid rgba(201,168,76,0.12);
+    }
+
+    .bio-meta-item {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .bio-meta-item__label {
+      font-size: 11px;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .bio-meta-item__value {
+      font-size: 14px;
+      color: #ffffff;
+      font-weight: 500;
+    }
+
+    .timeline {
+      position: relative;
+      padding-left: 48px;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 16px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(180deg, var(--gold), rgba(201,168,76,0.1));
+    }
+
+    .timeline-item {
+      position: relative;
+      margin-bottom: 48px;
+    }
+
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -36px;
+      top: 6px;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--dark);
+      border: 2px solid var(--gold);
+      z-index: 1;
+    }
+
+    .timeline-item--current::before {
+      background: var(--gold);
+      box-shadow: 0 0 12px var(--gold-glow);
+    }
+
+    .timeline-item__date {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .timeline-item__role {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--gray-800);
+      margin-bottom: 4px;
+    }
+
+    .timeline-item__company {
+      font-size: 14px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .timeline-item__desc {
+      font-size: 14px;
+      color: var(--gray-600);
+      line-height: 1.7;
+      max-width: 480px;
+    }
+
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .cred-card {
+      padding: 28px;
+      background: var(--cream);
+      border-radius: 14px;
+      border: 1px solid rgba(201,168,76,0.08);
+      transition: all 0.3s;
+    }
+
+    .cred-card:hover { border-color: var(--gold); }
+
+    .cred-card__year {
+      font-size: 12px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .cred-card__title {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .cred-card__detail {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
+    .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .expertise-card { background: linear-gradient(135deg, var(--dark-2), var(--dark-3)); border: 1px solid rgba(201,168,76,0.06); border-radius: 16px; padding: 32px; transition: all 0.4s var(--ease-out-expo); position: relative; overflow: hidden; }
+    .expertise-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s var(--ease-out-expo); }
+    .expertise-card:hover { border-color: rgba(201,168,76,0.2); transform: translateY(-4px); }
+    .expertise-card:hover::before { height: 100%; }
+    .expertise-card__title { font-family: var(--font-serif); font-size: 20px; font-weight: 600; color: var(--white); margin-bottom: 12px; }
+    .expertise-card__desc { font-size: 14px; color: #ffffff; line-height: 1.7; }
+
+    .bio-cta {
+      text-align: center;
+      padding: 80px 0;
+    }
+
+    .bio-cta__title {
+      font-family: var(--font-serif);
+      font-size: 36px;
+      font-weight: 600;
+      color: var(--white);
+      margin-bottom: 16px;
+    }
+
+    .bio-cta__sub {
+      font-size: 17px;
+      color: #ffffff;
+      margin-bottom: 36px;
+      max-width: 480px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    .bio-cta__links {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    @media (max-width: 768px) {
+      .bio-hero__content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        padding: 100px 20px 60px;
+      }
+
+      .bio-photo__frame { width: 240px; height: 300px; margin: 0 auto; }
+      .bio-photo { text-align: center; }
+      .bio-photo__accent, .bio-photo__accent-2 { display: none; }
+      .bio-intro__name { font-size: 36px; }
+      .bio-intro__summary { font-size: 16px; }
+      .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
+      .bio-meta-item { flex: 0 0 calc(50% - 10px); }
+      .cred-grid { grid-template-columns: 1fr; }
+      .expertise-grid { grid-template-columns: 1fr; }
+      .bio-cta__title { font-size: 28px; }
+      .bio-cta__links { flex-direction: column; align-items: center; }
+      .timeline { padding-left: 36px; }
+    }
+      .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
+    .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav nav--scrolled" id="nav">
+    <div class="nav__inner">
+      <a href="index.html" class="nav__logo">
+        <img src="rcp-logo.png" alt="Run Capital Partners" class="nav__logo-img"><span class="nav__logo-text">Run Capital Partners</span>
+      </a>
+      <button class="nav__toggle" id="navToggle" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="index.html#about" data-en="About" data-it="Chi Siamo">About</a></li>
+        <li><a href="index.html#services" data-en="Services" data-it="Servizi">Services</a></li>
+        <li><a href="index.html#group" data-en="Group" data-it="Gruppo">Group</a></li>
+        <li><a href="index.html#team" data-en="Team" data-it="Team">Team</a></li>
+        <li><a href="index.html#insights" data-en="Insights" data-it="News">Insights</a></li>
+        <li><a href="index.html#contact" class="nav__cta" data-en="Get in Touch" data-it="Contattaci">Get in Touch</a></li>
+        <li class="nav__lang"><button type="button" class="lang-switch" id="langSwitch" aria-label="Change language"><span class="lang-switch__opt lang-switch__opt--active" data-lang="en">EN</span><span class="lang-switch__sep">/</span><span class="lang-switch__opt" data-lang="it">IT</span></button></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- BIO HERO -->
+  <section class="bio-hero">
+    <div class="bio-hero__bg"></div>
+    <div class="bio-hero__content">
+      <a href="index.html#team" class="bio-back-link" style="grid-column: 1 / -1; margin-bottom: -40px;" data-en-html='<span aria-hidden="true">&larr;</span> Back to Team' data-it-html='<span aria-hidden="true">&larr;</span> Torna al Team'><span aria-hidden="true">&larr;</span> Back to Team</a>
+      <div class="bio-photo">
+        <div class="bio-photo__frame">
+          <img src="emanuele-rigo.jpg" alt="Emanuele Rigo, Operations Manager at Run Capital Partners" class="bio-photo__img" style="transform: scale(1.14) translateX(-6%); transform-origin: center top;">
+        </div>
+        <div class="bio-photo__accent"></div>
+        <div class="bio-photo__accent-2"></div>
+      </div>
+      <div class="bio-intro">
+        <h1 class="bio-intro__name">Emanuele Rigo</h1>
+        <p class="bio-intro__title" data-en="Operations Manager" data-it="Operations Manager">Operations Manager</p>
+        <a href="https://www.linkedin.com/in/emanuele-rigo/" target="_blank" rel="noopener" class="bio-linkedin">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          <span data-en="LinkedIn Profile" data-it="Profilo LinkedIn">LinkedIn Profile</span>
+        </a>
+        <p class="bio-intro__summary" data-en="Emanuele brings more than 15 years of experience in financial services management, compliance and risk to Run Capital Partners. In London he has served as Executive Director at Olympia Wealth Management and as Managing Partner at UCapital Asset Management, after leading business development for AvaTrade in Milan." data-it="Emanuele porta in Run Capital Partners oltre 15 anni di esperienza nella gestione, compliance e risk management dei servizi finanziari. A Londra &egrave; stato Executive Director in Olympia Wealth Management e Managing Partner in UCapital Asset Management, dopo aver guidato lo sviluppo commerciale di AvaTrade a Milano.">Emanuele brings more than 15 years of experience in financial services management, compliance and risk to Run Capital Partners. In London he has served as Executive Director at Olympia Wealth Management and as Managing Partner at UCapital Asset Management, after leading business development for AvaTrade in Milan.</p>
+        <div class="bio-intro__meta">
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label" data-en="Experience" data-it="Esperienza">Experience</span>
+            <span class="bio-meta-item__value" data-en="15+ Years" data-it="15+ Anni">15+ Years</span>
+          </div>
+          <div class="bio-meta-item">
+            <span class="bio-meta-item__label" data-en="Focus" data-it="Focus">Focus</span>
+            <span class="bio-meta-item__value" data-en="Operations &amp; Compliance" data-it="Operations e Compliance">Operations &amp; Compliance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EXPERTISE -->
+  <section class="section section--dark-alt">
+    <div class="container">
+      <p class="section__eyebrow section__eyebrow--light" data-en="Expertise" data-it="Competenze">Expertise</p>
+      <h2 class="section__title section__title--light" data-en-html='Governance, compliance and <span style="color: var(--gold);">operational resilience</span>.' data-it-html='Governance, compliance e <span style="color: var(--gold);">resilienza operativa</span>.'>Governance, compliance and <span style="color: var(--gold);">operational resilience</span>.</h2>
+      <p class="section__intro" data-en="Emanuele has spent his career inside regulated firms in Italy, Malta and the United Kingdom, from brokerage to asset and wealth management." data-it="Emanuele ha trascorso la sua carriera in societ&agrave; regolamentate in Italia, Malta e Regno Unito, dall&rsquo;intermediazione all&rsquo;asset e wealth management.">Emanuele has spent his career inside regulated firms in Italy, Malta and the United Kingdom, from brokerage to asset and wealth management.</p>
+      <div class="expertise-grid">
+        <div class="expertise-card">
+          <h3 class="expertise-card__title" data-en="Compliance &amp; Risk" data-it="Compliance e Rischio">Compliance &amp; Risk</h3>
+          <p class="expertise-card__desc" data-en="More than 15 years across management, compliance and risk in regulated financial firms, including implementation of the EU Digital Operational Resilience Act (DORA)." data-it="Oltre 15 anni tra gestione, compliance e rischio in societ&agrave; finanziarie regolamentate, inclusa l&rsquo;implementazione del Digital Operational Resilience Act (DORA) dell&rsquo;UE.">More than 15 years across management, compliance and risk in regulated financial firms, including implementation of the EU Digital Operational Resilience Act (DORA).</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title" data-en="Corporate Governance" data-it="Corporate Governance">Corporate Governance</h3>
+          <p class="expertise-card__desc" data-en="Board and executive experience in London, as Executive Director at Olympia Wealth Management and Managing Partner at UCapital Asset Management." data-it="Esperienza di board ed executive a Londra, come Executive Director in Olympia Wealth Management e Managing Partner in UCapital Asset Management.">Board and executive experience in London, as Executive Director at Olympia Wealth Management and Managing Partner at UCapital Asset Management.</p>
+        </div>
+        <div class="expertise-card">
+          <h3 class="expertise-card__title" data-en="Change &amp; Project Management" data-it="Change e Project Management">Change &amp; Project Management</h3>
+          <p class="expertise-card__desc" data-en="Project management for the start-up of regulated and unregulated business divisions, and organisational consultancy to regulated firms in Italy and the UK." data-it="Project management per l&rsquo;avvio di divisioni di business regolamentate e non regolamentate, e consulenza organizzativa a societ&agrave; regolamentate in Italia e nel Regno Unito.">Project management for the start-up of regulated and unregulated business divisions, and organisational consultancy to regulated firms in Italy and the UK.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER TIMELINE -->
+  <section class="section section--light" id="career">
+    <div class="container">
+      <div class="split">
+        <div class="split__left">
+          <p class="section__eyebrow" data-en="Career" data-it="Carriera">Career</p>
+          <h2 class="section__title" data-en-html='Fifteen years inside <span style="color: var(--gold);">regulated finance</span>.' data-it-html='Quindici anni nella <span style="color: var(--gold);">finanza regolamentata</span>.'>Fifteen years inside <span style="color: var(--gold);">regulated finance</span>.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;" data-en="Emanuele graduated in International Economics and Management from Universit&agrave; Bocconi in Milan, majoring in management, business strategy, marketing and economics. His career spans brokerage, asset management and wealth management in Italy, Malta and the United Kingdom." data-it="Emanuele si &egrave; laureato in Economia e Management Internazionale presso l&rsquo;Universit&agrave; Bocconi di Milano, con indirizzo in management, strategia aziendale, marketing ed economia. La sua carriera abbraccia intermediazione, asset management e wealth management in Italia, Malta e Regno Unito.">Emanuele graduated in International Economics and Management from Universit&agrave; Bocconi in Milan, majoring in management, business strategy, marketing and economics. His career spans brokerage, asset management and wealth management in Italy, Malta and the United Kingdom.</p>
+        </div>
+        <div class="split__right">
+          <div class="timeline">
+            <div class="timeline-item timeline-item--current">
+              <p class="timeline-item__date" data-en="Present" data-it="Attuale">Present</p>
+              <h3 class="timeline-item__role" data-en="Operations Manager" data-it="Operations Manager">Operations Manager</h3>
+              <p class="timeline-item__company">Run Capital Partners</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="Sep 2024 - Present" data-it="Set 2024 - Attuale">Sep 2024 - Present</p>
+              <h3 class="timeline-item__role" data-en="Executive Director" data-it="Executive Director">Executive Director</h3>
+              <p class="timeline-item__company" data-en="Olympia Wealth Management, London" data-it="Olympia Wealth Management, Londra">Olympia Wealth Management, London</p>
+              <p class="timeline-item__desc" data-en="Executive Director since July 2025, after joining as Management Consultant in September 2024." data-it="Executive Director da luglio 2025, dopo l&rsquo;ingresso come Management Consultant a settembre 2024.">Executive Director since July 2025, after joining as Management Consultant in September 2024.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="Jun 2021 - Dec 2024" data-it="Giu 2021 - Dic 2024">Jun 2021 - Dec 2024</p>
+              <h3 class="timeline-item__role" data-en="Partner, Managing Partner" data-it="Partner, Managing Partner">Partner, Managing Partner</h3>
+              <p class="timeline-item__company" data-en="UCapital Asset Management, London" data-it="UCapital Asset Management, Londra">UCapital Asset Management, London</p>
+              <p class="timeline-item__desc" data-en="Partner from 2021, Managing Partner from October 2022 to July 2024." data-it="Partner dal 2021, Managing Partner da ottobre 2022 a luglio 2024.">Partner from 2021, Managing Partner from October 2022 to July 2024.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="Jan 2020 - Jul 2022" data-it="Gen 2020 - Lug 2022">Jan 2020 - Jul 2022</p>
+              <h3 class="timeline-item__role" data-en="Managing Director" data-it="Managing Director">Managing Director</h3>
+              <p class="timeline-item__company">NewTraderLab, Malta</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="Feb 2014 - Dec 2019" data-it="Feb 2014 - Dic 2019">Feb 2014 - Dec 2019</p>
+              <h3 class="timeline-item__role" data-en="Business Development Manager" data-it="Business Development Manager">Business Development Manager</h3>
+              <p class="timeline-item__company" data-en="AvaTrade, Milan" data-it="AvaTrade, Milano">AvaTrade, Milan</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="Dec 2010 - Dec 2012" data-it="Dic 2010 - Dic 2012">Dec 2010 - Dec 2012</p>
+              <h3 class="timeline-item__role" data-en="Business Development" data-it="Business Development">Business Development</h3>
+              <p class="timeline-item__company">UMAN s.r.l., Verona</p>
+              <p class="timeline-item__desc" data-en="Management and organisational consultancy to regulated firms, including Millennium SIM in Milan and London Capital Group in London." data-it="Consulenza manageriale e organizzativa a societ&agrave; regolamentate, tra cui Millennium SIM a Milano e London Capital Group a Londra.">Management and organisational consultancy to regulated firms, including Millennium SIM in Milan and London Capital Group in London.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date">2007 - 2010</p>
+              <h3 class="timeline-item__role" data-en="Head of Sales" data-it="Head of Sales">Head of Sales</h3>
+              <p class="timeline-item__company">Forex47 S.p.A.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section section--dark">
+    <div class="container bio-cta">
+      <h2 class="bio-cta__title" data-en="Get in touch." data-it="Mettiti in contatto.">Get in touch.</h2>
+      <div class="bio-cta__links">
+        <a href="https://www.linkedin.com/in/emanuele-rigo/" class="btn btn--outline" target="_blank" rel="noopener" data-en="LinkedIn Profile" data-it="Profilo LinkedIn">LinkedIn Profile</a>
+        <a href="index.html#team" class="btn btn--outline" data-en="Back to Team" data-it="Torna al Team">Back to Team</a>
+      </div>
+    </div>
+  </section>  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div style="display: flex; align-items: center; gap: 14px; margin-bottom: 20px;">
+            <img src="rcp-logo.png" alt="Run Capital Partners" style="height: 48px; width: auto;">
+            <span style="font-family: 'Cinzel', 'Playfair Display', Georgia, serif; font-size: 16px; font-weight: 600; letter-spacing: 0.08em; color: var(--gold); text-transform: uppercase;">Run Capital Partners</span>
+          </div>
+          <p class="footer__legal" data-en="Run Capital Partners operates through group entities in the UK, Luxembourg, and Italy, each regulated in its home jurisdiction." data-it="Run Capital Partners opera attraverso entit&agrave; del gruppo in UK, Lussemburgo e Italia, ciascuna regolamentata nella propria giurisdizione.">Run Capital Partners operates through group entities in the UK, Luxembourg, and Italy, each regulated in its home jurisdiction.</p>
+          <p class="footer__legal footer__disclaimer" data-en="Content on this website does not constitute investment advice." data-it="I contenuti di questo sito non costituiscono consulenza di investimento.">Content on this website does not constitute investment advice.</p>
+          <a href="mailto:info@runcapital.partners" class="footer__email">info@runcapital.partners</a>
+        </div>
+        <div class="footer__col">
+          <h4 data-en="Services" data-it="Servizi" style="color: var(--gold);">Services</h4>
+          <ul>
+            <li><a href="asset-management.html" data-en="Asset Management" data-it="Gestione Patrimoniale">Asset Management</a></li>
+            <li><a href="sport-wealth.html" data-en-html="Sport &amp; Wealth" data-it-html="Sport &amp; Wealth">Sport &amp; Wealth</a></li>
+            <li><a href="nasdaq-listings.html" data-en="Nasdaq Listings" data-it="Quotazioni Nasdaq">Nasdaq Listings</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 data-en="Company" data-it="Azienda" style="color: var(--gold);">Company</h4>
+          <ul>
+            <li><a href="index.html#about" data-en="About Us" data-it="Chi Siamo">About Us</a></li>
+            <li><a href="index.html#group" data-en="Group Structure" data-it="Struttura del Gruppo">Group Structure</a></li>
+            <li><a href="index.html#team" data-en="Team" data-it="Team">Team</a></li>
+            <li><a href="insights.html" data-en="Insights" data-it="News">Insights</a></li>
+            <li><a href="mailto:info@runcapital.partners?subject=Request%20for%20a%20Consultation&amp;body=Dear%20Run%20Capital%20Partners%20Team%2C%0D%0A%0D%0AI%20would%20love%20to%20book%20a%20consultation%20with%20you.%0D%0A%0D%0AKind%20regards%2C" data-en="Contact" data-it="Contatti">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--offices">
+          <h4 data-en="Offices" data-it="Uffici" style="color: var(--gold);">Offices</h4>
+          <ul class="footer-offices">
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city" data-en-html='London <span class="footer-office__tag">HQ</span>' data-it-html='Londra <span class="footer-office__tag">HQ</span>'>London <span class="footer-office__tag">HQ</span></span>
+                <span class="footer-office__addr">Exhibition House, Addison Bridge Place, W14 8XP</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city" data-en="Luxembourg" data-it="Lussemburgo">Luxembourg</span>
+                <span class="footer-office__addr">11 Bd Grande-Duchesse Charlotte, 1331</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city" data-en="Milan" data-it="Milano">Milan</span>
+                <span class="footer-office__addr">Via Monte Napoleone 8, 20121</span>
+              </div>
+            </li>
+            <li class="footer-office">
+              <span class="footer-office__dot" aria-hidden="true"></span>
+              <div class="footer-office__body">
+                <span class="footer-office__city" data-en="Conegliano" data-it="Conegliano">Conegliano</span>
+                <span class="footer-office__addr">Viale Italia 203, 31015</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom" style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px;">
+        <p data-en="&copy; 2026 Run Capital Partners. All rights reserved." data-it="&copy; 2026 Run Capital Partners. Tutti i diritti riservati.">&copy; 2026 Run Capital Partners. All rights reserved.</p>
+        <div style="display: flex; gap: 24px; font-size: 12px;">
+          <a href="privacy-policy.html" style="color: #ffffff; text-decoration: none;" data-en="Privacy Policy" data-it="Privacy Policy">Privacy Policy</a>
+          <a href="cookie-policy.html" style="color: #ffffff; text-decoration: none;" data-en="Cookie Policy" data-it="Cookie Policy">Cookie Policy</a>
+          <a href="terms-of-service.html" style="color: #ffffff; text-decoration: none;" data-en="Terms of Service" data-it="Termini di Servizio">Terms of Service</a>
+          <a href="regulatory-disclosures.html" style="color: #ffffff; text-decoration: none;" data-en="Regulatory Disclosures" data-it="Informative Regolamentari">Regulatory Disclosures</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('nav__links--open');
+      toggle.classList.toggle('nav__toggle--active');
+    });
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        links.classList.remove('nav__links--open');
+        toggle.classList.remove('nav__toggle--active');
+      });
+    });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.08 });
+
+    document.querySelectorAll('.cred-card, .timeline-item, .expertise-card').forEach(el => {
+      el.classList.add('fade-in');
+      observer.observe(el);
+    });
+  </script>
+<script>(function(){var K='rcp_lang';function ap(l){document.documentElement.lang=l;document.querySelectorAll('[data-en]').forEach(function(e){var t=e.getAttribute('data-'+l);if(t!=null)e.textContent=t;});document.querySelectorAll('[data-en-html]').forEach(function(e){var h=e.getAttribute('data-'+l+'-html');if(h!=null)e.innerHTML=h;});document.querySelectorAll('.lang-switch__opt').forEach(function(o){o.classList.toggle('lang-switch__opt--active',o.getAttribute('data-lang')===l);});try{localStorage.setItem(K,l);}catch(e){}}var sv;try{sv=localStorage.getItem(K);}catch(e){}if(sv==='it')ap('it');var sw=document.getElementById('langSwitch');if(sw)sw.addEventListener('click',function(e){e.preventDefault();var c=e.target.closest('.lang-switch__opt');var cur=document.documentElement.lang==='it'?'it':'en';if(c&&c.getAttribute('data-lang'))ap(c.getAttribute('data-lang'));else ap(cur==='en'?'it':'en');});})();</script>
+  <script defer src="contact-modal.js"></script>
+  <script defer src="lang-switch.js"></script>
+  <script defer src="video-fallback.js"></script>
+</body>
+</html>
