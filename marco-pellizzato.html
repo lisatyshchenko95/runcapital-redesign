@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lara Covre | Insurance &amp; Credit Specialist | Run Capital Partners</title>
-  <meta name="description" content="Lara Covre, Insurance & Credit Specialist at Run Capital Partners. Insurance solutions and retail- and corporate-credit advisory for private and corporate clients.">
+  <title>Marco Pellizzato | Senior Operations Manager | Run Capital Partners</title>
+  <meta name="description" content="Marco Pellizzato, Senior Operations Manager at Run Capital Partners. More than a decade of operations and client service experience at BNY and Credit Suisse.">
   <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="canonical" href="https://runcapital.partners/lara-covre">
-  <meta property="og:url" content="https://runcapital.partners/lara-covre">
-  <meta property="og:title" content="Lara Covre | Insurance &amp; Credit Specialist | Run Capital Partners">
-  <meta property="og:description" content="Lara Covre, Insurance & Credit Specialist at Run Capital Partners. Insurance solutions and retail- and corporate-credit advisory for private and corporate clients.">
-  <meta property="og:image" content="https://runcapital-redesign-zeta.vercel.app/lara-covre.jpg">
+  <link rel="canonical" href="https://runcapital.partners/marco-pellizzato">
+  <meta property="og:url" content="https://runcapital.partners/marco-pellizzato">
+  <meta property="og:title" content="Marco Pellizzato | Senior Operations Manager | Run Capital Partners">
+  <meta property="og:description" content="Marco Pellizzato, Senior Operations Manager at Run Capital Partners. More than a decade of operations and client service experience at BNY and Credit Suisse.">
+  <meta property="og:image" content="https://runcapital-redesign-zeta.vercel.app/marco-pellizzato.jpg">
   <meta property="og:image:width" content="896">
   <meta property="og:image:height" content="1195">
   <meta property="og:type" content="profile">
@@ -238,6 +238,44 @@
       max-width: 480px;
     }
 
+    .cred-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .cred-card {
+      padding: 28px;
+      background: var(--cream);
+      border-radius: 14px;
+      border: 1px solid rgba(201,168,76,0.08);
+      transition: all 0.3s;
+    }
+
+    .cred-card:hover { border-color: var(--gold); }
+
+    .cred-card__year {
+      font-size: 12px;
+      color: var(--gold-dark);
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      margin-bottom: 8px;
+    }
+
+    .cred-card__title {
+      font-family: var(--font-serif);
+      font-size: 17px;
+      font-weight: 600;
+      margin-bottom: 6px;
+      color: var(--dark);
+    }
+
+    .cred-card__detail {
+      font-size: 13px;
+      color: var(--gray-600);
+      line-height: 1.5;
+    }
+
     .expertise-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
     .expertise-card { background: linear-gradient(135deg, var(--dark-2), var(--dark-3)); border: 1px solid rgba(201,168,76,0.06); border-radius: 16px; padding: 32px; transition: all 0.4s var(--ease-out-expo); position: relative; overflow: hidden; }
     .expertise-card::before { content: ''; position: absolute; top: 0; left: 0; width: 3px; height: 0; background: var(--gold); transition: height 0.4s var(--ease-out-expo); }
@@ -289,10 +327,11 @@
       .bio-intro__summary { font-size: 16px; }
       .bio-intro__meta { flex-wrap: wrap; gap: 20px; }
       .bio-meta-item { flex: 0 0 calc(50% - 10px); }
+      .cred-grid { grid-template-columns: 1fr; }
+      .expertise-grid { grid-template-columns: 1fr; }
       .bio-cta__title { font-size: 28px; }
       .bio-cta__links { flex-direction: column; align-items: center; }
       .timeline { padding-left: 36px; }
-      .expertise-grid { grid-template-columns: 1fr; }
     }
       .bio-linkedin { display: inline-flex; align-items: center; gap: 8px; color: #0A66C2; font-size: 14px; font-weight: 600; text-decoration: none; margin-bottom: 28px; padding: 6px 14px; border: 1px solid rgba(10,102,194,0.3); border-radius: 6px; transition: all 0.3s; }
     .bio-linkedin:hover { background: rgba(10,102,194,0.1); border-color: #0A66C2; }
@@ -328,27 +367,27 @@
       <a href="index.html#team" class="bio-back-link" style="grid-column: 1 / -1; margin-bottom: -40px;" data-en-html='<span aria-hidden="true">&larr;</span> Back to Team' data-it-html='<span aria-hidden="true">&larr;</span> Torna al Team'><span aria-hidden="true">&larr;</span> Back to Team</a>
       <div class="bio-photo">
         <div class="bio-photo__frame">
-          <img src="lara-covre.jpg?v=2" alt="Lara Covre, Insurance &amp; Credit Specialist at Run Capital Partners" class="bio-photo__img">
+          <img src="marco-pellizzato.jpg" alt="Marco Pellizzato, Senior Operations Manager at Run Capital Partners" class="bio-photo__img" style="transform: scale(1.1) translateX(-4%); transform-origin: center top;">
         </div>
         <div class="bio-photo__accent"></div>
         <div class="bio-photo__accent-2"></div>
       </div>
       <div class="bio-intro">
-        <h1 class="bio-intro__name">Lara Covre</h1>
-        <p class="bio-intro__title" data-en-html="Insurance &amp; Credit Specialist" data-it-html="Specialista Assicurazione e Credito">Insurance &amp; Credit Specialist</p>
-        <a href="https://www.linkedin.com/in/lara-covre-b469171b9" target="_blank" rel="noopener" class="bio-linkedin">
+        <h1 class="bio-intro__name">Marco Pellizzato</h1>
+        <p class="bio-intro__title" data-en="Senior Operations Manager" data-it="Senior Operations Manager">Senior Operations Manager</p>
+        <a href="https://www.linkedin.com/in/marco-pellizzato-3a362638/" target="_blank" rel="noopener" class="bio-linkedin">
           <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
           <span data-en="LinkedIn Profile" data-it="Profilo LinkedIn">LinkedIn Profile</span>
         </a>
-        <p class="bio-intro__summary" data-en="Lara sits where insurance meets credit advisory. She designs insurance solutions and structures retail- and corporate-credit arrangements, helping private clients and businesses align protection, financing, and risk transfer with their broader objectives." data-it="Lara opera all&rsquo;intersezione tra assicurazione e consulenza creditizia. Progetta soluzioni assicurative e struttura accordi di credito retail e corporate, aiutando clienti privati e imprese ad allineare protezione, finanziamento e trasferimento del rischio agli obiettivi pi&ugrave; ampi.">Lara sits where insurance meets credit advisory. She designs insurance solutions and structures retail- and corporate-credit arrangements, helping private clients and businesses align protection, financing, and risk transfer with their broader objectives.</p>
+        <p class="bio-intro__summary" data-en="Marco brings more than a decade of operations and client service experience in international banking to Run Capital Partners. Over ten years at BNY he moved from fund accounting into client service leadership, becoming Vice President and Client Service Manager for Structured Loans and CLOs, after earlier operations roles in private banking and wealth management at Credit Suisse." data-it="Marco porta in Run Capital Partners oltre dieci anni di esperienza nelle operations e nel client service del settore bancario internazionale. In dieci anni in BNY &egrave; passato dal fund accounting alla guida del client service, diventando Vice President e Client Service Manager per Structured Loans e CLO, dopo precedenti ruoli operativi nel private banking e wealth management in Credit Suisse.">Marco brings more than a decade of operations and client service experience in international banking to Run Capital Partners. Over ten years at BNY he moved from fund accounting into client service leadership, becoming Vice President and Client Service Manager for Structured Loans and CLOs, after earlier operations roles in private banking and wealth management at Credit Suisse.</p>
         <div class="bio-intro__meta">
           <div class="bio-meta-item">
-            <span class="bio-meta-item__label" data-en="Location" data-it="Sede">Location</span>
-            <span class="bio-meta-item__value" data-en="Italy" data-it="Italia">Italy</span>
+            <span class="bio-meta-item__label" data-en="Experience" data-it="Esperienza">Experience</span>
+            <span class="bio-meta-item__value" data-en="10+ Years" data-it="10+ Anni">10+ Years</span>
           </div>
           <div class="bio-meta-item">
             <span class="bio-meta-item__label" data-en="Focus" data-it="Focus">Focus</span>
-            <span class="bio-meta-item__value" data-en-html="Insurance &amp; Credit" data-it-html="Assicurazione e Credito">Insurance &amp; Credit</span>
+            <span class="bio-meta-item__value" data-en="Operations &amp; Client Service" data-it="Operations e Client Service">Operations &amp; Client Service</span>
           </div>
         </div>
       </div>
@@ -359,47 +398,67 @@
   <section class="section section--dark-alt">
     <div class="container">
       <p class="section__eyebrow section__eyebrow--light" data-en="Expertise" data-it="Competenze">Expertise</p>
-      <h2 class="section__title section__title--light" data-en-html='Where <span style="color: var(--gold);">insurance</span> and <span style="color: var(--gold);">credit advisory</span> meet.' data-it-html='Dove <span style="color: var(--gold);">assicurazione</span> e <span style="color: var(--gold);">consulenza creditizia</span> si incontrano.'>Where <span style="color: var(--gold);">insurance</span> and <span style="color: var(--gold);">credit advisory</span> meet.</h2>
-      <p class="section__intro" data-en="Lara combines insurance solutions with retail- and corporate-credit advisory, supporting private clients and businesses with integrated protection and financing strategies." data-it="Lara unisce soluzioni assicurative con consulenza creditizia retail e corporate, supportando clienti privati e imprese con strategie integrate di protezione e finanziamento.">Lara combines insurance solutions with retail- and corporate-credit advisory, supporting private clients and businesses with integrated protection and financing strategies.</p>
+      <h2 class="section__title section__title--light" data-en-html='Institutional <span style="color: var(--gold);">operations</span>, built at global banks.' data-it-html='<span style="color: var(--gold);">Operations</span> istituzionali, maturate nelle grandi banche globali.'>Institutional <span style="color: var(--gold);">operations</span>, built at global banks.</h2>
+      <p class="section__intro" data-en="Marco combines fund accounting, structured credit servicing and client service management, the operational disciplines behind complex investment products." data-it="Marco unisce fund accounting, servicing del credito strutturato e gestione del client service, le discipline operative alla base dei prodotti di investimento complessi.">Marco combines fund accounting, structured credit servicing and client service management, the operational disciplines behind complex investment products.</p>
       <div class="expertise-grid">
         <div class="expertise-card">
-          <h3 class="expertise-card__title" data-en="Insurance Solutions" data-it="Soluzioni Assicurative">Insurance Solutions</h3>
-          <p class="expertise-card__desc" data-en="Designing insurance and protection structures for private clients and businesses &mdash; tailored to specific risk profiles, family situations, and corporate exposures." data-it="Progettazione di strutture assicurative e di protezione per clienti privati e imprese &mdash; su misura per profili di rischio specifici, situazioni familiari ed esposizioni aziendali.">Designing insurance and protection structures for private clients and businesses &mdash; tailored to specific risk profiles, family situations, and corporate exposures.</p>
+          <h3 class="expertise-card__title" data-en="Structured Loans &amp; CLOs" data-it="Structured Loans e CLO">Structured Loans &amp; CLOs</h3>
+          <p class="expertise-card__desc" data-en="Central escalation point across operations, technology and service delivery for structured loans and collateralised loan obligations, including Tier 1 clients across EMEA." data-it="Punto centrale di escalation tra operations, tecnologia e service delivery per structured loans e collateralised loan obligations, inclusi clienti Tier 1 nell&rsquo;area EMEA.">Central escalation point across operations, technology and service delivery for structured loans and collateralised loan obligations, including Tier 1 clients across EMEA.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title" data-en="Risk Transfer" data-it="Trasferimento del Rischio">Risk Transfer</h3>
-          <p class="expertise-card__desc" data-en="Designing risk-transfer mechanisms that isolate specific exposures and let clients hold what they want, hedge what they don't." data-it="Progettazione di meccanismi di trasferimento del rischio che isolano esposizioni specifiche, permettendo ai clienti di mantenere ci&ograve; che vogliono e coprire ci&ograve; che non vogliono.">Designing risk-transfer mechanisms that isolate specific exposures and let clients hold what they want, hedge what they don't.</p>
+          <h3 class="expertise-card__title" data-en="Fund Accounting" data-it="Fund Accounting">Fund Accounting</h3>
+          <p class="expertise-card__desc" data-en="More than seven years in fund accounting at BNY, as Supervisor in Wroclaw and London and then as Assistant Manager." data-it="Oltre sette anni nel fund accounting in BNY, come Supervisor a Breslavia e Londra e poi come Assistant Manager.">More than seven years in fund accounting at BNY, as Supervisor in Wroclaw and London and then as Assistant Manager.</p>
         </div>
         <div class="expertise-card">
-          <h3 class="expertise-card__title" data-en-html="Retail &amp; Corporate Credit" data-it-html="Credito Retail e Corporate">Retail &amp; Corporate Credit</h3>
-          <p class="expertise-card__desc" data-en="Advising on credit solutions for both private clients and corporate counterparties &mdash; from personal financing to working-capital and corporate-credit structures." data-it="Consulenza su soluzioni di credito per clienti privati e controparti aziendali &mdash; dal finanziamento personale al working capital e alle strutture di credito corporate.">Advising on credit solutions for both private clients and corporate counterparties &mdash; from personal financing to working-capital and corporate-credit structures.</p>
+          <h3 class="expertise-card__title" data-en="Service Quality &amp; Analytics" data-it="Qualit&agrave; del Servizio e Analisi">Service Quality &amp; Analytics</h3>
+          <p class="expertise-card__desc" data-en="Regular client service reviews, operational analytics and discrepancy reporting, used to improve processes and anticipate issues before they reach the client." data-it="Service review periodiche con i clienti, analisi operative e reportistica sulle discrepanze, utilizzate per migliorare i processi e anticipare i problemi prima che raggiungano il cliente.">Regular client service reviews, operational analytics and discrepancy reporting, used to improve processes and anticipate issues before they reach the client.</p>
         </div>
       </div>
     </div>
   </section>
 
   <!-- CAREER TIMELINE -->
-  <section class="section section--light">
+  <section class="section section--light" id="career">
     <div class="container">
       <div class="split">
         <div class="split__left">
           <p class="section__eyebrow" data-en="Career" data-it="Carriera">Career</p>
-          <h2 class="section__title" data-en-html='Bridging <span style="color: var(--gold);">insurance</span> and <span style="color: var(--gold);">financial advisory</span>.' data-it-html='Connessione tra <span style="color: var(--gold);">assicurazione</span> e <span style="color: var(--gold);">consulenza finanziaria</span>.'>Bridging <span style="color: var(--gold);">insurance</span> and <span style="color: var(--gold);">financial advisory</span>.</h2>
-          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;" data-en="Lara's career sits at the intersection of insurance solutions and financial engineering, advising clients on structures that protect and grow wealth." data-it="La carriera di Lara si colloca all&rsquo;intersezione tra soluzioni assicurative e ingegneria finanziaria, fornendo consulenza ai clienti su strutture che proteggono e fanno crescere il patrimonio.">Lara's career sits at the intersection of insurance solutions and financial engineering, advising clients on structures that protect and grow wealth.</p>
+          <h2 class="section__title" data-en-html='A decade of operations at <span style="color: var(--gold);">global banks</span>.' data-it-html='Dieci anni di operations nelle <span style="color: var(--gold);">banche globali</span>.'>A decade of operations at <span style="color: var(--gold);">global banks</span>.</h2>
+          <p style="font-size: 16px; color: var(--gray-600); line-height: 1.7;" data-en="Marco holds a Master's degree in Economics and Business Management from the University of Bologna and an MSc in International Management from Reims Management School. He holds the Investment Advice Diploma and Advanced Wealth Management qualifications from CISI, the GARP Sustainability and Climate Risk (SCR) certificate, and Microsoft Azure AI Fundamentals." data-it="Marco ha conseguito la Laurea Magistrale in Economia e Management presso l&rsquo;Universit&agrave; di Bologna e un MSc in International Management presso la Reims Management School. &Egrave; in possesso dell&rsquo;Investment Advice Diploma e della qualifica Advanced Wealth Management del CISI, del certificato GARP Sustainability and Climate Risk (SCR) e della certificazione Microsoft Azure AI Fundamentals.">Marco holds a Master's degree in Economics and Business Management from the University of Bologna and an MSc in International Management from Reims Management School. He holds the Investment Advice Diploma and Advanced Wealth Management qualifications from CISI, the GARP Sustainability and Climate Risk (SCR) certificate, and Microsoft Azure AI Fundamentals.</p>
         </div>
         <div class="split__right">
           <div class="timeline">
             <div class="timeline-item timeline-item--current">
               <p class="timeline-item__date" data-en="Present" data-it="Attuale">Present</p>
-              <h3 class="timeline-item__role" data-en-html="Insurance &amp; Credit Specialist" data-it-html="Specialista Assicurazione e Credito">Insurance &amp; Credit Specialist</h3>
+              <h3 class="timeline-item__role" data-en="Senior Operations Manager" data-it="Senior Operations Manager">Senior Operations Manager</h3>
               <p class="timeline-item__company">Run Capital Partners</p>
-              <p class="timeline-item__desc" data-en="Works at the intersection of insurance and credit advisory, structuring protection solutions and retail- and corporate-credit arrangements for private clients and corporate counterparties." data-it="Lavora all&rsquo;intersezione tra assicurazione e consulenza creditizia, strutturando soluzioni di protezione e accordi di credito retail e corporate per clienti privati e controparti aziendali.">Works at the intersection of insurance and credit advisory, structuring protection solutions and retail- and corporate-credit arrangements for private clients and corporate counterparties.</p>
             </div>
             <div class="timeline-item">
-              <p class="timeline-item__date" data-en="Earlier Career" data-it="Carriera Precedente">Earlier Career</p>
-              <h3 class="timeline-item__role" data-en-html="Insurance &amp; Financial Advisory Roles" data-it-html="Ruoli in Assicurazione e Consulenza Finanziaria">Insurance &amp; Financial Advisory Roles</h3>
-              <p class="timeline-item__company" data-en="Italy" data-it="Italia">Italy</p>
-              <p class="timeline-item__desc" data-en="Held roles in insurance-related and financial-advisory functions, building a foundation in client-facing advisory and insurance-product structuring." data-it="Ha ricoperto ruoli in funzioni assicurative e di consulenza finanziaria, costruendo una base in consulenza diretta al cliente e strutturazione di prodotti assicurativi.">Held roles in insurance-related and financial-advisory functions, building a foundation in client-facing advisory and insurance-product structuring.</p>
+              <p class="timeline-item__date" data-en="Feb 2024 - Present" data-it="Feb 2024 - Attuale">Feb 2024 - Present</p>
+              <h3 class="timeline-item__role" data-en="Vice President, Client Service Manager" data-it="Vice President, Client Service Manager">Vice President, Client Service Manager</h3>
+              <p class="timeline-item__company">BNY</p>
+              <p class="timeline-item__desc" data-en="Escalation lead for operations, technology and service delivery in the Structured Loans and CLO business, running service reviews with Tier 1 clients across EMEA." data-it="Riferimento di escalation per operations, tecnologia e service delivery nel business Structured Loans e CLO, con service review per i clienti Tier 1 nell&rsquo;area EMEA.">Escalation lead for operations, technology and service delivery in the Structured Loans and CLO business, running service reviews with Tier 1 clients across EMEA.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="Sep 2022 - Feb 2024" data-it="Set 2022 - Feb 2024">Sep 2022 - Feb 2024</p>
+              <h3 class="timeline-item__role" data-en="Fund Accounting Assistant Manager" data-it="Fund Accounting Assistant Manager">Fund Accounting Assistant Manager</h3>
+              <p class="timeline-item__company">BNY</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="Sep 2016 - Sep 2022" data-it="Set 2016 - Set 2022">Sep 2016 - Sep 2022</p>
+              <h3 class="timeline-item__role" data-en="Fund Accounting Supervisor" data-it="Fund Accounting Supervisor">Fund Accounting Supervisor</h3>
+              <p class="timeline-item__company" data-en="BNY, Wroclaw and London" data-it="BNY, Breslavia e Londra">BNY, Wroclaw and London</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="May 2015 - Aug 2016" data-it="Mag 2015 - Ago 2016">May 2015 - Aug 2016</p>
+              <h3 class="timeline-item__role" data-en="Front Support Specialist" data-it="Front Support Specialist">Front Support Specialist</h3>
+              <p class="timeline-item__company">Credit Suisse</p>
+              <p class="timeline-item__desc" data-en="Securities, business data management and banking operations for Private Banking and Wealth Management." data-it="Titoli, gestione dei dati di business e operations bancarie per Private Banking e Wealth Management.">Securities, business data management and banking operations for Private Banking and Wealth Management.</p>
+            </div>
+            <div class="timeline-item">
+              <p class="timeline-item__date" data-en="Jan 2014 - Feb 2015" data-it="Gen 2014 - Feb 2015">Jan 2014 - Feb 2015</p>
+              <h3 class="timeline-item__role" data-en="Accounts Receivable Specialist" data-it="Accounts Receivable Specialist">Accounts Receivable Specialist</h3>
+              <p class="timeline-item__company">Hewlett Packard Enterprise</p>
             </div>
           </div>
         </div>
@@ -410,11 +469,9 @@
   <!-- CONTACT -->
   <section class="section section--dark">
     <div class="container bio-cta">
-      <h2 class="bio-cta__title" data-en="Get in touch directly." data-it="Contatto diretto.">Get in touch directly.</h2>
-      <p style="margin-bottom: 32px;"><a href="mailto:l.covre@runcapital.partners" style="color: var(--gold); font-size: 18px; text-decoration: none; font-weight: 500;">l.covre@runcapital.partners</a></p>
+      <h2 class="bio-cta__title" data-en="Get in touch." data-it="Mettiti in contatto.">Get in touch.</h2>
       <div class="bio-cta__links">
-        <a href="mailto:l.covre@runcapital.partners" class="btn btn--primary" data-en="Send Email" data-it="Invia Email">Send Email</a>
-        <a href="https://www.linkedin.com/in/lara-covre-b469171b9" class="btn btn--outline" target="_blank" rel="noopener" data-en="LinkedIn Profile" data-it="Profilo LinkedIn">LinkedIn Profile</a>
+        <a href="https://www.linkedin.com/in/marco-pellizzato-3a362638/" class="btn btn--outline" target="_blank" rel="noopener" data-en="LinkedIn Profile" data-it="Profilo LinkedIn">LinkedIn Profile</a>
         <a href="index.html#team" class="btn btn--outline" data-en="Back to Team" data-it="Torna al Team">Back to Team</a>
       </div>
     </div>
@@ -463,7 +520,7 @@
               <span class="footer-office__dot" aria-hidden="true"></span>
               <div class="footer-office__body">
                 <span class="footer-office__city" data-en="Luxembourg" data-it="Lussemburgo">Luxembourg</span>
-                <span class="footer-office__addr">2 Rue Ste Zithe, 2763</span>
+                <span class="footer-office__addr">11 Bd Grande-Duchesse Charlotte, 1331</span>
               </div>
             </li>
             <li class="footer-office">
@@ -478,13 +535,6 @@
               <div class="footer-office__body">
                 <span class="footer-office__city" data-en="Conegliano" data-it="Conegliano">Conegliano</span>
                 <span class="footer-office__addr">Viale Italia 203, 31015</span>
-              </div>
-            </li>
-            <li class="footer-office">
-              <span class="footer-office__dot" aria-hidden="true"></span>
-              <div class="footer-office__body">
-                <span class="footer-office__city" data-en="Rome" data-it="Roma">Rome</span>
-                <span class="footer-office__addr">Via Leonida Bissolati 54, 00187</span>
               </div>
             </li>
           </ul>
@@ -522,7 +572,7 @@
       });
     }, { threshold: 0.08 });
 
-    document.querySelectorAll('.timeline-item, .expertise-card').forEach(el => {
+    document.querySelectorAll('.cred-card, .timeline-item, .expertise-card').forEach(el => {
       el.classList.add('fade-in');
       observer.observe(el);
     });

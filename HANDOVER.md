@@ -80,9 +80,10 @@ runcapital-redesign/
 ├── denis-rondanini.html
 ├── patrizio-caringi.html
 ├── riccardo-perrone.html
+├── marco-pellizzato.html
 ├── alice-pozzobon.html
+├── emanuele-rigo.html
 ├── sara-longo.html
-├── lara-covre.html
 ├── mario-fama.html
 ├── davide-de-luca.html
 ├── elena-bernardi.html
@@ -291,6 +292,7 @@ If the site goes down, check these DNS records in Squarespace are still pointing
 
 ### New offices
 - **Rome office** added to the footer of all 44 pages: *Via Leonida Bissolati 54, 00187*
+  - **Removed 2026-11-04**: Rome dropped from every footer, the homepage hero pills and the Italy office line. Luxembourg address changed to *11 Bd Grande-Duchesse Charlotte, 1331* (footers + Run AM registered office on Regulatory Disclosures). UK company number 14161466 filled in on Regulatory Disclosures and the Privacy Policy. Lara Covre left the team (bio page, photo, cards and sitemap entry removed).
 - Hero locations pill on the homepage now includes **Rome / Roma**
 
 ### Homepage
