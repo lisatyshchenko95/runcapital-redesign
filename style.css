@@ -5032,3 +5032,16 @@ select:focus-visible,
 .bio-cta {
   padding: 24px 0 !important;
 }
+
+/* Article hero byline: author name + date on one line */
+.article-hero__byline {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.article-hero__byline .article-hero__date {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
