@@ -651,8 +651,8 @@
 
       </div>
 
-      <!-- Older insights, revealed by the See More button -->
-      <div class="insights-grid insights-grid--more" id="insightsMore" style="display: none; margin-top: 24px;">
+      <!-- Older insights, open by default; See Less hides them -->
+      <div class="insights-grid insights-grid--more" id="insightsMore" style="margin-top: 24px;">
 
         <a href="https://maha-capital.com/mfn_news/maha-completes-acquisition-of-keo-world-and-executes-capital-raises-of-usd-27-million-at-sek-16-per-share/" target="_blank" rel="noopener" class="insight-card insight-card--magazine">
           <div class="insight-card__cover">
@@ -702,7 +702,7 @@
       </div>
 
       <div class="team-expand">
-        <button class="team-expand__btn" id="insightsMoreBtn" type="button" aria-expanded="false" aria-controls="insightsMore" data-en="See More" data-it="Vedi Altro">See More</button>
+        <button class="team-expand__btn team-expand__btn--active" id="insightsMoreBtn" type="button" aria-expanded="true" aria-controls="insightsMore" data-en="See Less" data-it="Vedi Meno">See Less</button>
       </div>
     </div>
   </section>
@@ -996,9 +996,9 @@
         insBtn.classList.toggle('team-expand__btn--active', open);
         insBtn.setAttribute('aria-expanded', open);
         const isIt = document.documentElement.lang === 'it';
-        insBtn.textContent = open ? (isIt ? 'Mostra Meno' : 'Show Less') : (isIt ? 'Vedi Altro' : 'See More');
-        insBtn.setAttribute('data-en', open ? 'Show Less' : 'See More');
-        insBtn.setAttribute('data-it', open ? 'Mostra Meno' : 'Vedi Altro');
+        insBtn.textContent = open ? (isIt ? 'Vedi Meno' : 'See Less') : (isIt ? 'Vedi Altro' : 'See More');
+        insBtn.setAttribute('data-en', open ? 'See Less' : 'See More');
+        insBtn.setAttribute('data-it', open ? 'Vedi Meno' : 'Vedi Altro');
       });
     }
 
