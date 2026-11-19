@@ -191,6 +191,8 @@ Their profile page, photo and bio were never touched and are still in the repo.
 
 Currently hidden (since 2026-07-29): Giordano Tomasini, Danilo Carolini,
 Giovanni Campodall'Orto — on `index.html`, six service pages, and `sitemap.xml`.
+Also hidden since 2026-11-19: Emanuele Rigo (at his request) — on `index.html` and `sitemap.xml`;
+Mario Famà moved up into his slot. His page `emanuele-rigo.html` is untouched but no longer linked.
 
 ### Updating the footer:
 The footer is duplicated in every HTML file. To change it, you must update it in **all** HTML files.
